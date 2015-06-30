@@ -48,7 +48,7 @@ function usersGetByDistinct($where, $orderby)
 
 function usersGetAll()
 {
-        return getTable("pp_users", "", "");
+        return getTable("pp_users", "pp_us_enable = 1", "");
 }
 
 function usersInsert($fields)

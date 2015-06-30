@@ -87,10 +87,10 @@ if(isset($_SESSION['username']))
         <script src="js/other/bootstrap.js"></script>
         <!-- Meus scripts -->
         <script src="js/login.js"></script>
-        <script src="js/viewgr.js"></script>
+       <!-- <script src="js/viewgr.js"></script>-->
         <!-- for ie8 for bootstrap -->
         <script src="js/other/respond.js"></script>
-        <script src="js/html5shiv.js"></script>
+        <!--<script src="js/html5shiv.js"></script>-->
         <!-- sript for trim in ie8 -->
         <script src="js/trim.js"></script>
         <script>
@@ -106,10 +106,10 @@ if(isset($_SESSION['username']))
 	}
         </script>
         <!-- para o file upload -->
-        <script src="js/other/jquery.uploadfile.js"></script>
+        <!--<script src="js/other/jquery.uploadfile.js"></script>-->
         <!-- script para ver um pouco da guia -->
-        <script src="js/viewDataGr.js"></script>
-        <script src="js/viewDataRep.js"></script>
+        <!--<script src="js/viewDataGr.js"></script>
+        <script src="js/viewDataRep.js"></script>-->
         
         
     </head>

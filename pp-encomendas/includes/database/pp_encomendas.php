@@ -3,7 +3,7 @@
 //obtenho uma guia de reparação e só uma aqui
 function encomendasGetById($id)
 {
-    $t = getTable("pp_encomendas", "pp_enc_id = $id", "");
+    $t = getTable("pp_encomendas", "pp_enc_id = ".dbInteger($id), "");
     return foreachRow($t);
 }
 
@@ -20,37 +20,12 @@ function encomendasGetByDistinct($where, $orderby)
 	return getTableDistinct("pp_encomendas", $column, $where, $orderby);	
 }
 
-//rejet = null se não o quero nos meus filtros
-//status o que eu pretendo: id = 'dsadadads',....
-// se meto id_grep = -1 faz as outras coisas
-//function grepoGetByFiltro($id_grep, $status_array, $reject_status_array)
-//{
-//    $where = '';
-//
-//    if ($id_grep !== -1) {
-//            $where .= ($where == '') ? '' : ' AND ';
-//            $where .= "id = " . dbInteger($id_grep);
-//    }
-//
-//    if ($status_array !== null) {
-//            $where .= ($where == '') ? '' : ' AND ';
-//            $where .= "status IN ('" . join("', '", $status_array) . "')";
-//    }
-//
-//    if ($reject_status_array !== null) {
-//            $where .= ($where == '') ? '' : ' AND ';
-//            $where .= "status NOT IN ('" . join("', '", $reject_status_array) . "')";
-//    }
-//
-//    //ultima variável é para o order by
-//    return getTable('grep', $where, 'date_in');
-//}
-
 function encomendasGetAll()
 {
         return getTable("pp_encomendas", "", "");
 }
 
+//devolve me o id inserido
 function encomendasInsert($fields)
 {
     #$fields['id'] = insertRecord("grep", $fields, true);

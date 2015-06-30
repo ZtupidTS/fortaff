@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Menu class="javax.swing.JMenuBar" name="jMenuBarMain">
+      <Properties>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Curseur en forme de main"/>
+        </Property>
+      </Properties>
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="jMenuFile">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ficheiro"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemFileComment">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sugest&#xe3;o"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemFileCommentActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemViewComment">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ver Sugest&#xe3;o"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemViewCommentActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator4">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemFileExit">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sair"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemFileExitActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenuResult">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Resultados"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemImportResult">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Importar Vendas"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemImportResultActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemDeleteVendas">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Eliminar Vendas"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemDeleteVendasActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemObjetivos">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Inserir Objetivos Vendas"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemObjetivosActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator2">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemViewResults">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ver Vendas"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemViewResultsActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemViewObjetivos">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ver Objetivos Vendas"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemViewObjetivosActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenuStock">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Quebras"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemImportQuebra">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Importar Quebras"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemImportQuebraActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemDeleteQuebras">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Eliminar Quebras"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemDeleteQuebrasActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemInsertObjQuebra">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Inserir Objetivos Quebras"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemInsertObjQuebraActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator3">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemViewQuebras">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ver Quebras"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemViewQuebrasActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemViewQuebrasObj">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ver Quebras Objetivos"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemViewQuebrasObjActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenuAdministrator">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Administra&#xe7;&#xe3;o"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemUser">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Utilizadores"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemUserActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemConfiguration">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Configura&#xe7;&#xe3;o"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemConfigurationActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenuExit">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Sair"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuExitMouseClicked"/>
+          </Events>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="0"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBarMain"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
+              <Component id="jLabelLogotipo" pref="381" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="151" max="-2" attributes="0"/>
+          </Group>
+          <Component id="jSeparator1" alignment="1" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabelWelcome" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jLabelToday" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
+              <Component id="jLabelLogotipo" pref="123" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
+              <Component id="jSeparator1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelWelcome" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelToday" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabelLogotipo">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/logo01.gif"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JSeparator" name="jSeparator1">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelWelcome">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Benvindo "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelToday">
+    </Component>
+  </SubComponents>
+</Form>

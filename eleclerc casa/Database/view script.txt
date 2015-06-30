@@ -1,0 +1,19 @@
+user_authorization_menu
+
+select *
+from userauth ua, menumain mm, users us
+where ua.usa_menu_id = mm.menu_id and us.usr_id = usa_usr_id
+
+user_section_comment
+
+SELECT *
+FROM comment, users, section
+WHERE comment.com_id_user = users.usr_id and comment.com_id_section = section.sec_id
+
+
+temp
+
+SELECT * 
+FROM quebras
+WHERE MONTH(que_date) = 8
+ORDER BY que_date

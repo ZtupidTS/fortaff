@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="0"/>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+    </Property>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPnlBackground" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPnlBackground" min="-2" max="-2" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPnlBackground">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jLabelLogin" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelPassword" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="jButtonLogin" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="66" max="32767" attributes="0"/>
+                                  <Component id="jBtnClose" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jTextFieldLogin" max="32767" attributes="0"/>
+                              <Component id="jPasswordFieldLogin" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="28" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jBtnAnonymous" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="jLblVersion" min="-2" pref="35" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Component id="jLblLogotype" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLblLogotype" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabelLogin" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextFieldLogin" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabelPassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jPasswordFieldLogin" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jButtonLogin" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jBtnClose" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLblVersion" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="jBtnAnonymous" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLblLogotype">
+          <Properties>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/logo01.gif"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jBtnAnonymous">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Entrar como An&#xf3;nimo"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Curseur par d&#xe9;faut"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnAnonymousActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jBtnClose">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Fechar"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Curseur par d&#xe9;faut"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnCloseActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLblVersion">
+          <Properties>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="v2.1"/>
+            <Property name="toolTipText" type="java.lang.String" value="Objetivos nas quebras"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelLogin">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Login:"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextFieldLogin">
+          <Properties>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelPassword">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Password:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonLogin">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Entrar"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Curseur par d&#xe9;faut"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLoginActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="jPasswordFieldLogin">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="0"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jPasswordFieldLoginKeyPressed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

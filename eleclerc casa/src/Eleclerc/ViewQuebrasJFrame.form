@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabelSection" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                              <Component id="jComboBoxSection" min="-2" pref="150" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabelDate1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelMonth" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jDateChooser1" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="jMonthChooser" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jLabelSelection" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelYear" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelDate2" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jComboBoxSelection" pref="147" max="32767" attributes="0"/>
+                          <Component id="jYearChooserYear" min="-2" pref="88" max="-2" attributes="0"/>
+                          <Component id="jDateChooser2" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jLabelTypeQuebras" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jComboBoxTypeQuebras" min="-2" pref="157" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="62" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jPanelGraph" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jButtonOk" min="-2" pref="58" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButtonExit" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="jLabelValueQuebra" min="-2" pref="205" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabelPorcentQuebras" min="-2" pref="240" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelSection" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jComboBoxSection" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jComboBoxSelection" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelSelection" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelTypeQuebras" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jComboBoxTypeQuebras" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jYearChooserYear" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelYear" min="-2" max="-2" attributes="0"/>
+                  <Component id="jMonthChooser" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelMonth" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jDateChooser1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelDate1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jButtonOk" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonExit" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelValueQuebra" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelPorcentQuebras" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                      <Component id="jLabelDate2" min="-2" max="-2" attributes="0"/>
+                      <Component id="jDateChooser2" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+              <Component id="jPanelGraph" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="jButtonExit">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fechar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonExitActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonOk">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ok"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[75, 23]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[75, 23]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[75, 23]"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonOkMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelSection">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Sec&#xe7;&#xe3;o"/>
+      </Properties>
+    </Component>
+    <Component class="com.toedter.calendar.JMonthChooser" name="jMonthChooser">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelMonth">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="M&#xea;s"/>
+      </Properties>
+    </Component>
+    <Component class="com.toedter.calendar.JYearChooser" name="jYearChooserYear">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelYear">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ano"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jComboBoxSelection">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="2">
+            <StringItem index="0" value="Ano"/>
+            <StringItem index="1" value="M&#xea;s"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxSelectionActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelSelection">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Selec&#xe7;&#xe3;o"/>
+      </Properties>
+    </Component>
+    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
+    </Component>
+    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser2">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelDate1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Primeira Data"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelDate2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Segunda Data"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jComboBoxSection">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JPanel" name="jPanelGraph">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="332" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabelValueQuebra">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelTypeQuebras">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tipo de Quebras"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jComboBoxTypeQuebras">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelPorcentQuebras">
+    </Component>
+  </SubComponents>
+</Form>

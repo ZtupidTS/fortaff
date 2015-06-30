@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\pp-encomendas.clpprj">
 	<settings><PM_URL><![CDATA[//2...iSmsPhp/]]></PM_URL><PM_HOME_URL><![CDATA[//2...iSmsPhp/]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";"/><added value=""/><lastopfiles>
-		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\index.php"/>
-		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\conf.php"/>
-		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\header.php"/>
-		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js"/>
-		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php"/>
-		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_users.php"/>
-		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogout.php"/>
-		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\info.php"/>
 	</lastopfiles>
 	<codestructure version="4.6.1">
 		<phptree>
-			<treenode node="../includes/allpageaj.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f9;1;34;1;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogout.php;f9;1;34;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="../includes/allpageaj.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogout.php;f9;1;34;1;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f9;1;34;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="../fonction/function.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpageaj.php;f9;12;33;12;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -43,6 +35,38 @@
 			<treenode node="includes/footer.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\index.php;f15;40;34;40;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\info.php;f15;51;34;51;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="includes/header.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\index.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\info.php;f15;0;34;0;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="boloGetAll;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f0;22;1;25;;;;vpos;;v;;r;;d0,23;;b0,0;;m">
+			</treenode>
+			<treenode node="boloGetByDistinct;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f0;16;1;20;;;;vpos;;v;;r;;d0,17;;b0,0;;mwhere;;porderby;;p">
+				<treenode node="column;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f1;18;8;18;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="orderby;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f35;16;43;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f27;16;33;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="boloGetByFiltro;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f0;11;1;14;;;;vpos;;v;;r;;d0,12;;b0,0;;mwhere;;porderby;;p">
+				<treenode node="orderby;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f33;11;41;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f25;11;31;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="boloGetById;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f0;3;1;7;;;;vpos;;v;;r;;d0,4;;b0,0;;mid;;p">
+				<treenode node="id;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f21;3;24;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="t;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f4;5;6;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="boloInsert;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f0;28;1;32;;;;vpos;;v;;r;;d0,29;;b0,0;;mfields;;p">
+				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f20;28;27;28;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="boloUpdate;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f0;35;1;41;;;;vpos;;v;;r;;d0,36;;b0,0;;mfields;;p">
+				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f20;35;27;35;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f8;37;14;37;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
 			</treenode>
 			<treenode node="clearError;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\mysql.php;f0;39;1;42;;;;vpos;;v;;r;;d0,40;;b0,0;;m">
 				<treenode node="_SESSION;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\mysql.php;f1;41;10;41;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -108,30 +132,36 @@
 				<treenode node="data_recebida;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\fonction\function.php;f19;731;33;731;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\fonction\function.php;f19;731;33;731;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="encomendasGetAll;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f0;48;1;51;;;;vpos;;v;;r;;d0,49;;b0,0;;m">
+			<treenode node="encomendasGetAll;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f0;22;1;25;;;;vpos;;v;;r;;d0,23;;b0,0;;m">
 			</treenode>
 			<treenode node="encomendasGetByDistinct;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f0;16;1;20;;;;vpos;;v;;r;;d0,17;;b0,0;;mwhere;;porderby;;p">
-				<treenode node="orderby;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f41;16;49;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="column;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f1;18;8;18;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f1;18;8;18;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f33;16;39;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="orderby;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f41;16;49;16;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f41;16;49;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f33;16;39;16;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f33;16;39;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="encomendasGetByFiltro;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f0;11;1;14;;;;vpos;;v;;r;;d0,12;;b0,0;;mwhere;;porderby;;p">
-				<treenode node="orderby;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f39;11;47;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="orderby;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f39;11;47;11;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f39;11;47;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f31;11;37;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f31;11;37;11;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f31;11;37;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="encomendasGetById;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f0;3;1;7;;;;vpos;;v;;r;;d0,4;;b0,0;;mid;;p">
-				<treenode node="id;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f27;3;30;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="id;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f27;3;30;3;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f27;3;30;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="t;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f4;5;6;5;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f4;5;6;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="encomendasInsert;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f0;53;1;57;;;;vpos;;v;;r;;d0,54;;b0,0;;mfields;;p">
-				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f26;53;33;53;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="encomendasInsert;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f0;28;1;32;;;;vpos;;v;;r;;d0,29;;b0,0;;mfields;;p">
+				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f26;28;33;28;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f26;28;33;28;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="encomendasUpdate;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f0;60;1;66;;;;vpos;;v;;r;;d0,61;;b0,0;;mfields;;p">
-				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f26;60;33;60;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="encomendasUpdate;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f0;35;1;41;;;;vpos;;v;;r;;d0,36;;b0,0;;mfields;;p">
+				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f26;35;33;35;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f26;35;33;35;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php;f8;37;14;37;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f8;37;14;37;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="enviamail;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\fonction\function.php;f0;66;1;124;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\fonction\function.php;f0;66;1;124;;;;vpos;;v;;r;;d0,67;;b0,0;;mdest;;pid_gr;;pbody_mail;;panex;;p">
@@ -226,29 +256,29 @@
 				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\mysql.php;f43;91;49;91;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="grepGetAll;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f0;48;1;51;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f0;48;1;51;;;;vpos;;v;;r;;d0,49;;b0,0;;m">
+			<treenode node="grepGetAll;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f0;48;1;51;;;;vpos;;v;;r;;d0,49;;b0,0;;m">
 			</treenode>
-			<treenode node="grepGetByDistinct;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f0;16;1;20;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f0;16;1;20;;;;vpos;;v;;r;;d0,17;;b0,0;;mwhere;;porderby;;p">
-				<treenode node="column;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f1;18;8;18;;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f1;18;8;18;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="grepGetByDistinct;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f0;16;1;20;;;;vpos;;v;;r;;d0,17;;b0,0;;mwhere;;porderby;;p">
+				<treenode node="column;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f1;18;8;18;;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f1;18;8;18;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f1;18;8;18;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="orderby;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f35;16;43;16;;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f35;16;43;16;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f35;16;43;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f27;16;33;16;;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f27;16;33;16;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f27;16;33;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="grepGetByFiltro;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f0;11;1;14;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f0;11;1;14;;;;vpos;;v;;r;;d0,12;;b0,0;;mwhere;;porderby;;p">
+			<treenode node="grepGetByFiltro;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f0;11;1;14;;;;vpos;;v;;r;;d0,12;;b0,0;;mwhere;;porderby;;p">
 				<treenode node="orderby;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f33;11;41;11;;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f33;11;41;11;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f33;11;41;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f25;11;31;11;;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f25;11;31;11;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f25;11;31;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="grepGetById;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f0;3;1;7;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f0;3;1;7;;;;vpos;;v;;r;;d0,4;;b0,0;;mid;;p">
+			<treenode node="grepGetById;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f0;3;1;7;;;;vpos;;v;;r;;d0,4;;b0,0;;mid;;p">
 				<treenode node="id;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f21;3;24;3;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f21;3;24;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="t;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f4;5;6;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="t;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f4;5;6;5;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f4;5;6;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="grepInsert;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f0;53;1;57;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f0;53;1;57;;;;vpos;;v;;r;;d0,54;;b0,0;;mfields;;p">
+			<treenode node="grepInsert;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f0;53;1;57;;;;vpos;;v;;r;;d0,54;;b0,0;;mfields;;p">
 				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\pp_modifenc.php;f20;53;27;53;;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f20;53;27;53;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f20;53;27;53;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
@@ -286,6 +316,38 @@
 			</treenode>
 			<treenode node="invertedatasemhora;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\fonction\function.php;f0;39;1;50;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\fonction\function.php;f0;39;1;50;;;;vpos;;v;;r;;d0,40;;b0,0;;mdata;;p">
 				<treenode node="data;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\fonction\function.php;f28;39;33;39;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\fonction\function.php;f28;39;33;39;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="modifEncomendasGetAll;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f0;22;1;25;;;;vpos;;v;;r;;d0,23;;b0,0;;m">
+			</treenode>
+			<treenode node="modifEncomendasGetByDistinct;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f0;16;1;20;;;;vpos;;v;;r;;d0,17;;b0,0;;mwhere;;porderby;;p">
+				<treenode node="column;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f1;18;8;18;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="orderby;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f46;16;54;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f38;16;44;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="modifEncomendasGetByFiltro;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f0;11;1;14;;;;vpos;;v;;r;;d0,12;;b0,0;;mwhere;;porderby;;p">
+				<treenode node="orderby;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f44;11;52;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f36;11;42;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="modifEncomendasGetById;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f0;3;1;7;;;;vpos;;v;;r;;d0,4;;b0,0;;mid;;p">
+				<treenode node="id;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f32;3;35;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="t;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f4;5;6;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="modifEncomendasInsert;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f0;28;1;32;;;;vpos;;v;;r;;d0,29;;b0,0;;mfields;;p">
+				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f31;28;38;28;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="modifEncomendasUpdate;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f0;35;1;41;;;;vpos;;v;;r;;d0,36;;b0,0;;mfields;;p">
+				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f31;35;38;35;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f8;37;14;37;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="ocurrenceError;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\mysql.php;f0;44;1;47;;;;vpos;;v;;r;;d0,45;;b0,0;;m">
@@ -334,7 +396,7 @@
 				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\mysql.php;f39;158;45;158;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="usersGetAll;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f0;48;1;51;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_users.php;f0;48;1;51;;;;vpos;;v;;r;;d0,49;;b0,0;;m">
+			<treenode node="usersGetAll;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f0;48;1;51;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_users.php;f0;22;1;25;;;;vpos;;v;;r;;d0,23;;b0,0;;m">
 			</treenode>
 			<treenode node="usersGetByDistinct;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f0;16;1;20;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_users.php;f0;16;1;20;;;;vpos;;v;;r;;d0,17;;b0,0;;mwhere;;porderby;;p">
 				<treenode node="column;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f1;18;8;18;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_users.php;f1;18;8;18;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -356,14 +418,14 @@
 				<treenode node="t;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f4;5;6;5;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_users.php;f4;5;6;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="usersInsert;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f0;53;1;57;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_users.php;f0;53;1;57;;;;vpos;;v;;r;;d0,54;;b0,0;;mfields;;p">
-				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f21;53;28;53;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_users.php;f21;53;28;53;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="usersInsert;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f0;53;1;57;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_users.php;f0;27;1;31;;;;vpos;;v;;r;;d0,28;;b0,0;;mfields;;p">
+				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f21;53;28;53;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_users.php;f21;27;28;27;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="usersUpdate;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f0;60;1;66;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_users.php;f0;60;1;66;;;;vpos;;v;;r;;d0,61;;b0,0;;mfields;;p">
-				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f21;60;28;60;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_users.php;f21;60;28;60;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="usersUpdate;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f0;60;1;66;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_users.php;f0;34;1;40;;;;vpos;;v;;r;;d0,35;;b0,0;;mfields;;p">
+				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f21;60;28;60;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_users.php;f21;34;28;34;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f8;62;14;62;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_users.php;f8;62;14;62;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\database\Codelobster0.php;f8;62;14;62;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_users.php;f8;36;14;36;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="verifysms;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\fonction\function.php;f0;593;1;605;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\fonction\function.php;f0;593;1;605;;;;vpos;;v;;r;;d0,594;;b0,0;;mlastsmsid;;p">
@@ -372,11 +434,11 @@
 			</treenode>
 			<treenode node="_GET;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f23;3;28;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="_SESSION;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\conf.php;f0;10;9;10;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\header.php;f9;12;18;12;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f1;14;10;14;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogout.php;f10;3;19;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="_SESSION;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\header.php;f9;12;18;12;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\conf.php;f0;10;9;10;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogout.php;f10;3;19;3;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f1;14;10;14;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="iduser;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f0;3;7;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="login;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\index.php;f13;2;19;2;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\header.php;f4;25;10;25;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f0;4;6;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="login;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\header.php;f4;25;10;25;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\index.php;f13;2;19;2;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f0;4;6;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="now;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\header.php;f0;4;4;4;;;;vposint;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -392,6 +454,22 @@
 			</treenode>
 		</phptree>
 		<jstree>
+			<treenode node="Login;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js;f0;0;1;27;;;;vpos;;v;;r;;d0,1;;b0,0;;m">
+				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js;f22;11;26;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="iduser;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js;f9;8;15;8;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="login;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js;f9;9;14;9;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="newdata;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js;f14;12;21;12;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="password;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js;f9;10;17;10;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="strUser;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js;f8;2;15;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="window;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js;f8;18;14;18;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
 			<treenode node=".effects;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f1;9364;1;9366;;;;vpos;;v;;r;;d12,9364;;b0,0;;m">
 				<treenode node="effect;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f1;9365;11;9365;;;;vpos;;v;;r;;d9,9365;;b0,0;;m">
 				</treenode>
@@ -2674,22 +2752,6 @@
 				<treenode node="nodeHook;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f7;8142;15;8142;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="ret;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f7;8137;10;8137;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="Login;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js;f0;0;1;27;;;;vpos;;v;;r;;d0,1;;b0,0;;m">
-				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js;f22;11;26;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="iduser;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js;f9;8;15;8;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="login;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js;f9;9;14;9;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="newdata;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js;f14;12;21;12;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="password;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js;f9;10;17;10;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="strUser;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js;f8;2;15;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="window;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js;f8;18;14;18;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="matcherFromTokens;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f0;2280;1;2333;;;;vpos;;v;;r;;d37,2280;;b0,0;;mtokens;;p">
@@ -10541,9 +10603,14 @@
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js" crc="-1953136943"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\trim.js" crc="-985524520"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js" crc="1440457600"/>
-		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_users.php" crc="-194264237"/>
-		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php" crc="1208623885"/>
-		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php" crc="-835462044"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_users.php" crc="-960620467"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_recheio.php" crc="-240305817"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php" crc="1845298504"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_bolos.php" crc="-669003329"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_massa.php" crc="-1552790845"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_encomendas.php" crc="1597078921"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_cobertura.php" crc="-1443723862"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_bolo.php" crc="1509013473"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\mysql.php" crc="1784315564"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\header.php" crc="330049146"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\footer.php" crc="21709661"/>

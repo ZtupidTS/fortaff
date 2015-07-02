@@ -1,40 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\pp-encomendas.clpprj">
 	<settings><PM_URL><![CDATA[//2...iSmsPhp/]]></PM_URL><PM_HOME_URL><![CDATA[//2...iSmsPhp/]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";"/><added value=""/><lastopfiles>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\index.php"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\header.php"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\css\bootstrap.css"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\insert_bolonosso.php"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_massa.php"/>
 	</lastopfiles>
 	<codestructure version="4.6.1">
 		<phptree>
-			<treenode node="../includes/allpageaj.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogout.php;f9;1;34;1;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f9;1;34;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="../fonction/function.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpageaj.php;f9;14;33;14;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="../fonction/function.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpageaj.php;f9;12;33;12;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="../includes/allpageaj.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\Codelobster0.php;f9;1;34;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="../includes/conf.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpageaj.php;f9;11;29;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="../includes/conf.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpageaj.php;f9;13;29;13;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="../includes/database/mysql.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpageaj.php;f9;2;39;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
+			<treenode node="../includes/database/pp_bolo.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpageaj.php;f9;6;41;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="../includes/database/pp_cobertura.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpageaj.php;f9;7;46;7;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
 			<treenode node="../includes/database/pp_encomendas.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpageaj.php;f9;4;47;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="../includes/database/pp_massa.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpageaj.php;f9;8;42;8;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="../includes/database/pp_modif_bolos.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpageaj.php;f9;9;48;9;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="../includes/database/pp_recheio.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpageaj.php;f9;10;44;10;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="../includes/allpageaj.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogout.php;f9;1;34;1;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f9;1;34;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="../includes/database/pp_modif_encomendas.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpageaj.php;f9;5;53;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="../includes/database/pp_users.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpageaj.php;f9;3;42;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="fonction/function.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpage.php;f9;11;30;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="fonction/function.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpage.php;f9;13;30;13;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="includes/allpage.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\header.php;f9;1;29;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="includes/conf.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpage.php;f9;10;26;10;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="includes/conf.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpage.php;f9;12;26;12;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="includes/database/mysql.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpage.php;f9;2;36;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
+			<treenode node="includes/database/pp_bolo.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpage.php;f9;6;38;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="includes/database/pp_cobertura.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpage.php;f9;7;43;7;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
 			<treenode node="includes/database/pp_encomendas.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpage.php;f9;4;44;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="includes/database/pp_massa.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpage.php;f9;8;39;8;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="includes/database/pp_modif_bolos.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpage.php;f9;9;45;9;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="includes/database/pp_modif_encomendas.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpage.php;f9;5;50;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
+			<treenode node="includes/database/pp_recheio.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpage.php;f9;10;41;10;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
 			<treenode node="includes/database/pp_users.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpage.php;f9;3;39;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="includes/footer.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\index.php;f15;40;34;40;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\info.php;f15;51;34;51;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="includes/footer.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\info.php;f15;51;34;51;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\index.php;f15;40;34;40;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\insert_cobertura.php;f15;63;34;63;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\Codelobster0.php;f15;111;34;111;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="includes/header.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\index.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\info.php;f15;0;34;0;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="includes/header.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\info.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\index.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\insert_cobertura.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\Codelobster0.php;f15;0;34;0;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="boloGetAll;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\Codelobster0.php;f0;22;1;25;;;;vpos;;v;;r;;d0,23;;b0,0;;m">
 			</treenode>
@@ -74,6 +101,38 @@
 			</treenode>
 			<treenode node="closeDataBase;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\mysql.php;f0;22;1;26;;;;vpos;;v;;r;;d0,23;;b0,0;;m">
 				<treenode node="odb;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\mysql.php;f8;24;12;24;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="coberturaGetAll;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_cobertura.php;f0;22;1;25;;;;vpos;;v;;r;;d0,23;;b0,0;;m">
+			</treenode>
+			<treenode node="coberturaGetByDistinct;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_cobertura.php;f0;16;1;20;;;;vpos;;v;;r;;d0,17;;b0,0;;mwhere;;porderby;;p">
+				<treenode node="column;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_cobertura.php;f1;18;8;18;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="orderby;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_cobertura.php;f40;16;48;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_cobertura.php;f32;16;38;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="coberturaGetByFiltro;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_cobertura.php;f0;11;1;14;;;;vpos;;v;;r;;d0,12;;b0,0;;mwhere;;porderby;;p">
+				<treenode node="orderby;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_cobertura.php;f38;11;46;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_cobertura.php;f30;11;36;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="coberturaGetById;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_cobertura.php;f0;3;1;7;;;;vpos;;v;;r;;d0,4;;b0,0;;mid;;p">
+				<treenode node="id;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_cobertura.php;f26;3;29;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="t;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_cobertura.php;f4;5;6;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="coberturaInsert;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_cobertura.php;f0;28;1;32;;;;vpos;;v;;r;;d0,29;;b0,0;;mfields;;p">
+				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_cobertura.php;f25;28;32;28;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="coberturaUpdate;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_cobertura.php;f0;35;1;41;;;;vpos;;v;;r;;d0,36;;b0,0;;mfields;;p">
+				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_cobertura.php;f25;35;32;35;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_cobertura.php;f8;37;14;37;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="codpostalToForm;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\fonction\function.php;f0;59;1;64;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\fonction\function.php;f0;59;1;64;;;;vpos;;v;;r;;d0,60;;b0,0;;mcod;;p">
@@ -318,6 +377,38 @@
 				<treenode node="data;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\fonction\function.php;f28;39;33;39;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\fonction\function.php;f28;39;33;39;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
+			<treenode node="massaGetAll;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_massa.php;f0;22;1;25;;;;vpos;;v;;r;;d0,23;;b0,0;;m">
+			</treenode>
+			<treenode node="massaGetByDistinct;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_massa.php;f0;16;1;20;;;;vpos;;v;;r;;d0,17;;b0,0;;mwhere;;porderby;;p">
+				<treenode node="column;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_massa.php;f1;18;8;18;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="orderby;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_massa.php;f36;16;44;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_massa.php;f28;16;34;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="massaGetByFiltro;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_massa.php;f0;11;1;14;;;;vpos;;v;;r;;d0,12;;b0,0;;mwhere;;porderby;;p">
+				<treenode node="orderby;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_massa.php;f34;11;42;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_massa.php;f26;11;32;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="massaGetById;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_massa.php;f0;3;1;7;;;;vpos;;v;;r;;d0,4;;b0,0;;mid;;p">
+				<treenode node="id;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_massa.php;f22;3;25;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="t;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_massa.php;f4;5;6;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="massaInsert;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_massa.php;f0;28;1;32;;;;vpos;;v;;r;;d0,29;;b0,0;;mfields;;p">
+				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_massa.php;f21;28;28;28;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="massaUpdate;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_massa.php;f0;35;1;41;;;;vpos;;v;;r;;d0,36;;b0,0;;mfields;;p">
+				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_massa.php;f21;35;28;35;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_massa.php;f8;37;14;37;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
 			<treenode node="modifEncomendasGetAll;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f0;22;1;25;;;;vpos;;v;;r;;d0,23;;b0,0;;m">
 			</treenode>
 			<treenode node="modifEncomendasGetByDistinct;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_modif_encomendas.php;f0;16;1;20;;;;vpos;;v;;r;;d0,17;;b0,0;;mwhere;;porderby;;p">
@@ -366,6 +457,38 @@
 				<treenode node="server;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\mysql.php;f22;5;29;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="user;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\mysql.php;f42;5;47;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="recheioGetAll;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_recheio.php;f0;22;1;25;;;;vpos;;v;;r;;d0,23;;b0,0;;m">
+			</treenode>
+			<treenode node="recheioGetByDistinct;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_recheio.php;f0;16;1;20;;;;vpos;;v;;r;;d0,17;;b0,0;;mwhere;;porderby;;p">
+				<treenode node="column;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_recheio.php;f1;18;8;18;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="orderby;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_recheio.php;f38;16;46;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_recheio.php;f30;16;36;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="recheioGetByFiltro;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_recheio.php;f0;11;1;14;;;;vpos;;v;;r;;d0,12;;b0,0;;mwhere;;porderby;;p">
+				<treenode node="orderby;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_recheio.php;f36;11;44;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_recheio.php;f28;11;34;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="recheioGetById;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_recheio.php;f0;3;1;7;;;;vpos;;v;;r;;d0,4;;b0,0;;mid;;p">
+				<treenode node="id;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_recheio.php;f24;3;27;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="t;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_recheio.php;f4;5;6;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="recheioInsert;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_recheio.php;f0;28;1;32;;;;vpos;;v;;r;;d0,29;;b0,0;;mfields;;p">
+				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_recheio.php;f23;28;30;28;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="recheioUpdate;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_recheio.php;f0;35;1;41;;;;vpos;;v;;r;;d0,36;;b0,0;;mfields;;p">
+				<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_recheio.php;f23;35;30;35;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="where;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_recheio.php;f8;37;14;37;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="recupera_url;PHP:Function Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\fonction\function.php;f0;2;1;7;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\fonction\function.php;f0;2;1;7;;;;vpos;;v;;r;;d0,3;;b0,0;;m">
@@ -432,19 +555,33 @@
 				<treenode node="lastsmsid;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\pp-encomendas\includes\fonction\function.php;f19;593;29;593;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\fonction\function.php;f19;593;29;593;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="_GET;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f23;3;28;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="_GET;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f23;3;28;3;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\Codelobster0.php;f26;3;31;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="_SESSION;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\header.php;f9;12;18;12;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\conf.php;f0;10;9;10;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogout.php;f10;3;19;3;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f1;14;10;14;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="_SESSION;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\conf.php;f0;10;9;10;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogout.php;f10;3;19;3;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f1;14;10;14;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\header.php;f9;12;18;12;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="cb;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\Codelobster0.php;f33;57;36;57;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="cobertura;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\Codelobster0.php;f0;3;10;3;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\Codelobster0.php;f26;55;36;55;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\Codelobster0.php;f0;6;7;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="iduser;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f0;3;7;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="login;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\header.php;f4;25;10;25;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\index.php;f13;2;19;2;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f0;4;6;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="login;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f0;4;6;4;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\index.php;f13;2;19;2;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\header.php;f4;25;10;25;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="ma;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\Codelobster0.php;f33;89;36;89;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="massa;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\Codelobster0.php;f26;87;32;87;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="now;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\header.php;f0;4;4;4;;;;vposint;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="odb;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\mysql.php;f0;2;4;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="password;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f0;5;9;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="re;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\Codelobster0.php;f33;73;36;73;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="recheio;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\Codelobster0.php;f26;71;34;71;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="table;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php;f0;8;6;8;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -454,6 +591,512 @@
 			</treenode>
 		</phptree>
 		<jstree>
+			<treenode node="addCobertura;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\insert_cobertura.php;f0;3;5;30;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\Codelobster0.php;f0;3;5;30;;;;vpos;;v;;r;;d4,4;;b0,0;;m">
+				<treenode node="cobertura;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\insert_cobertura.php;f12;6;21;6;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\Codelobster0.php;f12;6;21;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\insert_cobertura.php;f19;15;23;15;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\Codelobster0.php;f19;15;23;15;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="newdata;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\insert_cobertura.php;f14;16;21;16;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\Codelobster0.php;f14;16;21;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Affix;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;1829;3;1841;;;;vpos;;v;;r;;d42,1829;;b0,0;;melement;;poptions;;p">
+				<treenode node="Affix;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f32;1830;37;1830;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="affixed;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;1836;16;1836;;;;vposAffix;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="checkPosition;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f51;1832;64;1832;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="checkPositionWithEventLoop;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f51;1833;77;1833;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f24;1829;31;1829;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="getPinnedOffset;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f18;1849;33;1849;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f33;1829;40;1829;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="pinnedOffset;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;1838;21;1838;;;;vposAffix;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="window;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1831;16;1831;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Affix.DEFAULTS;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f2;1845;3;1847;;;;vpos;;v;;r;;d19,1845;;b0,0;;m">
+				<treenode node="offset;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1846;10;1846;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Alert;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;73;3;75;;;;vpos;;v;;r;;d30,73;;b0,0;;mel;;p">
+				<treenode node="close;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f36;74;41;74;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="dismiss;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f22;74;29;74;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="el;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f26;73;28;73;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Button;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;161;3;165;;;;vpos;;v;;r;;d43,161;;b0,0;;melement;;poptions;;p">
+				<treenode node="Button;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f34;163;40;163;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f25;161;32;161;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="isLoading;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;164;18;164;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f34;161;41;161;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="setState;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f19;171;27;171;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="toggle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f19;195;25;195;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Button.DEFAULTS;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f2;167;3;169;;;;vpos;;v;;r;;d20,167;;b0,0;;m">
+				<treenode node="loadingText;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;168;15;168;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="carousel;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;406;3;418;;;;vpos;;v;;r;;d36,406;;b0,0;;moption;;p">
+				<treenode node="action;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;411;16;411;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="Carousel;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f33;410;41;410;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;409;14;409;;;;vposCarousel;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f28;406;34;406;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;410;17;410;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Carousel;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;269;3;282;;;;vpos;;v;;r;;d45,269;;b0,0;;melement;;poptions;;p">
+				<treenode node="active;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;276;16;276;;;;vposCarousel;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="cycle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f37;281;42;281;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f27;269;34;269;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="getActiveIndex;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;302;35;302;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="indicators;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;271;20;271;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="interval;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;275;17;275;;;;vposCarousel;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="items;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;277;15;277;;;;vposCarousel;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="next;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;334;25;334;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f36;269;43;269;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="pause;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;321;26;321;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="paused;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;273;15;273;;;;vposCarousel;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="prev;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;339;25;339;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="slide;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;344;26;344;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="to;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;309;23;309;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Carousel.DEFAULTS;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f2;284;3;288;;;;vpos;;v;;r;;d22,284;;b0,0;;m">
+				<treenode node="interval;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;285;12;285;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="pause;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;286;9;286;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="wrap;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;287;8;287;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Collapse;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;475;3;482;;;;vpos;;v;;r;;d45,475;;b0,0;;melement;;poptions;;p">
+				<treenode node="Collapse;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f38;477;46;477;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="dimension;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;488;30;488;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f27;475;34;475;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="hide;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;537;25;537;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f36;475;43;475;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="parent;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f35;480;41;480;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="show;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;493;25;493;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="toggle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;573;27;573;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="transitioning;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;478;22;478;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Collapse.DEFAULTS;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f2;484;3;486;;;;vpos;;v;;r;;d22,484;;b0,0;;m">
+				<treenode node="toggle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;485;10;485;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="complete;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;518;5;525;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;557;5;563;;;;vpos;;v;;r;;d31,518;;b0,0;;m">
+				<treenode node="dimension;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;522;18;522;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f12;519;19;519;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f12;559;19;559;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="transitioning;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f11;523;24;523;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f11;558;24;558;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Dropdown;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;648;3;650;;;;vpos;;v;;r;;d36,648;;b0,0;;melement;;p">
+				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f27;648;34;648;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="keydown;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;683;28;683;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="toggle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f44;649;50;649;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="getParent;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f0;727;3;738;;;;vpos;;v;;r;;d28,727;;b0,0;;mthis;;p">
+				<treenode node="A;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f32;732;33;732;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="parent;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;735;15;735;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="selector;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;728;16;728;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="this;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f22;727;26;727;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="z;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f37;732;38;732;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="Za;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f34;732;36;732;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="HandlePlaceholder;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f0;86;1;123;;;;vpos;;v;;r;;d37,86;;b0,0;;moTextbox;;p">
+				<treenode node="onblur;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f21;107;13;114;;;;vpos;;v;;r;;d41,107;;b0,0;;m">
+					<treenode node="_this;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f20;108;25;108;;;;vposHandlePlaceholder;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="curPlaceholder;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f34;112;48;112;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+				<treenode node="onfocus;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f21;94;13;106;;;;vpos;;v;;r;;d42,94;;b0,0;;m">
+					<treenode node="_this;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f20;95;25;95;;;;vposHandlePlaceholder;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="curPlaceholder;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f36;104;50;104;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+				<treenode node="_placeholderSupport;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f9;87;28;87;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="curPlaceholder;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f12;88;26;88;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="originalTextbox;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f25;96;40;96;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="oTextbox;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f27;86;35;86;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="parentNode;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f25;99;35;99;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Modal;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;794;3;807;;;;vpos;;v;;r;;d42,794;;b0,0;;melement;;poptions;;p">
+				<treenode node="backdrop;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;797;18;797;;;;vposModal;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f24;794;31;794;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="enforceFocus;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f18;893;30;893;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="escape;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f18;903;24;903;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="hide;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f18;866;22;866;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="hideModal;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f18;913;27;913;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f33;794;40;794;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="removeBackdrop;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f18;922;32;922;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="show;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f18;819;22;819;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="toggle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f18;815;24;815;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Modal.DEFAULTS;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f2;809;3;813;;;;vpos;;v;;r;;d19,809;;b0,0;;m">
+				<treenode node="backdrop;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;810;12;810;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="keyboard;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;811;12;811;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="show;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;812;8;812;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="options;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;1107;21;1107;;;;vpos;;v;;r;;d19,1107;;b0,0;;m">
+			</treenode>
+			<treenode node="options.delay;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;1097;7;1100;;;;vpos;;v;;r;;d22,1097;;b0,0;;m">
+				<treenode node="hide;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;1099;12;1099;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f14;1098;21;1098;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="show;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;1098;12;1098;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Popover;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;1438;3;1440;;;;vpos;;v;;r;;d44,1438;;b0,0;;melement;;poptions;;p">
+				<treenode node="arrow;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1494;25;1494;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="constructor;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1457;31;1457;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f26;1438;33;1438;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="getContent;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1484;30;1484;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="getDefaults;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1459;31;1459;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="hasContent;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1480;30;1480;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f35;1438;42;1438;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="setContent;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1463;30;1463;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="tip;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1498;23;1498;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="relatedTarget;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;668;49;668;;;;vpos;;v;;r;;d26,668;;b0,0;;m">
+				<treenode node="relatedTarget;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f28;668;41;668;;;;vposrelatedTarget;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="ReplaceWithText;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f0;58;1;84;;;;vpos;;v;;r;;d43,58;;b0,0;;moPasswordTextbox;;p">
+				<treenode node="onblur;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f25;78;9;82;;;;vpos;;v;;r;;d45,78;;b0,0;;m">
+				</treenode>
+				<treenode node="_placeholderSupport;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f8;59;27;59;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="curName;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f12;68;19;68;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="curValue;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f12;69;20;69;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="document;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f19;61;27;61;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="dummyTextbox;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f21;79;33;79;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="i;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f13;67;14;67;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="oPasswordTextbox;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f25;58;41;58;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="oTextbox;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f8;61;16;61;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="parentNode;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f21;80;31;80;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="value;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f42;79;47;79;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="ScrollSpy;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f0;1549;3;1566;;;;vpos;;v;;r;;d39,1549;;b0,0;;melement;;poptions;;p">
+				<treenode node="activate;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f22;1623;30;1623;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="activeTarget;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;1562;21;1562;;;;vposScrollSpy;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="body;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1554;14;1554;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;1549;28;1549;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="href;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;1550;12;1550;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="offsets;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;1560;16;1560;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f30;1549;37;1549;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="process;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;1551;15;1551;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="refresh;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f22;1572;29;1572;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="scrollElement;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1555;23;1555;;;;vposScrollSpy;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="ScrollSpy;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f39;1556;48;1556;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="selector;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;1557;17;1557;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="targets;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;1561;16;1561;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="window;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f52;1553;58;1553;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="ScrollSpy.DEFAULTS;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f2;1568;3;1570;;;;vpos;;v;;r;;d23,1568;;b0,0;;m">
+				<treenode node="offset;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1569;10;1569;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Tab;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;1703;3;1705;;;;vpos;;v;;r;;d31,1703;;b0,0;;melement;;p">
+				<treenode node="activate;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f16;1739;24;1739;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f22;1703;29;1703;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="show;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f16;1707;20;1707;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Tooltip;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;1039;3;1048;;;;vpos;;v;;r;;d44,1039;;b0,0;;melement;;poptions;;p">
+				<treenode node="applyPlacement;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1218;34;1218;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="arrow;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1358;25;1358;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="destroy;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1387;27;1387;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="disable;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1374;27;1374;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f26;1039;33;1039;;;;vposTooltip;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="enable;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1370;26;1370;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="enabled;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;1042;16;1042;;;;vposTooltip;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="enter;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1117;25;1117;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="fixTitle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1317;28;1317;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="getCalculatedOffset;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1336;39;1336;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="getDefaults;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1089;31;1089;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="getDelegateOptions;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1106;38;1106;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="getOptions;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1093;30;1093;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="getPosition;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1328;31;1328;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="getTitle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1343;28;1343;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="hasContent;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1324;30;1324;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="hide;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1290;24;1290;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="hoverState;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;1044;19;1044;;;;vposTooltip;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="init;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1062;24;1062;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="leave;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1132;25;1132;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f35;1039;42;1039;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="replaceArrow;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1278;32;1278;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="setContent;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1282;30;1282;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="show;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1147;24;1147;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="tip;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1354;23;1354;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="toggle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1382;26;1382;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="toggleEnabled;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1378;33;1378;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="type;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;1040;13;1040;;;;vposTooltip;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="validate;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1362;28;1362;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Tooltip.DEFAULTS;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f2;1050;3;1060;;;;vpos;;v;;r;;d21,1050;;b0,0;;m">
+				<treenode node="animation;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1051;13;1051;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="container;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1059;13;1059;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="delay;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1057;9;1057;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="html;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1058;8;1058;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="placement;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1052;13;1052;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="selector;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1053;12;1053;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="template;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1054;12;1054;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="title;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1056;9;1056;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="trigger;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1055;11;1055;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="transitionEnd;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f0;23;3;40;;;;vpos;;v;;r;;d27,23;;b0,0;;m">
+				<treenode node="transEndEventNames;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;26;5;31;;;;vpos;;v;;r;;d29,26;;b0,0;;m">
+				</treenode>
+				<treenode node="document;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f13;24;21;24;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="el;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;24;10;24;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="end;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f17;35;20;35;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="name;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f13;33;17;33;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="transEndEventNames;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;26;26;26;;;;vpostransEndEventNames;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="undefined;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f29;34;38;34;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="_placeholderSupport;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f4;1;1;5;;;;vpos;;v;;r;;d37,1;;b0,0;;m">
+				<treenode node="document;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f12;2;20;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="t;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f8;2;9;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="affix;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;1910;3;1919;;;;vpos;;v;;r;;d33,1910;;b0,0;;moption;;p">
+				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1913;14;1913;;;;vposAffix;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f25;1910;31;1910;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1914;17;1914;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="alert;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;117;3;125;;;;vpos;;v;;r;;d33,117;;b0,0;;moption;;p">
+				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;120;14;120;;;;vposAlert;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f25;117;31;117;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="button;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;217;3;228;;;;vpos;;v;;r;;d34,217;;b0,0;;moption;;p">
+				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;220;14;220;;;;vposButton;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f26;217;32;217;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;221;17;221;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="clearMenus;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f0;715;3;725;;;;vpos;;v;;r;;d25,715;;b0,0;;me;;p">
+				<treenode node="relatedTarget;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;719;49;719;;;;vpos;;v;;r;;d26,719;;b0,0;;m">
+					<treenode node="relatedTarget;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f28;719;41;719;;;;vposrelatedTarget;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+				<treenode node="backdrop;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;716;14;716;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="e;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f22;715;23;715;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="parent;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f11;718;17;718;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="relatedTarget;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;719;23;719;;;;vposrelatedTarget;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="toggle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;717;12;717;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="collapse;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;583;3;593;;;;vpos;;v;;r;;d36,583;;b0,0;;moption;;p">
+				<treenode node="Collapse;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f33;587;41;587;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;586;14;586;;;;vposCollapse;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f28;583;34;583;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;587;17;587;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Debug;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f0;125;1;135;;;;vpos;;v;;r;;d20,125;;b0,0;;mmsg;;p">
+				<treenode node="_debug;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f15;126;21;126;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="document;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f23;127;31;127;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="msg;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f15;125;18;125;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="oConsole;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f12;127;20;127;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="dropdown;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;746;3;754;;;;vpos;;v;;r;;d36,746;;b0,0;;moption;;p">
+				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;749;14;749;;;;vposDropdown;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f28;746;34;746;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="emulateTransitionEnd;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;43;3;49;;;;vpos;;v;;r;;d50,43;;b0,0;;mduration;;p">
+				<treenode node="callback;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;46;88;46;;;;vpos;;v;;r;;d31,46;;b0,0;;m">
+					<treenode node="called;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f38;46;44;46;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="el;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f49;46;51;46;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+				<treenode node="callback;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f15;47;23;47;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="called;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;44;14;44;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="duration;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f40;43;48;43;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="el;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f25;44;27;44;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="HandlePlaceholderItemSubmit;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f0;46;1;56;;;;vpos;;v;;r;;d46,46;;b0,0;;melement;;p">
+				<treenode node="curPlaceholder;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f12;48;26;48;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f37;46;44;46;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="window;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f12;51;18;51;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
 			<treenode node="Login;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js;f0;0;1;27;;;;vpos;;v;;r;;d0,1;;b0,0;;m">
 				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\login.js;f22;11;26;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
@@ -1024,30 +1667,6 @@
 				<treenode node="selector;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f26;193;34;193;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f26;10105;34;10105;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="Affix;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;1829;3;1841;;;;vpos;;v;;r;;d42,1829;;b0,0;;melement;;poptions;;p">
-				<treenode node="Affix;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f32;1830;37;1830;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="affixed;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;1836;16;1836;;;;vposAffix;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="checkPosition;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f51;1832;64;1832;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="checkPositionWithEventLoop;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f51;1833;77;1833;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f24;1829;31;1829;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="getPinnedOffset;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f18;1849;33;1849;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f33;1829;40;1829;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="pinnedOffset;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;1838;21;1838;;;;vposAffix;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="window;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1831;16;1831;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="Affix.DEFAULTS;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f2;1845;3;1847;;;;vpos;;v;;r;;d19,1845;;b0,0;;m">
-				<treenode node="offset;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1846;10;1846;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
 			<treenode node="ajaxConvert;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f0;8764;1;8853;;;;vpos;;v;;r;;d54,8764;;b0,0;;ms;;presponse;;pjqXHR;;pisSuccess;;p">
 				<treenode node="converters;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f2;8766;17;8766;;;;vpos;;v;;r;;d15,8766;;b0,0;;m">
 				</treenode>
@@ -1098,14 +1717,6 @@
 				<treenode node="target;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f21;8689;27;8689;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="undefined;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f22;8694;31;8694;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="Alert;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;73;3;75;;;;vpos;;v;;r;;d30,73;;b0,0;;mel;;p">
-				<treenode node="close;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f36;74;41;74;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="dismiss;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f22;74;29;74;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="el;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f26;73;28;73;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="animateClass;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f10;10112;1;10185;;;;vpos;;v;;r;;d71,10112;;b0,0;;mvalue;;pduration;;peasing;;pcallback;;p">
@@ -1228,74 +1839,6 @@
 				<treenode node="value;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f22;8039;27;8039;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="Button;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;161;3;165;;;;vpos;;v;;r;;d43,161;;b0,0;;melement;;poptions;;p">
-				<treenode node="Button;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f34;163;40;163;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f25;161;32;161;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="isLoading;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;164;18;164;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f34;161;41;161;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="setState;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f19;171;27;171;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="toggle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f19;195;25;195;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="Button.DEFAULTS;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f2;167;3;169;;;;vpos;;v;;r;;d20,167;;b0,0;;m">
-				<treenode node="loadingText;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;168;15;168;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="carousel;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;406;3;418;;;;vpos;;v;;r;;d36,406;;b0,0;;moption;;p">
-				<treenode node="action;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;411;16;411;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="Carousel;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f33;410;41;410;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;409;14;409;;;;vposCarousel;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f28;406;34;406;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;410;17;410;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="Carousel;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;269;3;282;;;;vpos;;v;;r;;d45,269;;b0,0;;melement;;poptions;;p">
-				<treenode node="active;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;276;16;276;;;;vposCarousel;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="cycle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f37;281;42;281;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f27;269;34;269;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="getActiveIndex;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;302;35;302;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="indicators;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;271;20;271;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="interval;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;275;17;275;;;;vposCarousel;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="items;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;277;15;277;;;;vposCarousel;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="next;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;334;25;334;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f36;269;43;269;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="pause;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;321;26;321;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="paused;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;273;15;273;;;;vposCarousel;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="prev;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;339;25;339;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="slide;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;344;26;344;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="to;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;309;23;309;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="Carousel.DEFAULTS;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f2;284;3;288;;;;vpos;;v;;r;;d22,284;;b0,0;;m">
-				<treenode node="interval;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;285;12;285;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="pause;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;286;9;286;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="wrap;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;287;8;287;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
 			<treenode node="clamp;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f0;9516;1;9540;;;;vpos;;v;;r;;d42,9516;;b0,0;;mvalue;;pprop;;pallowEmpty;;p">
 				<treenode node="allowEmpty;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f29;9516;39;9516;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
@@ -1344,38 +1887,16 @@
 				<treenode node="wrapper;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f2;10847;9;10847;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="Collapse;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;475;3;482;;;;vpos;;v;;r;;d45,475;;b0,0;;melement;;poptions;;p">
-				<treenode node="Collapse;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f38;477;46;477;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="dimension;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;488;30;488;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f27;475;34;475;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="hide;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;537;25;537;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f36;475;43;475;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="parent;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f35;480;41;480;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="show;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;493;25;493;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="toggle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;573;27;573;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="transitioning;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;478;22;478;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="Collapse.DEFAULTS;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f2;484;3;486;;;;vpos;;v;;r;;d22,484;;b0,0;;m">
-				<treenode node="toggle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;485;10;485;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
 			<treenode node="color.support;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f11;9490;29;9490;;;;vpos;;v;;r;;d27,9490;;b0,0;;m">
 			</treenode>
-			<treenode node="complete;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;518;5;525;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;557;5;563;;;;vpos;;v;;r;;d31,518;;b0,0;;m">
-				<treenode node="dimension;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;522;18;522;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="complete;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;557;5;563;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1206;5;1298;;;;vpos;;v;;r;;d24,1295;;b0,0;;m">
+				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f12;559;19;559;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f14;1207;21;1207;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f12;519;19;519;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f12;559;19;559;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="that;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;1207;12;1207;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="transitioning;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f11;523;24;523;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f11;558;24;558;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="tip;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f36;1296;39;1296;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="transitioning;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f11;558;24;558;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="computeStyleTests;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f0;6382;2;6424;;;;vpos;;v;;r;;d30,6382;;b0,0;;m">
@@ -1686,14 +2207,6 @@
 				<treenode node="show;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f2;10905;6;10905;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="Dropdown;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;648;3;650;;;;vpos;;v;;r;;d36,648;;b0,0;;melement;;p">
-				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f27;648;34;648;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="keydown;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;683;28;683;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="toggle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f44;649;50;649;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
 			<treenode node="elemdisplay;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f1;5973;17;5973;;;;vpos;;v;;r;;d15,5973;;b0,0;;m">
 			</treenode>
 			<treenode node="Event;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f7;4889;1;4926;;;;vpos;;vjQuery.Event.prototype;;c;;r;;d38,4889;;b0,0;;msrc;;pprops;;p">
@@ -1896,20 +2409,6 @@
 				<treenode node="raw;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f5;1082;8;1082;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="width;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f3;1085;8;1085;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="getParent;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f0;727;3;738;;;;vpos;;v;;r;;d28,727;;b0,0;;mthis;;p">
-				<treenode node="A;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f32;732;33;732;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="parent;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;735;15;735;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="selector;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;728;16;728;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="this;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f22;727;26;727;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="z;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f37;732;38;732;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="Za;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f34;732;36;732;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="getWidthOrHeight;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f0;6594;1;6635;;;;vpos;;v;;r;;d47,6594;;b0,0;;melem;;pname;;pextra;;p">
@@ -2806,34 +3305,30 @@
 				<treenode node="whitespace;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f82;707;92;707;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="Modal;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;794;3;807;;;;vpos;;v;;r;;d42,794;;b0,0;;melement;;poptions;;p">
-				<treenode node="backdrop;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;797;18;797;;;;vposModal;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="modal;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;975;3;985;;;;vpos;;v;;r;;d49,975;;b0,0;;moption;;p_relatedTarget;;p">
+				<treenode node="_relatedTarget;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f33;975;47;975;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f24;794;31;794;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;978;14;978;;;;vposModal;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="enforceFocus;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f18;893;30;893;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="Modal;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f33;979;38;979;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="escape;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f18;903;24;903;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f25;975;31;975;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="hide;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f18;866;22;866;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="hideModal;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f18;913;27;913;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f33;794;40;794;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="removeBackdrop;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f18;922;32;922;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="show;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f18;819;22;819;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="toggle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f18;815;24;815;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;979;17;979;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="Modal.DEFAULTS;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f2;809;3;813;;;;vpos;;v;;r;;d19,809;;b0,0;;m">
-				<treenode node="backdrop;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;810;12;810;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="next;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f0;1745;5;1765;;;;vpos;;v;;r;;d20,1745;;b0,0;;m">
+				<treenode node="active;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;1746;13;1746;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="keyboard;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;811;12;811;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="callback;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;1764;14;1764;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="show;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;812;8;812;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;1751;13;1751;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="transition;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1753;20;1753;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="noConflict;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f13;133;3;1930;;;;vpos;;v;;r;;d38,1927;;b0,0;;m">
+				<treenode node="old;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f17;134;20;134;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="nodeHook;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f1;8104;2;8121;;;;vpos;;v;;r;;d12,8104;;b0,0;;m">
@@ -6088,36 +6583,40 @@
 				<treenode node="Zb;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery.dataTables.min.js;f437;76;439;76;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="options;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;1107;21;1107;;;;vpos;;v;;r;;d19,1107;;b0,0;;m">
-			</treenode>
-			<treenode node="options.delay;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;1097;7;1100;;;;vpos;;v;;r;;d22,1097;;b0,0;;m">
-				<treenode node="hide;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;1099;12;1099;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="onload;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f7;7;1;37;;;;vpos;;v;;r;;d27,7;;b0,0;;m">
+				<treenode node="_placeholderSupport;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f9;23;28;23;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f14;1098;21;1098;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="arrInputs;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f8;8;17;8;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="show;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;1098;12;1098;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="arrTextareas;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f8;9;20;9;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="combinedArray;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f8;10;21;10;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="curInput;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f12;16;20;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="document;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f20;8;28;8;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="i;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f13;11;14;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="oForm;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f16;25;21;25;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="optionsCache;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f4;3032;21;3032;;;;vpos;;v;;r;;d19,3032;;b0,0;;m">
 			</treenode>
-			<treenode node="Popover;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;1438;3;1440;;;;vpos;;v;;r;;d44,1438;;b0,0;;melement;;poptions;;p">
-				<treenode node="arrow;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1494;25;1494;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="PlaceholderFormSubmit;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f0;39;1;44;;;;vpos;;v;;r;;d38,39;;b0,0;;moForm;;p">
+				<treenode node="curElement;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f12;41;22;41;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="constructor;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1457;31;1457;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="i;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f13;40;14;40;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f26;1438;33;1438;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="oForm;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f31;39;36;39;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="getContent;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1484;30;1484;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="popover;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;1509;3;1519;;;;vpos;;v;;r;;d35,1509;;b0,0;;moption;;p">
+				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1512;14;1512;;;;vposPopover;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="getDefaults;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1459;31;1459;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f27;1509;33;1509;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="hasContent;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1480;30;1480;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f35;1438;42;1438;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="setContent;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1463;30;1463;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="tip;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1498;23;1498;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1513;17;1513;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="position;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f5;1168;1;1346;;;;vpos;;v;;r;;d36,1168;;b0,0;;moptions;;p">
@@ -6354,8 +6853,8 @@
 				<treenode node="target;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f12;757;18;757;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="relatedTarget;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;668;49;668;;;;vpos;;v;;r;;d26,668;;b0,0;;m">
-				<treenode node="relatedTarget;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f28;668;41;668;;;;vposrelatedTarget;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="removeElement;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f0;100;5;102;;;;vpos;;v;;r;;d29,100;;b0,0;;m">
+				<treenode node="parent;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;101;13;101;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="respond;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\respond.js;f5;6;17;6;;;;vpos;;v;;r;;d15,6;;b0,0;;m">
@@ -6622,38 +7121,12 @@
 				<treenode node="width;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f2;11457;7;11457;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="ScrollSpy;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f0;1549;3;1566;;;;vpos;;v;;r;;d39,1549;;b0,0;;melement;;poptions;;p">
-				<treenode node="activate;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f22;1623;30;1623;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="scrollspy;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;1653;3;1662;;;;vpos;;v;;r;;d37,1653;;b0,0;;moption;;p">
+				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1656;14;1656;;;;vposScrollSpy;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="activeTarget;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;1562;21;1562;;;;vposScrollSpy;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f29;1653;35;1653;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="body;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1554;14;1554;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f21;1549;28;1549;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="href;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;1550;12;1550;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="offsets;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;1560;16;1560;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f30;1549;37;1549;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="process;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;1551;15;1551;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="refresh;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f22;1572;29;1572;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="scrollElement;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1555;23;1555;;;;vposScrollSpy;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="ScrollSpy;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f39;1556;48;1556;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="selector;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;1557;17;1557;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="targets;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;1561;16;1561;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="window;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f52;1553;58;1553;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="ScrollSpy.DEFAULTS;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f2;1568;3;1570;;;;vpos;;v;;r;;d23,1568;;b0,0;;m">
-				<treenode node="offset;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1569;10;1569;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1657;17;1657;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="setDocument;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f21;1048;1;1405;;;;vpos;;v;;r;;d52,1048;;b0,0;;mnode;;p">
@@ -7334,12 +7807,10 @@
 			</treenode>
 			<treenode node="support;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f4;63;16;63;;;;vpos;;v;;r;;d14,63;;b0,0;;m">
 			</treenode>
-			<treenode node="Tab;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;1703;3;1705;;;;vpos;;v;;r;;d31,1703;;b0,0;;melement;;p">
-				<treenode node="activate;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f16;1739;24;1739;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="tab;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;1782;3;1790;;;;vpos;;v;;r;;d33,1782;;b0,0;;moption;;p">
+				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1785;14;1785;;;;vposTab;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f22;1703;29;1703;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="show;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f16;1707;20;1707;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f24;1782;30;1782;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="testElementStyle;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f1;1515;2;1522;;;;vpos;;v;;r;;d20,1515;;b0,0;;m">
@@ -7388,84 +7859,12 @@
 				<treenode node="type;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f29;2023;33;2023;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="Tooltip;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;1039;3;1048;;;;vpos;;v;;r;;d44,1039;;b0,0;;melement;;poptions;;p">
-				<treenode node="applyPlacement;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1218;34;1218;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="tooltip;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;1398;3;1408;;;;vpos;;v;;r;;d35,1398;;b0,0;;moption;;p">
+				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1401;14;1401;;;;vposTooltip;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="arrow;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1358;25;1358;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f27;1398;33;1398;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="destroy;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1387;27;1387;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="disable;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1374;27;1374;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f26;1039;33;1039;;;;vposTooltip;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="enable;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1370;26;1370;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="enabled;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;1042;16;1042;;;;vposTooltip;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="enter;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1117;25;1117;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="fixTitle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1317;28;1317;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="getCalculatedOffset;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1336;39;1336;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="getDefaults;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1089;31;1089;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="getDelegateOptions;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1106;38;1106;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="getOptions;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1093;30;1093;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="getPosition;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1328;31;1328;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="getTitle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1343;28;1343;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="hasContent;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1324;30;1324;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="hide;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1290;24;1290;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="hoverState;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;1044;19;1044;;;;vposTooltip;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="init;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1062;24;1062;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="leave;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1132;25;1132;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f35;1039;42;1039;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="replaceArrow;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1278;32;1278;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="setContent;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1282;30;1282;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="show;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1147;24;1147;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="tip;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1354;23;1354;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="toggle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1382;26;1382;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="toggleEnabled;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1378;33;1378;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="type;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f9;1040;13;1040;;;;vposTooltip;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="validate;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f20;1362;28;1362;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="Tooltip.DEFAULTS;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f2;1050;3;1060;;;;vpos;;v;;r;;d21,1050;;b0,0;;m">
-				<treenode node="animation;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1051;13;1051;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="container;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1059;13;1059;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="delay;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1057;9;1057;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="html;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1058;8;1058;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="placement;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1052;13;1052;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="selector;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1053;12;1053;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="template;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1054;12;1054;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="title;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1056;9;1056;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="trigger;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;1055;11;1055;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1402;17;1402;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="transfer;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f38;11736;1;11765;;;;vpos;;v;;r;;d69,11736;;b0,0;;mo;;pdone;;p">
@@ -7522,22 +7921,6 @@
 				<treenode node="transfer;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f2;11751;10;11751;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="width;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f4;11758;9;11758;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="transitionEnd;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f0;23;3;40;;;;vpos;;v;;r;;d27,23;;b0,0;;m">
-				<treenode node="transEndEventNames;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;26;5;31;;;;vpos;;v;;r;;d29,26;;b0,0;;m">
-				</treenode>
-				<treenode node="document;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f13;24;21;24;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="el;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;24;10;24;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="end;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f17;35;20;35;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="name;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f13;33;17;33;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="transEndEventNames;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;26;26;26;;;;vpostransEndEventNames;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="undefined;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f29;34;38;34;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="transports;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f1;8609;16;8609;;;;vpos;;v;;r;;d14,8609;;b0,0;;m">
@@ -7852,14 +8235,6 @@
 				<treenode node="structure;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f38;8630;47;8630;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="affix;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;1910;3;1919;;;;vpos;;v;;r;;d33,1910;;b0,0;;moption;;p">
-				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1913;14;1913;;;;vposAffix;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f25;1910;31;1910;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1914;17;1914;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
 			<treenode node="ajax;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\respond.js;f2;28;3;44;;;;vpos;;v;;r;;d35,28;;b0,0;;murl;;pcallback;;p">
 				<treenode node="onreadystatechange;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\respond.js;f7;34;4;39;;;;vpos;;v;;r;;d40,34;;b0,0;;m">
 					<treenode node="req;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\respond.js;f9;35;12;35;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -7892,12 +8267,6 @@
 				<treenode node="type;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f39;8710;43;8710;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="undefined;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f14;8717;23;8717;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="alert;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;117;3;125;;;;vpos;;v;;r;;d33,117;;b0,0;;moption;;p">
-				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;120;14;120;;;;vposAlert;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f25;117;31;117;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="animated;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f20;10033;1;10037;;;;vpos;;v;;r;;d48,10033;;b0,0;;melem;;p">
@@ -8068,14 +8437,6 @@
 				<treenode node="traditional;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f35;9475;46;9475;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="button;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;217;3;228;;;;vpos;;v;;r;;d34,217;;b0,0;;moption;;p">
-				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;220;14;220;;;;vposButton;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f26;217;32;217;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;221;17;221;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
 			<treenode node="Callbacks;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f7;3065;1;3227;;;;vpos;;v;;r;;d39,3065;;b0,0;;moptions;;p">
 				<treenode node="self;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f2;3117;3;3224;;;;vpos;;v;;r;;d9,3117;;b0,0;;m">
 					<treenode node="add;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f3;3119;4;3148;;;;vpos;;v;;r;;d19,3119;;b0,0;;m">
@@ -8218,22 +8579,6 @@
 				<treenode node="stack;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f2;3088;7;3088;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="clearMenus;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f0;715;3;725;;;;vpos;;v;;r;;d25,715;;b0,0;;me;;p">
-				<treenode node="relatedTarget;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;719;49;719;;;;vpos;;v;;r;;d26,719;;b0,0;;m">
-					<treenode node="relatedTarget;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f28;719;41;719;;;;vposrelatedTarget;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-				</treenode>
-				<treenode node="backdrop;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;716;14;716;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="e;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f22;715;23;715;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="parent;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f11;718;17;718;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="relatedTarget;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;719;23;719;;;;vposrelatedTarget;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="toggle;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;717;12;717;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
 			<treenode node="cloneCopyEvent;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f0;5362;1;5388;;;;vpos;;v;;r;;d37,5362;;b0,0;;msrc;;pdest;;p">
 				<treenode node="curData.events;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f2;5375;21;5375;;;;vpos;;v;;r;;d19,5375;;b0,0;;m">
 				</treenode>
@@ -8254,16 +8599,6 @@
 				<treenode node="src;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f25;5362;28;5362;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="type;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f5;5368;9;5368;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="collapse;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;583;3;593;;;;vpos;;v;;r;;d36,583;;b0,0;;moption;;p">
-				<treenode node="Collapse;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f33;587;41;587;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;586;14;586;;;;vposCollapse;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f28;583;34;583;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;587;17;587;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="Color;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f16;9439;2;9441;;;;vpos;;v;;r;;d62,9439;;b0,0;;mcolor;;pgreen;;pblue;;palpha;;p">
@@ -8294,14 +8629,6 @@
 				<treenode node="selector;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f37;2434;45;2434;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="setMatchers;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f2;2436;13;2436;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="complete;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1206;5;1298;;;;vpos;;v;;r;;d24,1295;;b0,0;;m">
-				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f14;1207;21;1207;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="that;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;1207;12;1207;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="tip;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f36;1296;39;1296;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="completed;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f0;3448;1;3454;;;;vpos;;v;;r;;d21,3448;;b0,0;;m">
@@ -8584,12 +8911,6 @@
 				<treenode node="jQuery;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f14;5340;20;5340;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="dropdown;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;746;3;754;;;;vpos;;v;;r;;d36,746;;b0,0;;moption;;p">
-				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;749;14;749;;;;vposDropdown;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f28;746;34;746;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
 			<treenode node="elementMatcher;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f0;2152;1;2164;;;;vpos;;v;;r;;d36,2152;;b0,0;;mmatchers;;p">
 				<treenode node="context;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f18;2154;25;2154;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
@@ -8600,22 +8921,6 @@
 				<treenode node="matchers;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f25;2152;33;2152;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="xml;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f27;2154;30;2154;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="emulateTransitionEnd;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;43;3;49;;;;vpos;;v;;r;;d50,43;;b0,0;;mduration;;p">
-				<treenode node="callback;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;46;88;46;;;;vpos;;v;;r;;d31,46;;b0,0;;m">
-					<treenode node="called;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f38;46;44;46;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="el;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f49;46;51;46;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-				</treenode>
-				<treenode node="callback;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f15;47;23;47;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="called;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;44;14;44;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="duration;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f40;43;48;43;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="el;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f25;44;27;44;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="error;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f7;1469;1;1471;;;;vpos;;v;;r;;d31,1469;;b0,0;;mmsg;;p">
@@ -9066,18 +9371,6 @@
 				<treenode node="support;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f6;1420;13;1420;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="modal;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;975;3;985;;;;vpos;;v;;r;;d49,975;;b0,0;;moption;;p_relatedTarget;;p">
-				<treenode node="_relatedTarget;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f33;975;47;975;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;978;14;978;;;;vposModal;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="Modal;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f33;979;38;979;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f25;975;31;975;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;979;17;979;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
 			<treenode node="multipleContexts;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f0;2461;1;2468;;;;vpos;;v;;r;;d57,2461;;b0,0;;mselector;;pcontexts;;presults;;p">
 				<treenode node="contexts;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f37;2461;45;2461;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
@@ -9090,17 +9383,7 @@
 				<treenode node="selector;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f27;2461;35;2461;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="next;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f0;1745;5;1765;;;;vpos;;v;;r;;d20,1745;;b0,0;;m">
-				<treenode node="active;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;1746;13;1746;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="callback;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;1764;14;1764;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="element;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f6;1751;13;1751;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="transition;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1753;20;1753;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="noConflict;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f7;10312;1;10322;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f13;133;3;1930;;;;vpos;;v;;r;;d37,10312;;b0,0;;mdeep;;p">
+			<treenode node="noConflict;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f7;10312;1;10322;;;;vpos;;v;;r;;d37,10312;;b0,0;;mdeep;;p">
 				<treenode node="_;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f13;10314;14;10314;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="_jQuery;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f18;10318;25;10318;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -9196,14 +9479,6 @@
 				<treenode node="xml;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f5;8556;8;8556;;;;vposActiveXObject;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="popover;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;1509;3;1519;;;;vpos;;v;;r;;d35,1509;;b0,0;;moption;;p">
-				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1512;14;1512;;;;vposPopover;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f27;1509;33;1509;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1513;17;1513;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
 			<treenode node="promise;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f13;3456;1;3515;;;;vpos;;v;;r;;d39,3456;;b0,0;;mobj;;p">
 				<treenode node="doScrollCheck;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f33;3456;5;3510;;;;vpos;;v;;r;;d30,3493;;b0,0;;m">
 					<treenode node="doScrollCheck;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f26;3501;39;3501;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -9292,10 +9567,6 @@
 				<treenode node="jQuery;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f1;3378;7;3378;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="removeElement;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f0;100;5;102;;;;vpos;;v;;r;;d29,100;;b0,0;;m">
-				<treenode node="parent;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;101;13;101;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
 			<treenode node="restoreScript;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f0;5343;1;5351;;;;vpos;;v;;r;;d31,5343;;b0,0;;melem;;p">
 				<treenode node="elem;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f24;5343;28;5343;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
@@ -9318,14 +9589,6 @@
 				<treenode node="document;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f9;4247;17;4247;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="err;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f11;4248;14;4248;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="scrollspy;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;1653;3;1662;;;;vpos;;v;;r;;d37,1653;;b0,0;;moption;;p">
-				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1656;14;1656;;;;vposScrollSpy;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f29;1653;35;1653;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1657;17;1657;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="select;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f0;2470;1;2532;;;;vpos;;v;;r;;d52,2470;;b0,0;;mselector;;pcontext;;presults;;pseed;;p">
@@ -9610,12 +9873,6 @@
 				<treenode node="ret;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f5;6431;8;6431;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="tab;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;1782;3;1790;;;;vpos;;v;;r;;d33,1782;;b0,0;;moption;;p">
-				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1785;14;1785;;;;vposTab;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f24;1782;30;1782;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
 			<treenode node="testContext;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f0;1024;1;1026;;;;vpos;;v;;r;;d32,1024;;b0,0;;mcontext;;p">
 				<treenode node="context;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f22;1024;29;1024;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
@@ -9662,14 +9919,6 @@
 				<treenode node="rgba;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f27;9806;31;9806;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="s;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f5;9819;6;9819;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-			</treenode>
-			<treenode node="tooltip;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f7;1398;3;1408;;;;vpos;;v;;r;;d35,1398;;b0,0;;moption;;p">
-				<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1401;14;1401;;;;vposTooltip;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="option;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f27;1398;33;1398;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-				</treenode>
-				<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f10;1402;17;1402;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="toSelector;JS:Function Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f0;2089;1;2097;;;;vpos;;v;;r;;d30,2089;;b0,0;;mtokens;;p">
@@ -9747,6 +9996,8 @@
 				</treenode>
 			</treenode>
 			<treenode node="_;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f1;10310;2;10310;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="_debug;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f4;0;10;0;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="_jQuery;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f1;10307;8;10307;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -9884,7 +10135,7 @@
 			</treenode>
 			<treenode node="curCSS;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f15;6107;21;6107;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="d;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f20;9386;21;9386;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;172;9;172;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="d;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js;f20;9386;21;9386;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;172;9;172;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="data;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;175;12;175;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -10154,7 +10405,7 @@
 			</treenode>
 			<treenode node="opt;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f23;7692;26;7692;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f31;9585;38;9585;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\html5shiv.js;f6;9;13;9;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f52;1062;59;1062;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="options;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f31;9585;38;9585;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\html5shiv.js;f6;9;13;9;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f52;1062;59;1062;;;;vposoptions;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="optionsCache;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f4;3032;16;3032;;;;vposoptionsCache;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -10548,7 +10799,7 @@
 			</treenode>
 			<treenode node="width;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f8;1221;13;1221;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="window;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery.dataTables.min.js;f433;157;439;157;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f9;37;15;37;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\html5shiv.js;f11;3;17;3;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;451;10;451;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="window;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery.dataTables.min.js;f433;157;439;157;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f9;37;15;37;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\html5shiv.js;f11;3;17;3;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js;f0;7;6;7;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\bootstrap.js;f4;451;10;451;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="wrapMap;JS:JS Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js;f1;5277;8;5277;;;;vposwrapMap;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -10596,6 +10847,7 @@
 	</todoblock>
 	<filescache>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\respond.js" crc="-249769239"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\placeholderie8.js" crc="1748174729"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery.dataTables.min.js" crc="-1426122168"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-ui.js" crc="1224662630"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\js\other\jquery-1.11.0.js" crc="-1920260540"/>
@@ -10612,21 +10864,28 @@
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_cobertura.php" crc="-1443723862"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\pp_bolo.php" crc="1509013473"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\database\mysql.php" crc="1784315564"/>
-		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\header.php" crc="330049146"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\header.php" crc="-2069804902"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\footer.php" crc="21709661"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\conf.php" crc="855219718"/>
-		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpageaj.php" crc="-1411816196"/>
-		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpage.php" crc="1126403348"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpageaj.php" crc="1650260320"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\includes\allpage.php" crc="-2027611543"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\fonction\function.php" crc="2016656268"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\css\uploadfile.min.css" crc="917618928"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\css\jquery.dataTables.css" crc="-8520681"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\css\jquery-ui.css" crc="814549973"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\css\bootstrap.min.css" crc="289853837"/>
-		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\css\bootstrap.css" crc="1284449793"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\css\bootstrap.css" crc="867921419"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\css\bootstrap-theme.min.css" crc="729771799"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\css\bootstrap-theme.css" crc="198259953"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogout.php" crc="1850796665"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajlogin.php" crc="1904570456"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajinsert_recheio.php" crc="-1112552975"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajinsert_massa.php" crc="-1870756888"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\ajax\ajinsert_cobertura.php" crc="1339316164"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\insert_recheio.php" crc="1979037657"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\insert_massa.php" crc="-880954890"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\insert_cobertura.php" crc="-42987571"/>
+		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\insert_bolonosso.php" crc="-1159622743"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\info.php" crc="1902731744"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\pp-encomendas\index.php" crc="-1282551662"/>
 	</filescache>

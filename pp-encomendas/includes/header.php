@@ -43,7 +43,7 @@ if(isset($_SESSION['username']))
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <!-- On ouvre la fenêtre à la largeur de l'écran -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Guias Reparação</title>
+        <title>Encomendas</title>
         <!-- Intégration du CSS Bootstrap -->
         <link href="css/bootstrap.css" rel="stylesheet" media="screen">
         <link href="css/uploadfile.min.css" rel="stylesheet" >
@@ -141,17 +141,21 @@ if(isset($_SESSION['username']))
                         <?php if($login != "Entrar"){ ?>
 <!--                        <li><a href="#">Início</a></li>-->
 	                        <li class="dropdown">
-	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Guias de Reparações<b class="caret"></b></a>
-	                            <ul class="dropdown-menu">
-	                              <li><a href="searchgr.php">Procurar</a></li>
-	                              <li><a href="insertgr.php">Inserir</a></li>
+	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Encomendas<b class="caret"></b></a>
+	                            <ul class="dropdown-menu" role="menu">
+	                              <li class="dropdown-submenu">
+	                              	<a tabindex="-1" href="#">Inserir</a>
+	                              	<ul class="dropdown-menu">
+      						<li><a href="insertgr.php">Bolo dos nossos</a></li>
+      						<li><a href="insertgr.php">Bolo a pedido</a></li>
+    					</ul>
+	                              </li>
 	                              <li class="divider"></li>
-	                              <li><a href="insertgrcopy.php">Inserir a Copiar de Outra Guia</a></li>
+	                              <li><a href="insertgr.php">Consultar</a></li>
 	                              <li class="divider"></li>
-	                              <li><a href="anextalao.php">Anexar Talão a guia</a></li>
-	                              <li><a href="anexguia.php">Anexar Guia de Entregue a Guia</a></li>
 	                              <li class="divider"></li>
-	                              <li><a href="modifgr.php">Alterações</a></li>
+	                              <li class="divider"></li>
+	                              
 	<!--                              <li><a href="#">Something else here</a></li>
 	                              <li class="divider"></li>
 	                              <li><a href="#">Separated link</a></li>
@@ -159,7 +163,7 @@ if(isset($_SESSION['username']))
 	                              <li><a href="#">One more separated link</a></li>-->
 	                            </ul>
 	                        </li>
-	                        <li class="dropdown">
+	                        <!--<li class="dropdown">
 	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reparadores<b class="caret"></b></a>
 	                            <ul class="dropdown-menu">
 	                              <li><a href="searchreparador.php">Consultar</a></li>
@@ -186,31 +190,21 @@ if(isset($_SESSION['username']))
 	                              <li class="divider"></li>
 	                              <li><a href="closegr.php">Fechar Guia</a></li>                          
 	                            </ul>
-	                        </li>
-	                        <li class="dropdown">
-	                        	<?php 
-	                        	if($_SESSION['username'] != "Admin")
-	                        	{?>
-						<a href="adminlogin.php">Admin</a>
-						<?php
-					}?>
-	                        	
-	                        </li>
+	                        </li>-->
 	                        <?php
-	                        	if($_SESSION['username'] == "Admin")
+	                        	if($_SESSION['username'] == "admin")
 	                        	{?>
 						<li class="dropdown">
 			                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administração<b class="caret"></b></a>
 			                            <ul class="dropdown-menu">
-			                              <li><a href="deletegr.php">Eliminar guia</a></li>
-			                              <li><a href="recupgr.php">Recuperar Guia</a></li>
+			                              <li><a href="insert_recheio.php">Inserir Recheio</a></li>
+			                              <li><a href="insert_cobertura.php">Inserir Cobertura</a></li>
+			                              <li><a href="insert_massa.php">Inserir Massa</a></li>
 			                              <li class="divider"></li>
-			                              <li><a href="adduser.php">Adicionar funcionario</a></li>
+			                              <li><a href="insert_bolonosso.php">Inserir bolo nosso</a></li>
+			                              <!--<li><a href="deluser.php">Adicionar funcionario</a></li>
 			                              <li><a href="deluser.php">Desativar funcionario</a></li>
-			                              <li><a href="activeuser.php">Reactivar funcionario</a></li>
-			                              <li class="divider"></li>
-			                              <li><a href="addsection.php">Adicionar Secção</a></li>
-			                              <li><a href="delsection.php">Desactivar Secção</a></li>	                              
+			                              <li><a href="activeuser.php">Reactivar funcionario</a></li> -->                            
 			                            </ul>
 			                        </li>
 			                        <?php 

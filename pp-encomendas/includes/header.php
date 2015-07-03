@@ -106,7 +106,7 @@ if(isset($_SESSION['username']))
 	}
         </script>
         <!-- para o file upload -->
-        <!--<script src="js/other/jquery.uploadfile.js"></script>-->
+        <script src="js/other/jquery.uploadfile.js"></script>
         <!-- script para ver um pouco da guia -->
         <!--<script src="js/viewDataGr.js"></script>
         <script src="js/viewDataRep.js"></script>-->

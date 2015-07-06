@@ -1,0 +1,21 @@
+exemplo1:
+port=25
+ipaddressserver=219.21.221.141
+ssl=false
+login=backup@fafedis.pt
+password=backup
+sender=backup@fafedis.pt
+receipt=informatica@fafedis.pt
+deletefile=18
+folderlog=C:\\Program Files\\Tecnopack\\DigiGes\\log
+
+exemplo2:
+port=587
+ipaddressserver=219.21.221.141
+ssl=true
+login=backup@fafedis.pt
+password=backup
+sender=backup@fafedis.pt
+receipt=informatica@fafedis.pt
+deletefile=18
+folderlog=C:\\Program Files\\Tecnopack\\DigiGes\\log

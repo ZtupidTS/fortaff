@@ -1,0 +1,5 @@
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\checklogbalancas\checkLogBalancas\checkLogBalancas\bin\Debug\checkLogBalancas.exe
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\checklogbalancas\checkLogBalancas\checkLogBalancas\bin\Debug\checkLogBalancas.pdb
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\checklogbalancas\checkLogBalancas\checkLogBalancas\obj\x86\Debug\checkLogBalancas.exe
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\checklogbalancas\checkLogBalancas\checkLogBalancas\obj\x86\Debug\checkLogBalancas.pdb
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\checklogbalancas\checkLogBalancas\checkLogBalancas\bin\Debug\checkLogBalancas.exe.config

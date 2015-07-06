@@ -1,0 +1,9 @@
+port=25
+ipaddressserver=219.21.221.141
+ssl=false
+login=backup@fafedis.pt
+password=backup
+sender=backup@fafedis.pt
+receipt=informatica@fafedis.pt
+deletefile=3
+folderlog=C:\\log

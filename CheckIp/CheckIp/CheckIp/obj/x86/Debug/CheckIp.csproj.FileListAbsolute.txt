@@ -1,0 +1,7 @@
+C:\Users\Utilizador\Desktop\meu\toprima\CheckIp\CheckIp\CheckIp\bin\Debug\CheckIp.exe
+C:\Users\Utilizador\Desktop\meu\toprima\CheckIp\CheckIp\CheckIp\bin\Debug\CheckIp.pdb
+C:\Users\Utilizador\Desktop\meu\toprima\CheckIp\CheckIp\CheckIp\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Utilizador\Desktop\meu\toprima\CheckIp\CheckIp\CheckIp\obj\x86\Debug\CheckIp.exe
+C:\Users\Utilizador\Desktop\meu\toprima\CheckIp\CheckIp\CheckIp\obj\x86\Debug\CheckIp.pdb
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima2\CheckIp\CheckIp\CheckIp\obj\x86\Debug\CheckIp.exe
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima2\CheckIp\CheckIp\CheckIp\obj\x86\Debug\CheckIp.pdb

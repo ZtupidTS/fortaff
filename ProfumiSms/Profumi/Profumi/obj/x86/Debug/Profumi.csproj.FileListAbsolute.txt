@@ -1,0 +1,47 @@
+C:\Users\Utilizador\Desktop\meu\toprima\ProfumiSms\Profumi\Profumi\bin\Debug\Profumi.exe
+C:\Users\Utilizador\Desktop\meu\toprima\ProfumiSms\Profumi\Profumi\bin\Debug\Profumi.pdb
+C:\Users\Utilizador\Desktop\meu\toprima\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.Properties.Resources.resources
+C:\Users\Utilizador\Desktop\meu\toprima\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.csproj.GenerateResource.Cache
+C:\Users\Utilizador\Desktop\meu\toprima\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.exe
+C:\Users\Utilizador\Desktop\meu\toprima\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.pdb
+C:\Users\Utilizador\Desktop\meu\toprima\ProfumiSms\Profumi\Profumi\bin\Debug\Profumi.exe.config
+C:\Users\Utilizador\Desktop\meu\toprima\ProfumiSms\Profumi\Profumi\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Utilizador\Desktop\meu\toprima\ProfumiSms\Profumi\Profumi\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Utilizador\Desktop\meu\toprima\ProfumiSms\Profumi\Profumi\bin\Debug\System.Data.SQLite.dll
+C:\Users\Utilizador\Desktop\meu\toprima\ProfumiSms\Profumi\Profumi\bin\Debug\System.Data.SQLite.pdb
+C:\Users\Utilizador\Desktop\meu\toprima\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.FormSendSMS.resources
+C:\Users\Utilizador\Desktop\meu\toprima\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.Main.resources
+C:\Users\Utilizador\Desktop\meu\toprima\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.FormHistory.resources
+M:\Dropbox\taff et moi\meu\toprima\ProfumiSms\Profumi\Profumi\bin\Debug\Profumi.exe.config
+M:\Dropbox\taff et moi\meu\toprima\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.exe
+M:\Dropbox\taff et moi\meu\toprima\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.pdb
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\ProfumiSms\Profumi\Profumi\bin\Debug\Profumi.exe.config
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.exe
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.pdb
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\ProfumiSms\Profumi\Profumi\bin\Debug\Profumi.exe
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\ProfumiSms\Profumi\Profumi\bin\Debug\Profumi.pdb
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\ProfumiSms\Profumi\Profumi\bin\Debug\Newtonsoft.Json.dll
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\ProfumiSms\Profumi\Profumi\bin\Debug\System.Data.SQLite.dll
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\ProfumiSms\Profumi\Profumi\bin\Debug\Newtonsoft.Json.xml
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\ProfumiSms\Profumi\Profumi\bin\Debug\System.Data.SQLite.pdb
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.FormHistory.resources
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.FormSendSMS.resources
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.Main.resources
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.Properties.Resources.resources
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.csproj.GenerateResource.Cache
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima2\ProfumiSms\Profumi\Profumi\bin\Debug\Profumi.exe.config
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima2\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.exe
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima2\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.pdb
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima2\ProfumiSms\Profumi\Profumi\bin\Debug\Profumi.exe
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima2\ProfumiSms\Profumi\Profumi\bin\Debug\Profumi.pdb
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima2\ProfumiSms\Profumi\Profumi\bin\Debug\Newtonsoft.Json.dll
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima2\ProfumiSms\Profumi\Profumi\bin\Debug\System.Data.SQLite.dll
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima2\ProfumiSms\Profumi\Profumi\bin\Debug\Newtonsoft.Json.xml
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima2\ProfumiSms\Profumi\Profumi\bin\Debug\System.Data.SQLite.pdb
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima2\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.csprojResolveAssemblyReference.cache
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima2\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.FormHistory.resources
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima2\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.FormSendSMS.resources
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima2\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.Main.resources
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima2\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.Properties.Resources.resources
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima2\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.csproj.GenerateResource.Cache
+\\219.21.221.12\Dropbox\taff et moi\meu\toprima\ProfumiSms\Profumi\Profumi\obj\x86\Debug\Profumi.csprojResolveAssemblyReference.cache

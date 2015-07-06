@@ -1,0 +1,706 @@
+body{
+	background-color: white;
+}
+ css para o menu escondido da barra do menu 
+#container {
+	list-style:none;
+	font-weight:bold;
+	margin-bottom:10px;
+	float:left;
+	width:100%;
+} 
+#banner{
+	background-image: url('../images/grindteam.jpg');
+	background-repeat: no-repeat;
+	height: 150px;
+}
+#img_rss{
+	background-image: url('../../images/feedimage/azul.png');
+	background-repeat: no-repeat;
+	text-decoration: none;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-left: 40px;
+	margin-top: 2px;
+
+}
+/* ------------------- css para os Menus ------------------------------*/
+#nav{
+	list-style:none;
+	font-weight:bold;
+	margin-bottom:10px;
+	float:left;
+	width:100%;
+	position:relative;
+	z-index:5;
+	margin-top: 5px;
+}
+#nav li{
+	float:left;
+	margin-right:10px;
+	position:relative;
+}
+#nav a{
+	display:block;
+	padding:5px;
+	color:#fff;
+	background: #1292c7;
+	text-decoration:none;
+}
+#nav a:hover{
+	color:#fff;
+	background:#73d6ff;
+}
+
+/*--- DROPDOWN ---*/
+
+#nav ul{
+	background:#1292c7;
+	background:rgba(0,255,255,0); 
+	list-style:none;
+	position:absolute;
+	left:-9999px; 
+	padding: 0px;
+}
+	#nav ul li{
+		float:none;
+	}
+	#nav ul li a {
+		padding: 7.5px;
+		padding-top: 10px
+	}
+
+	#nav li:hover ul{ 
+		left:0; 
+	}
+	#nav li:hover a{ 
+		background:#73d6ff;
+
+	}
+	#nav li:hover ul a{ 
+		text-decoration:none;
+	}
+	#nav li:hover ul li a:hover{ 
+		background:#1292c7;
+	}
+
+#inform {
+	display:block;
+	padding:5px;
+	color:#fff;
+	background: #1292c7;
+	text-decoration:none;
+}
+
+/* css da pagina�?o das tabelas*/
+.pg-normal {
+	color: black;
+	font-weight: normal;
+	text-decoration: none;    
+	cursor: pointer;    
+}
+.pg-selected {
+	color: black;
+	font-weight: bold;        
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* css para a verifica�?o do registo*/
+.form_col {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 3px 0px;
+  width: 200px;
+  min-height: 1px;
+  text-align: right;
+}
+
+input {
+  padding: 2px;
+  border: 1px solid #CCC;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+input:focus {
+  border-color: rgba(82, 168, 236, 0.75);
+  -moz-box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+  -webkit-box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+  box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+}
+
+.correct {
+  border-color: rgba(68, 191, 68, 0.75);
+}
+
+.correct:focus {
+  border-color: rgba(68, 191, 68, 0.75);
+  -moz-box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+  -webkit-box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+  box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+}
+
+.incorrect {
+  border-color: rgba(191, 68, 68, 0.75);
+}
+
+.incorrect:focus {
+  border-color: rgba(191, 68, 68, 0.75);
+  -moz-box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+  -webkit-box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+  box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+}
+
+.tooltip {
+  display: inline-block;
+  margin-left: 20px;
+  padding: 2px 4px;
+  border: 1px solid #555;
+  background-color: #CCC;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+google maps 
+#map_canvas{
+	border: 1px dashed #C0C0C0;
+	width: 700px;
+	height: 400px;
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#mapa{
+	
+	width: 1024px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 12px;
+}
+#mapa2{
+	border: 1px solid blue;
+}
+
+#directionsPanel{
+	text-align: center;	
+}
+.adp-directions{
+	margin-left: 25%;
+}
+
+#estrutura_cabe�alho{
+background-color: #e2dcfc;
+}
+
+#menu_vis{
+	width: 1024px;
+	position: relative;
+	height: 25px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#login2{
+	width: 1024px;
+	height: 25px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#recuperar_pass a{
+	color: black;
+	background-color: #e7eef7;
+	list-style:none;
+	text-decoration: none;
+	font-size: 12px;
+	font-style: italic;
+}
+#recuperar_pass a:hover{
+	color: black;
+	background: #e7eef7;
+}
+
+#menu_cores_css{
+	text-align: left;
+	margin-left: 20px;
+}
+#valor{
+	width: 250px;
+}
+
+/* css do texto da p�gina visitante*/
+
+.paragrafo{
+    line-height: 20px;
+    text-align: justify;
+	font-family: Times New Roman;
+	font-size: 12px
+}
+.paragrafo1{
+	margin-left: 25px;
+	margin-right: 10px;
+}
+.paragrafo2{
+	margin-bottom: 45px;
+	margin-top: 45px;
+	text-align: center;
+}
+
+.titulo{
+	text-align: center;
+    font-size: 24px;
+    color: #003366;
+    text-transform: uppercase;
+	margin-top: 15px;
+}
+.titulo2{
+	
+        text-align: center;
+    font-size: 24px;
+    color: #003366;
+    text-transform: uppercase;
+	margin-top: 15px;
+}
+
+.imagem1{
+  height:100px;
+  width:200px;
+  float:left;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.imagem2{
+  height:200px;
+  width:200px;
+  float:left;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+.imagem3{
+  height:200px;
+  width:200px;
+  float:left;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.subtitulo{
+    font-size: 15px;
+    padding: 5px;
+    background-color: #E3E3E3;
+    color: #4C4C4C;
+	font-weight: bold;
+	text-align: center;
+} 
+#votos{
+	font-size: 9px;
+}
+
+/* css da estrutura toda do site*/
+
+.estrutura{
+	margin:  auto;
+	width: 800px;
+	box-shadow: 0 0 15px;
+	background-color: #e7eef7;
+}
+
+.login{
+	width: 650px;
+	height: 50px;
+	font-size: 12px;
+        alignment-adjust: center;
+}
+.login_formulaire{
+    text-align: center;
+    alignment-adjust: center;
+    
+}
+.bordermenu{
+	width: 650px;
+	height: 60px;
+}
+
+/* ------------------- css para o painel rolante de cima (proximos_6ev)  ------------------------------*/
+
+.proximos_6ev{
+	width: 1024px;
+	text-align: center;
+	background-color: #73d6ff;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	color: white;
+	font-weight: bold;
+}
+
+/* ------------------- css para  o painel rolante de baixo (feed_noticias)  ------------------------------*/
+.feed_noticias{
+	width: 1024px;
+	margin-top: 5px;
+	background-color: #73d6ff;
+	text-decoration: none;
+	color: white;
+}
+.feed_noticias a{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+
+
+
+
+#cores_css{
+	background-color: white;
+	margin:  auto;
+	width: 1024px;
+	margin-top: -9px;
+}
+
+/* Tabelas */
+#results{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse:collapse;
+	margin-bottom: 8px;
+	margin-left: auto;
+	margin-right:auto;
+	margin-top: 8px;
+        padding:3px 5px 3px 5px;
+        border:1px solid #ffffff;
+        
+        
+}
+	#results td, #results th {
+		font-size: 13px;
+		border:1px solid #ffffff;
+		padding:3px 5px 3px 5px;
+		
+	}
+	#results th {
+		font-size:	14px;
+		
+		padding-top:5px;
+		padding-bottom:5px;
+		background-color:#b4aca6;
+		color:#ffffff;
+	}
+	#results .linha_impar {
+		background-color:#009bff;
+                text-align: center;
+	 }
+         
+#viewhand{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse:collapse;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 8px;
+    padding:3px 5px 3px 5px;
+    border:1px;
+    border-color: none;
+}
+#viewhand .linha_impar {
+		background-color:#009bff;
+                text-align: center;
+	 }
+
+/* Pagina�?o */
+#pageNavPosition{
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.bandeiras{
+	width: 20px;
+}
+.modalidades{
+	width: 25px;
+}
+
+#prova{
+	text-align:center;
+	margin: auto;
+    width: 200px;
+    background-color: #e7eef7;
+	margin-bottom: 10px;
+	margin-top: 6px;
+}	
+#voltar {
+	margin-left: 49%;
+	text-decoration: none;
+}
+	#results .delega�ao_nome{
+	text-align:left;
+	padding-left: 15px;
+	} 
+
+/* ------------------- css para a tabela dos tempos ------------------------------*/
+.butao_opcoes{
+	border-style: none;
+	background: transparent;
+}
+.butao_opcoes1{
+	margin-left: 180px;
+	margin-top: 10px;
+	background: transparent;
+	font-weight: bold;
+	color: blue;
+
+}
+.butao_op�oes2{
+	color: blue;
+	margin-top: 10px;
+	background: transparent;
+	font-weight: bold;
+}
+.butao_submit {
+	float: right;
+	margin-left: 40%;
+}
+.gravar_altera�oes{
+	text-align: center;
+}
+#estatisticas_globais ul{
+	text-align: center;
+	list-style: none;
+}
+#estatisticas_globais li{
+	font-weight: bold;
+}
+#estatisticas_globais ol{
+	text-align: center;
+	list-style: none;
+	color: blue;
+}
+#form{
+	margin-left: 20%;
+}
+
+#form_rec_pass{
+	margin: auto;
+	text-align: center;
+	width: 1024px;
+	margin-bottom: 15px;
+}
+.tabela_rec_pass{
+	text-align: center;
+	margin: auto;
+}
+
+#test{
+	text-align: center;
+	margin: auto;
+}
+#opiniao{
+	text-align: center;
+	margin-left: 28%;
+	margin-right: auto;
+}
+#filtro{
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 15px;
+	text-align: center;
+}
+#txtchange2{
+	height: 200px;
+
+}
+#txtchange{
+	margin-bottom: 20px;
+	margin-top: 20px;}
+
+#menus{
+	border-bottom: 2px solid white;
+	margin-bottom: -4px;
+	margin-top: 10px;
+}
+
+
+
+#rodap�{
+	width: 1024px;
+	height: 60px;
+	margin-top: 2px;
+	border-top: 2px solid white;
+}	
+	#rodap�_centro p{
+		margin-left: 40%;
+		margin-right: 40%;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	#rodap� img{
+	float: right;
+	}
+
+	.header_login{
+	width: 140px;
+	height: 60px;
+	position: absolute;
+	}
+	.header_login2{
+	float:right;
+	width: 140px;
+	height: 60px;
+	}
+
+
+
+
+
+#estrutura{
+	margin:  auto;
+	width: 1024px;
+	box-shadow: 0 0 15px;
+	background-color: #e7eef7;
+}
+
+
+/* ------------------- css para a tabela dos tempos  ------------------------------*/
+
+ .bordertabela {
+   
+   border:2px solid #1292c7;
+    border-bottom:2px solid #1292c7;
+    border-top:2px solid #1292c7;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+} 
+
+.pre_tempo{
+	width: 121px;
+	height: 120px;
+	float: right;
+	margin-right: 20px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	border-radius: 10px;
+	font-size: 14px;
+	color:  #1292c7;
+	
+}
+.pre_tempo img{
+	width: 14px;
+}
+
+
+
+
+/* ------------------- css para o Rel�gio ------------------------------*/
+
+.posicao{
+float: right;
+margin-top: 10px;
+margin-right: 30px;
+}
+
+.numerosrelogio{
+font-size: 20px;
+text-align: center;
+font-family: Impact;
+color: #1292c7;
+text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+.legendarelogio{
+font-size: 10px;
+color: #1292c7;
+}
+
+ .border {
+    border:2px solid #1292c7;
+    border-bottom:2px solid #1292c7;
+    border-top:2px solid #1292c7;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+} 
+
+/* ---------css des archives-------------------------------------------------*/
+
+body {margin:25px; font:11px Verdana,Arial;}
+ul.menu {list-style:none; margin:0; padding:0}
+ul.menu * {margin:0; padding:0}
+ul.menu a {display:block; color:#000; text-decoration:none}
+ul.menu li {position:relative; float:left; margin-right:2px}
+ul.menu ul {position:absolute; top:26px; left:0; background:#d1d1d1; display:none; opacity:0; list-style:none}
+ul.menu ul li {position:relative; border:1px solid #aaa; border-top:none; width:148px; margin:0}
+ul.menu ul li a {display:block; padding:3px 7px 5px; background-color:#d1d1d1}
+ul.menu ul li a:hover {background-color:#c5c5c5}
+ul.menu ul ul {left:148px; top:-1px}
+ul.menu .menulink {border:1px solid #aaa; padding:5px 7px 7px; font-weight:bold; background:url(../images/header.gif); width:134px}
+ul.menu .menulink:hover, ul.menu .menuhover {background:url(../images/header_over.gif)}
+ul.menu .sub {background:#d1d1d1 url(../images/arrow.gif) 136px 8px no-repeat}
+ul.menu .topline {border-top:1px solid #aaa}
+
+/* ----------- shoutbox ----------------------*/
+
+form, p, span {
+	margin:0;
+	padding:0; }
+ 
+#wrapper input { font:12px arial; }
+ 
+a {
+	color:#0000FF;
+	text-decoration:none; }
+ 
+	a:hover { text-decoration:underline; }
+ 
+#wrapper, #loginform {
+	margin:0 auto;
+	padding-bottom:25px;
+	background:#EBF4FB;
+	width:504px;
+	border:1px solid #ACD8F0; }
+ 
+#loginform { padding-top:18px; }
+ 
+	#loginform p { margin: 5px; }
+ 
+#chatbox {
+	text-align:left;
+	margin:0 auto;
+	margin-bottom:25px;
+	padding:10px;
+	background:#fff;
+	height:270px;
+	width:430px;
+	border:1px solid #ACD8F0;
+	overflow:auto; }
+ 
+#usermsg {
+	width:395px;
+	border:1px solid #ACD8F0; }
+ 
+#submit { width: 60px; }
+ 
+.error { color: #ff0000; }
+ 
+#menu { padding:12.5px 25px 12.5px 25px; }
+ 
+.welcome { float:left; }
+ 
+.logout { float:right; }
+ 
+.msgln { margin:0 0 2px 0; }

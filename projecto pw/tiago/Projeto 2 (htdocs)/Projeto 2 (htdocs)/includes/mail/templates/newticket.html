@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>SIGO - Ticket</title>
+<style media="all" type="text/css">
+        table td {
+            border-collapse: collapse;
+        }
+</style>
+</head>
+<body marginheight="0">
+	<br>
+	<center>
+		<table width="600" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border: 1px solid #dddddd;">
+						<tr>
+							<td height="120" colspan="6" align="left">
+								<div style="height: 120px;max-height: 120px; overflow: hidden;">
+									<a href="http://pw606.x10.mx/" target="_blank" title="SIJO"><img src="http://pw606.x10.mx/pw606/img/banner_ticket.png" width="600" height="120" alt="SIGO" border="0"></a>
+								</div>
+							</td>	
+						</tr>
+						<tr>
+							<td height="30" colspan="6" align="center" valign="top" style="background-color: #1389FF; padding-left:15px;padding-right:15px;padding-top:8px;min-height: 30px;height: 30px;">
+								<table width="100%" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td align="left" valign="top" style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif; font-size:12px; font-weight:bold; color:#ffffff; text-transform:uppercase;">Formulário de Confirmação do Bilhete</td>
+										<td align="right" valign="top" style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif; font-size:12px; font-weight:bold; color:#ffffff; text-transform:uppercase;"><?php echo date("M j, Y"); ?></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+						  <td colspan="6" align="left" valign="top" style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;font-size:12px; font-weight:normal; color:#666666; padding:15px;">
+								<b>Nome do Utilizador:</b> {*NAME*}<br/>
+								<b>Email:</b> {*USER*}<br/>
+								<br/>
+								<b style="font-size:14px;">{*ACONTECIMENTO*}: {*EVENTO*}</b><br/>
+								<b>Local:</b> {*LOCAL*}<br/>
+								<b>Tipo:</b> {*TIPO*}</td>
+						</tr>
+						<tr>
+						  <td width="30%" align="center" valign="middle" style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;font-size:12px; font-weight:normal; color:#666666; padding:15px;"><b>Quantidade:</b><br/>
+{*QUANTIDADE*} bilhetes<br/></td>
+						  <td width="6%" align="center" valign="bottom" style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;font-size:12px; font-weight:normal; color:#666666; padding:15px;">*</td>
+						  <td width="16%" align="center" valign="middle" style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;font-size:12px; font-weight:normal; color:#666666; padding:15px;"><b>Pre&ccedil;o:</b><br/>
+{*PRECO*}&euro;</td>
+						  <td width="7%" align="center" valign="bottom" style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;font-size:12px; font-weight:normal; color:#666666; padding:15px;">=</td>
+						  <td width="17%" align="center" valign="middle" style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;font-size:12px; font-weight:normal; color:#666666; padding:15px;"><b>Total:</b><br/>
+{*TOTAL*}&euro; </td>
+						  <td width="24%" align="left" valign="middle" style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;font-size:12px; font-weight:normal; color:#666666; padding:15px;">&nbsp;</td>
+						</tr>
+						<tr>
+						  <td colspan="6" align="left" valign="top" style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;font-size:12px; font-weight:normal; color:#666666; padding:15px;">Para confirmar a {*TIPO*} clique <a href="http://localhost/pw606/myacount/ticket/confirm.php?code={*ID*}&checksum={*CHECKSUM_ACCEPT*}">aqui</a>.<br/>
+                            <br/>
+Se este email chegou por engano clique <a href="http://localhost/pw606/myacount/ticket/confirm.php?code={*ID*}&checksum={*CHECKSUM_REJECT*}">aqui<a/>.</td>
+					  </tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td height="30" align="center" valign="top" style="background-color: #666666; padding-left:15px;padding-right:15px;padding-top:8px;min-height: 30px;height: 30px;">
+					<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td align="left" valign="top" style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif; font-size:11px; font-weight:bold; color:#805b17; text-transform:uppercase;"></td>
+							<td align="right" valign="top" style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif; font-size:11px; font-weight:bold; color:#ffffff; text-transform:uppercase;">www.pw606.x10.mx</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</center>
+		<br>
+</body>
+</html>

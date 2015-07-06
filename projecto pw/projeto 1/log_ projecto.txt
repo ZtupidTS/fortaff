@@ -1,0 +1,360 @@
+CSS: 
+	IMPORTANTE: ir a pagina modalidade e ver o porque do numero das paginas desaperecer(implementei o numero de pagina para as tabelas :))
+	o codigo esta no include linha_tabela.php
+	IMPORTANTE: Ver no IE porque o css do RD esta mal (ver o CO porque estou a alterar o rd por isso vi)		
+	
+
+R.47(nao fiz commit ainda mas podem fazer):
+	- parte da classificacao já ok faltando o css para quem domina essa parte :)
+	- mudar a imagem se quiserem de visualizar a classificação meti aquela porque não encontrei outra mas não gosto muito
+
+R.46:
+	- mas correcções nas parte do rd.
+	- tou a acrescentar a classificação das provas.
+	
+	
+R.45:
+	- ja implementei o facto de corrigir as string para mysql e assim é mais uma protecção (falta alterar auxiliar e atleta).
+	- tambem fiz a correcção dos botões que não fazia submit
+	
+R.41:
+	- ja se consegue inserir ou retirar atletas das provas.
+	- meti um relogio a que desconto do dia de inicio dos jogos menos 30 dias, a partir dos 30 dias aparece o popup que não pode mais
+	alterar e só aparece uma vez e depois aparece uma frase (ver CSS disso tudo).
+	
+R.40:
+	- ja acrscentei e retira equipas das provas e desaparecem a menos de 10 dias da prova.(vai haver nova BD)(2 dias de luta mas consegui :D)
+	- uma pequena surpresa que ainda tou a acabar (por isso ainda vou efectuar alteração na BD e nas view de acrescentar equipas)
+	- surpresa acabada: consigo acrescentar provas masculinas e femininas, o que depois faço diferenças ao adicionar uma equipa.
+	e depois ao acrescentar um atleta a uma equipa força o atleta a ser feminino ou masculino. E acho que o resto funciona mas a
+	agredecia que testassem. Não ta pedido mas temos de nos diferenciar dos outros.
+	- normalmente só acrescenta atletas masculinos nas equipas masculinos e femininons nas equipas femininos.
+	Por favor: testar.
+	- inserir atleta ainda não implementado mas paginas já existentes
+
+R.38:
+	- nova BD com mais uma view
+	- meti um br no iclude bandeira
+	- eliminei colunas na tabela classificação provas e acrescentei uma porque a coluna cod_prova não pode ser unico
+	
+R.37:
+	- tou a retirar a pagina em branca porque consegui alterar o script.
+	- ainda a corrigir problemas por causa da eliminação logica
+	- ja acrescentado o sitio no codigo para escrever o texto nã há atletas a acrescentar (igual para os auxliares)PS: meti css para veres e eliminares
+	- alteração na BD tambem
+	
+R.36:
+	- consegui por a desaparecer a tabela por inteiro a menos de 30 dias.
+	- ainda tinha problemas por causa da eliminação logica (foda-se).
+	
+	
+R.30:
+	- acrescentei a tabela de acrescimo de auxiliares existentes nas equipas.
+	(o numero vai coindizer com o numero no google code)
+	
+v22.4:
+	- alteração de query nas inserção de delegação por causa da eliminação logica e não fisica
+	- tive que alterar a BD (ja esta disponivel v16.1)
+	
+v22.3:
+	- fiz alterações amanhã vejo se esta tudo a 100%, acho que sim mas preciso de verificar uns pormenores.
+	
+v22.2:
+	- acrescentei Kg e cm na tabela atletas no rd, ver e dizer se gostam ou não? para implementar nas outras
+	- criação a tabela para acrescentar atletas existentes noutras equipas.
+	- correcção no codigo que mostra os atletas e auxiliares para o rd
+	
+v22.1:
+	- a ver para adicionar atletas em equipas diferentes.
+	
+v22.0:
+	- o co já aceita ou não equipas
+	- o co já aceita ou não atletas ou auxiliares
+	
+v21.9:
+	- tenho de acabar o validar ou não equipa do rd no co
+	
+v21.8:
+	- rd ja adiciona, remova ou altera atletas ou auxiliares
+	- co: falta equipas, atletas e auxiliares mas depois de fazer o rd para isso.
+	
+v21.7:
+	- guardei na dropbox a pasta v final before que significa a pasta antes de toda a modificação
+	- trabalhar na mesma o css do rd porque não vai alterar muito e se tiverem tempo ajudar-me para alterar isso tudo.
+	- delegação alterado
+	- modalidade alterado
+	- prova alterado
+	- evento alterado
+	- falta equipas, atletas e auxiliares mas depois de fazer o rd para isso.
+	- na area_gestao_rd falta criar a view para ver o total de elementos por equipas.(acrescentar, alterar e eliminar ok)
+		
+v21.6:
+	- limpeza da BD
+	- acrescimo da data do ultimo acesso no rd e co
+	- prova 10 dias ok
+	- e para acabar projecto acabado na parte php e javascript :) faltando o css
+	favor experimentar TUDO obrigado.
+		
+v21.5:
+	- em alteração com os auxiliares.
+	- rd já acrescenta, elimina e altera auxiliares.
+	- co ja valida as alterações do Rd em relação aos auxiliares.
+	
+v21.4:
+	- modificação da pagina descricao_atleta para ser a mesma na alteração e inserção
+	- atletas no rd já elimina, acrescenta ou altera.
+	- o co ja valida ou não valida as alterações do rd nos atletas
+	
+v21.3:
+	- alteração da data na tabela atleta rd
+	- acrescentei maxlength="30" required nas paginas do co que faltava e na area reservada, ter em atenção e verificar se existe ao
+	entrar numa pagina
+	
+v21.2:
+	- acrescentar equipa no rd, alterar e remover com javascript
+	- estou agora a tratar dos atletas
+
+v21.1(google code mas que se encontra reunida na v final):
+	- javascript na pagina de login
+	- consegui fazer o include do jascript (nas paginas do co)
+	- acrescentai o codigo de css que faltava na pagina altera delegaçao
+	- acrescentei a bandeira na tabela equipa
+	- alterei o visualizar para atletas e auxiliares, e o opções em alterar e eliminar na pagina area de gestão rd 
+	
+v final:
+	- importante decidi criar um host no google code (ideia do tiago), depois de perder quase 3 horas já sei como funciona
+	no fundo vamos trabalhar na dropbox, e depois eu e vocês com uma pequena aplicação fazemos o upload para o google code 
+	das versões de alterações só com um clic de rato :).
+	Muito mais facil.
+	- a partir de agora só se trabalha com esse versão e mas nenhuma
+	
+v21: 
+	- Já contem css para as páginas do RD. Falta só melhorar o tipo de letra de alguma coisa e é só.
+     Esta versão é a mais recente pois cotem tudo actual do CO e do RD.
+
+v20:
+	- falta o css do rd ( ver com o zé).
+
+v19:  
+	- Um exemplo do css do rd. Tou á espera k o ricardo colok a versão final para colocar os divs nas páginas.
+	
+v18:
+	- Css da página area_reservada (Login)  Já tá na forma correcta
+
+v17.9:	
+	- ATENÇÃo: alterei a pasta images para imagens. Se provocar muito transtorno muda-se (afinal nao foi mudada).
+	- aplicação de um esboço de css à página delegação_co.
+	- criados: estilo_co, estilo_rd e mantido o global para o que for preciso.
+
+	Pendente: a alteração da pasta muda muita coisa. a fazer depois com mais cuidado
+
+
+
+v17.8:
+	- estou a criar o script javascript de eliminar para que o botão alterar e elimnar sejam iguais assim fica melhor.
+	- estou a retirar o css das paginas de co (acho que para ti jorge vai ser mais facil)
+
+
+v17.7:
+	- varias correcções nas pagina (e provavalmente ainda devera ter algumas conforme vou testando e aumentado codigo)
+	- o co já vilida ou não equipas, atletas e auxiliares
+	- só existe 2 pagina para validar ou não atletas e auxiliares porque recuperou o url de origem e redirecciona para a pagina
+	de atleta ou auxiliar (experimentei só no ie e no chrome) mas um ponto para o projecto :)
+	
+
+v17.6:
+	- terminar sessao adicionado no co e rd
+	- criação verificacao_intruso_rd para as paginas do rd
+	- mais correcção nos evento e provas
+	- meti as imagens de valido ou pendente
+	- acrescentei um button na pagina de acrescentar auxiliar e atleta
+	- correcçõs no acrescimo de equipas no rd
+	- acrescimo do botão de validar ou não as alterações do rd
+	- ja esta implementado o facto do co validar ou não as alterações do rd na parte de equipas
+	
+v17.5:
+	- correcção de prova_co, acrescentar eliminar e alterar provas, uns promenores que faltava
+	- faltava o dizer eliminar nas cruz eliminar
+	- alteração do ficheiro função formulario
+	- evento e provas a 100%
+	- co completa faltando o aceitar ou não modificações do RD	
+	
+v17.4:
+	- provas co a 100% (ver ficheiros antes da pasta projecto tarefas a executar sff, obrigado)
+	- data no formato que queriamos DD-MM-YYYY :)
+	- evento a 30% e vou para a cama :)
+
+v17.3:
+	- versao compilada com o jose
+
+v17.2:
+	- estou a acabar a parte de prova (acrescentar, eliminar e editar), ainda não acabei porque implementei muita coisa 
+	como javascript, verificações,....
+	- jorge na pasta includes tem uma pagina erro_formulario na qual eu quero que aquele texto aparece em vermelho
+	e se possível em pequeno, para testares vai a pagina acrescentar prova. (só dá erro no IE e se retirar a programação
+	por isso não vai conseguir ver mas faz o css que depois testamos os 2)
+	- vou actualizando com as novidades (ver o acrescentar e atualizar provas a 80% foda se)
+	NOTA: Sim zé temos de fundir tudo hoje e depois continuar com isso ;)
+	
+
+v17.1 - Relativamente ao RD:
+			- Já vai buscara bandeira pelo prefix ex: pt ,fr ...
+			- Ja lista as equipas, Atletas e Auxiliares desse pais
+			- Já adiciona uma equipa,um atleta e um auxiliar a uma determinada equipa
+			- O RESTANTE AINDA TÁ A SER FEITO
+
+		NOTA: HOJE DEVIA-MOS FUNDIR AS VERSÕES CO e RD INCLUINDO O CSS 
+
+
+v17.0:
+	- Devemos arrumar as paginas nas pastas correctas para ser mais lisivel (css, co, rd,...)
+	- O "co" já esta todo ;)
+	- ainda não esta acrescentado o codigo do zé do rd (v16.9)
+	Jorge:
+	- problema na pagina altera_delegacao_co com os css dos botões
+	- vou ver se consigo acabar o co amanhã
+
+
+v16.9 - Relativamente ao RD:
+			- Já vai buscara bandeira pelo prefix ex: pt ,fr ...
+			- Ja lista as equipas, Atletas e Auxiliares desse pais
+			- Já adiciona um atleta a uma determinada equipa
+			- O RESTANTE AINDA TÁ A SER FEITO
+					
+
+v16.8:
+	- alterei a pagina menu_escolha_co porque ao inserir estavamos inserir outra vez o body, head, title, e como a pagina onde
+	estamos a inserir ja ó tem não é preciso por isso fica só o codigo que nos interessa
+	- atletas e auxiliares ok (faltando o validar e cancelar alterações
+	- prova a 50%
+	- MUITO IMPORTANTE: meter essa função maxlength="30" nos text field porque pode estoirar a BD 
+
+v16.7:	Foi inserido um pouco de css nos menus e nos butoes do co 
+
+v16.6:
+	- limpeza do codigo com coisas denecessarias
+	- paginas que vão interessar mais a frente na pasta pagina obsuletas
+
+v16.5:
+	- acrescentei todas as funcionalidades de modalidade para um co	
+	- ja temos as funcionalidades de delegação e modalidades implementados para um co (temos que lhe dar ainda mais :) )
+
+v16.4:
+	- juntei a versão do zé a esta 
+	- em relação a bandeira é uma boa ideia, nesse caso tirava-se o texto "Alterar delegação de Alemanha" e ficava a bandeira??
+	- Em relação a pagina do RD já tinhamos falados disso, fica já feito.
+	- Uma anotação jose: não metas css no teu codigo porque denão depois o jorge não consegue alterar com o css dele ;). Deixa a montuar
+	que o jorge trata.
+
+v16.3: - 1)Ao clicar-mos na página "delegação.php" para alterar aparece na proxima página "altera_delegacao_co.php" a respectiva bandeira do pais.
+	
+	 2)Alterei a página "verificacao_login.php" para passar o nome_pais como sessão.
+	   Assim se um utilizador conectar-se sem ser o "Co" vai aparecer na página "area_gestao_rd.php" a bandeira do respectivo pais.	
+
+
+           NOTA: Itália, Roménia está com acento na pasta Bandeiras e na base de dados está sem acento o k poderá n aparecer a bandeira. Tem k se alterar de um lado ou do outro.
+			
+		 Ricardo e jorge basta sustituir as 3 páginas para funcionar.
+
+v16.2:
+	- como pedido no enunciado, a pessao que faz o login tem de ter o login durante o tempo da sessao, nesse sentido a sessao acaba
+	por defeito ao fim de 3horas (dei por ela porque fecho me a sessao ao fim de 3horas seguidas de trabalho lol). por isso meti
+	20 horas de trabalhos para a sessao chegar ao fim ;). 
+	- correcção: depois de verificação é só ao fim de 3 horas na mesma pagina sem fazer nada ;)
+	(depois meto na dropbox quando tiver mais alterações, podem pegar na v16.1 que ta igual)
+	- obsoleta
+	
+
+v16.1:
+	- criei as pagina acrescentar_atleta e acrescentar auxiliar
+	- eliminei a pagina acrescentar_el_equipa_co.php
+	- na pagina el_equipa_co.php e que escolhas o que quere fazer: adicionar atleta ou auxiliar
+	- criei a pagina descricao_atleta.php para poder inserir esse codigo nas outras paginas (data_nasc, peso, altura, grupo sanguineo)
+	- acrescentar atleta a 100%
+	- acrescentar auxiliar a 100%
+	- depois de ler o projecto vi que o CO não insere equipas, nem atletas, nem auxiliar :( a partido o codigo deve dar para o RD 
+	- decidi criar a 16.1 porque a esse ritmo não vamos ter numeros que chegam lol
+	
+
+v16:
+	- já funciona a parte de editar ao clicar na imagem
+	- inserir a funcionalidade de escrever 2 password para ele confirmar que são iguais
+	- implementei o eliminar do jose e já ta a funcionar o eliminar e alterar
+	- inseri um for na pagina acrescentar_el_equipa para escolher o ano dia e mes correcto
+
+v15b:
+  	- eliminar 100% com java script mas sem variáveis de sessão
+
+v15a:
+	- alterar 100%
+	- eliminar a implementar
+
+v15:
+	- modifcação da pagina "verficacao_acre_delegacao" porque passou a verificar se o login já existe na BD
+	- caso um campo esteja vazio não insere na BD
+	- já consegui implementar o facto de verificar se fez a inserção ou não na BD
+	- já implementei na pagina de inserção de delegação se for um CO na tabela estado passa a verdadeiro caso seja RD passa a falso (pendente)
+	  assim na altura de acrescentar uma delegação pelo um RD pode se usar a mesma pagina
+	  (depois insiro a versão na dropbox com o meu pc porque pelo browser é complicado)
+	- depois de falar com o tiago e de ver alguns projecto, as paginas do CO só são para o CO e vice versa. Assim fica como pedido no enunciado
+	  um css diferente para cada um e nesse caso paginas diferente para cada um.
+	- acrescentar: equipa, delegação ok
+	- el_equipa a 50%
+	- acrescentei um função que funciona no chrome e no firefox, quando não se preencha um campo aparece um popup. no internet
+	explorer faço o check dessa parte com o php. Assim fica com um pouco de design
+	
+
+v14:
+	- foi alterações do josé
+	  
+v13:
+	- depois das alterações na BD v12 alterei o necessario no codigo das equipas para o total de elementos
+
+v12:
+	- limpeza e arrumação do codigo
+	- retirei a funcionalidade do url e meti em sessão
+	- acho que esta tudo ok.
+
+v11:
+	- criação de uma view
+	- só aparece os pais não listados na tabelas delegação para a selecçõa de inserção
+
+v10:
+	- já dá para inserir delegações e vai buscar o prefix a tabela pais ;)
+	- verificar se dá erro e vou fazer o upload para o nosso site.
+
+v9:
+	- ja vou conseguir criar as tabela para todas as nossas views
+	- a ideia é que vou criar o codigo para todas a tabelas e para edtiar e vos depois alterais as tabelas (com o css)
+	- precisa das bandeiras (pasta imagens e pasta bandeiras)
+
+v8: 
+	- no meu não aparece a vermelho o login (mas vimos isso para o fim)
+	- retirei o cookie e agora funciona com "$_SESSION", perdi tempo mas ficou.
+	- Jorge e José: ver já a parte do CSS (não fazer mas ver como funciona)
+	- jorge mandei te um mail para a resolução DB
+
+v7:
+	- previsto implementação de jascript para a escolha de delegaçao ou equipas ou atletas (nao sei se vai funcionar)
+	- Pequena "arrumação" no código. pus o login errado a vermelho, mas acho que todo o css deveria ser feito 
+	  mais para o fim. (jorge)
+v6: 
+	- criação do cookie, na pagina "area_gestao_co".
+	- nao deixar um intruso entrar na pagina de gestao de "co" (ao modificar o url manualmente) :)
+	
+v5: 
+	- login a 100%, funcional.
+
+v4:
+	- login (funciona mal)
+
+v3:
+	- nada a assinalar (backup)
+
+v2:	- regrupei o que o zé fez na paginas que já tinhamos (login).
+	- alterei a pagina do zé ligação e meti antes um try and catch (nova cersão do php, w3 schools e outros).
+	- não percebi o codigo do zé para fazer o login, preciso que me explicas como funciona (ricardo).
+	- tambem existe uma pasta imagens, é onde vai ficar todas as nossas imagens.
+	- convem mnater um codigo limpo e lisivel (vou tentar fazer um esforço lool).
+	
+v1: inicial

@@ -1,0 +1,80 @@
+body{
+	background-color: #e7eef7;
+}
+.estrutura{
+	margin:  auto;
+	width: 1024px;
+	box-shadow: 0 0 15px;
+	background-color: white;
+	margin-top: 70px;
+}
+.conteudo{
+	margin-bottom: 10px;
+	text-align: center;
+}
+.cabeçalho{
+	height: 150px; 
+	width: 1024px;
+	margin: 20px 0;
+}
+.botao{
+background-color: #EEE8CD;
+color: #708090;
+font-weight: bold;
+margin-top: 2%;	
+}
+
+	/* Forms */
+.frm{
+font-family: Verdana;
+}
+.frm-on{
+background-color:#EEE8CD;
+ font-family: Verdana;
+ color:#B8860B;
+}
+.tabela{
+	margin-left: auto;
+	margin-right:auto;
+}
+#rodapé{
+	width: 1024px;
+	height: 60px;
+	margin-top: 110px;
+	border-top: 1px solid #3ab9ee;
+}	
+	#rodapé_centro p{
+		margin-left: 40%;
+		margin-right: 40%;
+		text-align: center;
+		font-weight: bold;
+	}
+	#rodapé img{
+	float: right;
+	}
+	.header_login{
+	width: 140px;
+	height: 60px;
+	position: absolute;
+	}
+	.header_login2{
+	float:right;
+	width: 140px;
+	height: 60px;
+	}
+.titulo{
+	color: #3ab9ee;
+}
+.link_password a{
+	font-size: 11px;
+	text-decoration: none;
+	margin-right: 10px;
+}
+.link_password a:hover {
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+
+

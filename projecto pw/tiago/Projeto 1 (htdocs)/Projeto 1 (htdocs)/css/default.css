@@ -1,0 +1,457 @@
+/*
+CSS Projecto PW JO
+*/
+
+.clear { clear: both; }
+
+* {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+body {
+	margin: 0px 0;
+	padding: 0;
+	background: #EFEFEF;
+	font-size: 12px;
+	color: #6B6B6B;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	color: #000000;
+}
+
+h1 {
+	margin-bottom: 10px;
+	border-bottom: 1px solid #F4F4F4;
+	font-size: 26px;
+}
+
+h2 {
+	margin-bottom: 10px;
+	border-bottom: 1px solid #F4F4F4;
+	font-size: 21px;
+}
+
+h3 {
+	margin-bottom: 15px;
+	padding-bottom: 5px;
+	font-size: 16px;
+	border-bottom: 1px solid #F4F4F4;
+}
+
+p, ol, ul, blockquote {
+	line-height: 24px;
+}
+
+ul {
+}
+
+img {
+	border: none;
+}
+
+from{
+}
+
+textarea{
+	background: url("/pw606/img/textarea_bg.png") no-repeat scroll center transparent;
+	height: 100px;
+	width: 400px;
+	border: 1px solid #B5B8BB;
+	border-radius: 5px 5px 5px 5px;
+	margin-bottom: 10px;
+	font-size: 15px;
+}
+
+textarea:hover{
+	background: url("/pw606/img/textarea_bg.png") no-repeat scroll center transparent;
+	border: 1px solid #777777;
+}
+
+textarea:focus{
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #333333;
+}
+
+input[type="radio"]{
+}
+
+input[type="radio"]:focus{
+	shadow-box: 0 0 15px;
+}
+
+input[type="text"]{
+	background: url("/pw606/img/bg_input.png") no-repeat scroll center transparent;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-color: transparent;
+	height: 25px;
+	border: 1px solid #B5B8BB;
+	border-radius: 5px 5px 5px 5px;
+	width: auto;
+	margin-bottom: 10px;
+	font-size: 15px;
+}
+
+input[type="text"]:hover{
+	background: url("/pw606/img/bg_input.png") no-repeat scroll center transparent;
+	border: 1px solid #777777;
+}
+
+input[type="text"]:focus{
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #333333;
+}
+
+input[type="password"]{
+	background: url("/pw606/img/bg_input.png") no-repeat scroll center transparent;
+	height: 25px;
+	border: 1px solid #B5B8BB;
+	border-radius: 5px 5px 5px 5px;
+	width: auto;
+	margin-bottom: 10px;
+	font-size: 15px;
+}
+
+input[type="password"]:hover{
+	background: url("/pw606/img/bg_input.png") no-repeat scroll center transparent;
+	border: 1px solid #777777;
+}
+
+input[type="password"]:focus{
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #333333;
+}
+
+
+input[type="submit"]{
+	border: 1px solid #999999;
+	background: url("/pw606/img/input_bg.png") no-repeat scroll center transparent;
+	font-size: 15px;
+	width: auto;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	border-radius: 5px 5px 5px 5px;
+}
+
+input[type="submit"]:hover{
+	background: none repeat scroll 0 0 #DADADA;
+}
+
+input[type="button"]{
+	border: 1px solid #999999;
+	background: url("/pw606/img/input_bg.png") no-repeat scroll center transparent;
+	font-size: 15px;
+	width: auto;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	border-radius: 5px 5px 5px 5px;
+}
+
+input[type="button"]:hover{
+	background: none repeat scroll 0 0 #DADADA;
+}
+
+button[type="button"]{
+	border: 1px solid #999999;
+	background: url("/pw606/img/input_bg.png") no-repeat scroll center transparent;
+	font-size: 15px;
+	width: auto;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	border-radius: 5px 5px 5px 5px;
+}
+
+button[type="button"]:hover{
+	background: none repeat scroll 0 0 #DADADA;
+}
+
+select{
+	background: url("/pw606/img/bg_input.png") no-repeat scroll center transparent;
+	height: 32px;
+	border: 1px solid #B5B8BB;
+	border-radius: 5px 5px 5px 5px;
+	width: auto;
+	margin-bottom: 10px;
+	font-size: 15px;
+}
+
+select:hover{
+	background: url("/pw606/img/bg_input.png") no-repeat scroll center transparent;
+	border: 1px solid #777777;
+}
+
+select:focus{
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #333333;
+}
+
+label{
+	width: 130px;
+	display: block
+	font-size: 15px;
+}
+
+/* Main */
+
+#main{
+	margin: 0 auto;
+	width: 964px;
+	position: relative;
+}
+
+#content-background{
+	background-color: #FFFFFF;
+	box-shadow: 0 0 15px;
+	overflow: hidden;
+	width: 964px;
+	margin-top: 130px;
+}
+
+#content-bg{
+	overflow: hidden;
+	width: 964px;
+}
+
+/* Logo */
+
+#logo {
+	float: left;
+	height: 110px;
+	width: 180px;
+	padding: 0 0 0 0;
+	margin-top: 5px;
+	box-shadow: 0 0 10px black;
+	border-radius: 5px 5px 5px 5px;
+	background-color: #ffffff;
+}
+
+#logo * {
+	text-decoration: none;
+}
+
+#logo h1 {
+	float: left;
+	padding: 50px 0 0 40px;
+	font-size: 36px;
+}
+
+#logo h1 a {
+	color: #000000;
+}
+
+#logo h1 span {
+	font-weight: bold;
+}
+
+#logo h2 {
+	float: left;
+	padding: 72px 0 0 8px;
+	font-size: 12px;
+	border: none;
+}
+
+#logo h2 a {
+	color: #B4B4B4;
+}
+
+/* Vertical Menu */
+
+#verticalmenu {
+  width: 200px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid;
+  border-radius: 0px;
+  margin-top: 10px;
+}
+
+#verticalmenu a {
+  text-decoration: none;
+  display: block;
+  background: url("/pw606/img/fundo_menu.png") repeat scroll 0 0 transparent;
+  border-color: #FFFFFF -moz-use-text-color #959BA2
+}
+#verticalmenu ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+#verticalmenu ul li {
+  color: #03F;
+  display: block;
+}
+#verticalmenu ul li a {
+  color: #555555;
+  height: 33px;
+  text-shadow: 0 1px 0 #FFFFFF;
+  border-style: solid none;
+  border-width: 1px medium;
+  font-weight: normal;
+  padding-left: 32px;
+}
+#verticalmenu ul li a:hover {
+  color: #064792;
+}
+
+#verticalmenu ul li ul li a {
+  color: #333333;
+  display: block;
+  height: 0px;
+  font-size: 12px;
+}
+
+#verticalmenu ul li ul {
+  display: none;
+}
+
+#verticalmenu ul li ul li {
+  color: #09F;
+  height: 0px;
+  border-radius: 3px 3px 0 0;
+}
+
+#verticalmenu ul li:hover ul {
+  display: block;
+}
+
+#verticalmenu ul li:hover ul li {
+  height:20px;
+  display: block;
+}
+
+/* Banner */
+
+#content-holder{
+	float: right;
+	width: 735px;
+	position: relative;
+}
+
+/* Sidebar */
+
+#sidebar {
+	width: 200px;
+	float: left;
+	padding-left: 10px;
+	height: 530px;
+}
+
+/* User */
+
+#user {
+	width: 190px;
+	background: url(/pw606/img/bg_user.png) no-repeat;
+	height: 57px;
+	margin-top: 17px;
+	padding: 10px 5px 6px 9px;
+}
+
+#user_links {
+	float: right;
+	width: 130px;
+}
+
+#contador{
+	margin-top: 10px;
+	line-height: 28px;
+	background: url(/pw606/img/bg_user.png) no-repeat;
+	padding-left: 6px;
+	height: 74px;
+}
+
+/* Content */
+
+#content {
+	width: 695px;
+	margin: 0px auto;
+	padding: 10px 20px;
+	margin-top: 17px;
+	margin-bottom: 5px;
+	float: left;
+	position: relative;
+	
+}
+
+#colOne {
+	float: left;
+	width: 620px;
+}
+
+#colTwo {
+	float: right;
+	width: 185px;
+	padding: 5px 0 0 0;
+}
+
+/* Footer */
+
+#footer {
+	margin: 10px auto 20px;
+	height: 15px;
+	width: 964px;
+}
+
+#footer p {
+	text-align: center;
+	color: #777777;
+}
+
+#footer a {
+	color: #5D5D5D;
+	float: right;
+}
+
+.validatorField {
+	visibility:hidden;
+	color:red;
+	font-size:18px;
+}
+
+div.errormsg, div.informationmsg, div.warningmsg { 
+	color: black;
+	list-style: inline;
+	/*width: 99%;*/
+	display: block;
+	padding: 8px 3px 8px 30px;
+	border-top: black 2px solid;
+	border-bottom: black 2px solid;
+	font-weight: bold;
+}
+
+div.errormsg {
+	background: url('/pw606/img/msg/error.png') #FDC3C3 no-repeat 3px center;
+	border-top-color: red;
+	border-bottom-color: red;
+}
+
+div.informationmsg {
+	background: url('/pw606/img/msg/information2.png') #C3C4FD no-repeat 3px center;
+	border-top-color: blue;
+	border-bottom-color: blue;
+}
+
+div.warningmsg {
+	background: url('/pw606/img/msg/warning.png') #FDF5C3 no-repeat 3px center;
+	border-top-color: #FFEE00;
+	border-bottom-color: #FFEE00;
+}
+
+.star_style {
+	min-width: 71px;
+}
+
+.star_style img {
+	margin-right: -3px;
+}
+
+.pg-normal {
+	cursor:pointer;
+}
+
+.pg-selected {
+	font-weight: bold;
+}

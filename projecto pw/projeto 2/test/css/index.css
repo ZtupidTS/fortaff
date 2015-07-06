@@ -1,0 +1,31 @@
+body{
+	background-color: white;
+}
+
+.estrutura{
+	margin:  auto;
+	width: 1000px;
+	box-shadow: 0 0 8px;
+	margin-top: 30px;
+}
+
+.cabeçalho{
+	
+	text-align: center;
+}
+.conteudo2{
+	float: left;
+	width: 10px;
+}
+
+.conteudo{
+	
+	text-align: center;
+	margin-top: 20px;
+}
+
+.rodapé{
+
+	text-align: center;
+	margin-top: 20px;
+}

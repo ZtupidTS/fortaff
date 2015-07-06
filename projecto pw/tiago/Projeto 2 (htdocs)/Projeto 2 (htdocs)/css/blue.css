@@ -1,0 +1,119 @@
+/* CO */
+
+
+h3 {
+	color: #0092C5;
+}
+
+a {
+	color: #1389FF;
+}
+
+a:hover {
+	color: #0092C5;
+}
+
+.header_h1, .footer_h1 {
+    background: url("/pw606/img/blue/fundo_header_blue.png") repeat scroll transparent;
+}
+
+/* Topo */
+
+#topo {
+	background: url("/pw606/img/blue/header_bg.png") no-repeat scroll center transparent;
+}
+
+/*Table Blue */
+
+table.tableclass tr:hover {
+	background-color: #3BBBEC;
+	color: #FFFFFF;
+}
+
+.contador{
+	background: url("/pw606/img/blue/blue.png") repeat scroll center transparent;
+	border-bottom: 1px solid #004B88;
+	border-left: 1px solid #3BBBEC;
+	border-right: 2px solid #004B88;
+	border-top: 2px solid #3BBBEC;
+}
+
+/*Login*/
+#dropmenu_login{
+	border: 1px solid #0388C8;
+	background: url(/pw606/img/co/time.png) repeat scroll center center transparent;
+}
+
+/*DropMenu*/
+#dropmenu_menu{
+	background: url(/pw606/img/co/time.png) repeat scroll center center transparent;
+}
+
+.dropmenu ul a {
+  color: #0657AD;
+}
+
+.dropmenu li{
+	border: 1px solid #0092C5;
+}
+
+.dropmenu li span{
+	background:url(/pw606/img/blue/seta_hover.png) no-repeat;
+}
+
+.dropmenu li  a:hover span{
+	background:transparent url(/pw606/blue/menu/seta_active.png) repeat-x scroll 0 0;
+}
+
+.dropmenu a.selected{
+	color: #0657AD !important;
+}
+
+.dropmenu li a:hover{
+	color: #0092C5 !important;
+}
+
+#rss{
+	background: url("/pw606/img/blue/ico-geral.png");
+}
+
+#eventos_1{
+	background: url("/pw606/img/blue/eventos.png");
+}
+
+#tempo_1{
+	background: url("/pw606/img/blue/tempo.png");
+}
+
+#info{
+	border: 0px solid #C6EBF7;
+	background-color: #006CAD;
+	color: #FFFFFF;
+}
+
+.pg-normal {
+	color: #065EAD;
+	background-color: #C6EBF7;
+}
+
+#tempo_h3{
+	color: #0092C5;
+}
+
+#tempo_h3_1{
+	color: #0092C5;
+}
+
+.seta-invertida{
+	background: url(/pw606/img/blue/seta-invertida-blue.gif) no-repeat left center transparent;
+}
+
+.noticia div a:hover{
+	color: #0092C5;
+}
+
+.pg-selected {
+	border: 1px solid #065EAD;
+	color: #0092C5;
+}
+

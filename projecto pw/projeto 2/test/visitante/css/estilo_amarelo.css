@@ -1,0 +1,231 @@
+/* css para o menu escondido da barra do menu */
+#container {
+list-style:none;
+	font-weight:bold;
+	margin-bottom:10px;
+	/* Clear floats */
+	float:left;
+	width:100%;
+	/* Bring the nav above everything else--uncomment if needed.
+	position:relative;
+	z-index:5;
+	*/
+} 
+#nav{
+	list-style:none;
+	font-weight:bold;
+	margin-bottom:10px;
+	/* Clear floats */
+	float:left;
+	width:100%;
+	/* Bring the nav above everything else--uncomment if needed.
+	position:relative;
+	z-index:5;
+	*/
+}
+#nav li{
+	float:left;
+	margin-right:10px;
+	position:relative;
+}
+#nav a{
+	display:block;
+	padding:5px;
+	color:red;
+	background:#333;
+	text-decoration:none;
+}
+#nav a:hover{
+	color:#fff;
+	background:#6b0c36;
+	text-decoration:underline;
+}
+
+/*--- DROPDOWN ---*/
+#nav ul{
+	background:#fff; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+	background:rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+	list-style:none;
+	position:absolute;
+	left:-9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+}
+#nav ul li{
+	padding-top:1px; /* Introducing a padding between the li and the a give the illusion spaced items */
+	float:none;
+}
+#nav ul a{
+	white-space:nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+}
+#nav li:hover ul{ /* Display the dropdown on hover */
+	left:0; /* Bring back on-screen when needed */
+}
+#nav li:hover a{ /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+	background:#6b0c36;
+	text-decoration:underline;
+}
+#nav li:hover ul a{ /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+	text-decoration:none;
+}
+#nav li:hover ul li a:hover{ /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+	background:#333;
+}
+
+/* css da paginação das tabelas*/
+.pg-normal {
+	color: black;
+	font-weight: normal;
+	text-decoration: none;    
+	cursor: pointer;    
+}
+.pg-selected {
+	color: black;
+	font-weight: bold;        
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* css para a verificação do registo*/
+.form_col {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 3px 0px;
+  width: 200px;
+  min-height: 1px;
+  text-align: right;
+}
+
+input {
+  padding: 2px;
+  border: 1px solid #CCC;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+input:focus {
+  border-color: rgba(82, 168, 236, 0.75);
+  -moz-box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+  -webkit-box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+  box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+}
+
+.correct {
+  border-color: rgba(68, 191, 68, 0.75);
+}
+
+.correct:focus {
+  border-color: rgba(68, 191, 68, 0.75);
+  -moz-box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+  -webkit-box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+  box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+}
+
+.incorrect {
+  border-color: rgba(191, 68, 68, 0.75);
+}
+
+.incorrect:focus {
+  border-color: rgba(191, 68, 68, 0.75);
+  -moz-box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+  -webkit-box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+  box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+}
+
+.tooltip {
+  display: inline-block;
+  margin-left: 20px;
+  padding: 2px 4px;
+  border: 1px solid #555;
+  background-color: #CCC;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+
+
+
+/* css do texto da página visitante*/
+
+
+.paragrafo{
+    line-height: 20px;
+    text-align: justify;
+	font-family: Times New Roman;
+	font-size: 12px
+	
+}
+.titulo{
+    font-size: 24px;
+    color: #003366;
+    text-transform: uppercase;
+}
+
+.imagem1{
+  height:100px;
+  width:130px;
+  float:left;
+}
+
+.imagem2{
+  height:200px;
+  width:200px;
+  float:left;
+}
+.imagem3{
+  height:200px;
+  width:230px;
+  float:left;
+}
+
+.subtitulo{
+    font-size: 14px;
+    padding: 5px;
+    background-color: #E3E3E3;
+    color: #4C4C4C;
+} 
+
+
+
+/* css da estrutura toda do site*/
+
+.estrutura{
+	margin:  auto;
+	width: 1024px;
+	box-shadow: 0 0 15px;
+	background-color: #D3D3D3;
+}
+
+.login{
+	width: 1024px;
+	height: 50px;
+	margin:  auto;
+	border: 1px solid black;
+}
+.bordermenu{
+	width: 1024px;
+	height: 60px;
+	margin:  auto;
+	border: 1px solid black;
+}
+
+.pre_tempo{
+	width: 1024px;
+	height: 60px;
+	margin-top: 10px;	
+	text-align: center;
+
+}
+
+.proximos_6ev{
+	width: 1024px;
+	text-align: center;
+	margin:auto;
+}
+
+.feed_noticias{
+	width: 1024px;
+}
+
+
+

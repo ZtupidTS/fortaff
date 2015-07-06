@@ -1,0 +1,150 @@
+/* css para o menu escondido da barra do menu */
+#container {
+} 
+
+#nav, #nav ul {
+   padding: 0;
+   margin: 0;
+   list-style: none; 
+} 
+
+#nav a {
+   display: block;
+   width: 10em; 
+} 
+
+#nav li {
+   float: left;
+   width: 10em;
+}
+
+#nav li ul {
+   position: absolute;
+   width: 10em;
+   left: -999em; 
+} 
+
+#nav li:hover ul {
+   left: auto; 
+}
+
+#nav li:hover ul, #nav li.sfhover ul {
+   left: auto; 
+}
+
+/* css da paginação das tabelas*/
+.pg-normal {
+	color: black;
+	font-weight: normal;
+	text-decoration: none;    
+	cursor: pointer;    
+}
+.pg-selected {
+	color: black;
+	font-weight: bold;        
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* css para a verificação do registo*/
+.form_col {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 3px 0px;
+  width: 200px;
+  min-height: 1px;
+  text-align: right;
+}
+
+input {
+  padding: 2px;
+  border: 1px solid #CCC;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+input:focus {
+  border-color: rgba(82, 168, 236, 0.75);
+  -moz-box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+  -webkit-box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+  box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+}
+
+.correct {
+  border-color: rgba(68, 191, 68, 0.75);
+}
+
+.correct:focus {
+  border-color: rgba(68, 191, 68, 0.75);
+  -moz-box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+  -webkit-box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+  box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+}
+
+.incorrect {
+  border-color: rgba(191, 68, 68, 0.75);
+}
+
+.incorrect:focus {
+  border-color: rgba(191, 68, 68, 0.75);
+  -moz-box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+  -webkit-box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+  box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+}
+
+.tooltip {
+  display: inline-block;
+  margin-left: 20px;
+  padding: 2px 4px;
+  border: 1px solid #555;
+  background-color: #CCC;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+
+
+
+/* css do texto da página visitante*/
+
+
+.paragrafo{
+    line-height: 20px;
+    text-align: justify;
+	font-family: Times New Roman;
+	font-size: 12px
+	
+}
+.titulo{
+    font-size: 24px;
+    color: #003366;
+    text-transform: uppercase;
+}
+
+.imagem1{
+  height:100px;
+  width:130px;
+  float:left;
+}
+
+.imagem2{
+  height:200px;
+  width:200px;
+  float:left;
+}
+.imagem3{
+  height:200px;
+  width:230px;
+  float:left;
+}
+
+.subtitulo{
+    font-size: 14px;
+    padding: 5px;
+    background-color: #E3E3E3;
+    color: #4C4C4C;
+} 
+
+

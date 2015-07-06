@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title>TVI24</title>
+    <link>http://www.tvi24.iol.pt</link>
+    <description>TVI24 - Vídeos e últimas notícias de Portugal e do mundo em tempo real</description>
+    <language>pt-pt</language>
+    <copyright>Copyright (c) 2000 Media Capital Multimédia e TVI, empresas do grupo Media Capital</copyright>
+    <pubDate>Thu, 05 Jan 2012 20:38:00 GMT</pubDate>
+    <lastBuildDate>Thu, 05 Jan 2012 20:38:00 GMT</lastBuildDate>
+    <ttl>5</ttl>
+    <category domain="Notícias">Última_Hora</category>
+    <category domain="Portugal">Notícias</category>
+    <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+    <atom:link rel="self" href="http://rss.iol.pt/tvi24.rss" />
+    <image>
+      <title>TVI24</title>
+      <url>http://www.tvi24.iol.pt/images/2011/bg_top_nav.jpg</url>
+      <link>http://www.tvi24.iol.pt</link>
+      <width>144</width>
+      <height>86</height>
+      <description>TVI24 - Vídeos e últimas notícias de Portugal e do mundo em tempo real</description>
+    </image>
+    <item>
+      <title>Cortes nas pensões levam idosos a protestar</title>
+      <link>http://www.tvi24.iol.pt/economia/pensoes-pensionistas-reformados-reformas-seguranca-social-caixa-geral-de-aposentacoes/1314826-4058.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13452950/200" align="left" hspace="5"/&gt;Cortes nas pensões levam idosos a protestar</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 20:38:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/economia/pensoes-pensionistas-reformados-reformas-seguranca-social-caixa-geral-de-aposentacoes/1314826-4058.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13452950/200" align="left" hspace="5"/><br />Maioria passa a receber menos 50 euros]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13452950" />
+    </item>
+    <item>
+      <title>Pingo Doce: especialistas admitem quebra nas vendas</title>
+      <link>http://www.tvi24.iol.pt/economia/pingo-doce-jeronimo-martins-vendas-holanda-agencia-financeira/1314824-4058.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551427/200" align="left" hspace="5"/&gt;Pingo Doce: especialistas admitem quebra nas vendas</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 20:26:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/economia/pingo-doce-jeronimo-martins-vendas-holanda-agencia-financeira/1314824-4058.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551427/200" align="left" hspace="5"/><br />Peritos em marketing dizem que consumidores podem sentir-se traídos]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551427" />
+    </item>
+    <item>
+      <title>Apanhado a vender droga junto a centro de Saúde</title>
+      <link>http://www.tvi24.iol.pt/sociedade/gnr-droga-heroina-guimaraes-taipas-tvi24/1314822-4071.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13375150/200" align="left" hspace="5"/&gt;Apanhado a vender droga junto a centro de Saúde</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 20:09:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/sociedade/gnr-droga-heroina-guimaraes-taipas-tvi24/1314822-4071.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13375150/200" align="left" hspace="5"/><br />GNR deteve um homem de 46 anos e apreendeu-lhe 500 doses de heroína]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13375150" />
+    </item>
+    <item>
+      <title>Grécia liberaliza profissões e aumenta controlo fiscal</title>
+      <link>http://www.tvi24.iol.pt/economia/grecia-profissoes-evasao-fiscal-agencia-financeira/1314821-4058.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13474035/200" align="left" hspace="5"/&gt;Grécia liberaliza profissões e aumenta controlo fiscal</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 20:07:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/economia/grecia-profissoes-evasao-fiscal-agencia-financeira/1314821-4058.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13474035/200" align="left" hspace="5"/><br />Projecto-lei prevê novo sistema tributário para impedir a evasão fiscal]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13474035" />
+    </item>
+    <item>
+      <title>Portagens: deputado do PS propõe «convergência» com PSD e CDS</title>
+      <link>http://www.tvi24.iol.pt/politica/portagens-a22-ps-psd-cds-tvi24/1314820-4072.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13546789/200" align="left" hspace="5"/&gt;Portagens: deputado do PS propõe «convergência» com PSD e CDS</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 20:01:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/politica/portagens-a22-ps-psd-cds-tvi24/1314820-4072.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13546789/200" align="left" hspace="5"/><br />Em causa as tarifas da A22, no Algarve, circulo pelo qual foi eleito Miguel Freitas]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13546789" />
+    </item>
+    <item>
+      <title>Hospital vai avaliar mulheres com implantes PIP</title>
+      <link>http://www.tvi24.iol.pt/sociedade/implantes-mamas-coimbra-hospitais-doentes-tvi24/1314700-4071.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13542903/200" align="left" hspace="5"/&gt;Hospital vai avaliar mulheres com implantes PIP</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 20:00:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/sociedade/implantes-mamas-coimbra-hospitais-doentes-tvi24/1314700-4071.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13542903/200" align="left" hspace="5"/><br />Custos da remoção, caso essa seja a indicação clínica, ficarão a cargo dos hospitais]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13542903" />
+    </item>
+    <item>
+      <title>Mãe de jornalista burlada pela prima</title>
+      <link>http://www.tvi24.iol.pt/sociedade/multibanco-jornalista-burlada-prima-cartao-tvi24/1314818-4071.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13473163/200" align="left" hspace="5"/&gt;Mãe de jornalista burlada pela prima</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 19:57:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/sociedade/multibanco-jornalista-burlada-prima-cartao-tvi24/1314818-4071.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13473163/200" align="left" hspace="5"/><br />Mãe do jornalista Rodrigo Guedes de Carvalho lesada em mais de 11 mil euros]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13473163" />
+    </item>
+    <item>
+      <title>CIP lamenta greve e apela a reforma laboral</title>
+      <link>http://www.tvi24.iol.pt/economia/cip-greve-portos-agencia-financeira/1314817-4058.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13510032/200" align="left" hspace="5"/&gt;CIP lamenta greve e apela a reforma laboral</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 19:55:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/economia/cip-greve-portos-agencia-financeira/1314817-4058.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13510032/200" align="left" hspace="5"/><br />Em causa greve nos portos nacionais]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13510032" />
+    </item>
+    <item>
+      <title>Novo Peugeot 107 chega em Março</title>
+      <link>http://www.tvi24.iol.pt/economia/carros-automovel-peugeot-107-agencia-financeira-envy/1314816-4058.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551444/200" align="left" hspace="5"/&gt;Novo Peugeot 107 chega em Março</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 19:50:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/economia/carros-automovel-peugeot-107-agencia-financeira-envy/1314816-4058.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551444/200" align="left" hspace="5"/><br />Modelo chega diferente, mas igualmente prático e económico]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551444" />
+    </item>
+    <item>
+      <title>Reforço leonino</title>
+      <link>http://www.tvi24.iol.pt/desporto/sporting-sporting-reforco-sporting-mercado-labyad-zakaria-labyad-transferencias/1314815-4062.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13504482/200" align="left" hspace="5"/&gt;Carlos Freitas fala de Labyad: «PSV já sabe...»</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 19:43:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/desporto/sporting-sporting-reforco-sporting-mercado-labyad-zakaria-labyad-transferencias/1314815-4062.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13504482/200" align="left" hspace="5"/><br />Director-desportivo assume que todas as partes já sabem qual vai ser o futuro: jogador deve ser reforço leonino na próxima época.]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13504482" />
+    </item>
+    <item>
+      <title>Paulo Futre vai estar todas as terças-feiras à noite na TVI24</title>
+      <link>http://www.tvi24.iol.pt/desporto/paulo-futre-noite-de-futrebol-sousa-martins/1314814-4062.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551449/200" align="left" hspace="5"/&gt;«Desempregrados  portugueses, fiquem atentos ao programa»</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 19:37:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/desporto/paulo-futre-noite-de-futrebol-sousa-martins/1314814-4062.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551449/200" align="left" hspace="5"/><br />Paulo Futre vai estar todas as terças-feiras à noite na TVI24]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551449" />
+    </item>
+    <item>
+      <title>Mulher desaparecida nos Açores</title>
+      <link>http://www.tvi24.iol.pt/sociedade/acores-desaparecida-mulher-gnr-psp-tvi24/1314811-4071.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13375346/200" align="left" hspace="5"/&gt;Mulher desaparecida nos Açores</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 19:31:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/sociedade/acores-desaparecida-mulher-gnr-psp-tvi24/1314811-4071.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13375346/200" align="left" hspace="5"/><br />Decorrem operações de busca com elementos da PSP, GNR e Polícia Marítima]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13375346" />
+    </item>
+    <item>
+      <title>TAP: providência cautelar chumbada pelo tribunal</title>
+      <link>http://www.tvi24.iol.pt/economia/tap-tripulacao-cabine-providencia-cautelar-subsidio-de-ferias/1314810-4058.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13468729/200" align="left" hspace="5"/&gt;TAP: providência cautelar chumbada pelo tribunal</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 19:30:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/economia/tap-tripulacao-cabine-providencia-cautelar-subsidio-de-ferias/1314810-4058.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13468729/200" align="left" hspace="5"/><br />Pessoal de cabine entregou providência contra a companhia por esta não ter processado o subsídio de férias em Janeiro]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13468729" />
+    </item>
+    <item>
+      <title>Casal apanhado em flagrante a roubar azeitonas</title>
+      <link>http://www.tvi24.iol.pt/sociedade/gnr-azeitonas-tras-os-montes-macedo-de-cavaleiros-tvi24/1314804-4071.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13550077/200" align="left" hspace="5"/&gt;Casal apanhado em flagrante a roubar azeitonas</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 19:13:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/sociedade/gnr-azeitonas-tras-os-montes-macedo-de-cavaleiros-tvi24/1314804-4071.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13550077/200" align="left" hspace="5"/><br />GNR apreendeu 60 quilos de azeitonas furtadas]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13550077" />
+    </item>
+    <item>
+      <title>TVI24: «O mais importante ecrã multimédia do país»</title>
+      <link>http://www.tvi24.iol.pt/sociedade/jose-alberto-carvalho-ultimas-noticias-apresentacao-tvi24-nova-grelha-canal/1314805-4071.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551429/200" align="left" hspace="5"/&gt;TVI24: «O mais importante ecrã multimédia do país»</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 19:11:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/sociedade/jose-alberto-carvalho-ultimas-noticias-apresentacao-tvi24-nova-grelha-canal/1314805-4071.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551429/200" align="left" hspace="5"/><br />José Alberto Carvalho «levantou o pano» sobre a nova informação da TVI24]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551429" />
+    </item>
+    <item>
+      <title>Papademos: única «linha vermelha» é evitar incumprimento</title>
+      <link>http://www.tvi24.iol.pt/economia/grecia-papademos-incumprimento-agencia-financeira/1314809-4058.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13517389/200" align="left" hspace="5"/&gt;Papademos: única «linha vermelha» é evitar incumprimento</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 19:06:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/economia/grecia-papademos-incumprimento-agencia-financeira/1314809-4058.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13517389/200" align="left" hspace="5"/><br />Grécia pode confrontar-se já em Março com um descontrolado incumprimento da dívida]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13517389" />
+    </item>
+    <item>
+      <title>Israel e Palestina retomam negociações de paz</title>
+      <link>http://www.tvi24.iol.pt/internacional/israel-palestina-paz-eua-jordania-tvi24/1314802-4073.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13377027/200" align="left" hspace="5"/&gt;Israel e Palestina retomam negociações de paz</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 19:02:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/internacional/israel-palestina-paz-eua-jordania-tvi24/1314802-4073.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13377027/200" align="left" hspace="5"/><br />Encontro está marcado para 9 de Janeiro na Jordânia]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13377027" />
+    </item>
+    <item>
+      <title>Espreite aqui a nova TVI24</title>
+      <link>http://www.tvi24.iol.pt/sociedade/trailer-ultimas-noticias-grafismo-tvi24-nova-imagem-iol/1314801-4071.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551421/200" align="left" hspace="5"/&gt;Espreite aqui a nova TVI24</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 18:56:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/sociedade/trailer-ultimas-noticias-grafismo-tvi24-nova-imagem-iol/1314801-4071.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551421/200" align="left" hspace="5"/><br />Nova imagem da estação avança já na próxima segunda-feira]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551421" />
+    </item>
+    <item>
+      <title>Número de mortos em explosões no Iraque sobre para 67</title>
+      <link>http://www.tvi24.iol.pt/internacional/explosoes-bombas-iraque-bagda-tvi24/1314772-4073.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13544605/200" align="left" hspace="5"/&gt;Número de mortos em explosões no Iraque sobre para 67</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 18:50:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/internacional/explosoes-bombas-iraque-bagda-tvi24/1314772-4073.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13544605/200" align="left" hspace="5"/><br />Cinco explosões atingiram os bairros xiitas de Bagdad e uma localidade no sul do Iraque]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13544605" />
+    </item>
+    <item>
+      <title>Senhorios que queiram despejar podem ser multados</title>
+      <link>http://www.tvi24.iol.pt/economia/rendas-arrendamento-casas-imoveis-habitacao-senhorios/1314795-4058.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13375822/200" align="left" hspace="5"/&gt;Senhorios que queiram despejar podem ser multados</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 18:50:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/economia/rendas-arrendamento-casas-imoveis-habitacao-senhorios/1314795-4058.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13375822/200" align="left" hspace="5"/><br />Contratos que não estejam registados e rendas que não tenham sido declaradas ao Fisco podem ser «apanhados»]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13375822" />
+    </item>
+    <item>
+      <title>Viúva adolescente dispara a matar sobre intruso</title>
+      <link>http://www.tvi24.iol.pt/internacional/eua-viuva-sarah-mckinley-tvi24-adolescente/1314799-4073.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13375140/200" align="left" hspace="5"/&gt;Viúva adolescente dispara a matar sobre intruso</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 18:35:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/internacional/eua-viuva-sarah-mckinley-tvi24-adolescente/1314799-4073.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13375140/200" align="left" hspace="5"/><br />Norte-americana telefonou para o 911 a pedir autorização para abater um homem que tentava entrar no seu quarto]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13375140" />
+    </item>
+    <item>
+      <title>Mais imagens sexuais nos jornais que na Internet</title>
+      <link>http://www.tvi24.iol.pt/sociedade/imagens-sexual-internet-tvi24/1314785-4071.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551418/200" align="left" hspace="5"/&gt;Mais imagens sexuais nos jornais que na Internet</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 18:33:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/sociedade/imagens-sexual-internet-tvi24/1314785-4071.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551418/200" align="left" hspace="5"/><br />Estudo revela que as crianças portuguesas vêem mais imagens relacionadas com sexo nos jornais e na televisão]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551418" />
+    </item>
+    <item>
+      <title>Ministério Público investiga colocação de professores</title>
+      <link>http://www.tvi24.iol.pt/sociedade/professores-colocacao-diap-ministerio-publico-educacao-tvi24/1314793-4071.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13376304/200" align="left" hspace="5"/&gt;Ministério Público investiga colocação de professores</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 18:21:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/sociedade/professores-colocacao-diap-ministerio-publico-educacao-tvi24/1314793-4071.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13376304/200" align="left" hspace="5"/><br />Elementos do DIAP estiveram nas instalações do Ministério da Educação, que assegura estar a colaborar com a investigação]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13376304" />
+    </item>
+    <item>
+      <title>Penhora deixa bombeiros de Macedo de Cavaleiros  sem dinheiro</title>
+      <link>http://www.tvi24.iol.pt/sociedade/macedo-de-cavaleiros-penhora-bombeiros-tvi24/1314796-4071.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13526390/200" align="left" hspace="5"/&gt;Penhora deixa bombeiros de Macedo de Cavaleiros  sem dinheiro</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 18:21:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/sociedade/macedo-de-cavaleiros-penhora-bombeiros-tvi24/1314796-4071.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13526390/200" align="left" hspace="5"/><br />Problema financeiro ameaça auxílio à população]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13526390" />
+    </item>
+    <item>
+      <title>TDT: Governo não cede, «apagão» avança mesmo</title>
+      <link>http://www.tvi24.iol.pt/politica/tvi24-relvas-apagao-ultimas-noticias-tdt-parlamento/1314794-4072.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551417/200" align="left" hspace="5"/&gt;TDT: Governo não cede, «apagão» avança mesmo</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 18:21:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/politica/tvi24-relvas-apagao-ultimas-noticias-tdt-parlamento/1314794-4072.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551417/200" align="left" hspace="5"/><br />Debate de urgência no Parlamento agendado pelo PCP]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551417" />
+    </item>
+    <item>
+      <title>Portugal recebeu 5,5 milhões por dia em fundos comunitários</title>
+      <link>http://www.tvi24.iol.pt/economia/fundos-comunitarios-portugal-bruxelas-ministerio-da-economia-agencia-financeira/1314792-4058.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13510130/200" align="left" hspace="5"/&gt;Portugal recebeu 5,5 milhões por dia em fundos comunitários</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 18:15:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/economia/fundos-comunitarios-portugal-bruxelas-ministerio-da-economia-agencia-financeira/1314792-4058.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13510130/200" align="left" hspace="5"/><br />País arrecadou a ano passado 2.024 milhões de euros]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13510130" />
+    </item>
+    <item>
+      <title>Cão faz o pino enquanto come e é estrela no YouTube</title>
+      <link>http://www.tvi24.iol.pt/acredite-se-quiser/cao-patas-equilibrista-youtube-tvi24/1314759-4088.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551403/200" align="left" hspace="5"/&gt;Cão faz o pino enquanto come e é estrela no YouTube</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 18:11:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/acredite-se-quiser/cao-patas-equilibrista-youtube-tvi24/1314759-4088.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551403/200" align="left" hspace="5"/><br />Vídeo do «equilibrista» já foi visto por 70 mil pessoas]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551403" />
+    </item>
+    <item>
+      <title>Carris: sindicato marca greve de 24 horas</title>
+      <link>http://www.tvi24.iol.pt/economia/greve-transportes-carris-soflusa-metro-agencia-financeira/1314791-4058.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13383438/200" align="left" hspace="5"/&gt;Carris: sindicato marca greve de 24 horas</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 18:06:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/economia/greve-transportes-carris-soflusa-metro-agencia-financeira/1314791-4058.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13383438/200" align="left" hspace="5"/><br />Paralisação será de três horas por turno na Soflusa]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13383438" />
+    </item>
+    <item>
+      <title>Dois GNR afastados por irem «bêbedos» a um bar</title>
+      <link>http://www.tvi24.iol.pt/sociedade/arcos-de-valdevez-militares-gnr-ma-conduta-alcool-tvi24/1314788-4071.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13470087/200" align="left" hspace="5"/&gt;Dois GNR afastados por irem «bêbedos» a um bar</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 17:55:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/sociedade/arcos-de-valdevez-militares-gnr-ma-conduta-alcool-tvi24/1314788-4071.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13470087/200" align="left" hspace="5"/><br />Fardados e em serviço ter-se-ão apresentado «sob efeito de álcool» em casa diversão noctura]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13470087" />
+    </item>
+    <item>
+      <title>Jon Spencer regressa a Portugal para dois concertos</title>
+      <link>http://www.tvi24.iol.pt/musica/jon-spencer-concertos-hard-club-tmn-ao-vivo-jon-spencer-blues-explosion-marco/1314779-4060.html</link>
+      <description>&lt;img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551407/200" align="left" hspace="5"/&gt;Jon Spencer regressa a Portugal para dois concertos</description>
+      <category domain="Notícias">Última_Hora</category>
+      <category domain="Portugal">Notícias</category>
+      <category domain="http://rss.iol.pt/tvi24.rss">TVI24_Últimas</category>
+      <pubDate>Thu, 05 Jan 2012 17:48:00 GMT</pubDate>
+      <author>agenda@tvi24.pt (TVI24)</author>
+      <guid>http://www.tvi24.iol.pt/musica/jon-spencer-concertos-hard-club-tmn-ao-vivo-jon-spencer-blues-explosion-marco/1314779-4060.html</guid>
+      <content:encoded><![CDATA[<img src="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551407/200" align="left" hspace="5"/><br />Porto e Lisboa recebem os Jon Spencer Blues Explosion em Março]]></content:encoded>
+      <media:content url="http://www.tvi24.iol.pt/multimedia/oratvi/multimedia/imagem/id/13551407" />
+    </item>
+  </channel>
+</rss>

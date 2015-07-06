@@ -1,0 +1,128 @@
+body{
+	background-color: #d5eecb;
+}
+.estrutura{
+	margin:  auto;
+	width: 1024px;
+	background-color: white;
+	margin-top: 20px;
+	height: auto;
+}
+#cabeçalho{
+	margin-bottom: 20px;
+}
+.estrutabela{
+	width: 800px;
+	margin-left: 40px;
+}
+
+	/* Menu Bandeira */
+#bandeira{
+   float:right;
+   margin-right: 30px;
+   width: 150px;
+}
+	.img_bandeira img{
+		height: 60px;
+	}
+	.img_bandeira{
+		text-align: center;
+	}
+	.texto_bandeira{
+		text-align: center;
+		padding: 0px 6px 6px 0px;
+		border-top-width: 2px;
+		border-right-width: 5px;
+		border-bottom-width: 5px;
+		border-left-width: 2px;
+		border-style: solid;
+		border-color: #b5b3ff;
+	}
+	
+	/* Contagem Decrescente */
+#contagem{
+	color: #b5b3ff;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.altera_titulo{
+	font-family: Verdana, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+}
+.titulo_rd{
+	color: #301747;
+}
+
+	/* Tabelas */
+.tabela td, .tabela th {
+	font-size: 13px;
+	border:1px solid #D1EEEE;
+	padding:3px 5px 3px 5px;
+	text-align: center;
+}
+.tabela th {
+	font-size:	14px;
+	text-align:center;
+	background-color:#7CCD7C;
+	color:#ffffff;
+}
+
+	/* Botões */
+.botao_terminar{
+	background-color: #EEE8CD;
+	color: #708090;
+	font-weight: bold;
+	margin-top: 2%;	
+}
+.botao{
+	background-color: #EEE8CD;
+	color: #708090;
+	font-weight: bold;
+	margin-top: 2%;	
+}
+.terminar{
+	text-align:center;
+}
+	.terminar :hover{
+		color: #d01f11;
+	}
+.botão_opções{
+	border-style: none;
+	background: transparent;
+}
+
+	/* Forms */
+.frm{
+	font-family: Verdana;
+}
+.frm-on{
+	background-color:#EEE8CD;
+	font-family: Verdana;
+	color:#B8860B;
+}
+
+	/* Rodapé */
+#rodapé{
+	width: 1024px;
+	height: 60px;
+	margin-top: 230px;
+	border-top: 1px solid #74cc76;
+}	
+	.header_login{
+	width: 140px;
+	height: 60px;
+	position: absolute;
+	}
+	.header_login2{
+	float:right;
+	width: 140px;
+	height: 60px;
+	}
+	#rodapé_centro p{
+		margin-left: 40%;
+		margin-right: 40%;
+		text-align: center;
+		font-weight: bold;
+	}

@@ -1,0 +1,34 @@
+body{
+   text-align: center;
+   font-family: 'Georgia',serif;
+   font-variant: small-caps;
+}
+
+.liste{
+   display:block;
+   text-align:left;
+   width:200px;
+   margin:auto;
+   margin-top:50px;
+   margin-bottom:50px;
+}
+
+.liste li{
+   list-style:square;
+}
+
+ul{
+	margin:0;
+	padding:0;
+	margin-top:50px;
+}
+ul li{
+	list-style:none;
+	text-align: center;
+}
+.page-map, .ui-content, #map-canvas 
+{
+	width: 99%; 
+	height: 99%; 
+	 
+}

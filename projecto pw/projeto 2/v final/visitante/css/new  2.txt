@@ -1,0 +1,26 @@
+amarelo
+#edff0f
+menus
+
+#fffa67 -->hoover
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#1292c7
+[16:46:17] Jorge Cunha: azul dos menus
+
+#e3ce00 --> hoover
+#e7eef7 --> fundo

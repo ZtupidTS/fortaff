@@ -1,0 +1,135 @@
+/* RD */
+
+a {
+	color: #297525;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #9DC453;
+	text-decoration: none;
+}
+
+fieldset
+{
+	border: 1px solid #297525;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 0 5px;
+}
+
+.header_h1, .footer_h1 {
+    background: url("/pw606/img/rd/fundo_header_rd.png") repeat scroll transparent;
+    color: #FFFFFF;
+    height: 35px;
+    padding-left: 10px;
+}
+
+.header_h1 {
+	border-radius: 5px 5px 0 0;
+	margin: 0px 0px 10px 0px;
+}
+
+.footer_h1 {
+	border-radius: 0 0 5px 5px;
+	margin: 10px 0px 0px 0px;
+}
+
+.header_h1 > input[type="button"], .header_h1 > button,
+.footer_h1 > input[type="button"], .footer_h1 > button {
+	background: none;
+	color: #FFFFFF;
+	font-weight: bold;
+	border: none;
+	border-left: white 1px solid;
+	box-shadow: none;
+	border-radius: 0;
+	float: right;
+	margin-top: 6px;
+	cursor: pointer;
+	text-decoration: none;
+	
+}
+
+.header_h1 input[type="button"]:hover, .header_h1 > button:hover ,
+.footer_h1 input[type="button"]:hover, .footer_h1 > button:hover{
+	background: none;
+	text-decoration: underline;
+}
+
+/* Topo */
+
+#topo {
+	background: url("/pw606/img/rd/header_bg_rd.png") no-repeat scroll center transparent;
+	height: 117px;
+	margin-top: -130px;
+	width: 100%;
+	z-index: 5;
+	position: fixed;
+	box-shadow: 0 0 10px;
+}
+
+/*Table CO */
+
+table.tableclass {
+	width: 100%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	border: 1px solid #777777;
+	margin: 10px 0px 10px 0px;
+	border-spacing: 0;
+}
+
+table.tableclass th{
+	background: url(/pw606/img/th_table.png) repeat;
+	font-weight: bold;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 5px;
+	color: #000000;
+	text-align: left;
+}
+
+table.tableclass td{
+	height: 20px;
+	line-height: 30px;
+	padding: 0 5px;
+}
+
+table.tableclass .rowgroup {
+	background-color: #666666;
+	color: #FFFFFF;
+}
+
+table.tableclass tr:hover {
+	background-color: #297525;
+	color: #FFFFFF;
+}
+
+table.tableclass tr.rowgroup:hover {
+	background-color: #666666;
+}
+
+table.tableclass .rowalternative {
+	background-color: #CDE1A7/*9DC453*/;
+}
+
+.contador{
+	font-size: 18px;
+	background: url("/pw606/img/rd/time.png") repeat scroll center transparent;
+	color: #FFFFFF;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 5px 5px 5px 5px;
+	display: inline;
+	border-bottom: 1px solid #297525;
+	border-left: 1px solid #609600;
+	border-right: 2px solid #297525;
+	border-top: 2px solid #609600;
+}
+
+.contador span{
+	padding: 0;
+}

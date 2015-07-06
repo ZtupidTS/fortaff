@@ -1,0 +1,119 @@
+/* CO */
+
+
+h3 {
+	color: #FF8704;
+}
+
+a {
+	color: #BF6E09;
+}
+
+a:hover {
+	color: #FF8704;
+}
+
+.header_h1, .footer_h1 {
+    background: url("/pw606/img/yellow/fundo_header_yellow.png") repeat scroll transparent;
+}
+
+/* Topo */
+
+#topo {
+	background: url("/pw606/img/yellow/header_bg.png") no-repeat scroll center transparent;
+}
+
+/*Table Blue */
+
+table.tableclass tr:hover {
+	background-color: #FF8704;
+	color: #FFFFFF;
+}
+
+.contador{
+	background: url("/pw606/img/yellow/yellow.png") repeat scroll center transparent;
+	border-bottom: 1px solid #FF8704;
+	border-left: 1px solid #BF6E09;
+	border-right: 2px solid #FF8704;
+	border-top: 2px solid #BF6E09;
+}
+
+/*Login*/
+#dropmenu_login{
+	border: 1px solid #BF6E09;
+	background: url(/pw606/img/yellow/yellow.png) repeat scroll center center transparent;
+}
+
+/*DropMenu*/
+#dropmenu_menu{
+	background: url(/pw606/img/yellow/yellow.png) repeat scroll center center transparent;
+}
+
+.dropmenu ul a {
+  color: #BF6E09;
+}
+
+.dropmenu li span{
+	background:url(/pw606/img/yellow/seta_hover.png) no-repeat;
+}
+
+.dropmenu li  a:hover span{
+	background:transparent url(/pw606/img/yellow/seta_active.png) repeat-x scroll 0 0;
+}
+
+.dropmenu li{
+	border: 1px solid #FF8704;
+}
+
+.dropmenu a.selected{
+	color: #BF6E09 !important;
+}
+
+.dropmenu li a:hover{
+	color: #FF8704 !important;
+}
+
+
+#rss{
+	background: url("/pw606/img/yellow/ico-geral-yellow.png");
+}
+
+#eventos_1{
+	background: url("/pw606/img/yellow/eventos_yellow.png");
+}
+
+#tempo_1{
+	background: url("/pw606/img/yellow/tempo.png");
+}
+
+#info{
+	border: 0px solid #C6EBF7;
+	background-color: #BF6E09;
+	color: #FFFFFF;
+}
+
+.pg-normal {
+	color: #BF6E09;
+	background-color: #FBD485;
+}
+
+#tempo_h3{
+	color: #FF8704;
+}
+
+#tempo_h3_1{
+	color: #FF8704;
+}
+
+.noticia div a:hover{
+	color: #FF8704;
+}
+
+.pg-selected {
+	border: 1px solid #BF6E09;
+	color: #BF6E09;
+}
+
+.seta-invertida{
+	background: url(/pw606/img/yellow/seta-invertida-yellow.gif) no-repeat left center transparent;
+}

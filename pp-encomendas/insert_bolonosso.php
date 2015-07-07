@@ -2,50 +2,130 @@
     
     <script>
     //variáveis globais que uso aqui
-    var cbcobertura;
-    var cbrecheio;
-    var cbmassa;
-    function addCobertura()
+    var cbcobertura = '';
+    var cbrecheio = '';
+    var cbmassa = '';
+    function addBolo()
     {
-        //alert('dd');
-        var cobertura = $('#valorsearch').val();
-        //alert(recheio);
-	if(cobertura == '')
+        //nome do bolo
+        var nomebolo = $('#valorsearch').val();
+        var continu = true;
+        if(nomebolo == '')
 	{
-		alert('Tem de escrever uma cobertura');
-	}else{
-		//alert('dddd');
-		$.get( "ajax/ajinsert_cobertura.php", { 
-			cobertura: cobertura}, 'text' )
+		alert('Tem de escrever um nome para o bolo');
+		continu = false;
+	}
+	//cobertura
+	var cobertura = $('#cbcobertura').find('option:selected').text();
+	var coberturanova = '';
+	var idcobertura = '';
+	if(continu && cobertura == 'Outro')
+	{
+		if($('#novacobertura').val() == '')
+		{
+			alert('Tem que preencher a designação da nova cobertura');
+			continu = false;
+		}else{
+			coberturanova = $('#novacobertura').val();				
+		}		
+	}
+	if(continu && coberturanova == '' && cobertura != 'Outro')
+	{
+		if(cbcobertura == '')
+		{
+			alert('Tem que seleccionar uma cobertura');
+			continu = false;
+		}else{
+			idcobertura = cbcobertura;
+		}
+	}
+	//recheio
+	var recheio = $('#cbrecheio').find('option:selected').text();
+	var recheionova = '';
+	var idrecheio = '';
+	if(continu && recheio == 'Outro')
+	{
+		if($('#novorecheio').val() == '')
+		{
+			alert('Tem que preencher a designação do novo recheio');
+			continu = false;
+		}else{
+			recheionova = $('#novorecheio').val();				
+		}		
+	}
+	if(continu && recheionova == '' && recheio != 'Outro')
+	{
+		if(cbrecheio == '')
+		{
+			alert('Tem que seleccionar um recheio');
+			continu = false;
+		}else{
+			idrecheio = cbrecheio;
+		}
+	}
+	//massa
+	var massa = $('#cbmassa').find('option:selected').text();
+	var massanova = '';
+	var idmassa = '';
+	if(continu && massa == 'Outro')
+	{
+		if($('#novamassa').val() == '')
+		{
+			alert('Tem que preencher a designação da nova massa');
+			continu = false;
+		}else{
+			massanova = $('#novamassa').val();				
+		}		
+	}
+	if(continu && massanova == '' && massa != 'Outro')
+	{
+		if(cbmassa == '')
+		{
+			alert('Tem que seleccionar uma massa');
+			continu = false;
+		}else{
+			idmassa = cbmassa;
+		}
+	}
+	
+	//upload file
+	var myElem = document.getElementById('filename');
+	var filename = '';
+	if(myElem != null)
+	{
+		if(document.getElementById('filename').textContent != "")
+		{
+			//alert(document.getElementById('filename').innerText);
+			filename = document.getElementById('filename').innerText;
+		}else{
+			alert('Tem que inserir a foto do bolo para poder inserir o bolo');
+			continu = false;
+		}
+	}
+	if(continu)
+	{
+		$.get( "ajax/ajinsert_bolo.php", { 
+			coberturanova: coberturanova,
+			idcobertura: idcobertura,
+			recheionova: recheionova,
+			idrecheio: idrecheio,
+			massanova: massanova,
+			idmassa: idmassa,
+			filename: filename,
+			nomebolo: nomebolo}, 'text' )
 			.done(function( data ) {
 		   	    var newdata = data.trim();
 			    if(newdata == "ok")
 			    {
-			    	alert('Cobertura inserido com sucesso');
-			    	$('#valorsearch').val('');
-			    	$('#valorsearch').focus();
+			    	alert('Bolo inserido com sucesso');
+			    	window.location = "insert_bolonosso.php";			    	
 			    }else{
 			    	//$('#suppliertype').hide();
 			    	alert(newdata);
 			    }
 			});
-
-	}
-	
-	
-    }
-    //upload file
-    var myElem = document.getElementById('filename');
-    if(myElem != null)
-    {
-	if(document.getElementById('filename').textContent != "")
-	{
-		//alert(document.getElementById('filename').innerText);
-		postajax = postajax+"&tal_filename="+document.getElementById('filename').innerText;
 	}
     }
-    
-    
     </script>
     <script>
 	$(document).ready(function()
@@ -154,7 +234,7 @@
                     	<div class="form-group">
                             <label class="col-sm-2 control-label" for="textinput" ></label>
                             <div class="col-sm-2">
-                                <input type="button" onclick="addCobertura()" class="btn btn-primary" value="Adicionar">
+                                <input type="button" onclick="addBolo()" class="btn btn-primary" value="Inserir Bolo">
                             </div>
                         </div> 
                     

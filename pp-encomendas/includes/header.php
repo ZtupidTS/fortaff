@@ -111,6 +111,10 @@ if(isset($_SESSION['username']))
         <!--<script src="js/viewDataGr.js"></script>
         <script src="js/viewDataRep.js"></script>-->
         
+        <!-- para o carroussel -->
+        <script src="js/other/jssor.slider.js"></script>        
+        <script src="js/other/jssor.js"></script>        
+        
         
     </head>
     
@@ -140,6 +144,9 @@ if(isset($_SESSION['username']))
                     <ul class="nav navbar-nav">
                         <?php if($login != "Entrar"){ ?>
 <!--                        <li><a href="#">Início</a></li>-->
+	                        <li class="dropdown">
+	                        	<a href="index.php">Início</a>				
+	                        </li>
 	                        <li class="dropdown">
 	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Encomendas<b class="caret"></b></a>
 	                            <ul class="dropdown-menu" role="menu">

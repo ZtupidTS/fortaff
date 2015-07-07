@@ -20,6 +20,7 @@ function boloGetByDistinct($where, $orderby)
 	return getTableDistinct("pp_bolo", $column, $where, $orderby);	
 }
 
+//tenho que fazer o mysql_fetch_array
 function boloGetAll()
 {
         return getTable("pp_bolo", "", "");

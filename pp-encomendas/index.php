@@ -107,7 +107,7 @@
     </div><!-- /.row -->    
    <?php } ?>
    
-   	<div id="slider1_container" style="position: relative; top: 0px; left: 100px; width: 800px; height: 600px; overflow: hidden; ">
+   	<div id="slider1_container" style="position: relative; top: 0px; left: 100px; width: 800px; height: 550px; overflow: hidden; ">
 
         <!-- Loading Screen -->
         <div u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -120,9 +120,9 @@
         </div>
 
         <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 600px; overflow: hidden;">
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 550px; overflow: hidden;">
         	<?php
-        	$table = boloGetAll();
+        	$table = boloGetByFiltro("pp_bolo_enable = 1", "");
         	while ($bolo = foreachRow($table)) 
                 {?>
                     <div><img u="image" src="<?= $bolo['pp_bolo_urlimage'];?>"/></div>

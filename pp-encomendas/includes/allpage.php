@@ -9,6 +9,7 @@ include 'includes/database/pp_cobertura.php';
 include 'includes/database/pp_massa.php';
 include 'includes/database/pp_modif_bolos.php';
 include 'includes/database/pp_recheio.php';
+include 'includes/database/view_nossosbolos.php';
 
 include 'includes/conf.php';
 include 'fonction/function.php';

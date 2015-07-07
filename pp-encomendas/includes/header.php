@@ -153,15 +153,13 @@ if(isset($_SESSION['username']))
 	                              <li class="dropdown-submenu">
 	                              	<a tabindex="-1" href="#">Inserir</a>
 	                              	<ul class="dropdown-menu">
-      						<li><a href="insertgr.php">Bolo dos nossos</a></li>
-      						<li><a href="insertgr.php">Bolo a pedido</a></li>
+      						<li><a href="view_bolonosso.php">Bolo dos nossos</a></li>
+      						<li><a href="insert_enc_bolo.php">Bolo a pedido</a></li>
     					</ul>
 	                              </li>
 	                              <li class="divider"></li>
 	                              <li><a href="insertgr.php">Consultar</a></li>
-	                              <li class="divider"></li>
-	                              <li class="divider"></li>
-	                              <li class="divider"></li>
+	                              
 	                              
 	<!--                              <li><a href="#">Something else here</a></li>
 	                              <li class="divider"></li>

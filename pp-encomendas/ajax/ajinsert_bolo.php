@@ -46,9 +46,12 @@ $postfilename = str_ireplace("\\", "/", $postfilename);
 $file_new = explode("/", $postfilename);
 foreach ($file_new as $v)
 {
+	//print_r($file_new);
+	//echo ' s ';
 	if(strpos($v, ".") !== false)
 	{
 		$filefinal = explode(".", $v);
+		//print_r($filefinal);
 		rename('../bolos/' . $filefinal[0] . "." . $filefinal[1], '../bolos/' . $idbolonosso . '.' . $filefinal[1]);
 		//agora vou guardar isso na DB			
 		$fields = array();
@@ -60,6 +63,8 @@ foreach ($file_new as $v)
 }   
 
 echo 'ok';
+
+insertmodifbolonosso($idbolonosso, "Criação do bolo");
 
 closeDataBase();
 ?>

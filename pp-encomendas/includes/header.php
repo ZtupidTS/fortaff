@@ -50,6 +50,9 @@ if(isset($_SESSION['username']))
         <link href="css/jquery-ui.css" rel="stylesheet" >
         <!-- tabelas -->
         <link href="css/jquery.dataTables.css" rel="stylesheet" >
+        <!--calendario-->
+        <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" >
+        <link href="css/bootstrap-datetimepicker.css" rel="stylesheet" >
         
         <style type="text/css">
 	#loadingmsg {
@@ -113,8 +116,12 @@ if(isset($_SESSION['username']))
         
         <!-- para o carroussel -->
         <script src="js/other/jssor.slider.js"></script>        
-        <script src="js/other/jssor.js"></script>        
+        <script src="js/other/jssor.js"></script>     
         
+        <!--para o calendario-->   
+        <script src="js/other/bootstrap-datetimepicker.js"></script>
+        <!--<script src="js/other/bootstrap-datetimepicker.min.js"></script>-->
+        <script src="js/other/locales/bootstrap-datetimepicker.pt.js"></script>
         
     </head>
     
@@ -207,6 +214,8 @@ if(isset($_SESSION['username']))
 			                              <li><a href="insert_massa.php">Inserir Massa</a></li>
 			                              <li class="divider"></li>
 			                              <li><a href="insert_bolonosso.php">Inserir bolo nosso</a></li>
+			                              <li class="divider"></li>
+			                              <li><a href="insert_users.php">Inserir Utilizador</a></li>
 			                              <!--<li><a href="deluser.php">Adicionar funcionario</a></li>
 			                              <li><a href="deluser.php">Desativar funcionario</a></li>
 			                              <li><a href="activeuser.php">Reactivar funcionario</a></li> -->                            

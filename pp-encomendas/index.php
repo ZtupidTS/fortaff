@@ -114,7 +114,7 @@
             <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
                 background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
             </div>
-            <div style="position: absolute; display: block; background: url(img/loading.gif) no-repeat center center;
+            <div style="position: absolute; display: block; background: url(images/loading2.gif) no-repeat center center;
                 top: 0px; left: 0px;width: 100%;height:100%;">
             </div>
         </div>
@@ -149,7 +149,7 @@
                 /* size of bullet elment */
                 width: 16px;
                 height: 16px;
-                background: url(img/b05.png) no-repeat;
+                background: url(images/b05.png) no-repeat;
                 overflow: hidden;
                 cursor: pointer;
             }
@@ -184,7 +184,7 @@
                 width: 30px;
                 height: 46px;
                 cursor: pointer;
-                background: url(img/a12.png) no-repeat;
+                background: url(images/a12.png) no-repeat;
                 overflow: hidden;
             }
             .jssora12l { background-position: -16px -37px; }

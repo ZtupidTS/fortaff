@@ -11,7 +11,7 @@
 		    <thead>  
 		          <tr>  
 		            <th>Versão</th> 
-		            <th>Modifcações</th> 		            
+		            <th>Modificações</th> 		            
 		          </tr>  
 		    </thead>
 		    <tbody>

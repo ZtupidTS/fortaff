@@ -1,0 +1,3 @@
+select *
+from pp_bolo pb, pp_cobertura pc, pp_recheio pr, pp_massa pm
+where pb.pp_bolo_massaid = pm.pp_massa_id and pb.pp_bolo_recheioid = pr.pp_recheio_id and pb.pp_bolo_coberturaid = pc.pp_cobertura_id

@@ -667,14 +667,26 @@ function getnumberexist($number_tel)
 	//return $stringtest;
 }
 //insere dados na tabela modif gr
-function insertmodifgr($id, $text)
+function insertmodifencomenda($id, $text)
 {
 	$fields = array();
-	$fields['gr_id'] = $id;
-	$fields['us_id'] = $_SESSION['iduser'];
-	$fields['modif_date'] = dbString(date('Y-m-d H:i:s', time() - 3600));
-	$fields['modif_text'] = dbString($text);
-	modifgrInsert($fields);
+	$fields['pp_modif_enc_id'] = dbInteger($id);
+	$fields['pp_modif_us_id'] = dbInteger($_SESSION['iduser']);
+	$fields['pp_modif_date'] = dbString(date('Y-m-d H:i:s', time() - 3600));
+	$fields['pp_modif_texto'] = dbString($text);
+	modifEncomendasInsert($fields);
+	unset($fields);	
+}
+
+//insere dados na tabela modif gr
+function insertmodifbolonosso($id, $text)
+{
+	$fields = array();
+	$fields['pp_modif_bolo_id'] = dbInteger($id);
+	$fields['pp_modif_us_id'] = dbInteger($_SESSION['iduser']);
+	$fields['pp_modif_date'] = dbString(date('Y-m-d H:i:s', time() - 3600));
+	$fields['pp_modif_texto'] = dbString($text);
+	modifBolosInsert($fields);
 	unset($fields);	
 }
 

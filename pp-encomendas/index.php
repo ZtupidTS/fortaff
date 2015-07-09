@@ -107,7 +107,7 @@
     </div><!-- /.row -->    
    <?php } ?>
    
-   	<div id="slider1_container" style="position: relative; top: 0px; left: 100px; width: 800px; height: 550px; overflow: hidden; ">
+   	<div id="slider1_container" style="position: relative; top: 0px; left: 150px; width: 800px; height: 550px; overflow: hidden; ">
 
         <!-- Loading Screen -->
         <div u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -204,7 +204,7 @@
         <a style="display: none" href="http://www.jssor.com">Bootstrap Slider</a>
     </div>
    	
-   	
+   	<h1 style="text-align: center; color: #0701fe;">Faça a sua Encomenda</h1>
    
         
 	

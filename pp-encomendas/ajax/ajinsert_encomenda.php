@@ -35,6 +35,11 @@ $fields['pp_enc_clientcontact'] = dbString(control_post($_GET['contacto']));
 $fields['pp_enc_obs'] = dbString(control_post($_GET['obs']));
 $fields['pp_enc_sendsms'] = dbInteger(control_post($_GET['sendsms']));
 $fields['pp_enc_us_id'] = dbInteger($_SESSION['iduser']);
+if($_GET['id'] != '')
+{
+	$fields['pp_enc_idbolonosso'] = dbInteger(control_post($_GET['id']));	
+}
+
 
 $idencomenda = encomendasInsert($fields);
 

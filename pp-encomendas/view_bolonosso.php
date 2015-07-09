@@ -30,15 +30,24 @@
 		            	<td colspan="2" bgcolor="#535455" ><font color="#ffffff"><?= $data['pp_bolo_nome'];?></font></td>  
 		            </tr>
 		            <tr>
-		                <td rowspan="3" width="255"><a href="insert_enc_bolo.php?pp_bolo_id=<?= $data['pp_bolo_id'];?>"><img height="150" width="250" src="<?= $data['pp_bolo_urlimage'];?>"/></a></td>  
-		                <td><b>Cobertura:</b> <?= $data['pp_cobertura_designacao'];?></td>
+		                <td rowspan="3" width="255">
+		                	<a href="insert_enc_bolo.php?pp_bolo_id=<?= $data['pp_bolo_id'];?>"><img height="150" width="250" src="<?= $data['pp_bolo_urlimage'];?>"/></a></td>  
+		                <td>
+		                	<b>Cobertura:</b></br>
+		                	<?= $data['pp_cobertura_designacao'];?>
+		                </td>
 		            </tr>
 		            <tr> 
-		                <td><b>Recheio:</b> <?= $data['pp_recheio_designacao'];?></td>
+		                <td>
+		                	<b>Recheio:</b></br>
+		                	<?= $data['pp_recheio_designacao'];?>
+		                </td>
 		            </tr>
 		            <tr>
-		                <td><b>Massa:</b> <?= $data['pp_massa_designacao'];?></td>
-		                
+		                <td>
+		                	<b>Massa:</b></br>
+		                	<?= $data['pp_massa_designacao'];?>
+		                </td>		                
 		            </tr>
 		            <?php
 	        	}        

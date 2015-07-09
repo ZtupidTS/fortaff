@@ -233,6 +233,13 @@
                     	</div>
                     	<div class="form-group">
                             <label class="col-sm-2 control-label" for="textinput" ></label>
+                            <div class="col-sm-10">
+                                <label class="col-sm-6 control-label" for="textinput" >A foto tem de ser do tipo 'jpeg'</label>
+                            </div>                            
+                        </div>
+                    	
+                    	<div class="form-group">
+                            <label class="col-sm-2 control-label" for="textinput" ></label>
                             <div class="col-sm-2">
                                 <input type="button" onclick="addBolo()" class="btn btn-primary" value="Inserir Bolo">
                             </div>

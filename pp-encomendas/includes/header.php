@@ -90,7 +90,7 @@ if(isset($_SESSION['username']))
         <script src="js/other/bootstrap.js"></script>
         <!-- Meus scripts -->
         <script src="js/login.js"></script>
-       <!-- <script src="js/viewgr.js"></script>-->
+       
         <!-- for ie8 for bootstrap -->
         <script src="js/other/respond.js"></script>
         <!--<script src="js/html5shiv.js"></script>-->
@@ -120,7 +120,6 @@ if(isset($_SESSION['username']))
         
         <!--para o calendario-->   
         <script src="js/other/bootstrap-datetimepicker.js"></script>
-        <!--<script src="js/other/bootstrap-datetimepicker.min.js"></script>-->
         <script src="js/other/locales/bootstrap-datetimepicker.pt.js"></script>
         
     </head>
@@ -165,7 +164,7 @@ if(isset($_SESSION['username']))
     					</ul>
 	                              </li>
 	                              <li class="divider"></li>
-	                              <li><a href="insertgr.php">Consultar</a></li>
+	                              <li><a href="view_encomendas.php">Consultar</a></li>
 	                              
 	                              
 	<!--                              <li><a href="#">Something else here</a></li>
@@ -209,16 +208,31 @@ if(isset($_SESSION['username']))
 						<li class="dropdown">
 			                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administração<b class="caret"></b></a>
 			                            <ul class="dropdown-menu">
-			                              <li><a href="insert_recheio.php">Inserir Recheio</a></li>
-			                              <li><a href="insert_cobertura.php">Inserir Cobertura</a></li>
-			                              <li><a href="insert_massa.php">Inserir Massa</a></li>
-			                              <li class="divider"></li>
-			                              <li><a href="insert_bolonosso.php">Inserir bolo nosso</a></li>
-			                              <li class="divider"></li>
-			                              <li><a href="insert_users.php">Inserir Utilizador</a></li>
-			                              <!--<li><a href="deluser.php">Adicionar funcionario</a></li>
-			                              <li><a href="deluser.php">Desativar funcionario</a></li>
-			                              <li><a href="activeuser.php">Reactivar funcionario</a></li> -->                            
+			                            	<li class="dropdown-submenu">
+				                              	<a tabindex="-1" href="#">Inserir Composição</a>
+				                              	<ul class="dropdown-menu">
+			      						<li><a href="insert_recheio.php">Inserir Recheio</a></li>
+			                              			<li><a href="insert_cobertura.php">Inserir Cobertura</a></li>
+			                              			<li><a href="insert_massa.php">Inserir Massa</a></li>
+			    					</ul>
+				                        </li>
+			                            	<li><a href="modif_composicao.php">Alterar Composição</a></li>
+			                              	<li class="divider"></li>
+			                              	<li><a href="insert_bolonosso.php">Inserir bolo nosso</a></li>
+			                              	<li><a href="modif_bolonosso.php">Alterar bolo nosso</a></li>
+			                              	<li class="divider"></li>
+			                              	<li><a href="insert_users.php">Inserir Utilizador</a></li>
+			                              	<!--<li class="divider"></li>
+			                              	<li class="dropdown-submenu">
+				                              	<a tabindex="-1" href="#">Modificações</a>
+				                              	<ul class="dropdown-menu">
+			      						<li><a href="modif_encomendas.php">Encomendas</a></li>
+			                              			<li><a href="insert_bolos.php">Bolos</a></li>
+			    					</ul>
+				                        </li>-->
+			                              	<!--<li><a href="deluser.php">Adicionar funcionario</a></li>
+			                              	<li><a href="deluser.php">Desativar funcionario</a></li>
+			                              	<li><a href="activeuser.php">Reactivar funcionario</a></li> -->                            
 			                            </ul>
 			                        </li>
 			                        <?php 

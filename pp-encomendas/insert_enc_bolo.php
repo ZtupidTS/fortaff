@@ -1,7 +1,7 @@
 <?php include 'includes/header.php'; ?>
 
 	<script>
-	function addEncomenda()
+	function addEncomenda(id)
 	{
 		var continu = true;
 		//cobertura
@@ -164,7 +164,8 @@
 				osb: obs,
 				nomecliente: nomecliente,
 				contacto: contacto,
-				sendsms: sendsms}, 'text' )
+				sendsms: sendsms,
+				id: id}, 'text' )
 				.done(function( data ) {
 			   	    var newdata = data.trim();
 				    if(newdata == "ok")
@@ -212,9 +213,9 @@
 					<div class="form-group">
 	                            		<label class="col-sm-2 control-label" for="textinput" ></label>
 	                            		<div class="col-sm-10">
-	                                		<input type="text" disabled name="valorsearch" id="valorsearch" class="form-control" maxlength="79" value="<?= $data['pp_bolo_nome'];?>"/> 	                                		
-	                            		</div>                            
-	                        	</div>
+	                                		<input type="text" disabled name="valorsearch" id="valorsearch" class="form-control" maxlength="79" value="<?= $data['pp_bolo_nome'];?>"/> 	                                			                                		
+	                            		</div>
+	                        	</div>	                        	
 					<?php		
 				}else{?>
 					<!--novo bolo-->
@@ -381,7 +382,15 @@
 	                    	<div class="form-group">
 	                            <label class="col-sm-2 control-label" for="textinput" ></label>
 	                            <div class="col-sm-2">
-	                                <input type="button" onclick="addEncomenda()" class="btn btn-primary" value="Inserir Encomenda">
+	                            	<?php
+	                            	if(isset($_GET['pp_bolo_id']))
+					{?>
+						<input type="button" onclick="addEncomenda(<?= $data['pp_bolo_id'];?>)" class="btn btn-primary" value="Inserir Encomenda">
+						<?php
+					}else{?>
+						<input type="button" onclick="addEncomenda()" class="btn btn-primary" value="Inserir Encomenda">
+						<?php
+					}?>	
 	                            </div>
 	                        </div> 
 	                    

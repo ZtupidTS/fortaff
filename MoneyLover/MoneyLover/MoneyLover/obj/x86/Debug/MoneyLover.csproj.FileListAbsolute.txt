@@ -1,0 +1,17 @@
+\\219.21.221.12\Dropbox\taff et moi\MoneyLover\MoneyLover\MoneyLover\bin\Debug\MoneyLover.exe.config
+\\219.21.221.12\Dropbox\taff et moi\MoneyLover\MoneyLover\MoneyLover\bin\Debug\MoneyLover.exe
+\\219.21.221.12\Dropbox\taff et moi\MoneyLover\MoneyLover\MoneyLover\bin\Debug\MoneyLover.pdb
+\\219.21.221.12\Dropbox\taff et moi\MoneyLover\MoneyLover\MoneyLover\bin\Debug\EntityFramework.dll
+\\219.21.221.12\Dropbox\taff et moi\MoneyLover\MoneyLover\MoneyLover\bin\Debug\EntityFramework.SqlServer.dll
+\\219.21.221.12\Dropbox\taff et moi\MoneyLover\MoneyLover\MoneyLover\bin\Debug\System.Data.SQLite.dll
+\\219.21.221.12\Dropbox\taff et moi\MoneyLover\MoneyLover\MoneyLover\bin\Debug\System.Data.SQLite.EF6.dll
+\\219.21.221.12\Dropbox\taff et moi\MoneyLover\MoneyLover\MoneyLover\bin\Debug\System.Data.SQLite.Linq.dll
+\\219.21.221.12\Dropbox\taff et moi\MoneyLover\MoneyLover\MoneyLover\bin\Debug\EntityFramework.xml
+\\219.21.221.12\Dropbox\taff et moi\MoneyLover\MoneyLover\MoneyLover\bin\Debug\EntityFramework.SqlServer.xml
+\\219.21.221.12\Dropbox\taff et moi\MoneyLover\MoneyLover\MoneyLover\bin\Debug\System.Data.SQLite.xml
+\\219.21.221.12\Dropbox\taff et moi\MoneyLover\MoneyLover\MoneyLover\obj\x86\Debug\MoneyLover.Properties.Resources.resources
+\\219.21.221.12\Dropbox\taff et moi\MoneyLover\MoneyLover\MoneyLover\obj\x86\Debug\MoneyLover.csproj.GenerateResource.Cache
+\\219.21.221.12\Dropbox\taff et moi\MoneyLover\MoneyLover\MoneyLover\obj\x86\Debug\MoneyLover.exe
+\\219.21.221.12\Dropbox\taff et moi\MoneyLover\MoneyLover\MoneyLover\obj\x86\Debug\MoneyLover.pdb
+\\219.21.221.12\Dropbox\taff et moi\MoneyLover\MoneyLover\MoneyLover\obj\x86\Debug\MoneyLover.FormMain.resources
+\\219.21.221.12\Dropbox\taff et moi\MoneyLover\MoneyLover\MoneyLover\obj\x86\Debug\MoneyLover.csprojResolveAssemblyReference.cache

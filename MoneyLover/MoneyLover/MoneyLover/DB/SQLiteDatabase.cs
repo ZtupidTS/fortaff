@@ -5,6 +5,7 @@ using System.Text;
 using System.Data;
 using System.Data.SQLite;
 using System.IO;
+using MoneyLover;
 
 namespace StopLoss.DB
 {
@@ -18,20 +19,14 @@ namespace StopLoss.DB
         /// </summary>
         public SQLiteDatabase()
         {
-            if (File.Exists("config/DB.sqlite"))
+            if (File.Exists("DB/ML.sqlite"))
             {
-                dbConnection = "Data Source=config/DB.sqlite";
+                dbConnection = "Data Source=DB/ML.sqlite";
                 //e aqui caso quero alterar o que já existe
             }
             else
             {
-                SQLiteConnection.CreateFile("config/DB.sqlite");
-                dbConnection = "Data Source=config/DB.sqlite";
-                //criar as tabela e colunas aqui no soft
-                //ExecuteNonQuery("create table configframe (id INTEGER PRIMARY KEY, nameframe varchar(40), nameobject varchar(40), valueobject varchar(40))");
-                ExecuteNonQuery("create table questionwc (id INTEGER PRIMARY KEY, type varchar(40), subtype varchar(40), questions text(300), enabled BOOLEAN, deleted BOOLEAN DEFAULT 0)");
-                ExecuteNonQuery("create table warmup (id INTEGER PRIMARY KEY, subtype varchar(40), datequestions DATETIME, questionsdone INT, questionstotal INT)");
-                ExecuteNonQuery("create table cooldown (id INTEGER PRIMARY KEY, datequestions DATETIME, idquestions INT, rating DECIMAL(8,2))");
+                new Utils().alertMessage("Problema na abertura da DB");
             }
         }
 

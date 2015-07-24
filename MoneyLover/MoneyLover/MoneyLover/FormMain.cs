@@ -9,186 +9,224 @@ using System.Windows.Forms;
 using System.Xml;
 using System.IO;
 using System.Xml.Serialization;
+using System.Diagnostics;
+using StopLoss.DB;
 
 namespace MoneyLover
 {
     public partial class FormMain : Form
     {
+        private SQLiteDatabase sql;
+        private String year;
+        private String month;
+        private Double receitas;
+        private Double despesas;
+        private Boolean allyear;
+        
         public FormMain()
         {
             InitializeComponent();
+            
+            if (new Utils().dbExists())
+            {
+                sql = new SQLiteDatabase();
+                fillCbYear();                
+            }
+            comboBoxMonth.Enabled = false;
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openFileDialogMoneyLoverFile.Filter = "File mlx|*.mlx";
             openFileDialogMoneyLoverFile.FileName = "";
             openFileDialogMoneyLoverFile.ShowDialog();
             if (!openFileDialogMoneyLoverFile.FileName.Equals(""))
             {
-
-                ListBox listBox1 = new ListBox();
-                
-
-                //Aqui tenho que criar tudo o preciso para a consulta.
-                //XmlReader xReader = XmlReader.Create(new StringReader(openFileDialogMoneyLoverFile.FileName));
-                
-                //while (xReader.Read())
-                //{
-                //    if (xReader.IsStartElement())
-                //    {
-                //        switch (xReader.NodeType)
-                //        {
-                //            case XmlNodeType.Element:
-                //                listBox1.Items.Add("<" + xReader.Name + ">");
-                //                break;
-                //            case XmlNodeType.Text:
-                //                listBox1.Items.Add(xReader.Value);
-                //                break;
-                //            case XmlNodeType.EndElement:
-                //                listBox1.Items.Add("");
-                //                break;
-                //        }
-                //    }
-                //}
-
-                //DataSet ds = new DataSet();
-                //XmlSerializer xmlSerializer = new XmlSerializer(typeof(DataSet));
-                //FileStream readStream = new FileStream(openFileDialogMoneyLoverFile.FileName, FileMode.Open);
-                //ds = (DataSet)xmlSerializer.Deserialize(readStream);
-                //readStream.Close();
-                //dataGridView1.DataSource = ds.Tables[0];
-
-                //XmlDocument xmlDoc = new XmlDocument();
-                //xmlDoc.Load(openFileDialogMoneyLoverFile.FileName);
-
-                //DataSet ds = new DataSet();
-                //XmlNodeReader xnr = new XmlNodeReader(xmlDoc);
-                //ds.ReadXml(xnr);
-
-                //dataGridView1.DataSource = ds;
-
-                //XmlDocument doc = new XmlDocument();
-                //doc.Load(openFileDialogMoneyLoverFile.FileName);
-                //foreach (XmlNode est in doc.ChildNodes)
-                //{
-                // Console.WriteLine(est.Name);
-                //}
-                //foreach (XmlNode est in doc.DocumentElement.ChildNodes)
-                //{
-                // Console.WriteLine(" " +est.Name +" id= " +est.Attributes["id"].Value +"Nom= " +est.Attributes[1].Value);
-                // foreach (XmlNode i in est.ChildNodes)
-                // {
-                // Console.WriteLine(" " + i.Name +" Valeur : " +
-                //i.InnerText);
-                // }
-                // Console.WriteLine("\n\n");
-                //}
-                //Console.Read();
-
-                //DataSet ds = new DataSet();
-                //ds.ReadXml(openFileDialogMoneyLoverFile.FileName);
-
-                //XmlDocument doc = new XmlDocument();
-                //doc.Load(openFileDialogMoneyLoverFile.FileName);
-
-                //for (int i = 0; i <= ds.Tables.Count - 1; i++)
-                //{
-                //    dataGridView1.DataSource = ds.Tables[i].TableName);
-                //}
-
-
-                //dataGridView1.DataSource = ds.Tables["transactions"];
-                //dataGridView1.DataSource = ds.Tables[1].Rows[10];
-
-                //int sd = ds.Tables["transactions"].Rows.Count;
-
-                int f = 0;
-                //int a = doc.ChildNodes.Count;
-                //int b = doc.DocumentType["transactions"].ChildNodes.Count;
-                //Boolean fe = doc.HasChildNodes;
-
-               // dataGridView1.DataSource = ds.Tables["transactions"];
-
-                //foreach (XmlNode est in doc.ChildNodes)
-                //{
-                //    Console.WriteLine(est.Name);
-                //    int i = 0;
-                //}
-
-                //DataTable table = new DataTable("XmlData");
-                //try
-                //{
-                //    //open the file using a Stream
-                //    using (Stream stream = new FileStream(openFileDialogMoneyLoverFile.FileName, FileMode.Open, FileAccess.Read))
-                //    {
-                //        //create the table with the appropriate column names
-                //        //table.Columns.Add("Name", typeof(string));
-                //        //table.Columns.Add("Power", typeof(int));
-                //        //table.Columns.Add("Location", typeof(string));
-
-                //        //use ReadXml to read the XML stream
-                //        table.ReadXml(stream);
-
-                //        dataGridView1.DataSource = table;
-                //        //return the results
-                //        ///return table;
-                //    }
-                //}
-                //catch (Exception ex)
-                //{
-                //   // return table;
-                //}
-
-                //DataTable table = new DataTable("XmlDemo");
-                ////PrintValues(table, "Original table");
-
-                //string fileName = "C:\\TestData.xml";
-                //table.WriteXml(openFileDialogMoneyLoverFile.FileName, XmlWriteMode.WriteSchema);
-
-                //DataTable newTable = new DataTable();
-                //newTable.ReadXml(openFileDialogMoneyLoverFile.FileName);
-
-                // Print out values in the table.
-                //PrintValues(newTable, "New table");
-
-                //textBoxSoundStopWin.Text = System.IO.Path.GetFileName(openFileDialogSounds.FileName);
-                //new Utils().copyFile(openFileDialogSounds.FileName);
-
-                //Server.MapPath - serve para pegar o caminho completo no sistema.
-                //Server.MapPath("~/contatos.xml") = c:\inetpub\wwwroot\site\contatos.xml
-                //string sCaminhoDoArquivo = Server.MapPath("~/contatos.xml");
-
-                XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.Load(openFileDialogMoneyLoverFile.FileName); //Carregando o arquivo
-
-                //Pegando elemento pelo nome da TAG
-                XmlNodeList xnList = xmlDoc.GetElementById("transactions").ChildNodes;
-                //xmlDoc.GetElementsByTagName("");
-
-                int de = xnList.Count;
-
-                //Usando for para imprimir na tela
-                for (int i = 0; i < xnList.Count; i++)
+                //copiar a DB para a pasta do soft
+                if (new Utils().dbExists())
                 {
-                    string sNome = xnList[i]["id"].InnerText;
-                    string sEmail = xnList[i]["amount"].InnerText;
-
-                    //Response.Write("Nome: " + sNome + " Email: " + sEmail + "<br />");
+                    sql = null;
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
                 }
+                new Utils().copyFile(openFileDialogMoneyLoverFile.FileName);
+                sql = new SQLiteDatabase();
+            }
+            fillCbYear();
+        }
 
-                //Usando foreach para imprimir na tela
-                //foreach (XmlNode xn in xnList)
-                //{
-                //    string sNome = xn["nome"].InnerText;
-                //    string sEmail = xn["email"].InnerText;
-
-                //    Response.Write("Nome: " + sNome + " Email: " + sEmail + "<br />");
-                //}
-
-
+        private void fillCbYear()
+        {
+            comboBoxYear.Items.Clear();
+            //encher a combo dos anos
+            DataTable dt = sql.GetDataTable("select distinct strftime('%Y', display_date) as Year from transactions");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                //new Utils().alertMessage(dt.Rows[i].ItemArray[0].ToString());
+                comboBoxYear.Items.Add(dt.Rows[i].ItemArray[0].ToString());
             }
         }
+
+        private void fillCbMonth(String year)
+        {
+            this.year = year;
+            comboBoxMonth.Items.Clear();
+            //encher a combo dos anos
+            DataTable dt = sql.GetDataTable("select distinct strftime('%m', display_date) as Month from transactions where strftime('%Y', display_date) = '"+year+"'");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                //new Utils().alertMessage(dt.Rows[i].ItemArray[0].ToString());
+
+                comboBoxMonth.Items.Add(new Utils().monthIntToString(dt.Rows[i].ItemArray[0].ToString()));
+            }
+            comboBoxMonth.Items.Add("Ano Inteiro");
+        }
+
+        private void comboBoxYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxYear.SelectedItem.ToString() != "")
+            {
+                fillCbMonth(comboBoxYear.SelectedItem.ToString());
+                //new Utils().alertMessage(comboBoxYear.SelectedItem.ToString());
+                comboBoxMonth.Enabled = true;
+            }
+        }
+
+        private void comboBoxMonth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxMonth.SelectedItem.ToString() != "" && comboBoxMonth.SelectedItem.ToString() != "Ano Inteiro")
+            {
+                this.month = new Utils().monthStringToInt(comboBoxMonth.SelectedItem.ToString());
+
+                String receit = sql.ExecuteScalar("select sum(tr.amount) from transactions tr, categories cat "
+                    + "where strftime('%Y', tr.display_date) = '" + year + "' and strftime('%m', tr.display_date) = '" + month + "' and tr.cat_id = cat.cat_id and cat.cat_type = 1");
+                receitas = new Utils().stringtoDouble(receit);
+                labelReceitas.Text = receitas.ToString() + " €";
+
+                String despe = sql.ExecuteScalar("select sum(tr.amount) from transactions tr, categories cat "
+                    + "where strftime('%Y', tr.display_date) = '" + year + "' and strftime('%m', tr.display_date) = '" + month + "' and tr.cat_id = cat.cat_id and cat.cat_type = 2");
+                despesas = new Utils().stringtoDouble(despe);
+                labelDespesas.Text = despesas.ToString() + " €";
+
+                totalCount(Math.Round(receitas - despesas, 2));
+
+                //agora preencher o datgagridview
+                fillDgvAll(false);
+                allyear = false;
+            }
+            else
+            {
+                String receit = sql.ExecuteScalar("select sum(tr.amount) from transactions tr, categories cat "
+                    + "where strftime('%Y', tr.display_date) = '" + year + "' and tr.cat_id = cat.cat_id and cat.cat_type = 1");
+                receitas = new Utils().stringtoDouble(receit);
+                labelReceitas.Text = receitas.ToString() + " €";
+
+                String despe = sql.ExecuteScalar("select sum(tr.amount) from transactions tr, categories cat "
+                    + "where strftime('%Y', tr.display_date) = '" + year + "' and tr.cat_id = cat.cat_id and cat.cat_type = 2");
+                despesas = new Utils().stringtoDouble(despe);
+                labelDespesas.Text = despesas.ToString() + " €";
+
+                totalCount(Math.Round(receitas - despesas, 2));
+
+                //agora preencher o datgagridview
+                fillDgvAll(true);
+                allyear = true;
+            }
+        }
+
+        private void totalCount(Double total)
+        {
+            labelTotal.Text = total.ToString() + " €";
+            if (total < 0)
+            {
+                labelTotal.ForeColor = Color.Red;
+            }
+            else
+            {
+                labelTotal.ForeColor = Color.Green;
+            }
+        }
+
+        private void fillDgvAll(Boolean anointeiro)
+        {
+            DataTable dt;
+            
+            if (anointeiro)
+            {
+                dt = sql.GetDataTable("select cat.cat_name as Nome, round(sum(tr.amount),2) as 'Valor €', cat.cat_type, cat.cat_id from transactions tr, categories cat "
+                + "where strftime('%Y', tr.display_date) = '" + year + "' and tr.cat_id = cat.cat_id group by cat.cat_id");
+            }
+            else
+            {
+                dt = sql.GetDataTable("select cat.cat_name as Nome, round(sum(tr.amount),2) as 'Valor €', cat.cat_type, cat.cat_id from transactions tr, categories cat "
+                + "where strftime('%Y', tr.display_date) = '" + year + "' and strftime('%m', tr.display_date) = '" + month + "' and tr.cat_id = cat.cat_id group by cat.cat_id");
+            }
+            
+            dataGridViewAll.AllowUserToAddRows = false;
+            dataGridViewAll.AllowUserToDeleteRows = false;
+            dataGridViewAll.ReadOnly = true;
+            dataGridViewAll.DataSource = dt;
+            dataGridViewAll.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewAll.Columns[2].Visible = false;
+            dataGridViewAll.Columns[3].Visible = false;
+            dataGridViewAll.Sort(dataGridViewAll.Columns[1], ListSortDirection.Descending);
+            //por a cor verde ou vermelho
+            colorDgv(dataGridViewAll);
+            dataGridViewAll.Refresh();
+        }
+
+        private void dataGridViewAll_Click(object sender, EventArgs e)
+        {
+            int row = dataGridViewAll.CurrentCell.RowIndex;
+            int colum = dataGridViewAll.CurrentCell.ColumnIndex;
+
+            String sel = dataGridViewAll.Rows[row].Cells[3].Value.ToString();
+
+            DataTable dt;
+
+            if (allyear)
+            {
+                dt = sql.GetDataTable("select tr.note as Nome, round(sum(tr.amount),2) as 'Valor €', tr.display_date as Data from transactions tr, categories cat "
+                    + "where strftime('%Y', tr.display_date) = '" + year + "' and"
+                    + " tr.cat_id = cat.cat_id and cat.cat_id = '" + sel + "' group by tr.note");
+            }
+            else
+            {
+                dt = sql.GetDataTable("select tr.note as Nome, round(sum(tr.amount),2) as 'Valor €', tr.display_date as Data from transactions tr, categories cat "
+                    + "where strftime('%Y', tr.display_date) = '" + year + "' and strftime('%m', tr.display_date) = '" + month + "' and"
+                    + " tr.cat_id = cat.cat_id and cat.cat_id = '" + sel + "' group by tr.note");
+            }
+
+            dataGridViewSelection.AllowUserToAddRows = false;
+            dataGridViewSelection.AllowUserToDeleteRows = false;
+            dataGridViewSelection.ReadOnly = true;
+            dataGridViewSelection.DataSource = dt;
+            dataGridViewSelection.Sort(dataGridViewSelection.Columns[1], ListSortDirection.Descending);
+            dataGridViewSelection.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewSelection.Refresh();
+        }
+
+        private void dataGridViewAll_Sorted(object sender, EventArgs e)
+        {
+            colorDgv(dataGridViewAll);
+        }
+
+        private void colorDgv(DataGridView dgv)
+        {
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                //currQty += row.Cells["qty"].Value;
+                if (row.Cells[2].Value.ToString() == "1")
+                {
+                    row.DefaultCellStyle.ForeColor = Color.Green;
+                }
+                else
+                {
+                    row.DefaultCellStyle.ForeColor = Color.Red;
+                }
+                dataGridViewAll.Refresh();
+            }
+        }
+
     }
 
 

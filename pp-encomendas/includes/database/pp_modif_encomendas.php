@@ -3,7 +3,7 @@
 //obtenho uma guia de reparação e só uma aqui
 function modifEncomendasGetById($id)
 {
-    $t = getTable("pp_modif_encomendas", "pp_modif_id = ".dbInteger($id), "");
+    $t = getTable("pp_modif_encomendas", "pp_modif_enc_id = ".dbInteger($id), "");
     return foreachRow($t);
 }
 

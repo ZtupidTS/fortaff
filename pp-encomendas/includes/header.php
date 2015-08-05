@@ -111,8 +111,8 @@ if(isset($_SESSION['username']))
         <!-- para o file upload -->
         <script src="js/other/jquery.uploadfile.js"></script>
         <!-- script para ver um pouco da guia -->
-        <!--<script src="js/viewDataGr.js"></script>
-        <script src="js/viewDataRep.js"></script>-->
+        <script src="js/viewEncomenda.js"></script>
+        <!-- <script src="js/viewDataRep.js"></script>-->
         
         <!-- para o carroussel -->
         <script src="js/other/jssor.slider.js"></script>        
@@ -166,12 +166,6 @@ if(isset($_SESSION['username']))
 	                              <li class="divider"></li>
 	                              <li><a href="view_encomendas.php">Consultar</a></li>
 	                              
-	                              
-	<!--                              <li><a href="#">Something else here</a></li>
-	                              <li class="divider"></li>
-	                              <li><a href="#">Separated link</a></li>
-	                              <li class="divider"></li>
-	                              <li><a href="#">One more separated link</a></li>-->
 	                            </ul>
 	                        </li>
 	                        <!--<li class="dropdown">
@@ -184,24 +178,27 @@ if(isset($_SESSION['username']))
 	                              <li class="divider"></li>
 	                              <li><a href="deleterep.php">Eliminar</a></li>
 	                            </ul>
-	                        </li>
+	                        </li> -->
 	                        <li class="dropdown">
 	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tarefas<b class="caret"></b></a>
 	                            <ul class="dropdown-menu">
-	                              <li><a href="sendmail.php">Enviar Mail ao Reparador</a></li>                              
+	                              <!--<li><a href="sendmail.php">Enviar Mail ao Reparador</a></li>                              
 	                              <li><a href="levantamentogr.php">Registar Levantamento Pelo Reparador</a></li>
 	                              <li class="divider"></li>
 	                              <li><a href="sendmailanexo.php">Enviar Mail Com Anexo ao Reparador</a></li>
-	                              <li class="divider"></li>
+	                              <li class="divider"></li>-->
 	                              <li><a href="sendsms.php">Enviar SMS ao Cliente</a></li>
-	                              <li><a href="entregueclgr.php">Registar Levantamento Pelo Cliente</a></li>
 	                              <li><a href="verifystatussms.php">Verificar estado SMS</a></li>
 	                              <li class="divider"></li>
+	                              <li><a href="levantamentobolo.php">Registar Levantamento Pelo Cliente</a></li>	
+	                              <li class="divider"></li>                              
+	                              <li><a href="deleteenc.php">Anular Encomenda</a></li>
+	                              <!--<li class="divider"></li>
 	                              <li><a href="orcamento.php">Inserir valor Orçamento</a></li>   
 	                              <li class="divider"></li>
-	                              <li><a href="closegr.php">Fechar Guia</a></li>                          
+	                               -->                         
 	                            </ul>
-	                        </li>-->
+	                        </li>
 	                        <?php
 	                        	if($_SESSION['username'] == "admin")
 	                        	{?>
@@ -216,12 +213,14 @@ if(isset($_SESSION['username']))
 			                              			<li><a href="insert_massa.php">Inserir Massa</a></li>
 			    					</ul>
 				                        </li>
-			                            	<li><a href="modif_composicao.php">Alterar Composição</a></li>
+			                            	<li><a href="view_composicao.php">Ver Composições</a></li>
 			                              	<li class="divider"></li>
 			                              	<li><a href="insert_bolonosso.php">Inserir bolo nosso</a></li>
 			                              	<li><a href="modif_bolonosso.php">Alterar bolo nosso</a></li>
 			                              	<li class="divider"></li>
 			                              	<li><a href="insert_users.php">Inserir Utilizador</a></li>
+			                              	<li class="divider"></li>
+	                              			<li><a href="view_modifenc.php">Modificações Encomendas</a></li>
 			                              	<!--<li class="divider"></li>
 			                              	<li class="dropdown-submenu">
 				                              	<a tabindex="-1" href="#">Modificações</a>

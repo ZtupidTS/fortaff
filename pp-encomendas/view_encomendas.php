@@ -31,10 +31,10 @@
 			            <th>Nome</th> 
 			            <th>Contacto</th> 
 			            <th>Data Criação</th>  
-			            <th>Data a realizar</th>
+			            <th>Data Levantamento</th>
 			            <th>Data SMS</th>
 			            <th>Sms Entregue?</th>
-			            <th>Data Levantamento</th>			            
+			            <th>Cliente Levantou</th>			            
 			          </tr>  
 			    </thead>
 			    <tbody> 
@@ -74,7 +74,7 @@
 						}?>
 			                	
 			                </td>
-			                <td>é para meter?</td>                
+			                <td><?= $data['pp_enc_datalevantamento'];?></td>                
 			                
 			            </tr>
 			            <?php

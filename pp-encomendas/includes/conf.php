@@ -19,7 +19,7 @@ $_SESSION['include_function'] = 'C:/xampp/htdocs/pp-encomendas_dev/fonction/func
 
 
 //localização do ficheiro 'gr-guias/mail/class.phpmailer.php'
-$_SESSION['locate_file_phpmailer'] = 'C:/xampp/htdocs/pp-encomendas/mail/class.phpmailer.php';
+$_SESSION['locate_file_phpmailer'] = 'C:/xampp/htdocs/pp-encomendas_dev/mail/class.phpmailer.php';
 
 //aqui os dados para o envio do mail diario podem ser preenchidos iguais ao do fornecedor
 //o unico ponto é caso tenham um servidor interno de mail como no meu caso
@@ -45,15 +45,15 @@ $_SESSION['setfrom_mail_send_daily'] = 'Bazar SAV';
 $_SESSION['add_cc_mail_send_daily'] = array("mail1" => "informatica@fafedis.pt", "mail2" => "bazarl@fafedis.pt", "mail3" => "bazarl2@fafedis.pt", "mail4" => "bazarp@fafedis.pt", "mail5" => "bazarsav@fafedis.pt" );
 //$_SESSION['add_cc_mail_send_daily'] = array("mail1" => "informatica@fafedis.pt");
 
+
 //aqui temos de por onde se situa os seguintes ficheiros
-$_SESSION['mysql_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas/includes/database/mysql.php';
-$_SESSION['dblogin_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas/includes/database/dblogin.php';
-$_SESSION['dbgrep_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas/includes/database/dbgrep.php';
-$_SESSION['dbmodifgr_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas/includes/database/dbmodifgr.php';
-$_SESSION['dbmodifreparador_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas/includes/database/dbmodifreparador.php';
-$_SESSION['dbreparador_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas/includes/database/dbreparador.php';
-//update v1.2
-$_SESSION['dbsection_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas/includes/database/dbsection.php';
+$_SESSION['pp_bolo_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas_dev/includes/database/pp_bolo.php';
+$_SESSION['pp_cobertura_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas_dev/includes/database/pp_cobertura.php';
+$_SESSION['pp_encomendas_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas_dev/includes/database/pp_encomendas.php';
+$_SESSION['pp_massa_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas_dev/includes/database/pp_massa.php';
+$_SESSION['pp_recheio_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas_dev/includes/database/pp_recheio.php';
+$_SESSION['pp_users_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas_dev/includes/database/pp_users.php';
+$_SESSION['view_nossosbolos_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas_dev/includes/database/view_nossosbolos.php';
 
 
 

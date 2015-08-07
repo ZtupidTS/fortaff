@@ -25,6 +25,11 @@ function encomendasGetAll()
         return getTable("pp_encomendas", "", "");
 }
 
+function encomendasGetAllEnable()
+{
+	return etTable("pp_encomendas", "pp_enc_enable = 1", "pp_enc_id");
+}
+
 //devolve me o id inserido
 function encomendasInsert($fields)
 {

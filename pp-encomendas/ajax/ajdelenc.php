@@ -3,16 +3,23 @@ include '../includes/allpageaj.php';
 
 $id = control_post($_GET['idenc']);
 
-//vou inserir na DB
-$fields = array();
-$fields['pp_enc_id'] = dbInteger($id);
-$fields['pp_enc_enable'] = dbInteger(0);
-encomendasUpdate($fields);
-unset($fields);
+$data = encomendasGetById($_GET['idenc']);
 
-insertmodifencomenda($id, "Encomenda eliminada");
+if($data['pp_enc_enable'] == '0')
+{
+	echo 'Encomenda já eliminada, verifique numero inserido';
+}else{
+	//vou inserir na DB
+	$fields = array();
+	$fields['pp_enc_id'] = dbInteger($id);
+	$fields['pp_enc_enable'] = dbInteger(0);
+	encomendasUpdate($fields);
+	unset($fields);
 
-echo 'ok';
+	insertmodifencomenda($id, "Encomenda eliminada");
+
+	echo 'ok';
+}
 
 closeDataBase();
 ?>

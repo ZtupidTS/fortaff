@@ -30,8 +30,7 @@
 		   	    if(newdata == "ok")
 			    {
 			    	alert('Encomenda eliminada com sucesso');
-			    	$('#valorsearch').val('');
-			    	$('#valorsearch').focus();
+			    	window.location = 'deleteenc.php';
 			    }else{
 			    	//$('#suppliertype').hide();
 			    	alert(newdata);
@@ -56,10 +55,10 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label" for="textinput" >Nº da Encomenda</label>
                             <div class="col-sm-2">
-                                <input type="text" name="valorsearch" id="valorsearch" class="form-control" onkeyup="if(event.keyCode == 13) verEncomenda('sms')" />
+                                <input type="text" name="valorsearch" id="valorsearch" class="form-control" onkeyup="if(event.keyCode == 13) verEncomenda('')" />
                             </div>
                             <div class="col-sm-3">
-                                <input type="button" onclick="verEncomenda('sms')" class="btn btn-primary" value="Ver">
+                                <input type="button" onclick="verEncomenda('')" class="btn btn-primary" value="Ver">
                             </div>                            
                         </div>
                         

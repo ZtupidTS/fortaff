@@ -221,6 +221,7 @@ if(isset($_SESSION['username']))
 			                              	<li><a href="insert_users.php">Inserir Utilizador</a></li>
 			                              	<li class="divider"></li>
 	                              			<li><a href="view_modifenc.php">Modificações Encomendas</a></li>
+	                              			<li><a href="recup_encomendas.php">Recuperar Encomendas</a></li>
 			                              	<!--<li class="divider"></li>
 			                              	<li class="dropdown-submenu">
 				                              	<a tabindex="-1" href="#">Modificações</a>

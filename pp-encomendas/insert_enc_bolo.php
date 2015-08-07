@@ -161,7 +161,7 @@
 				peso: peso,
 				pessoas: pessoas,
 				dizeres: dizeres,
-				osb: obs,
+				obs: obs,
 				nomecliente: nomecliente,
 				contacto: contacto,
 				sendsms: sendsms,

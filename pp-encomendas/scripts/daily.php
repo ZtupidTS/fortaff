@@ -102,111 +102,103 @@ unset($where);
 unset($table);
 unset($data);*/
 
-$textmail = '<html><body>';
+$textmail = '';
+$textmail_final = '<html><body>';
 //$titulo = "Indiferenciado";
 //$numerowhile = 0;
 
+$textmail_pdf = '';
 
 $table = encomendasGetByFiltro("pp_enc_datedone >= ".dbString($date_atual)." AND pp_enc_datedone <= ".dbString($date_mais8). " AND pp_enc_datalevantamento is NULL AND pp_enc_enable = 1", "pp_enc_datedone");
 
 while ($row = foreachRow($table))
 {
-	$textmail .= '<h2> Encomenda Nº ' . $row['pp_enc_id'] . '</h2>';
+	$textmail .= '<h2 style="color:blue"> Encomenda Nº ' . $row['pp_enc_id'] . '</h2>';
 	
-	$textmail .= 'Data do levantamento da encomenda: '.$row['pp_enc_datedone'].'<br/>';
-	$textmail .= 'Nome do cliente: '.$row['pp_enc_clientname'].'<br/>';
-	$textmail .= 'Contacto do cliente: '.$row['pp_enc_clientcontact'].'<br/>';
-	$textmail .= 'Data de criação da encomenda: '.$row['pp_enc_dateenc'].'<br/>';
+	$textmail .= '<b>Data do levantamento da encomenda:</b> '.$row['pp_enc_datedone'].'<br/>';
+	$textmail .= '<b>Nome do cliente:</b> '.$row['pp_enc_clientname'].'<br/>';
+	$textmail .= '<b>Contacto do cliente:</b> '.$row['pp_enc_clientcontact'].'<br/>';
+	$textmail .= '<b>Data de criação da encomenda:</b> '.$row['pp_enc_dateenc'].'<br/>';
 	if($row['pp_enc_idbolonosso'] == '')
 	{
-		$textmail .= 'Fez a selecção através de um bolo nosso: Não<br/>';
+		$textmail .= '<b>Fez a selecção através de um bolo nosso:</b> Não<br/>';
 	}else{
-		$textmail .= 'Fez a selecção através de um bolo nosso: Sim<br/>';
+		$textmail .= '<b>Fez a selecção através de um bolo nosso:</b> Sim<br/>';
 		$bolonosso = boloGetById($row['pp_enc_idbolonosso']);
-		$textmail .= '<img height="150" width="250" src="../'.$bolonosso['pp_bolo_urlimage'].'"/><br/>';
+		//mail
+		$textmail_final .= $textmail;
+		//$textmail_final .= '<img height="150" width="250" src="//219.21.221.141/pp-encomendas_dev/'.$bolonosso['pp_bolo_urlimage'].'"/><br/>';
+		//pdf
+		$textmail_pdf .= $textmail;
+		$textmail_pdf .= '<img height="150" width="250" src="C:/xampp/htdocs/pp-encomendas_dev/'.$bolonosso['pp_bolo_urlimage'].'"/><br/>';
+		$textmail = '';
 		
 	}
 	
-	$textmail .= '<h4>Composição:</h4>';
+	$textmail .= '<h4 style="color:green">Composição:</h4>';
 	if($row['pp_enc_coberturaid'] == '')
 	{
-		$textmail .= 'Cobertura: '.$row['pp_enc_coberturaoutra'].'<br/>';
+		$textmail .= '<b>Cobertura:</b> '.$row['pp_enc_coberturaoutra'].'<br/>';
 	}else{
 		$data_cob = coberturaGetById($row['pp_enc_coberturaid']);
-		$textmail .= 'Cobertura: '.$data_cob['pp_cobertura_designacao'].'<br/>';
+		$textmail .= '<b>Cobertura:</b> '.$data_cob['pp_cobertura_designacao'].'<br/>';
 	}
 	if($row['pp_enc_recheioid'] == '')
 	{
-		$textmail .= 'Recheio: '.$row['pp_enc_recheiooutra'].'<br/>';
+		$textmail .= '<b>Recheio:</b> '.$row['pp_enc_recheiooutra'].'<br/>';
 	}else{
 		$data_cob = recheioGetById($row['pp_enc_recheioid']);
-		$textmail .= 'Recheio: '.$data_cob['pp_recheio_designacao'].'<br/>';
+		$textmail .= '<b>Recheio:</b> '.$data_cob['pp_recheio_designacao'].'<br/>';
 	}
 	if($row['pp_enc_massaid'] == '')
 	{
-		$textmail .= 'Massa: '.$row['pp_enc_massaoutra'].'<br/>';
+		$textmail .= '<b>Massa:</b> '.$row['pp_enc_massaoutra'].'<br/>';
 	}else{
 		$data_cob = massaGetById($row['pp_enc_massaid']);
-		$textmail .= 'Massa: '.$data_cob['pp_massa_designacao'].'<br/>';
+		$textmail .= '<b>Massa:</b> '.$data_cob['pp_massa_designacao'].'<br/>';
 	}
 	
-	$textmail .= '<h4>Outros:</h4>';
+	$textmail .= '<h4 style="color:green">Outros:</h4>';
 	if($row['pp_enc_peso'] != '')
 	{
-		$textmail .= 'Peso: '.$row['pp_enc_peso'].' Kg <br/>';
+		$textmail .= '<b>Peso:</b> '.$row['pp_enc_peso'].' Kg <br/>';
 	}
 	if($row['pp_enc_pessoas'] != '')
 	{
-		$textmail .= 'Pessoas: '.$row['pp_enc_pessoas'].'<br/>';
+		$textmail .= '<b>Pessoas:</b> '.$row['pp_enc_pessoas'].'<br/>';
 	}
 	if($row['pp_enc_dizeres'] != '')
 	{
-		$textmail .= 'Dizeres: '.$row['pp_enc_dizeres'].'<br/>';
+		$textmail .= '<b>Dizeres:</b> '.$row['pp_enc_dizeres'].'<br/>';
 	}
 	if($row['pp_enc_obs'] != '')
 	{
-		$textmail .= 'Observações: '.$row['pp_enc_obs'].'<br/>';
-	}
-	
-		
-
-	
-
-	//isso vai para o mail
-	/*$where = 'status_sms  != 1 AND date_sms IS NOT NULL AND date_tocliente IS NULL AND id_section = '.$numerowhile;
-	$table = grepGetByFiltro($where, 'date_in');
-
-	$textmail .= 'SMS enviados que não foram entregue ao cliente: <br/>';
-	if(mysql_num_rows($table) > 0)
-	{
-		while($data = mysql_fetch_array($table))
-		{
-			//aqui vou ir buscar o numero do fornecedor
-			$reparador = '';
-			if($data['rep_id'] > 0)
-			{
-				$data_rep = reparadorGetById($data['rep_id']);
-				$reparador = $data_rep['rep_name'];
-			}else{
-				$reparador = 'Não foi enviado mail ao reparador ainda';
-			}
-			$textmail .= 'GR nº' . $data['id'] . ' - Data entrada: ' . $data['date_in'] . ' - ' . $data['cl_name'] . ' - ' . $data['art_marca'] . ': ' . $data['art_type'] . ' - ' . $reparador . '<br/>';
-		}	
-	}else{
-		$textmail .= 'Não existe nenhum. <br/>';
-		
-	}*/	
+		$textmail .= '<b>Observações:</b> '.$row['pp_enc_obs'].'<br/>';
+	}	
 }
 
 
 $textmail .= '<br/>';
+$textmail .= '<br/>';
+$textmail .= '<br/>';
 $textmail .= '!!!! Muito importante, caso deixam de receber esse mail diario, avisar-me !!!!';
-$textmail .= '</body></html>';
+$textmail_pdf .= $textmail;
+$textmail_final .= $textmail;
 
-echo $textmail;
+$textmail_final .= '</body></html>';
 
-//echo 'd';
-/*enviamaildiary($textmail);*/
-//echo 'd';
+require_once('C:/xampp/htdocs/pp-encomendas_dev/FPDF/html2pdf/html2pdf.class.php');
+    
+ob_start();
+echo $textmail_pdf; 
+$content = ob_get_clean();
+$html2pdf = new HTML2PDF('P', 'A4', 'pt');
+$html2pdf->writeHTML($content, isset($_GET['vuehtml']));
+$html2pdf->Output('C:/xampp/htdocs/pp-encomendas_dev/scripts/script_diario.pdf', 'F');
+//aqui permite me envia-lo em anexo
+$content_PDF = $html2pdf->Output('', true);
+
+enviamaildiary($textmail_final, $content_PDF);
+
 closeDataBase();
 ?>

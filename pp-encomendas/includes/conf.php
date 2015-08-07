@@ -25,9 +25,9 @@ $_SESSION['locate_file_phpmailer'] = 'C:/xampp/htdocs/pp-encomendas_dev/mail/cla
 //o unico ponto é caso tenham um servidor interno de mail como no meu caso
 
 //mail login
-$_SESSION['login_mail_send_daily'] ='bazarsav@fafedis.pt';
+$_SESSION['login_mail_send_daily'] ='backup@fafedis.pt';
 //mail password
-$_SESSION['password_mail_send_daily'] ='bazarsavfafe';
+$_SESSION['password_mail_send_daily'] ='backup';
 //host do servidor de mail
 $_SESSION['host_envio_mail_send_daily'] ='127.0.0.1';
 //helo a priori igual ao host
@@ -35,14 +35,14 @@ $_SESSION['helo_envio_mail_send_daily'] ='127.0.0.1';
 //porta do servidor de envio
 $_SESSION['port_envio_mail_send_daily'] = 25;
 //endereço mail de quem envia referente ao login associado e preenchido mais em cima
-$_SESSION['from_mail_send_daily'] ="bazarsav@fafedis.pt";
+$_SESSION['from_mail_send_daily'] ="backup@fafedis.pt";
 //alem do envio ao forncedores meter um mail em copia da loja
 //$_SESSION['addcc_mail_send_daily'] ="informatica@fafedis.pt";
 //Renomear o nome do mail de envio em 
-$_SESSION['setfrom_mail_send_daily'] = 'Bazar SAV';
+$_SESSION['setfrom_mail_send_daily'] = 'Encomendas';
 //preencher com os mails que pretende que vai em copia o mail
 //exemplos: ("mail1" => "test1@fafedis.pt") ou ("mail1" => "test1@fafedis.pt", "mail2" => "test2@fafedis.pt"),.....
-$_SESSION['add_cc_mail_send_daily'] = array("mail1" => "informatica@fafedis.pt", "mail2" => "bazarl@fafedis.pt", "mail3" => "bazarl2@fafedis.pt", "mail4" => "bazarp@fafedis.pt", "mail5" => "bazarsav@fafedis.pt" );
+$_SESSION['add_cc_mail_send_daily'] = array("mail1" => "informatica@fafedis.pt");
 //$_SESSION['add_cc_mail_send_daily'] = array("mail1" => "informatica@fafedis.pt");
 
 

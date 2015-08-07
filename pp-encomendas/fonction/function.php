@@ -691,7 +691,7 @@ function insertmodifbolonosso($id, $text)
 }
 
 #enviar um mail diario aos chefes
-function enviamaildiary($text)
+function enviamaildiary($text, $anexo)
 {
 	//require 'C:/xampp/htdocs/gr-guias/mail/class.phpmailer.php';
 	require $_SESSION['locate_file_phpmailer'];
@@ -718,8 +718,10 @@ function enviamaildiary($text)
 		$mail->AddCC($value);		
 	}
 	#$mail->AddReplyTo('jo2012@pw-jre.heliohost.org', 'Administrator JO2012');	
-	$mail->Subject='Reparações pendentes e estado sms';
+	$mail->Subject='Encomendas Bolos';
 	$mail->Body=$text;
+	
+	$mail->AddStringAttachment($anexo, 'Impressao em pdf.pdf');
 	
         if($mail->Send()){
 		$mail->ErrorInfo;

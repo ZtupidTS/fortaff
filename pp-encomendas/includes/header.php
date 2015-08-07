@@ -164,7 +164,8 @@ if(isset($_SESSION['username']))
     					</ul>
 	                              </li>
 	                              <li class="divider"></li>
-	                              <li><a href="view_encomendas.php">Consultar</a></li>
+	                              <li><a href="view_encomendas.php">Consultar Encomendas</a></li>
+	                              <li><a href="view_encdiario.php">Encomendas Do Mail</a></li>
 	                              
 	                            </ul>
 	                        </li>

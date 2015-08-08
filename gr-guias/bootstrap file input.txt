@@ -1,0 +1,7 @@
+http://plugins.krajee.com/file-input
+
+versão 1.5.0.12
+
+https://github.com/pekebyte/pekeUpload
+http://hayageek.com/docs/jquery-upload-file.php
+ 

@@ -1,0 +1,5 @@
+id_section
+
+0 - nothing
+1 - bazarp
+2 - bazarl

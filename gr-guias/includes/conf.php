@@ -39,7 +39,9 @@ $_SESSION['setfrom_mail_send_supplier'] = 'Bazar SAV';
 $_SESSION['corpo_levantamento_mail_send_supplier'] = 'Venho por este meio pedir o levantamento do artigo relativo a guia em anexo.';
 //em csa do cliente
 $_SESSION['corpo_casa_mail_send_supplier'] = 'Venho por este meio solicitar a reparação ao domicílio da guia em anexo.';
-
+//Podem acrescentar um pequeno texto que vai ser enviado no corpo do mail
+//Caso não querem acrescentar é deixar assim ''
+$_SESSION['corpo_add_body'] = '';
 
 
 
@@ -100,8 +102,8 @@ $_SESSION['from_mail_send_daily'] ="bazarsav@fafedis.pt";
 $_SESSION['setfrom_mail_send_daily'] = 'Bazar SAV';
 //preencher com os mails que pretende que vai em copia o mail
 //exemplos: ("mail1" => "test1@fafedis.pt") ou ("mail1" => "test1@fafedis.pt", "mail2" => "test2@fafedis.pt"),.....
-$_SESSION['add_cc_mail_send_daily'] = array("mail1" => "informatica@fafedis.pt", "mail2" => "bazarl@fafedis.pt", "mail3" => "bazarl2@fafedis.pt", "mail4" => "bazarp@fafedis.pt", "mail5" => "bazarsav@fafedis.pt" );
-//$_SESSION['add_cc_mail_send_daily'] = array("mail1" => "informatica@fafedis.pt");
+//$_SESSION['add_cc_mail_send_daily'] = array("mail1" => "informatica@fafedis.pt", "mail2" => "bazarl@fafedis.pt", "mail3" => "bazarl2@fafedis.pt", "mail4" => "bazarp@fafedis.pt", "mail5" => "bazarsav@fafedis.pt" );
+$_SESSION['add_cc_mail_send_daily'] = array("mail1" => "informatica@fafedis.pt");
 
 //aqui temos de por onde se situa os seguintes ficheiros
 $_SESSION['mysql_mail_send_daily'] = 'C:/xampp/htdocs/gr-guias/includes/database/mysql.php';

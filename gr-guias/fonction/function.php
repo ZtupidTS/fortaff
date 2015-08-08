@@ -86,7 +86,7 @@ function enviamail($dest,$id_gr,$body_mail,$anex)
         $mail->AddCC($_SESSION['addcc_mail_send_supplier']);
 	#$mail->AddReplyTo('jo2012@pw-jre.heliohost.org', 'Administrator JO2012');	
 	$mail->Subject='GR Nº' . $id_gr;
-	$mail->Body='<html><body>Bom dia,<br /><br />' . $body_mail . '<br/><br/>Obrigado pela atenção.</body></html>';
+	$mail->Body='<html><body>Bom dia,<br /><br />' . $body_mail . '<br/>'.$_SESSION['corpo_add_body'].'<br/><br/>Obrigado pela atenção.</body></html>';
 	
         $pdf = createpdf($id_gr);
         $attachment= $pdf->Output('GR numero '. $id_gr . '.pdf', 'S');

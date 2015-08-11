@@ -10,6 +10,11 @@ $body_mail = "";
 if($_POST['tipo_id'] == "1")
 {
 	$body_mail = $_SESSION['corpo_levantamento_mail_send_supplier'];
+	if($_SESSION['corpo_add_body'] != '')
+	{
+		$body_mail .= '<br/><br/>'.$_SESSION['corpo_add_body'];
+	}
+	
 }else{
 	$body_mail = $_SESSION['corpo_casa_mail_send_supplier'];
 }
@@ -37,6 +42,7 @@ if(count($mail) > 0)
 	    	{
 			if(strpos($v, ".") !== false)
 			{
+				
 				$sendmail = enviamail($mail, $_POST['id_gr'], $body_mail, '../uploads/' . $v);
 				unlink('../uploads/' . $v);
 			}

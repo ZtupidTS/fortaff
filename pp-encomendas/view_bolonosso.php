@@ -53,7 +53,7 @@
 	        	}        
 		    }else{?>
 		        <tr>
-		            <td colspan="2" style="text-align: center;">Não há resultados</td> 
+		            <td colspan="2" style="text-align: center;">Ainda não foi inseridos bolos dos nossos.</td> 
 		        </tr>    
 		        <?php
 		    }

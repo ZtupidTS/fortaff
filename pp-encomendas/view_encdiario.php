@@ -71,7 +71,31 @@ while ($row = foreachRow($table))
 
 $textmail .= '</body></html>';
 
-echo $textmail;
+//echo $textmail;
 ?>
+
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+    		<form name="changegr" class="form-horizontal" onsubmit="return false;" >
+        		<fieldset>
+
+            		<!-- Form Name -->
+            			<legend>Visualização das encomendas diarias</legend>
+            			<?php
+            			if (strpos($textmail,'Encomenda') !== false) 
+            			{
+    					echo $textmail;
+				}else{
+					echo 'Não existe encomendas para hoje e os proximos 8 dias';
+				}
+            			?>
+            
+        		</fieldset>
+    		</form>    
+	</div><!-- /.col-lg-12 -->
+</div><!-- /.row -->
+
+
+
 
 <?php include 'includes/footer.php';?>

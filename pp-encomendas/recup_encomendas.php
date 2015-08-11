@@ -34,6 +34,11 @@
                     $where = "pp_enc_enable = 0";
 		    $order = " DESC";
 		    $table = encomendasGetByFiltro($where, "pp_enc_datedone".$order);
+		    if (is_bool($table) === false) 
+			    {
+			    
+			    if (mysql_num_rows($table) > 0)
+			    {
                     ?>
 
 			<!-- <table id="example" class="table table-striped table-hover"> -->
@@ -52,11 +57,7 @@
 			    </thead>
 			    <tbody> 
 			    <?php
-			    if (is_bool($table) === false) 
-			    {
 			    
-			    if (mysql_num_rows($table) > 0)
-			    {
 			        while($data = mysql_fetch_array($table))
 			        {
 			            ?>
@@ -93,6 +94,20 @@
 			            <?php
 			        }        
 			    }else{?>
+			        <table id="" class="table table-striped table-bordered display" cellspacing="0" width="auto">
+			    <thead>  
+			          <tr>  
+			            <th>Nº</th>  
+			            <th>Nome</th> 
+			            <th>Contacto</th> 
+			            <th>Data Criação</th>  
+			            <th>Data Levantamento</th>
+			            <th>Data SMS</th>
+			            <th>Sms Entregue?</th>
+			            <th>Cliente Levantou</th>			            
+			          </tr>  
+			    </thead>
+			    <tbody> 
 			        <tr>
 			            <td colspan="10" style="text-align: center;">Não há resultados</td> 
 			        </tr>    

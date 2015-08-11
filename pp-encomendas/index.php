@@ -107,9 +107,15 @@
     </div><!-- /.row -->    
    <?php } ?>
    
+   	<?php
+        $table = boloGetByFiltro("pp_bolo_enable = 1", "");
+        if(mysql_num_rows($table) > 0)
+        {?>
+   	
    	<div id="slider1_container" style="position: relative; top: 0px; left: 150px; width: 800px; height: 550px; overflow: hidden; ">
 
         <!-- Loading Screen -->
+        
         <div u="loading" style="position: absolute; top: 0px; left: 0px;">
             <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
                 background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
@@ -121,8 +127,8 @@
 
         <!-- Slides Container -->
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 550px; overflow: hidden;">
+        	
         	<?php
-        	$table = boloGetByFiltro("pp_bolo_enable = 1", "");
         	while ($bolo = foreachRow($table)) 
                 {?>
                     <div><img u="image" src="<?= $bolo['pp_bolo_urlimage'];?>"/></div>
@@ -203,6 +209,7 @@
         <!--#endregion Arrow Navigator Skin End -->
         <a style="display: none" href="http://www.jssor.com">Bootstrap Slider</a>
     </div>
+    <?php }?>
    	
    	<h1 style="text-align: center; color: #0701fe;">Faça a sua Encomenda</h1>
    

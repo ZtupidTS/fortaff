@@ -20,6 +20,11 @@
                     
 		    $order = " DESC";
 		    $table = grepGetByFiltro($where, "date_in".$order);
+			if (is_bool($table) === false) 
+			    {
+			    
+			    if (mysql_num_rows($table) > 0)
+			    {
                     ?>
 
 			<!-- <table id="example" class="table table-striped table-hover"> -->
@@ -40,11 +45,7 @@
 			    </thead>
 			    <tbody> 
 			    <?php
-			    if (is_bool($table) === false) 
-			    {
 			    
-			    if (mysql_num_rows($table) > 0)
-			    {
 			        while($data = mysql_fetch_array($table))
 			        {
 			            ?>
@@ -82,6 +83,22 @@
 			            <?php
 			        }        
 			    }else{?>
+				<table id="" class="table table-striped table-bordered display" cellspacing="0" width="auto">
+			    <thead>  
+			          <tr>  
+			            <th>Nº</th>  
+			            <th>Nome</th> 
+			            <th>Contacto</th> 
+			            <th>Data Entrada</th>  
+			            <th>Data Reparador</th>
+			            <th>Data SMS</th>
+			            <th>Entregue?</th>
+			            <th>Data Levantamento</th>
+			            <th>Tipo</th>
+			            <th>Marca</th>
+			          </tr>  
+			    </thead>
+			    <tbody> 
 			        <tr>
 			            <td colspan="10" style="text-align: center;">Não há resultados</td> 
 			        </tr>    

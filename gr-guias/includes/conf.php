@@ -37,7 +37,7 @@ $_SESSION['setfrom_mail_send_supplier'] = 'Bazar SAV';
 //existe 2 corpos, um para o levantamento e outro para a reparação em casa do cliente
 //levantamento
 $_SESSION['corpo_levantamento_mail_send_supplier'] = 'Venho por este meio pedir o levantamento do artigo relativo a guia em anexo.';
-//em csa do cliente
+//em casa do cliente
 $_SESSION['corpo_casa_mail_send_supplier'] = 'Venho por este meio solicitar a reparação ao domicílio da guia em anexo.';
 //Podem acrescentar um pequeno texto que vai ser enviado no corpo do mail
 //Caso não querem acrescentar é deixar assim ''
@@ -67,7 +67,7 @@ $_SESSION['nif_leclerc_pdf'] = '507019792';
 //anotação no rodapé (só na guia do cliente), não obrigatorio, podem deixar em branco ao deixar assim ''.
 $_SESSION['rodape_guia'] = 'NOTA - O PRAZO MAXIMO DE REPARAÇÃO SÃO 30 DIAS ÚTEIS A CONTAR A PARTIR DA DATA DE ENTRADA NA LOJA. ESTA GUIA É INDISPENSÁVEL
 PARA O LEVANTAMENTO DO SEU ARTIGO EM LOJA, SE NÃO APRESENTA-LA NÃO PODERA LEVANTAR O ARTIGO EM CAUSA.';
-//tamanho da letra do rodape
+//tamanho da letra do rodape de 4 a 7
 $_SESSION['size_font_rodape'] = 7;
 
 

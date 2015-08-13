@@ -19,7 +19,10 @@
 		    		<td>v1.5</td>
 		    		<td>Possibilidade de "arquivar" guias usando o ficheiro conf.php.</td>
 		    	</tr>
-			<tr>
+				<tr>	
+		    		<td>Possibilidade de adicionar um texto no mail que vai ao fornecedor em caso de levantamento na loja</td>		    		
+		    	</tr>
+				<tr>
 		    		<td>v1.4</td>
 		    		<td>Pequenas correcções.</td>
 		    	</tr>

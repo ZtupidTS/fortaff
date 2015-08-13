@@ -14,8 +14,14 @@ function loginGetByEnableAdmin()
 
 function loginGetDisable()
 {
-        $where = "us_password IS NULL AND us_enable = 0";
-        return getTable('Users', $where, 'us_name');
+        $where = "enable = 0";
+        return getTable('Users', $where, 'name');
+}
+
+function loginGetEnable()
+{
+        $where = "enable = 1";
+        return getTable('Users', $where, 'name');
 }
 
 function loginGetAll()
@@ -25,14 +31,14 @@ function loginGetAll()
 
 function loginGetAllWithoutAdmin()
 {
-	$where = "name != 'Admin'";
+	$where = "name != 'Admin' AND enable = 1";
         return getTable("Users", $where, "name");
 }
 
 function usersUpdate($fields)
 {
-        $where = "us_id = " . dbString($fields['us_id']);
-        unset($fields['us_id']);
+        $where = "id = " . dbString($fields['id']);
+        unset($fields['id']);
 
         updateRecord("Users", $fields, $where);
 }

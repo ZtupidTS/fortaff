@@ -13,9 +13,6 @@ $user = $_SESSION['user_sms'] ;
 $pass = $_SESSION['pass_user_sms'];
 $message = $_SESSION['message_sms'];
 
-//com o 3z4u eu usava o smsid, neste caso vou meter o hash da campaign no smsid 
-//$campaign = "41442e668e695065749c855de6404d9a";
-
 $data = encomendasGetById(dbInteger($_GET['idenc']));
 $continu = true;
 
@@ -30,10 +27,10 @@ $number = $data['pp_enc_clientcontact'];
 if($number[0] == "9" && $continu)
 {
 	//antes de enviar tenho que verificar se já existe na lista
-	//$exist_number = getnumberexist($number);	
+	$exist_number = getnumberexist($number);	
 	
 	//enviar
-	/*$defined = '';
+	$defined = '';
 	$reference = '';
 	if(strlen($exist_number) > 0)
 	{
@@ -44,12 +41,61 @@ if($number[0] == "9" && $continu)
 		//'cellphone' => $number,
 		$defined = 'cellphone';
 		$reference = $number;
-	}*/
+	}
+	$params = array(
+	'apikey'    => $apikey,
+	'listID'    => $list,
+	$defined    => $reference,
+	'message'   => $message,
+	'subject'   => 'PP',
+	'from'    	=> 'E.Leclerc');
+
+	$client = new SoapClient('http://api.e-goi.com/v2/soap.php?wsdl');
+	$result = $client->sendSMS($params);
 	
 	
+	$lastsmsid = $result['CAMPAIGN'];
+	unset($result);
+	unset($params);
 	
+	//print_r($result);
 	
-	/*$url = 'https://www51.e-goi.com/api/public/sms/send';
+	//aqui um if porque a partir daqui se der erro é só
+	// verificar porque a sms pode ter sida enviada
+	if(strlen($lastsmsid) > 0)
+	{
+		//aqui faço o update da tabela grep e faço o registo na tabela modif.
+		$fields = array();
+		$fields['pp_enc_datesms'] = dbString(date('Y-m-d H:i:s', time() - 3600));
+		$fields['pp_enc_id'] = dbInteger($_GET['idenc']);
+		$fields['pp_enc_statussms'] = dbString('0');
+		$fields['pp_enc_smsid'] = dbString($lastsmsid);
+		encomendasUpdate($fields);
+		unset($fields);
+		
+		//agora a tabela modif
+		insertmodifencomenda($_GET['idenc'], 'Mensagem processada, verificar dentro de 25 min o estado dela');
+		
+		echo "Mensagem processada, verificar dentro de 25 min o estado dela";
+		
+	}else{
+		echo "Mensagem não foi enviada, tente novamente";
+	}
+}else{
+	if($continu)
+	{
+		//agora a tabela modif
+		insertmodifencomenda($_GET['idenc'], "O numero do cliente não é um telemóvel");
+		echo "O contacto do cliente não é um numero de telemóvel viável";
+	}	
+}
+
+closeDataBase();
+?>
+
+<?php
+//isso é com a api transacional
+/*$url = 'https://www51.e-goi.com/api/public/sms/send';
 	
 	$params = array(
 	'apikey'    => $apikey,
@@ -77,7 +123,7 @@ if($number[0] == "9" && $continu)
 	
 	$int = $json;*/
 	
-	$url = 'https://www51.e-goi.com/api/public/stats/sms/sends';
+	/*$url = 'https://www51.e-goi.com/api/public/stats/sms/sends';
 	
 	$params = array(
 	
@@ -99,7 +145,7 @@ if($number[0] == "9" && $continu)
 	
 	$json = json_decode($response, true);
 
-	print_r($json);
+	print_r($json);*/
 	
 	
 /*	// using Soap with SoapClient
@@ -117,52 +163,4 @@ print_r($result);
 	unset($params);*/
 	
 	//print_r($result);
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	//aqui um if porque a partir daqui se der erro é só
-	// verificar porque a sms pode ter sida enviada
-	/*if(strlen($lastsmsid) > 0)
-	{
-		//aqui faço o update da tabela grep e faço o registo na tabela modif.
-		$fields = array();
-		$fields['date_sms'] = dbString(date('Y-m-d H:i:s', time() - 3600));
-		$fields['id'] = dbInteger($_POST['id_gr']);
-		$fields['status_sms'] = dbString('0');
-		$fields['sms_id'] = dbString($lastsmsid);
-		grepUpdate($fields);
-		unset($fields);
-		
-		//agora a tabela modif
-		insertmodifgr($_POST['id_gr'], 'Mensagem processada, verificar dentro de 5 min o estado dela');
-		
-		echo "Mensagem processada, verificar dentro de 25 min o estado dela";
-		//depois de enviar vou aguardar um pouco para eles atualizar o mesmo
-		
-	}else{
-		echo "Mensagem não foi enviada, tente novamente";
-	}*/
-}else{
-	/*if($continu)
-	{
-		//agora a tabela modif
-		insertmodifgr($_POST['id_gr'], "O numero do cliente não é um telemóvel");
-		echo "O contacto do cliente não é um numero de telemóvel viável";
-	}*/	
-}
-
-closeDataBase();
 ?>

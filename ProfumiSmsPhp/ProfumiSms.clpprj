@@ -10,6 +10,8 @@
 	</lastopfiles>
 	<codestructure version="4.6.1">
 		<phptree>
+			<treenode node="../includes/allpage.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajdeleteuser.php;f9;1;32;1;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajactiveuser.php;f9;1;32;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
 			<treenode node="../includes/allpage.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\Codelobster0.php;f9;1;32;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="../includes/allpage.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajverifysms.php;f9;1;32;1;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajverifyadmin.php;f9;1;32;1;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajlogout.php;f9;1;32;1;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajlogin.php;f9;1;32;1;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajsendsms.php;f9;1;32;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -32,9 +34,9 @@
 			</treenode>
 			<treenode node="includes/allpage.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\includes\header.php;f9;1;29;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="includes/footer.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\verifystatussms.php;f15;64;34;64;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\sendsms.php;f15;121;34;121;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\consult.php;f15;134;34;134;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\adminlogin.php;f15;68;34;68;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\adduser.php;f15;84;34;84;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\index.php;f15;40;34;40;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\deluser.php;f15;72;34;72;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\activeuser.php;f15;72;34;72;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="includes/footer.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\verifystatussms.php;f15;64;34;64;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\sendsms.php;f15;121;34;121;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\consult.php;f15;134;34;134;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\adminlogin.php;f15;68;34;68;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\index.php;f15;40;34;40;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\adduser.php;f15;84;34;84;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\deluser.php;f15;72;34;72;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\activeuser.php;f15;72;34;72;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="includes/header.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\verifystatussms.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\sendsms.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\consult.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\adminlogin.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\adduser.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\index.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\deluser.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\activeuser.php;f15;0;34;0;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="includes/header.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\verifystatussms.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\sendsms.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\consult.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\adminlogin.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\index.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\adduser.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\deluser.php;f15;0;34;0;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\activeuser.php;f15;0;34;0;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="RestImpl.php;PHP:PHP Include;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\Egoi\Factory.php;f15;5;27;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -6938,7 +6940,7 @@
 			</treenode>
 			<treenode node="_FILES;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\includes\upload.php;f9;2;16;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="_POST;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajverifysms.php;f29;5;35;5;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajverifyadmin.php;f31;3;37;3;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajlogin.php;f23;3;29;3;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajsendsms.php;f11;17;17;17;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\Codelobster0.php;f16;7;22;7;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="_POST;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajverifysms.php;f29;5;35;5;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajverifyadmin.php;f31;3;37;3;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajlogin.php;f23;3;29;3;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajsendsms.php;f11;17;17;17;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\Codelobster0.php;f16;7;22;7;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajdeleteuser.php;f16;7;22;7;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajactiveuser.php;f16;7;22;7;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="_SERVER;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\includes\allpage.php;f0;3;8;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -6960,7 +6962,7 @@
 			</treenode>
 			<treenode node="exist_number;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajsendsms.php;f1;24;14;24;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\script\daily.php;f2;57;9;57;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajverifysms.php;f1;60;8;60;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajsendsms.php;f2;62;9;62;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\Codelobster0.php;f0;6;7;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="fields;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\script\daily.php;f2;57;9;57;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajverifysms.php;f1;60;8;60;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajsendsms.php;f2;62;9;62;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\Codelobster0.php;f0;6;7;6;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajdeleteuser.php;f0;6;7;6;;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\ajax\ajactiveuser.php;f0;6;7;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="fileCount;PHP:Var Name;\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\includes\upload.php;f3;23;13;23;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -14681,6 +14683,8 @@
 			<todo name="@todo" pos="21;442"/>
 		</todofile>
 	</todoblock>
+	<dbgurls>
+	</dbgurls>
 	<filescache>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\script\daily.php" crc="-106549595"/>
 		<file name="\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\ProfumiSmsPhp\js\other\respond.js" crc="-249769239"/>

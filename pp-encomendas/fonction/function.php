@@ -666,7 +666,7 @@ function getnumberexist($number_tel)
 	return $result_final;
 	//return $stringtest;
 }
-//insere dados na tabela modif gr
+//insere dados na tabela modif encomendas
 function insertmodifencomenda($id, $text)
 {
 	$fields = array();
@@ -678,7 +678,7 @@ function insertmodifencomenda($id, $text)
 	unset($fields);	
 }
 
-//insere dados na tabela modif gr
+//insere dados na tabela modif encomendas
 function insertmodifbolonosso($id, $text)
 {
 	$fields = array();

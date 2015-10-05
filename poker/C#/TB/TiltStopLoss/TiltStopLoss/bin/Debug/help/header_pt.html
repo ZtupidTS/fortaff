@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Poker BRM - Help</title>
+		<style type="text/css">
+		/* For Mozilla only: create rounded corners */
+		#box {
+		  -moz-border-radius: 10px 10px 10px 10px;
+		}
+		</style>
+		<link href="newcss.css" rel="stylesheet" type="text/css" name="css">
+        <meta http-equiv="content-type" content="text/html;charset=UTF8">
+		
+	</head>
+	
+	<body>
+            
+        <div class="estrutura">	
+            <div id="banner">
+                &nbsp;
+            </div>			
+			<a href="header_fr.html">Français</a>
+			<a href="header_pt.html">Português</a>
+			<a href="header_en.html">English</a>
+			<br/>
+			
+			<h1>Arranque</h1>
+			<p>
+			Dezipar a pasta Poker BRM onde quiserem.
+			Para cada atualização futuras, basta dezipar a pasta em cima da antiga pasta e assim não vão perder as configurações anteriores.
+			</p>
+			<p>
+			Clicar em Poker BRM.exe para lançar a aplicação:<br/>
+			<img src="images/start.jpg"><br/>
+			</p>
+			<p>
+			Se ao lançamento tem uma mensagem de erro, tem de descarregar o "net framework 4.0" da microsoft.
+			</p>
+			<h1>Configuração da DB</h1>
+			<p>
+			Nos campos server, port, userdb, password, vocês tem de preencher os valores necessarios para que a aplicação
+			consegue se ligar a vossa DB postgresql.
+			Os valores aqui inseridos correspondem aos valores por defeitos:</p>
+			<p>Servidor: 127.0.0.1</p>
+			<p>Porta: 5432</p>
+			<p>Base de dados: clicar no tracker opção database</p>
+			<p>Utilizador BD: postgres</p>
+			<p>Palavra passe: postgrespass or dbpass</p>
+			<p>
+			O campo databse corresponde ao nome da vossa base de dados do vosso tracker.
+			</p>
+			<p>
+			<img src="images/DB.jpg"><br/>
+			</p>
+			<p>
+			Depois de ter preenchido todos os campos, clicar em test e se tiver tudo bem vão obter essa mensagem e a applicação vai se fechar.
+			</p>
+			<p><img src="images/db_ok.jpg"><br/></p>
+			<p>
+			Em caso contrario verificar os dados inseridos, mas em particular o nome da base de dados.
+			</p>
+			<p>
+			Abrir de novo a aplicação, e agora vão poder inserir o vosso nickname da room onde jogam ou o alias criado no hem ou pt4
+			(se tiver tudo bem vão ter isso).
+			</p>
+			<p><img src="images/player.jpg"><br/></p>
+			<h1>Conf. Stop</h1>
+			<p>
+			No separador conf. stop vão poder configurar o stops.
+			Podem os configurar todos ou nenhum.
+			</p>
+			<p><img src="images/confstop.jpg"><br/></p>
+			<h4>Stoploss:</h4>
+			Intermédio: A parti de xx BBs um som toca durante 5 segundos.<br/>
+			Final: A partir de xx BBs negativos o som toca.
+			<h4>StoplossPeak:</h4>
+			Aqui é mais dificil a explicar, vamos ver se o povo entende.
+			Começamos uma sessão onde já estamos positivos de 200bs. Vamos agora supor que inseri 160 no campo over, neste caso o stoplosspeak comece
+			já entra em jogo por ter ultrapassados os 160. Vamos agora supor, que perdemos 180 dos 200, e que inseri 150 no stoplosspeak. Neste
+			caso perdi mais daquilo que inseri, os 150, logo o som começa a tocar.
+			<h4>StopHands:</h4>
+			A partir de xx hands o som toca.
+			<h4>StopTime:</h4>
+			A partir de xx minutos o som toca.(inserir em minutos).
+			<h4>StopWin:</h4>
+			Intermédio: A parti de xx BBs um som toca durante 5 segundos.<br/>
+			Final: A partir de xx BBs positivos o som toca.
+			<h4>Stop Rake (só para hem2):</h4>
+			Inserir o valor do rake que querem ser alertados
+			<h4>Stop VPP (só para hem2 e poker stars):</h4>
+			Inserir o valor de vpp que querem atingir para ser alertados
+			<h4>Resume on Stop:</h4>
+			Se metemos o visto, ao fim da sessão, depois de clicar em stop vamos ser redireccionados para o separador resume session onde
+			vai estar o resume da sessão que jogamos.
+			<h4>Hide BBs:</h4>
+			Permite de esconder os bbs da janela que aparece depois de clicar em start.
+			<h4>Sempre Visível:</h4>
+			Permite meter os bbs sempre visível.
+			<h4>Active button set:</h4>
+			Permite de ativar o botão "set" que permite reajustar os valores de stop durante a sessão.
+			<h4>Block Limit above:</h4>
+			Permite bloquear os limites nos quais não deveriamos jogar segundo a nossa gestão de banca.<br/>
+			Escolher o limite maximo.<br/>
+			Room compatíveis: pokerstars, winamax, ipoker e rede party poker.<br/>
+			Por enquanto só funcionas com o NoLimit porque só jogo nessa room e esse tipo de limite.<br/>
+			Para mais room e limites enviem me 3 ou 4 maõs onde podem mudar os nomes dos jogadores.
+			<h4>Sounds:</h4>
+			Permite de definir os sons (só *.wav e *.mp3).
+			
+			<h1>Conf. Stop2</h1>
+			<p><img src="images/confstop2.jpg"><br/></p>
+			
+			<h4>Close Skype:</h4>
+			Se ativo, fecha o skype.
+			
+			<h4>Vericar Aplicações:</h4>
+			Avisa se o skype, chrome, firefox ou internet explorer esta aberto.
+			
+			<h4>Rage Quit:</h4>
+			Fecha as mesas e o lobby sem perguntar nada.<br/>
+			Neste moment só funciona com a poker stars, winamax e ipoker, para mais rooms preciso de um print screen onde mostra isso por exemplo<br/>
+			<p><img src="images/ragequit.jpg" width="800px"><br/></p>
+			
+			<h4>Snooze:</h4>
+			Funciona como um despertador, seleccionar o tempo para voltar a despertar.
+			
+			<h4>Tempos entre sessões:</h4>
+			Tempo entre sessões.
+			
+			<h4>Start timer on 1st hand:</h4>
+			Só arranca o timer quando jogar a primeira hand
+			
+			<h4>Check update:</h4>
+			Verifica se x em x dia se existe um update (quanto mais dias metem mais a aplicação ao arrancar é mais rapida).
+			
+			<h4>AutoStart:</h4>
+			Faz o auto start da aplicação para começar a sessão
+			
+			<h4>BRM Management:</h4>
+			Aqui vocês tem que meter a partir do momento atual quantos bis precisam para subir e descer de limite.<br/>
+			Neste caso antes de começar o grind, vou ver a minha banca e meto aqui os valores correspondentes em BIs para descer e subir.<br/>
+			Só serão avisado de subir ou descer, ao fim da sessão (click em stop) ou ao arrancar a aplicação.
+			
+			<h4>Reset Values:</h4>
+			Ao carregar no botão vão poder inserir novos valores de bis. Neste caso carregam no botão e depois inserem os novos valores.
+			
+			<h4>Auto Start Tab:</h4>
+			Permite escolher o separador que tem que aparecer ao arranque da aplicação.
+			
+			
+			<h1>Resume Session</h1>
+			Faz um resumo da sessão que acabaram de realizar e dos melhores resultados positivos ou negativos desde que tenham o Poker BRM.
+			<p><img src="images/resumesession.jpg"><br/></p>
+			<h1>Start</h1>
+			Start para começar.<br/>
+			Se gostem não se esqueçam de um pequeno donativo.<br/>
+			Feedback para enviar um critica ou sugestão.
+			<p><img src="images/start2.jpg"><br/></p>
+			<h1>Durante a sessão</h1>
+			<p><img src="images/session.jpg"><br/></p>
+			Se vocês desativaram "hide session" ao passar o rato onde tem o "0" como na imgem, aí vai ser mostrados os BBs ganhos ou perdidos durante
+			a sessãoa atual.
+			<h4>Hands:</h4>
+			Numero de mãos jogadas na sessão.
+			<h4>Tempo:</h4>
+			O tempo que passou desde o inicio da sessão. Ao cliar no tempo, o tempo para. Exemplo: sitout.
+			<h4>Set:</h4>
+			Permite reajustar os valores dos stops.
+			<h4>Stop:</h4>
+			Parar a sessão.
+			
+		</div>		
+    </body>
+</html>

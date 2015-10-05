@@ -1,0 +1,8 @@
+mediacooldown
+
+select cd.idquestions, qwc.questions, qwc.id, round((SUM(cd.rating) / count(qwc.id)),2) AS median
+from cooldown cd, questionwc qwc
+where cd.idquestions = qwc.id
+group by qwc.id
+
+

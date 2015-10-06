@@ -53,6 +53,7 @@
             this.buttonStart.Text = "Start";
             this.buttonStart.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Visible = false;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
             // buttonStop
@@ -83,7 +84,7 @@
             this.checkBoxLogin.TabIndex = 3;
             this.checkBoxLogin.Text = "With Login";
             this.checkBoxLogin.UseVisualStyleBackColor = true;
-            this.checkBoxLogin.CheckedChanged += new System.EventHandler(this.checkBoxLogin_CheckedChanged);
+            this.checkBoxLogin.Visible = false;
             // 
             // checkBoxDown
             // 
@@ -94,6 +95,7 @@
             this.checkBoxDown.TabIndex = 4;
             this.checkBoxDown.Text = "down to up";
             this.checkBoxDown.UseVisualStyleBackColor = true;
+            this.checkBoxDown.Visible = false;
             // 
             // checkBoxZoom
             // 
@@ -104,6 +106,7 @@
             this.checkBoxZoom.TabIndex = 5;
             this.checkBoxZoom.Text = "Zoom";
             this.checkBoxZoom.UseVisualStyleBackColor = true;
+            this.checkBoxZoom.Visible = false;
             // 
             // textBoxVm
             // 
@@ -111,6 +114,7 @@
             this.textBoxVm.Name = "textBoxVm";
             this.textBoxVm.Size = new System.Drawing.Size(29, 20);
             this.textBoxVm.TabIndex = 6;
+            this.textBoxVm.Visible = false;
             // 
             // buttonConnectVpn
             // 
@@ -120,7 +124,7 @@
             this.buttonConnectVpn.TabIndex = 7;
             this.buttonConnectVpn.Text = "Connect Vpn";
             this.buttonConnectVpn.UseVisualStyleBackColor = true;
-            this.buttonConnectVpn.Click += new System.EventHandler(this.buttonConnectVpn_Click);
+            this.buttonConnectVpn.Visible = false;
             // 
             // textBoxVpn1
             // 
@@ -139,7 +143,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 198);
+            this.label1.Location = new System.Drawing.Point(53, 124);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 10;
@@ -158,11 +162,12 @@
             this.textBoxDrive.Name = "textBoxDrive";
             this.textBoxDrive.Size = new System.Drawing.Size(27, 20);
             this.textBoxDrive.TabIndex = 12;
+            this.textBoxDrive.Visible = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 123);
+            this.label2.Location = new System.Drawing.Point(47, 198);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 13;
@@ -172,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(186, 252);
+            this.ClientSize = new System.Drawing.Size(186, 173);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxDrive);
             this.Controls.Add(this.textBoxVpn3);
@@ -189,7 +194,6 @@
             this.Controls.Add(this.buttonStart);
             this.Name = "FormInicial";
             this.Text = "StartDT";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormInicial_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

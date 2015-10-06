@@ -223,7 +223,7 @@ namespace PS
                     //System.Net.NetworkInformation.Ping ping = new System.Net.NetworkInformation.Ping();
 
                     //if (ping.Send(_IPToPing).Status == System.Net.NetworkInformation.IPStatus.Success)
-                    if(_IPToPing.Equals(new Utils().getipinternet()))
+                    if(_IPToPing.Equals(new Utils().getipinternetMeu()))
                     {
                         //inverti o true e false
                         RV = false;

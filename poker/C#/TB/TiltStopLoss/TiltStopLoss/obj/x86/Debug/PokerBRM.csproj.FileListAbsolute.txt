@@ -89,3 +89,8 @@ E:\meu\PortableApps\Dropbox\Dropbox\taff et autre\pok-ps\C#\TB\TiltStopLoss\Tilt
 E:\meu\PortableApps\Dropbox\Dropbox\taff et autre\pok-ps\C#\TB\TiltStopLoss\TiltStopLoss\obj\x86\Debug\Poker BRM.exe
 E:\meu\PortableApps\Dropbox\Dropbox\taff et autre\pok-ps\C#\TB\TiltStopLoss\TiltStopLoss\obj\x86\Debug\Poker BRM.pdb
 M:\Dropbox\taff et autre\pok-ps\C#\TB\TiltStopLoss\TiltStopLoss\obj\x86\Debug\PokerBRM.csprojResolveAssemblyReference.cache
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\TB\TiltStopLoss\TiltStopLoss\bin\Debug\Poker BRM.exe.config
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\TB\TiltStopLoss\TiltStopLoss\obj\x86\Debug\Interop.WMPLib.dll
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\TB\TiltStopLoss\TiltStopLoss\obj\x86\Debug\PokerBRM.csproj.ResolveComReference.cache
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\TB\TiltStopLoss\TiltStopLoss\obj\x86\Debug\Poker BRM.exe
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\TB\TiltStopLoss\TiltStopLoss\obj\x86\Debug\Poker BRM.pdb

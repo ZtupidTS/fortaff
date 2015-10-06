@@ -8,3 +8,10 @@ M:\Dropbox\taff et autre\pok-ps\C#\PS\PS\obj\x86\Debug\PS.exe
 M:\Dropbox\taff et autre\pok-ps\C#\PS\PS\obj\x86\Debug\PS.pdb
 M:\Dropbox\taff et autre\pok-ps\C#\PS\PS\obj\x86\Debug\PS.csproj.GenerateResource.Cache
 M:\Dropbox\taff et autre\pok-ps\C#\PS\PS\obj\x86\Debug\PS.csprojResolveAssemblyReference.cache
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.exe
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.pdb
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.FormInicial.resources
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.Properties.Resources.resources
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.csproj.GenerateResource.Cache
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\bin\Debug\PS.exe
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\bin\Debug\PS.pdb

@@ -30,6 +30,7 @@ namespace PS
         String ipinicial;
         //VpnConnect.VPN vpn;
         public WebClient webclient = new WebClient();
+        public int i = 1;
 
         //const int VK_UP = 0x26; //key up
 
@@ -38,14 +39,13 @@ namespace PS
         public FormInicial()
         {
             InitializeComponent();
-            //loadconfig();
+            loadconfig();
             //aqui vai ser para a vpn
             //ipinicial = new Utils().getipinternetMeu();
             //String ipinicial2 = new Utils().getipinternet2();
-            ipinicial = new Utils().getipinternet3(webclient);
+            ipinicial = new Utils().getipinternetMeu();
             label1.Text = ipinicial;
-            MethodInvoker startdt = new MethodInvoker(Dt);
-            startdt.BeginInvoke(null, null);           
+            
         }
 
         //[DllImport("user32.dll")]
@@ -62,7 +62,6 @@ namespace PS
 
         public void Dt()
         {
-            int i = 1;
             while (continueDt)
             {
                 String temp = new Utils().getipinternet3(webclient);
@@ -71,162 +70,109 @@ namespace PS
                     continueDt = false;
                     //fecha a stars
                     new Utils().detectApps("PokerStars");
+                    listbox("Mudança de IP");
                 }
-                Boolean continu = true;
-                if (i == 1)
-                {
-                    labelStopSet1(temp);
-                    labelStopSet2("");
-                    i++;
-                    continu = false;
-                }
-                if (i == 2 && continu)
-                {
-                    labelStopSet2(temp);
-                    labelStopSet3("");
-                    i++;
-                    continu = false;
-                }
-                if (i == 3 && continu)
-                {
-                    labelStopSet3(temp);
-                    labelStopSet1("");
-                    i = 1;
-                }
+                listbox(i + "- " + temp + " (1)");
+                i++; 
             }
         }
 
-
-
-        public void labelStopSet1(String text)
+        public void DtMeu()
         {
-            if (this.textBoxVpn1.InvokeRequired)
+            while (continueDt)
             {
-                SetTextCallbacks d = new SetTextCallbacks(setLabelStop1);
-                this.Invoke(d, new object[] { text });
-            }
-            else
-            {
-                // It's on the same thread, no need for Invoke
-                this.textBoxVpn1.Text = text;
-                //this.labelStop.ForeColor = cor;
-            }
-        }
-
-        public void setLabelStop1(String text)
-        {
-            this.textBoxVpn1.Text = text;
-            //this.labelStop.ForeColor = cor;
-        }
-
-        public void labelStopSet2(String text)
-        {
-            if (this.textBoxVpn2.InvokeRequired)
-            {
-                SetTextCallbacks d = new SetTextCallbacks(setLabelStop2);
-                this.Invoke(d, new object[] { text });
-            }
-            else
-            {
-                // It's on the same thread, no need for Invoke
-                this.textBoxVpn2.Text = text;
-                //this.labelStop.ForeColor = cor;
-            }
-        }
-
-        public void setLabelStop2(String text)
-        {
-            this.textBoxVpn2.Text = text;
-            //this.labelStop.ForeColor = cor;
-        }
-
-        public void labelStopSet3(String text)
-        {
-            if (this.textBoxVpn3.InvokeRequired)
-            {
-                SetTextCallbacks d = new SetTextCallbacks(setLabelStop3);
-                this.Invoke(d, new object[] { text });
-            }
-            else
-            {
-                // It's on the same thread, no need for Invoke
-                this.textBoxVpn3.Text = text;
-                //this.labelStop.ForeColor = cor;
-            }
-        }
-
-        public void setLabelStop3(String text)
-        {
-            this.textBoxVpn3.Text = text;
-            //this.labelStop.ForeColor = cor;
-        }
-
-        public void buttonStart_Click(object sender, EventArgs e)
-        {
-            int i = 1;
-            while(continueDt)
-            {
-                String temp = new Utils().getipinternet3(webclient);
+                String temp = new Utils().getipinternetMeu();
                 if (temp != ipinicial)
                 {
                     continueDt = false;
                     //fecha a stars
                     new Utils().detectApps("PokerStars");
+                    listbox("Mudança de IP");
                 }
-                Boolean continu = true;
-                if (i == 1)
-                {
-                    textBoxVpn1.Text = temp;
-                    i++;
-                    continu = false;
-                }
-                if (i == 2 && continu)
-                {
-                    textBoxVpn2.Text = temp;
-                    i++;
-                    continu = false;
-                }
-                if (i == 3 && continu)
-                {
-                    textBoxVpn3.Text = temp;
-                    i = 1;
-                }
+                listbox(i + "- " + temp + " (2)");
+                i++;
             }
-            //if (textBoxLogin.Text == "")
-            //{
-            //    textBoxLogin.Text = "Login here first";
-            //}
-            //else
-            //{
-            //    Boolean contar = true;
-            //    int n = 5;
-
-            //    while (contar)
-            //    {
-            //        if (n != 0)
-            //        {
-            //            System.Threading.Thread.Sleep(500);
-            //            n = n - 1;
-            //        }
-            //        else
-            //        {
-            //            contar = false;
-            //        }
-            //    }
-
-            //    continueDt = true;
-            //    if (firststart)
-            //    {
-            //        //méthode async
-            //        MethodInvoker startdt = new MethodInvoker(Dt);
-            //        startdt.BeginInvoke(null, null);
-            //        firststart = false;
-            //    }
-                
-            //}
-
-
         }
+
+        public void Dt2()
+        {
+            while (continueDt)
+            {
+                String temp = new Utils().getipinternet2();
+                if (temp != ipinicial)
+                {
+                    continueDt = false;
+                    //fecha a stars
+                    new Utils().detectApps("PokerStars");
+                    listbox("Mudança de IP");
+                }
+                listbox(i + "- " + temp + " (3)");
+                i++;
+            }
+        }
+
+        public void listbox(String text)
+        {
+            if (this.listBox1.InvokeRequired)
+            {
+                SetTextCallbacks d = new SetTextCallbacks(setListbox);
+                this.Invoke(d, new object[] { text });
+            }
+            else
+            {
+                // It's on the same thread, no need for Invoke
+                this.listBox1.TopIndex = this.listBox1.Items.Add(text);
+
+                //this.labelStop.ForeColor = cor;
+            }
+        }
+
+        public void setListbox(String text)
+        {
+            this.listBox1.TopIndex = this.listBox1.Items.Add(text);
+            //this.labelStop.ForeColor = cor;
+        }
+
+        
+
+        //public void buttonStart_Click(object sender, EventArgs e)
+        //{
+            
+        //    //if (textBoxLogin.Text == "")
+        //    //{
+        //    //    textBoxLogin.Text = "Login here first";
+        //    //}
+        //    //else
+        //    //{
+        //    //    Boolean contar = true;
+        //    //    int n = 5;
+
+        //    //    while (contar)
+        //    //    {
+        //    //        if (n != 0)
+        //    //        {
+        //    //            System.Threading.Thread.Sleep(500);
+        //    //            n = n - 1;
+        //    //        }
+        //    //        else
+        //    //        {
+        //    //            contar = false;
+        //    //        }
+        //    //    }
+
+        //    //    continueDt = true;
+        //    //    if (firststart)
+        //    //    {
+        //    //        //méthode async
+        //    //        MethodInvoker startdt = new MethodInvoker(Dt);
+        //    //        startdt.BeginInvoke(null, null);
+        //    //        firststart = false;
+        //    //    }
+                
+        //    //}
+
+
+        //}
 
         //public void Dt()
         //{
@@ -368,6 +314,16 @@ namespace PS
             this.Close();
         }
 
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            MethodInvoker startdt = new MethodInvoker(Dt);
+            startdt.BeginInvoke(null, null);
+            MethodInvoker startdt3 = new MethodInvoker(DtMeu);
+            startdt3.BeginInvoke(null, null);
+            MethodInvoker startdt2 = new MethodInvoker(Dt2);
+            startdt2.BeginInvoke(null, null);
+        }
+
         //private void checkBoxLogin_CheckedChanged(object sender, EventArgs e)
         //{
         //    if (checkBoxLogin.Checked)
@@ -380,97 +336,72 @@ namespace PS
         //    }
         //}
 
-        //private void FormInicial_FormClosed(object sender, FormClosedEventArgs e)
-        //{
-        //    String location = this.Location.X.ToString()+','+this.Location.Y.ToString();
-        //    String path = Directory.GetCurrentDirectory();
-        //    StreamWriter w = new StreamWriter(path + "/config.txt", false);
-        //    w.Write("Location="+location);
-        //    w.WriteLine();
-        //    if (checkBoxDown.Checked)
-        //    {
-        //        w.Write("Checkbox_down=true");
-        //        w.WriteLine();
-        //    }
-        //    if (checkBoxLogin.Checked)
-        //    {
-        //        w.Write("checkBox_Login=" + textBoxLogin.Text.ToString());
-        //        w.WriteLine();
-        //    }
-        //    if (checkBoxZoom.Checked)
-        //    {
-        //        w.Write("Checkbox_zoom=true");
-        //        w.WriteLine();
-        //    }
-        //    w.Write("Vm="+textBoxVm.Text);
-        //    w.WriteLine();
-        //    w.Write("Vpn1=" + textBoxVpn1.Text);
-        //    w.WriteLine();
-        //    w.Write("Vpn2=" + textBoxVpn2.Text);
-        //    w.WriteLine();
-        //    w.Write("Vpn3=" + textBoxVpn3.Text);
-        //    w.WriteLine();
-        //    w.Write("drive=" + textBoxDrive.Text);
-        //    w.WriteLine();            
-        //    w.Close();
-        //}
+        private void FormInicial_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            String location = this.Location.X.ToString() + ',' + this.Location.Y.ToString();
+            String path = Directory.GetCurrentDirectory();
+            StreamWriter w = new StreamWriter(path + "/config.txt", false);
+            w.Write("checkBox_Login=" + textBoxLogin.Text.ToString());
+            w.WriteLine();
+            w.Close();
+        }
 
-        //private void loadconfig()
-        //{
-        //    String path = Directory.GetCurrentDirectory();
-        //    String filepath = path + "/config.txt";
-        //    if (File.Exists(filepath))
-        //    {
-        //        string line;
-        //        // Read the file and display it line by line.
-        //        System.IO.StreamReader file = new System.IO.StreamReader(filepath);
-        //        while ((line = file.ReadLine()) != null)
-        //        {
-        //            String[] array = line.Split('=');
-        //            configframe(array);                                      
-        //        }
-        //        file.Close();
-        //    }
-        //}
+        private void loadconfig()
+        {
+            String path = Directory.GetCurrentDirectory();
+            String filepath = path + "/config.txt";
+            if (File.Exists(filepath))
+            {
+                string line;
+                // Read the file and display it line by line.
+                System.IO.StreamReader file = new System.IO.StreamReader(filepath);
+                while ((line = file.ReadLine()) != null)
+                {
+                    String[] array = line.Split('=');
+                    configframe(array);
+                }
+                file.Close();
+            }
+        }
 
-        //private void configframe(String[] line)
-        //{
-        //    switch (line[0])
-        //    {
-        //        case "Location":
-        //            String[] loc = line[1].Split(',');
-        //            this.StartPosition = FormStartPosition.Manual;
-        //            this.Location = new Point(int.Parse(loc[0]), int.Parse(loc[1]));
-        //            break;
-        //        case "Checkbox_down":
-        //            checkBoxDown.Checked = true;
-        //            break;
-        //        case "checkBox_Login":
-        //            checkBoxLogin.Checked = true;
-        //            textBoxLogin.Text = line[1].ToString();
-        //            break;
-        //        case "Checkbox_zoom":
-        //            checkBoxZoom.Checked = true;
-        //            break;
-        //        case "Vm":
-        //            textBoxVm.Text = line[1].ToString();
-        //            break;
-        //        case "Vpn1":
-        //            textBoxVpn1.Text = line[1].ToString();
-        //            break;
-        //        case "Vpn2":
-        //            textBoxVpn2.Text = line[1].ToString();
-        //            break;
-        //        case "Vpn3":
-        //            textBoxVpn3.Text = line[1].ToString();
-        //            break;
-        //        case "drive":
-        //            textBoxDrive.Text = line[1].ToString();
-        //            break;                    
-        //        default:
-        //            break;
-        //    }
-        //}
+        private void configframe(String[] line)
+        {
+            switch (line[0])
+            {
+                case "Location":
+                    String[] loc = line[1].Split(',');
+                    this.StartPosition = FormStartPosition.Manual;
+                    this.Location = new Point(int.Parse(loc[0]), int.Parse(loc[1]));
+                    break;
+                case "Checkbox_down":
+                    checkBoxDown.Checked = true;
+                    break;
+                case "checkBox_Login":
+                    //checkBoxLogin.Checked = true;
+                    textBoxLogin.Text = line[1].ToString();
+                    break;
+                case "Checkbox_zoom":
+                    checkBoxZoom.Checked = true;
+                    break;
+                case "Vm":
+                    textBoxVm.Text = line[1].ToString();
+                    break;
+                case "Vpn1":
+                    textBoxVpn1.Text = line[1].ToString();
+                    break;
+                case "Vpn2":
+                    textBoxVpn2.Text = line[1].ToString();
+                    break;
+                case "Vpn3":
+                    textBoxVpn3.Text = line[1].ToString();
+                    break;
+                case "drive":
+                    textBoxDrive.Text = line[1].ToString();
+                    break;
+                default:
+                    break;
+            }
+        }
 
         //private void buttonConnectVpn_Click(object sender, EventArgs e)
         //{

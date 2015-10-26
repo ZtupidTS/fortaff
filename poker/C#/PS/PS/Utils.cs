@@ -5,6 +5,7 @@ using System.Text;
 using System.Net;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace PS
 {
@@ -20,15 +21,22 @@ namespace PS
 
         public String getipinternet2()
         {
-            try
+            var request = (HttpWebRequest)WebRequest.Create("http://bot.whatismyipaddress.com");
+
+            request.UserAgent = "curl"; // this simulate curl linux command
+
+            string publicIPAddress;
+
+            request.Method = "GET";
+            using (WebResponse response = request.GetResponse())
             {
-                string externalIP;
-                externalIP = (new WebClient()).DownloadString("http://checkip.dyndns.org/");
-                externalIP = (new Regex(@"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"))
-                             .Matches(externalIP)[0].ToString();
-                return externalIP;
+                using (var reader = new StreamReader(response.GetResponseStream()))
+                {
+                    publicIPAddress = reader.ReadToEnd();
+                }
             }
-            catch { return null; }
+
+            return publicIPAddress.Replace("\n", "");
         }
 
         public String getipinternet3(WebClient wc)

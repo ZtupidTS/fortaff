@@ -103,6 +103,25 @@ function getTableDistinct($table, $column, $where, $orderBy)
 	return executeReader($sql);
 }
 
+function getNumberGr($table, $where, $orderBy, $limit, $column, $order)
+{
+	$sql = "SELECT " .$column. " FROM " . $table . " ";
+	
+	if ($where !== "") {
+		$sql .= " WHERE " . $where . " ";
+	}
+	
+	if ($orderBy !== "") {
+		$sql .= " ORDER BY " . $orderBy . " " . $order;
+	}
+	
+	if ($limit !== "") {
+		$sql .= " LIMIT " . $limit;
+	}	
+	return executeReader($sql);
+	//return $sql;
+}
+
 function getTableCount($table, $where, $orderBy)
 {
 	return mysql_num_rows(getTable($table, $where, $orderBy));

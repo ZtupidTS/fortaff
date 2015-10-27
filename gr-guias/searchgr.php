@@ -50,7 +50,15 @@
 			        {
 			            ?>
 			            <tr onclick="viewGr('<?= $data['id'];?>');">  
-			                <td><?= $data['id'];?></td>  
+			                <td>
+			                	<?php
+			                	if($data['gr_number'] == "")
+			                	{
+			                		echo $data['id'];
+			                	}else{
+			                		echo $data['gr_number'];
+			                	};?>
+			                </td>  
 			                <td><?= $data['cl_name'];?></td>
 			                <td><?= $data['cl_telefone'];?></td>
 			                <td><?= $data['date_in'];?></td>

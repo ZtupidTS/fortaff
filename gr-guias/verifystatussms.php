@@ -31,7 +31,8 @@
                 if (xhr.readyState==4 && xhr.status==200)
                 {
                     hideLoading();
-                    alert(xhr.responseText);                                        
+                    alert(xhr.responseText); 
+                    window.location = "verifystatussms.php";                                        
                 }
         }
         xhr.open("POST","ajax/ajverifysms.php",true);
@@ -82,5 +83,9 @@
             
         </div><!-- /.col-lg-12 -->
     </div><!-- /.row -->
+    
+    <script>
+    	$('#valorsearch').focus();    
+    </script>
     
 <?php include 'includes/footer.php';?>

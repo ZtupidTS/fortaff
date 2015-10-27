@@ -1,12 +1,15 @@
 <?php
 include '../includes/allpageaj.php';
 
-$fields = array();
-
-
+if (strpos($_GET['campo'],'-') !== false) 
+{
+	$data = grepGetByGrNumber($_GET['campo']);
+}else{
+	$data = grepGetById($_GET['campo']);	
+}
 //echo $_GET['campo'];
 //$where .= $_POST['campo'] . " = " . $_POST['valor'];
-$data = grepGetById($_GET['campo']);
+//$data = grepGetById($_GET['campo']);
 if(strlen($data['cl_name']) > 0)
 {
 	?>

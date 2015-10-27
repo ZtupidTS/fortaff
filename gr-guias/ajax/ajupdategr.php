@@ -1,6 +1,15 @@
 <?php
 include '../includes/allpageaj.php';
 
+if (strpos($_POST['id_gr'],'-') !== false) 
+{
+	$data = grepGetByGrNumber($_POST['id_gr']);
+	$idguia = $data['id'];
+}else{
+	$data = grepGetById($_POST['id_gr']);	
+	$idguia = $data['id'];
+}
+
 $fields = array();
 $fields['id'] = dbInteger($_POST['id']);
 //echo " | " . $_POST['art_ean'] . " ! ";

@@ -16,7 +16,14 @@ $message = $_SESSION['message_sms'];
 //com o 3z4u eu usava o smsid, neste caso vou meter o hash da campaign no smsid 
 //$campaign = "41442e668e695065749c855de6404d9a";
 
-$data = grepGetById(dbInteger($_POST['id_gr']));
+if (strpos($_POST['id_gr'],'-') !== false) 
+{
+	$data = grepGetByGrNumber($_POST['id_gr']);
+}else{
+	$data = grepGetById($_POST['id_gr']);	
+}
+
+//$data = grepGetById(dbInteger($_POST['id_gr']));
 $continu = true;
 
 if(strlen($data['date_sms']) > 0)
@@ -70,14 +77,14 @@ if($number[0] == "9" && $continu)
 		//aqui faço o update da tabela grep e faço o registo na tabela modif.
 		$fields = array();
 		$fields['date_sms'] = dbString(date('Y-m-d H:i:s', time() - 3600));
-		$fields['id'] = dbInteger($_POST['id_gr']);
+		$fields['id'] = dbInteger($data['id']);
 		$fields['status_sms'] = dbString('0');
 		$fields['sms_id'] = dbString($lastsmsid);
 		grepUpdate($fields);
 		unset($fields);
 		
 		//agora a tabela modif
-		insertmodifgr($_POST['id_gr'], 'Mensagem processada, verificar dentro de 5 min o estado dela');
+		insertmodifgr($data['id'], 'Mensagem processada, verificar dentro de 5 min o estado dela');
 		
 		echo "Mensagem processada, verificar dentro de 25 min o estado dela";
 		//depois de enviar vou aguardar um pouco para eles atualizar o mesmo
@@ -159,7 +166,7 @@ if($number[0] == "9" && $continu)
 	if($continu)
 	{
 		//agora a tabela modif
-		insertmodifgr($_POST['id_gr'], "O numero do cliente não é um telemóvel");
+		insertmodifgr($data['id'], "O numero do cliente não é um telemóvel");
 		echo "O contacto do cliente não é um numero de telemóvel viável";
 	}	
 }

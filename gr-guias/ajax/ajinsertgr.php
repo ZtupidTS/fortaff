@@ -55,10 +55,18 @@ if(isset($_POST['art_ean']))
 {
     $fields['art_ean'] = dbInteger($_POST['art_ean']);
 }
+//aqui vou inserir o novo tipo de numero de guia
+$lastnumbergr = newnumbergr();
+if($lastnumbergr != "")
+{
+	$fields['gr_number'] = dbString($lastnumbergr);
+}
 
+//return id auto increment da guia
 $fields['id'] = grepInsert($fields);
 
 $_SESSION['lastidinsert'] = $fields['id'];
+$_SESSION['lastgr_number'] = $lastnumbergr;
 
 //print_r($fields);
 

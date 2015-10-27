@@ -92,7 +92,14 @@ function enviamail($dest,$id_gr,$body_mail,$anex)
         $attachment= $pdf->Output('GR numero '. $id_gr . '.pdf', 'S');
         $mail->AddStringAttachment($attachment, 'GR numero '. $id_gr . '.pdf');
         //verifica se existe um talão porque se existe é sempre para enviar
-        $data = grepGetById($id_gr);
+        if (strpos($id_gr,'-') !== false) 
+	{
+		$data = grepGetByGrNumber($id_gr);		
+	}else{
+		$data = grepGetById($id_gr);	
+	}
+        //$data = grepGetById($id_gr);
+        //$urlguia = $data['url_talao'];
 	if($data['url_talao'] != "")
 	{
 		$mail->AddAttachment('../' . $data['url_talao'], 'talao.pdf');
@@ -141,8 +148,16 @@ function createpdfA5($id_gr)
     $pdf->Cell(10,10,$pdf->Image('../images/eleclerc.jpg',148,7,30),0 ,0 ,'L');
     //$pdf->Cell(0,10,utf8_decode('Guia de Reparação nº19') ,0 ,0 ,'R');
     $pdf->Ln(6);
-    $pdf->Cell(140,5,utf8_decode('Guia de Reparação nº' . $id_gr) ,0 ,0 ,'L');
-    $pdf->Cell(0,5,utf8_decode('Guia de Reparação nº' . $id_gr) ,0 ,0 ,'L');
+    if($grepdb['gr_number'] == "")
+    {
+    	$pdf->Cell(140,5,utf8_decode('Guia de Reparação nº' . $grepdb['id']) ,0 ,0 ,'L');
+    	$pdf->Cell(0,5,utf8_decode('Guia de Reparação nº' . $grepdb['id']) ,0 ,0 ,'L');	
+    }else{
+    	$pdf->Cell(140,5,utf8_decode('Guia de Reparação nº' . $grepdb['gr_number']) ,0 ,0 ,'L');
+    	$pdf->Cell(0,5,utf8_decode('Guia de Reparação nº' . $grepdb['gr_number']) ,0 ,0 ,'L');
+    }
+    //$pdf->Cell(140,5,utf8_decode('Guia de Reparação nº' . $grepdb['gr_number']) ,0 ,0 ,'L');
+    //$pdf->Cell(0,5,utf8_decode('Guia de Reparação nº' . $grepdb['gr_number']) ,0 ,0 ,'L');
     $pdf->Ln(6);
     $pdf->Cell(100,10,utf8_decode($_SESSION['morada_leclerc_pdf']) ,0 ,0, 'L');
     $pdf->Cell(40,10,utf8_decode('Data: '. invertedatasemhora($grepdb['date_in'])) ,0 ,0, 'L');
@@ -504,7 +519,13 @@ function createpdf($id_gr)
     //require('../fpdf/makefont/makefont.php');
     //MakeFont('../fpdf/arial.ttf','iso-8859-1', true);
 
-    $grepdb = grepGetById($id_gr);
+    if (strpos($id_gr,'-') !== false) 
+    {
+	$grepdb = grepGetByGrNumber($id_gr);
+    }else{
+	$grepdb = grepGetById($id_gr);	
+    }	
+    //$grepdb = grepGetById($id_gr);
     
     $pdf = new FPDF('P','mm','A4');
     $pdf->AliasNbPages();
@@ -512,7 +533,12 @@ function createpdf($id_gr)
     $pdf->SetFont('arial','',12);
     $pdf->Cell(0,10,$pdf->Image('../images/eleclerc.jpg',6,10,50),0 ,0 ,'L');
     //$pdf->Cell(0,10,utf8_decode('Guia de Reparação nº19') ,0 ,0 ,'R');
-    $pdf->Cell(0,10,utf8_decode('Guia de Reparação nº' . $id_gr) ,0 ,0 ,'R');
+    if($grepdb['gr_number'] == "")
+    {
+    	$pdf->Cell(0,10,utf8_decode('Guia de Reparação nº' . $grepdb['id']) ,0 ,0 ,'R');
+    }else{
+    	$pdf->Cell(0,10,utf8_decode('Guia de Reparação nº' . $grepdb['gr_number']) ,0 ,0 ,'R');
+    }
     $pdf->Ln(15);
     $pdf->Cell(155,10,utf8_decode($_SESSION['morada_leclerc_pdf']) ,0 ,0, 'L');
     $pdf->Cell(2,10,utf8_decode('Data: '. invertedatasemhora($grepdb['date_in'])) ,0 ,0, 'L');
@@ -672,6 +698,8 @@ function insertmodifgr($id, $text)
 	$fields = array();
 	$fields['gr_id'] = $id;
 	$fields['us_id'] = $_SESSION['iduser'];
+	$data2 = grepGetById($id);
+	$fields['gr_number'] = dbString($data2['gr_number']);
 	$fields['modif_date'] = dbString(date('Y-m-d H:i:s', time() - 3600));
 	$fields['modif_text'] = dbString($text);
 	modifgrInsert($fields);
@@ -738,6 +766,41 @@ function diff_data($data_recebida)
 	$numdias = floor($diff/86400);
 	return $numdias;
 }
-//criar a função de converter string para int
+//devolve o numero da guia para inserir na DB
+function newnumbergr()
+{
+	$year = date('y', time() - 3600);
+	//$year = "15";
+	$lastnumber = gregGetLastNumberGr($year);
+	if($year > 15)
+	{
+		if($lastnumber['gr_number'] == "")
+		{
+			//se devolde vazio quer dizer que não tem nada ou
+			//é um novo ano
+			return $year . "-0001";
+		}else{
+			//caso tem vou devolver ja o bom numero
+			$oldnumber = explode("-", $lastnumber['gr_number']);
+			$tempnumber = (int)$oldnumber[1] + 1;
+			switch ($tempnumber) {
+			    case $tempnumber < 10:
+			        return $year . "-000" . $tempnumber;
+			        break;
+			    case $tempnumber < 100:
+			        return $year . "-00" . $tempnumber;
+			        break;
+			    case $tempnumber < 1000:
+			        return $year . "-0" . $tempnumber;
+			        break;
+			    case $tempnumber < 10000:
+			        return $year . "-" .$tempnumber;
+			        break;
+			}
+		}
+	}else{
+		return "";
+	}	
+}
 
 ?>

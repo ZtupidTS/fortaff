@@ -1,7 +1,7 @@
 <?php
 include '../includes/allpageaj.php';
 
-$de = sectionGetAll();
+/*$de = sectionGetAll();
 
 if(empty($de))
 {
@@ -33,6 +33,33 @@ if(empty($de))
 	}
 }else{
 	echo 'Script não executado';
+}*/
+
+$col_name = 'gr_number';
+
+$col = mysql_query("SELECT ".$col_name." FROM grep");
+
+if (!$col){
+    mysql_query("ALTER TABLE grep ADD ".$col_name." VARCHAR(7) UNIQUE");
+
+    echo "A coluna " .$col_name." foi acrescentada com sucesso a tabela grep<br/>";
+} else {
+    echo 'A coluna '.$col_name.' já existe na tabela grep<br/>';
 }
+
+$col_name = 'gr_number';
+
+$col = mysql_query("SELECT ".$col_name." FROM modifgr");
+
+if (!$col){
+    mysql_query("ALTER TABLE modifgr ADD ".$col_name." VARCHAR(7)");
+
+    echo 'A coluna ' .$col_name.' foi acrescentada com sucesso a tabela modifgr<br/>';
+} else {
+    echo 'A coluna '.$col_name.' já existe na tabela modifgr<br/>';
+}
+
+echo "O script já acabou, já podem fechar a pagina";
+
 closeDataBase();
 ?>

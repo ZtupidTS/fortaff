@@ -89,4 +89,8 @@
         </div><!-- /.col-lg-12 -->
     </div><!-- /.row -->
     
+    <script>
+    	$('#valorsearch').focus();    
+    </script>
+    
 <?php include 'includes/footer.php';?>

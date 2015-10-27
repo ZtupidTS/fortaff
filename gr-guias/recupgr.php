@@ -45,7 +45,7 @@
 
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <form name="changegr" class="form-horizontal" >
+            <form name="changegr" class="form-horizontal" onsubmit="return false;">
                 <fieldset>
 
                     <!-- Form Name -->

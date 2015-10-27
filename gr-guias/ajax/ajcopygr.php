@@ -1,8 +1,13 @@
 <?php
 include '../includes/allpageaj.php';
 
+if (strpos($_POST['id_gr'],'-') !== false) 
+{
+	$data = grepGetByGrNumber($_POST['id_gr']);
+}else{
+	$data = grepGetById($_POST['id_gr']);
+}
 
-$data = grepGetById($_POST['id_gr']);
 
 if(sizeof($data) > 1)
 {
@@ -62,17 +67,30 @@ if(sizeof($data) > 1)
 	{
 	    $fields['url_talao'] = dbString($data['url_talao']);
 	}
-
+	//aqui vou inserir o novo tipo de numero de guia
+	$lastnumbergr = newnumbergr();
+	if($lastnumbergr != "")
+	{
+		$fields['gr_number'] = dbString($lastnumbergr);
+	}
+	
 	$fields['id'] = grepInsert($fields);
 
 	$_SESSION['lastidinsert'] = $fields['id'];
+	$_SESSION['lastgr_number'] = $lastnumbergr;
 	
 	unset($fields);
 	
 	//aqui vou atualizar a guia antiga para dizer o que foi feito
-	$novoobs = $data['obs'] . " Nova guia aberta com o nº" . $_SESSION['lastidinsert'];
+	if($_SESSION['lastgr_number'] == "")
+	{
+		$novoobs = $data['obs'] . " Nova guia aberta com o nº" . $_SESSION['lastidinsert'];
+	}else{
+		$novoobs = $data['obs'] . " Nova guia aberta com o nº" . $_SESSION['lastgr_number'];	
+	}
+	
 	$fields = array();
-	$fields['id'] = $_POST['id_gr'];
+	$fields['id'] = $data['id'];
 	$fields['obs'] = dbString($novoobs);
 	grepUpdate($fields);
 	unset($fields);

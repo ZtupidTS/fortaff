@@ -30,7 +30,8 @@ $_SESSION['port_envio_mail_send_supplier'] = 25;
 //endereço mail de quem envia referente ao login associado e preenchido mais em cima
 $_SESSION['from_mail_send_supplier'] ="bazarsav@fafedis.pt";
 //alem do envio ao forncedores meter um mail em copia da loja
-$_SESSION['addcc_mail_send_supplier'] ="bazarsav@fafedis.pt";
+//$_SESSION['addcc_mail_send_supplier'] ="bazarsav@fafedis.pt";
+$_SESSION['addcc_mail_send_supplier'] ="gravenegro@gmail.com";
 //Renomear o nome do mail de envio em 
 $_SESSION['setfrom_mail_send_supplier'] = 'Bazar SAV';
 //o corpo do mail

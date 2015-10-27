@@ -34,8 +34,9 @@
                     {
                         //alert(xhr.responseText);
                         alert('Levantamento registado');
-                        document.getElementById('valorsearch').value = "";
-                        document.getElementById('valorsearch').focus();
+                        window.location = "levantamentogr.php";
+                        //document.getElementById('valorsearch').value = "";
+                        //document.getElementById('valorsearch').focus();
                         //window.location = "index.php";                        
                     }else{
                         //alert(xhr.responseText);
@@ -89,5 +90,9 @@
             
         </div><!-- /.col-lg-12 -->
     </div><!-- /.row -->
+    
+    <script>
+    	$('#valorsearch').focus();    
+    </script>
     
 <?php include 'includes/footer.php';?>

@@ -3,12 +3,23 @@ include '../includes/allpageaj.php';
 
 $table = "";
 
-if(is_numeric($_POST['gr_id']))
+if (strpos($_POST['gr_id'],'-') !== false) 
+{
+	$data = grepGetByGrNumber($_POST['gr_id']);
+	$table = modifgrGet($data['id']);
+}else{
+	//$data = grepGetById($_POST['id_gr']);	
+	$table = modifgrGet($_POST['gr_id']);
+}
+
+
+
+/*if(is_numeric($_POST['gr_id']))
 {
     $table = modifgrGet($_POST['gr_id']);
 }else{
     $table = modifgrGet(999999999);
-}
+}*/
 
 ?>
 <table class="table table-striped table-hover">
@@ -28,7 +39,17 @@ if(is_numeric($_POST['gr_id']))
         {
             ?>
             <tr>  
-                <td><?= $data['gr_id'];?></td>
+                <td>
+                	<?php
+                	if($data['gr_number'] == "")
+                      	{
+				$idguia = $data['gr_id'];
+			}else{
+				$idguia = $data['gr_number'];
+			}
+                	echo $idguia;
+                	?>                		
+                </td>
                 <td>
                     <?php
                         $data2 = loginGet($data['us_id']);

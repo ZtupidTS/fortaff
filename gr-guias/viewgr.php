@@ -101,7 +101,15 @@
                     <div class="form-group">
                       <label class="col-sm-2 control-label" for="textinput">Nº Guia</label>
                       <div class="col-sm-4">
-                        <input type="text" class="form-control" value="<?= $_GET['id'];?>" disabled readonly/>
+                      	<?php
+                      	if($data['gr_number'] == "")
+                      	{
+				$idguia = $data['id'];
+			}else{
+				$idguia = $data['gr_number'];
+			}
+                      	?>
+                        <input type="text" class="form-control" value="<?= $idguia;?>" disabled readonly/>
                       </div>
                       <label class="col-sm-3 control-label" for="textinput">Data guia</label>
                       <div class="col-sm-3">

@@ -1,9 +1,14 @@
 <?php
 include '../includes/allpageaj.php';
 
-//id_gr='+id_gr+"&rep_mail=
-//echo enviamail($_POST['rep_mail'], $_POST['id_gr']);
-
+if (strpos($_POST['id_gr'],'-') !== false) 
+{
+	$data = grepGetByGrNumber($_POST['id_gr']);
+	$idguia = $data['id'];
+}else{
+	$data = grepGetById($_POST['id_gr']);	
+	$idguia = $data['id'];
+}
 
 $data = reparadorGetById($_POST['rep_id']);
 $body_mail = "";
@@ -59,13 +64,13 @@ if(count($mail) > 0)
 	    //agora aqui tenho de registar que foi feito a modifcação na tabela
 	    if(isset($_POST['anexo']))
 	    {
-	    	insertmodifgr($_POST['id_gr'], "Guia enviada por mail ao reparador Nº" . $_POST['rep_id'] . " com anexo");
+	    	insertmodifgr($idguia, "Guia enviada por mail ao reparador Nº" . $_POST['rep_id'] . " com anexo");
 	    }else{
-	    	insertmodifgr($_POST['id_gr'], "Guia enviada por mail ao reparador Nº" . $_POST['rep_id']);
+	    	insertmodifgr($idguia, "Guia enviada por mail ao reparador Nº" . $_POST['rep_id']);
 	    }	    
 	    //vou registar na tabela grep o numero do reparador.
 	    $fields = array();
-            $fields['id'] = $_POST['id_gr'];
+            $fields['id'] = $idguia;
 	    $fields['rep_id'] = $_POST['rep_id'];
 	    grepUpdate($fields);
 	    unset($fields);

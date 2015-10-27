@@ -7,6 +7,12 @@ function grepGetById($id)
     return foreachRow($t);
 }
 
+function grepGetByGrNumber($grnumber)
+{
+    $t = getTable("grep", "gr_number = '$grnumber'", "");
+    return foreachRow($t);
+}
+
 //minha para procurar o que pretendo
 //fazer o mysql_fetch_array
 function grepGetByFiltro($where, $orderby)
@@ -64,6 +70,13 @@ function grepUpdate($fields)
         unset($fields['id']);
 
         updateRecord("grep", $fields, $where);
+}
+
+//obter o ultimo numero de guias
+function gregGetLastNumberGr($year)
+{
+	$t = getNumberGr("grep", "gr_number LIKE '%".$year."-%'", "gr_number", "1", "gr_number", "DESC");
+	return foreachRow($t);
 }
 
 ?>

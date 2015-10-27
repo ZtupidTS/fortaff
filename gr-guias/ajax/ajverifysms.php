@@ -3,7 +3,14 @@ include '../includes/allpageaj.php';
 
 require_once 'Egoi/Factory.php';
 
-$data = grepGetById(dbInteger($_POST['id_gr']));
+if (strpos($_POST['id_gr'],'-') !== false) 
+{
+	$data = grepGetByGrNumber($_POST['id_gr']);
+}else{
+	$data = grepGetById($_POST['id_gr']);	
+}
+
+//$data = grepGetById(dbInteger($_POST['id_gr']));
 
 require('../sms/bootstrap.php');
 $continu = true;
@@ -97,12 +104,12 @@ if(strlen($lastsmsid) > 0 && $continu)
 	//aqui faço o update da tabela grep e faço o registo na tabela modif.
 	$fields = array();
 	$fields['date_sms'] = dbString(date('Y-m-d H:i:s', time() - 3600));
-	$fields['id'] = dbInteger($_POST['id_gr']);
+	$fields['id'] = dbInteger($data['id']);
 	$fields['status_sms'] = dbString($status);
 	grepUpdate($fields);
 	unset($fields);
 	//agora a tabela modif
-	insertmodifgr($_POST['id_gr'], $texto);
+	insertmodifgr($data['id'], $texto);
 }else{
 	if($continu)
 	{

@@ -122,6 +122,7 @@
 		$('#importtalao').hide();
 		$('#importtalao2').hide();
 	});
+	$('#valorsearch').focus();
     </script>
     
 <?php include 'includes/footer.php';?>

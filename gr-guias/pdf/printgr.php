@@ -22,6 +22,7 @@ $pdfnew->Output();
 
 unset($id);
 unset($_SESSION['lastidinsert']);
+unset($_SESSION['lastgr_number']);
 
 closeDataBase();
 ?>

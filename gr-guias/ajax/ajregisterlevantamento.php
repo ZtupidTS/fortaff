@@ -1,18 +1,25 @@
 <?php
 include '../includes/allpageaj.php';
 
-//id_gr='+id_gr+"&rep_mail=
-//echo enviamail($_POST['rep_mail'], $_POST['id_gr']);
+if (strpos($_POST['id_gr'],'-') !== false) 
+{
+	$data = grepGetByGrNumber($_POST['id_gr']);
+	$idguia = $data['id'];
+}else{
+	$data = grepGetById($_POST['id_gr']);	
+	$idguia = $data['id'];
+}
+
 $fields = array();
 
-$fields['id'] = $_POST['id_gr'];
+$fields['id'] = $idguia;
 $fields['date_torep'] = dbString(date('Y-m-d H:i:s', time() - 3600));
 
 grepUpdate($fields);
 
 unset($fields);
 
-insertmodifgr($_POST['id_gr'], "Artigo Levantado pelo reparador");
+insertmodifgr($idguia, "Artigo Levantado pelo reparador");
 
 echo 'ok';
 

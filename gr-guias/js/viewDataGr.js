@@ -7,6 +7,7 @@ function verDataGr(namebutton)
 	  	$.get( "ajax/ajviewgr.php", { campo: $('#valorsearch').val(), buttonname: namebutton } )
 		   	.done(function( data ) {
 			    /*alert( "Data Loaded: " + data );*/
+			    
 			    if(data.length > 40)
 			    {
 			    	$("#requestajviewgr").html( data );
@@ -14,6 +15,7 @@ function verDataGr(namebutton)
 			    	$('#suppliertype').show();	
 			    }else{
 			    	$('#suppliertype').hide();
+			    	$("#requestajviewgr").html("");
 			    }
 		});
 		$('#importtalao').show();

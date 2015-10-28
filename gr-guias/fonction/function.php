@@ -776,26 +776,31 @@ function newnumbergr()
 	{
 		if($lastnumber['gr_number'] == "")
 		{
-			//se devolde vazio quer dizer que não tem nada ou
-			//é um novo ano
+			//se devolve vazio quer dizer que não tem nada 
 			return $year . "-0001";
 		}else{
+			//tenho que ver sé um novo ano e
 			//caso tem vou devolver ja o bom numero
-			$oldnumber = explode("-", $lastnumber['gr_number']);
-			$tempnumber = (int)$oldnumber[1] + 1;
-			switch ($tempnumber) {
-			    case $tempnumber < 10:
-			        return $year . "-000" . $tempnumber;
-			        break;
-			    case $tempnumber < 100:
-			        return $year . "-00" . $tempnumber;
-			        break;
-			    case $tempnumber < 1000:
-			        return $year . "-0" . $tempnumber;
-			        break;
-			    case $tempnumber < 10000:
-			        return $year . "-" .$tempnumber;
-			        break;
+			$oldnumber = explode("-", $lastnumber['gr_number']);			
+			if($oldnumber[0] < $year)
+			{
+				return 	$year . "-0001";
+			}else{
+				$tempnumber = (int)$oldnumber[1] + 1;
+				switch ($tempnumber) {
+				    case $tempnumber < 10:
+				        return $year . "-000" . $tempnumber;
+				        break;
+				    case $tempnumber < 100:
+				        return $year . "-00" . $tempnumber;
+				        break;
+				    case $tempnumber < 1000:
+				        return $year . "-0" . $tempnumber;
+				        break;
+				    case $tempnumber < 10000:
+				        return $year . "-" .$tempnumber;
+				        break;
+				}
 			}
 		}
 	}else{

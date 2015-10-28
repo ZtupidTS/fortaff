@@ -1,17 +1,17 @@
 <?php
 include '../includes/allpageaj.php';
 
-if (strpos($_POST['id_gr'],'-') !== false) 
+if (strpos($_POST['id'],'-') !== false) 
 {
-	$data = grepGetByGrNumber($_POST['id_gr']);
+	$data = grepGetByGrNumber($_POST['id']);
 	$idguia = $data['id'];
 }else{
-	$data = grepGetById($_POST['id_gr']);	
+	$data = grepGetById($_POST['id']);	
 	$idguia = $data['id'];
 }
 
 $fields = array();
-$fields['id'] = dbInteger($_POST['id']);
+$fields['id'] = dbInteger($idguia);
 //echo " | " . $_POST['art_ean'] . " ! ";
 if(strlen($_POST['cl_telefone']) > 0)
 {
@@ -54,7 +54,7 @@ unset($fields);
 if(isset($_POST['why']))
 {
 	$fields2 = array();
-	$fields2['gr_id'] = $_POST['id'];
+	$fields2['gr_id'] = $idguia;
 	$fields2['us_id'] = $_SESSION['iduser'];
 	$fields2['modif_date'] = dbString(date('Y-m-d H:i:s', time() - 3600));
 	$fields2['modif_text'] = dbString($_POST['why']);

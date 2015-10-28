@@ -33,39 +33,47 @@ if (strpos($_POST['gr_id'],'-') !== false)
     </thead>
     <tbody> 
     <?php
-    if (mysql_num_rows($table) > 0)
+    if (is_bool($table) === false) 
     {
-        while($data = mysql_fetch_array($table))
-        {
-            ?>
-            <tr>  
-                <td>
-                	<?php
-                	if($data['gr_number'] == "")
-                      	{
-				$idguia = $data['gr_id'];
-			}else{
-				$idguia = $data['gr_number'];
-			}
-                	echo $idguia;
-                	?>                		
-                </td>
-                <td>
-                    <?php
-                        $data2 = loginGet($data['us_id']);
-                        echo $data2['us_name'];
-                    ?>
-                </td>
-                <td><?= $data['modif_date'];?></td>
-                <td><?= $data['modif_text'];?></td>                
-            </tr>
-            <?php
-        }        
+	    if (mysql_num_rows($table) > 0)
+	    {
+	        while($data = mysql_fetch_array($table))
+	        {
+	            ?>
+	            <tr>  
+	                <td>
+	                	<?php
+	                	if($data['gr_number'] == "")
+	                      	{
+					$idguia = $data['gr_id'];
+				}else{
+					$idguia = $data['gr_number'];
+				}
+	                	echo $idguia;
+	                	?>                		
+	                </td>
+	                <td>
+	                    <?php
+	                        $data2 = loginGet($data['us_id']);
+	                        echo $data2['us_name'];
+	                    ?>
+	                </td>
+	                <td><?= $data['modif_date'];?></td>
+	                <td><?= $data['modif_text'];?></td>                
+	            </tr>
+	            <?php
+	        }        
+	    }else{?>
+	        <tr>
+	            <td colspan="5" style="text-align: center;">Não há resultados</td> 
+	        </tr>    
+	        <?php
+	    }
     }else{?>
-        <tr>
-            <td colspan="5" style="text-align: center;">Não há resultados</td> 
-        </tr>    
-        <?php
+    	<tr>
+	    <td colspan="5" style="text-align: center;">Não há resultados</td> 
+	</tr>
+	<?php
     }
     ?>  
     </tbody>

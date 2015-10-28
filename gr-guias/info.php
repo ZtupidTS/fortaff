@@ -15,12 +15,22 @@
 		          </tr>  
 		    </thead>
 		    <tbody>
+			<tr>
+		    		<td rowspan="3">v1.7</td>
+		    		<td>O numero das guias é agora da forma XX-YYYY</td>
+		    	</tr>
 		    	<tr>
-		    		<td>v1.5</td>
+				<td>XX: Ano</td>
+			</tr>
+		    	<tr>
+				<td>YYYY: numero da guia</td>
+		    	</tr>
+		    	<tr>
+		    		<td rowspan="2">v1.5</td>
 		    		<td>Possibilidade de "arquivar" guias usando o ficheiro conf.php.</td>
 		    	</tr>
-				<tr>	
-		    		<td>Possibilidade de adicionar um texto no mail que vai ao fornecedor em caso de levantamento na loja</td>		    		
+		    	<tr>
+				<td>Possibilidade de adicionar um texto no mail que vai ao fornecedor em caso de levantamento na loja</td>		    		
 		    	</tr>
 				<tr>
 		    		<td>v1.4</td>

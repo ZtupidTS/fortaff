@@ -18,17 +18,19 @@ $_SESSION['include_function'] = 'C:/xampp/htdocs/gr-guias_dev/fonction/function.
 
 
 //mail login
-$_SESSION['login_mail_send_supplier'] ='bazarsav@fafedis.pt';
+$_SESSION['login_mail_send_supplier'] ='wbs00020676@valongodis.pt';
+
 //mail password
-$_SESSION['password_mail_send_supplier'] ='1Qqz%2o8';
+//$_SESSION['password_mail_send_supplier'] ='1Qqz%2o8';
+$_SESSION['password_mail_send_supplier'] ='oeg5m1iahb';
 //host do servidor de mail
-$_SESSION['host_envio_mail_send_supplier'] ='mail.fafedis.pt';
+$_SESSION['host_envio_mail_send_supplier'] ='smtp.smartcloudpt.pt';
 //helo a priori igual ao host
-$_SESSION['helo_envio_mail_send_supplier'] ='mail.fafedis.pt';
+$_SESSION['helo_envio_mail_send_supplier'] ='';
 //porta do servidor de envio
-$_SESSION['port_envio_mail_send_supplier'] = 25;
+$_SESSION['port_envio_mail_send_supplier'] = 587;
 //endereço mail de quem envia referente ao login associado e preenchido mais em cima
-$_SESSION['from_mail_send_supplier'] ="bazarsav@fafedis.pt";
+$_SESSION['from_mail_send_supplier'] ="wbs00020676@valongodis.pt";
 //alem do envio ao forncedores meter um mail em copia da loja
 //$_SESSION['addcc_mail_send_supplier'] ="bazarsav@fafedis.pt";
 $_SESSION['addcc_mail_send_supplier'] ="gravenegro@gmail.com";

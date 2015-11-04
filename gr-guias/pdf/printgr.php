@@ -16,9 +16,10 @@ if(isset($_GET['id']))
     //$grepdb = grepGetById($_SESSION['lastidinsert']);
     $id = $_SESSION['lastidinsert'];
 }
-
+ob_start();
 $pdfnew = createpdfA5($id);
 $pdfnew->Output();
+ob_end_flush();
 
 unset($id);
 unset($_SESSION['lastidinsert']);

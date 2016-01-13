@@ -21,7 +21,7 @@ namespace CleanHH
         public void LogMessage(String message)
         {
             StreamWriter w = new StreamWriter(getFileName(), true);
-            w.Write(message);
+            w.Write(DateTime.Now.ToString("yyyy_M_d_HH_MM") + ": " +message);
             w.WriteLine();
             w.Close();
         }

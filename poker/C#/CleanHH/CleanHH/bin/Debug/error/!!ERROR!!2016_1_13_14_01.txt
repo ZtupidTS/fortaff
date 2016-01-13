@@ -1,0 +1,2 @@
+Problem sqlite (insert): SQL logic error or missing database
+no such table: questionwc

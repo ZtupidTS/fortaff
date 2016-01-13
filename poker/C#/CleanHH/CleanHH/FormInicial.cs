@@ -9,11 +9,15 @@ using System.Windows.Forms;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using CleanHH.DB;
 
 namespace CleanHH
 {
     public partial class FormInicial : Form
     {
+        //convert hands
+        private SQLiteDatabase dbsqlite = new SQLiteDatabase();
+        //clean HH
         private String folder;
         private String[] nickname;
         private String site = "";
@@ -22,6 +26,12 @@ namespace CleanHH
         private int i = 0;
         private string[] filePaths;
         private int numfile;
+        //convert hive hands
+        private String folderoriginalhive = "";
+        private String folderconvertedhive = "";
+        private Thread hiveconvert;
+        private Boolean continuconverthive = false;
+        private int handconverted = 0;
         
         public FormInicial()
         {
@@ -89,6 +99,14 @@ namespace CleanHH
                         checkBoxMultiThread.Checked = false;
                     }
                     break;
+                case "folderoriginalhive":
+                    textBoxHandOriginalHive.Text = line[1].ToString();
+                    folderoriginalhive = line[1].ToString();
+                    break;
+                case "folderconvertedhive":
+                    textBoxHandHiveConverted.Text = line[1].ToString();
+                    folderconvertedhive = line[1].ToString();
+                    break;
                 default:
                     break;
             }
@@ -109,11 +127,17 @@ namespace CleanHH
             w.WriteLine();
             w.Write("multithread=" + checkBoxMultiThread.Checked.ToString());
             w.WriteLine();
+            w.Write("folderoriginalhive=" + textBoxHandOriginalHive.Text.ToString());
+            w.WriteLine();
+            w.Write("folderconvertedhive=" + textBoxHandHiveConverted.Text.ToString());
+            w.WriteLine();
             w.Close();
             //test
         }
 
         #endregion
+
+        #region clean HH
 
         /// <summary>
         /// clean HH
@@ -354,7 +378,7 @@ namespace CleanHH
         }
 
         /// <summary>
-        /// choose folder
+        /// choose folder to clean hands
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -378,6 +402,11 @@ namespace CleanHH
             }
         }
 
+        /// <summary>
+        /// trabalho em 2º plano
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void backgroundWorkerProgressBar_DoWork(object sender, DoWorkEventArgs e)
         {
             BackgroundWorker worker = sender as BackgroundWorker;
@@ -408,7 +437,283 @@ namespace CleanHH
             this.Close();
         }
 
-       
+        #endregion
+
+
+        #region convert hive hands
+
+        /// <summary>
+        /// button folder hive original
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonFOlderHandHiveOriginal_Click(object sender, EventArgs e)
+        {
+            folderBrowserDialogHand.ShowDialog();
+            textBoxHandOriginalHive.Text = folderBrowserDialogHand.SelectedPath.ToString();
+            folderoriginalhive = folderBrowserDialogHand.SelectedPath.ToString();
+        }
+
+        /// <summary>
+        /// button folder hive converted
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonHandsHiveConverted_Click(object sender, EventArgs e)
+        {
+            folderBrowserDialogHand.ShowDialog();
+            textBoxHandHiveConverted.Text = folderBrowserDialogHand.SelectedPath.ToString();
+            folderconvertedhive = folderBrowserDialogHand.SelectedPath.ToString();
+        }
+
+        /// <summary>
+        /// button start convert hive hands
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonStartConvertHandHive_Click(object sender, EventArgs e)
+        {
+            if (folderoriginalhive.Equals("") || folderconvertedhive.Equals(""))
+            {
+                MessageBox.Show("Choose first folder original hands and converted hands");
+            }
+            else
+            {
+                continuconverthive = true;
+                labelStatusHiveHand.Text = "STARTED";
+                labelStatusHiveHand.ForeColor = Color.Green;
+                hiveconvert = new Thread(new ThreadStart(this.convertHandsHive));
+                hiveconvert.Start();
+            }
+            buttonStartConvertHandHive.Enabled = false;
+            buttonStopConvertHandHive.Enabled = true;
+        }
+
+        /// <summary>
+        /// button stop convert hive hands
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonStopConvertHandHive_Click(object sender, EventArgs e)
+        {
+            continuconverthive = false;
+            labelStatusHiveHand.Text = "STOPPED";
+            labelStatusHiveHand.ForeColor = Color.Red;
+            hiveconvert.Abort();
+            buttonStopConvertHandHive.Enabled = false;
+            buttonStartConvertHandHive.Enabled = true;
+        }
+
+        private void convertHandsHive()
+        {
+            string[] folders;
+            string[] filehands;
+            
+            while (continuconverthive)
+            {
+                //ober a lista de directorios
+                folders = Directory.GetDirectories(folderoriginalhive);
+                //obter dados de cada pasta
+                foreach (String fo in folders)
+                {
+                    //aqui obtenho o tamanho da pasta
+                    long sizedirectory = sizeDir(fo);
+                    //agora se não existe na DB vou meter ou verificar se há mudanças
+                    Boolean folderboo = folderChanges(fo, sizedirectory);
+                    //true = ler directorio
+                    //false = ir para outro directorio
+
+                    if (folderboo)
+                    {
+                        //vou passar a ir novamente a todos os ficheiros
+                        filehands = Directory.GetFiles(@"" + fo, "*.txt");
+
+                        String textfile2 = "";
+                        foreach (String fi in filehands)
+                        {
+                            //antes de ir ler o ficheiro ver se tem o mesmo tamanho
+                            FileInfo info = new FileInfo(fi);
+                            Boolean fileboo = fileChanges(fi, info.Length);
+
+                            //true = ler file
+                            //false = ir para outro
+                            if (fileboo)
+                            {
+                                using (StreamReader streamReader = new StreamReader(fi, Encoding.UTF8))
+                                {
+                                    textfile2 = streamReader.ReadToEnd();
+                                }
+                                handHive(textfile2, Path.GetFileName(fi));
+                            }
+                            textfile2 = "";                            
+                        }
+
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// get size dir
+        /// </summary>
+        /// <param name="dir"></param>
+        /// <returns></returns>
+        private long sizeDir(String dir)
+        {
+            string[] a = Directory.GetFiles(dir, "*.*");
+            long b = 0;
+            foreach (string name in a)
+            {
+                FileInfo info = new FileInfo(name);
+                b += info.Length;
+            }
+            return b;
+        }
+
+        /// <summary>
+        /// verify if folder has changed
+        /// </summary>
+        /// <param name="dir"></param>
+        /// <param name="sizedir"></param>
+        /// <returns></returns>
+        private Boolean folderChanges(String dir, long sizedir)
+        {
+            DataTable dt = dbsqlite.GetDataTable("select * from folders where name = '"+dir+"'");
+            if (dt.Rows.Count > 0)
+            {
+                //aqui vou ver se o tamamnho é o mesmo
+                foreach (DataRow rows in dt.Rows)
+                {
+                    long sizedb = (long)rows.ItemArray[2];
+                    if (sizedb.Equals(sizedir))
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            else
+            {
+                //aqui tenho que inserir e de pois devolvo o true
+                Dictionary<String, String> data = new Dictionary<String, String>();
+                data.Add("name", dir);
+                data.Add("size", sizedir.ToString());
+                Boolean results = dbsqlite.Insert("folders", data);
+                return true;
+            }
+        }
+
+        /// <summary>
+        /// verify if file has changed
+        /// </summary>
+        /// <param name="dir"></param>
+        /// <param name="sizedir"></param>
+        /// <returns></returns>
+        private Boolean fileChanges(String fil, long sizedir)
+        {
+            DataTable dt = dbsqlite.GetDataTable("select * from files where name = '" + fil + "'");
+            if (dt.Rows.Count > 0)
+            {
+                //aqui vou ver se o tamamnho é o mesmo
+                foreach (DataRow rows in dt.Rows)
+                {
+                    long sizedb = (long)rows.ItemArray[2];
+                    if (sizedb.Equals(sizedir))
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+                return true;
+            }
+            else
+            {
+                //aqui tenho que inserir e de pois devolvo o true
+                Dictionary<String, String> data = new Dictionary<String, String>();
+                data.Add("name", fil);
+                data.Add("size", sizedir.ToString());
+                Boolean results = dbsqlite.Insert("files", data);
+                return true;
+            }
+        }
+
+        /// <summary>
+        /// ver all hands file and create new file
+        /// </summary>
+        /// <param name="file"></param>
+        /// <param name="filename"></param>
+        private void handHive(String file, String filename)
+        {
+            String[] splitfile = file.Split(new string[] { "Hive Poker Game #" }, StringSplitOptions.RemoveEmptyEntries);
+            String filefinal = "";
+            foreach (String fi in splitfile)
+            {
+                //vou dividir novamente no #
+                String[] splitone = fi.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
+
+                long oldnumberhand = Convert.ToInt64(splitone[0]);
+                //tendo o numero antigo vou guardar na DB e dar o novo
+                long newhandnumber = newHandNumber(oldnumberhand);
+
+                if (newhandnumber > 0)
+                {
+                    filefinal += "PokerStars Hand #" + newhandnumber;
+                    for (i = 1; i < splitone.Length; i++)
+                    {
+                        filefinal += ":" + splitone[i];
+                    }
+                }
+                handconverted++;
+            }
+            //aqui crio o novo ficheiro
+            String icon_path = new Uri(folderconvertedhive).LocalPath;
+            String dede = icon_path + "\\" + filename;
+            StreamWriter w = new StreamWriter(dede, true);
+            w.Write(filefinal);
+            w.WriteLine();
+            w.Close();
+        }
+        /// <summary>
+        /// 0: hands exists
+        /// num hand : new number
+        /// </summary>
+        /// <param name="oldnumhand"></param>
+        /// <returns></returns>
+        private long newHandNumber(long oldnumhand)
+        {
+            DataTable dt = dbsqlite.GetDataTable("select * from numberhands where numberhand = '" + oldnumhand + "'");
+            if (dt.Rows.Count > 0)
+            {
+                return 0;                    
+            }
+            else
+            {
+                //como não existe a hand vou inserir na DB
+                //mas antes ter o ultimo numero inserido
+                dt = dbsqlite.GetDataTable("select * from numberhands order by id DESC limit 1");
+                long newid = 100;
+                if (dt.Rows.Count > 0)
+                {
+                    //aqui vou ver se o tamamnho é o mesmo
+                    foreach (DataRow rows in dt.Rows)
+                    {
+                        newid = (long)rows.ItemArray[0] + 100;
+                    }
+                }
+
+                Dictionary<String, String> data = new Dictionary<String, String>();
+                data.Add("numberhand", oldnumhand.ToString());
+                data.Add("newnumber", newid.ToString());
+                Boolean results = dbsqlite.Insert("numberhands", data);
+                return newid;
+            }
+        }
+
+        #endregion
+
 
     }
 }

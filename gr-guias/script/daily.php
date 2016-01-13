@@ -136,7 +136,7 @@ while ($sec = foreachRow($tablesection))
 			}else{
 				$reparador = 'Não foi enviado mail ao reparador ainda';
 			}
-			if($data['gr_number'} == "")
+			if($data['gr_number'] == "")
 			{
 				$numguia = $data['id'];
 			}else{
@@ -171,7 +171,7 @@ while ($sec = foreachRow($tablesection))
 			}else{
 				$reparador = 'Não foi enviado mail ao reparador ainda';
 			}
-			if($data['gr_number'} == "")
+			if($data['gr_number'] == "")
 			{
 				$numguia = $data['id'];
 			}else{
@@ -206,7 +206,7 @@ while ($sec = foreachRow($tablesection))
 			}else{
 				$reparador = 'Não foi enviado mail ao reparador ainda';
 			}
-			if($data['gr_number'} == "")
+			if($data['gr_number'] == "")
 			{
 				$numguia = $data['id'];
 			}else{
@@ -287,7 +287,7 @@ while ($sec = foreachRow($tablesection))
 			}else{
 				$reparador = 'Não foi enviado mail ao reparador ainda';
 			}
-			if($data['gr_number'} == "")
+			if($data['gr_number'] == "")
 			{
 				$numguia = $data['id'];
 			}else{

@@ -22,4 +22,3 @@ M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\bin\Debug\PS.pdb
 \\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.FormInicial.resources
 \\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.Properties.Resources.resources
 \\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.csproj.GenerateResource.Cache
-M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.csprojResolveAssemblyReference.cache

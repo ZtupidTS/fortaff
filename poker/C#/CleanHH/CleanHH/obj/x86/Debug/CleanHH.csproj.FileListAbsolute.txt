@@ -16,7 +16,6 @@ E:\meu\PortableApps\Dropbox\Dropbox\taff et autre\pok-ps\C#\CleanHH\CleanHH\obj\
 M:\Dropbox\taff et autre\pok-ps\C#\CleanHH\CleanHH\obj\x86\Debug\CleanHH.csprojResolveAssemblyReference.cache
 M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\bin\Debug\HandHistory.exe
 M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\bin\Debug\HandHistory.pdb
-M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\obj\x86\Debug\CleanHH.csprojResolveAssemblyReference.cache
 M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\obj\x86\Debug\CleanHH.FormInicial.resources
 M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\obj\x86\Debug\CleanHH.Properties.Resources.resources
 M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\obj\x86\Debug\CleanHH.csproj.GenerateResource.Cache
@@ -38,3 +37,12 @@ M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\obj\x86\De
 \\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\obj\x86\Debug\CleanHH.FormInicial.resources
 \\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\obj\x86\Debug\CleanHH.Properties.Resources.resources
 \\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\obj\x86\Debug\CleanHH.csproj.GenerateResource.Cache
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\bin\Debug\HandHistory.exe.config
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\bin\Debug\EntityFramework.dll
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\bin\Debug\EntityFramework.SqlServer.dll
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\bin\Debug\System.Data.SQLite.dll
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\bin\Debug\System.Data.SQLite.EF6.dll
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\bin\Debug\System.Data.SQLite.Linq.dll
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\bin\Debug\EntityFramework.xml
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\bin\Debug\EntityFramework.SqlServer.xml
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\bin\Debug\System.Data.SQLite.xml

@@ -224,7 +224,8 @@ namespace CleanHH.DB
             values = values.Substring(0, values.Length - 1);
             try
             {
-                this.ExecuteNonQuery(String.Format("insert into {0}({1}) values({2});", tableName, columns, values));
+                int rows = this.ExecuteNonQuery(String.Format("insert into {0}({1}) values({2});", tableName, columns, values));
+                if (rows < 1) returnCode = false;
             }
             catch (Exception fail)
             {

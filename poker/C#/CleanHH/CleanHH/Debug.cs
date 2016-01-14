@@ -15,7 +15,18 @@ namespace CleanHH
             //string startupPath2 = Environment.CurrentDirectory;
             //var iconPath = Path.Combine(outPutDirectory, "");
             String icon_path = new Uri(startupPath).LocalPath;
-            return icon_path + "\\error\\!!ERROR!!" + DateTime.Now.ToString("yyyy_M_d_HH_MM") + ".txt";
+            return icon_path + "\\error\\!!ERROR!!" + DateTime.Now.ToString("yyyy_M_d") + ".txt";
+        }
+
+        /// <summary>
+        /// return path aplication
+        /// </summary>
+        /// <returns></returns>
+        public String pathApp()
+        {
+            String startupPath = System.IO.Directory.GetCurrentDirectory();
+            String icon_path = new Uri(startupPath).LocalPath;
+            return icon_path;
         }
 
         public void LogMessage(String message)

@@ -508,48 +508,59 @@ namespace CleanHH
         {
             string[] folders;
             string[] filehands;
-            
-            while (continuconverthive)
+            try
             {
-                //ober a lista de directorios
-                folders = Directory.GetDirectories(folderoriginalhive);
-                //obter dados de cada pasta
-                foreach (String fo in folders)
+                while (continuconverthive)
                 {
-                    //aqui obtenho o tamanho da pasta
-                    long sizedirectory = sizeDir(fo);
-                    //agora se não existe na DB vou meter ou verificar se há mudanças
-                    Boolean folderboo = folderChanges(fo, sizedirectory);
-                    //true = ler directorio
-                    //false = ir para outro directorio
-
-                    if (folderboo)
+                    //ober a lista de directorios
+                    folders = Directory.GetDirectories(folderoriginalhive);
+                    //obter dados de cada pasta
+                    foreach (String fo in folders)
                     {
-                        //vou passar a ir novamente a todos os ficheiros
-                        filehands = Directory.GetFiles(@"" + fo, "*.txt");
+                        //aqui obtenho o tamanho da pasta
+                        long sizedirectory = sizeDir(fo);
+                        //agora se não existe na DB vou meter ou verificar se há mudanças
+                        Boolean folderboo = folderChanges(fo, sizedirectory);
+                        //true = ler directorio
+                        //false = ir para outro directorio
 
-                        String textfile2 = "";
-                        foreach (String fi in filehands)
+                        if (folderboo)
                         {
-                            //antes de ir ler o ficheiro ver se tem o mesmo tamanho
-                            FileInfo info = new FileInfo(fi);
-                            Boolean fileboo = fileChanges(fi, info.Length);
+                            //vou passar a ir novamente a todos os ficheiros
+                            filehands = Directory.GetFiles(@"" + fo, "*.txt");
 
-                            //true = ler file
-                            //false = ir para outro
-                            if (fileboo)
+                            String textfile2 = "";
+                            foreach (String fi in filehands)
                             {
-                                using (StreamReader streamReader = new StreamReader(fi, Encoding.UTF8))
-                                {
-                                    textfile2 = streamReader.ReadToEnd();
-                                }
-                                handHive(textfile2, Path.GetFileName(fi));
-                            }
-                            textfile2 = "";                            
-                        }
+                                //antes de ir ler o ficheiro ver se tem o mesmo tamanho
+                                FileInfo info = new FileInfo(fi);
+                                Boolean fileboo = fileChanges(fi, info.Length);
 
+                                //true = ler file
+                                //false = ir para outro
+                                if (fileboo)
+                                {
+                                    //vou copiar o ficheiro original
+                                    String tempfile = new Debug().pathApp() + "\\tempfile\\" + info.Name;
+                                    File.Copy(fi, tempfile, true);
+
+                                    using (StreamReader streamReader = new StreamReader(tempfile, Encoding.UTF8))
+                                    {
+                                        textfile2 = streamReader.ReadToEnd();
+                                    }
+                                    handHive(textfile2, Path.GetFileName(tempfile));
+                                    File.Delete(tempfile);
+                                }
+                                textfile2 = "";
+                            }
+
+                        }
                     }
                 }
+            }
+            catch (Exception e)
+            {
+                new Debug().LogMessage("Problem no handconverthive: " + e.ToString());
             }
         }
 
@@ -649,10 +660,14 @@ namespace CleanHH
         {
             String[] splitfile = file.Split(new string[] { "Hive Poker Game #" }, StringSplitOptions.RemoveEmptyEntries);
             String filefinal = "";
-            foreach (String fi in splitfile)
+
+            //aqui ler ao contrario assim se o numero das hands se repete tipo 3x paro :)
+            //foreach (String fi in splitfile)
+            int repeathand = 0;
+            for(int l = (splitfile.Length -1);l > 0;l--)
             {
                 //vou dividir novamente no #
-                String[] splitone = fi.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
+                String[] splitone = splitfile[l].Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
 
                 long oldnumberhand = Convert.ToInt64(splitone[0]);
                 //tendo o numero antigo vou guardar na DB e dar o novo
@@ -661,21 +676,35 @@ namespace CleanHH
                 if (newhandnumber > 0)
                 {
                     filefinal += "PokerStars Hand #" + newhandnumber;
-                    for (i = 1; i < splitone.Length; i++)
+                    for (int k = 1; k < splitone.Length; k++)
                     {
-                        filefinal += ":" + splitone[i];
+                        filefinal += ":" + splitone[k];
                     }
                 }
+                else
+                {
+                    repeathand++;
+                }
+
+                if (repeathand > 4) l = 0;
+
+                //essa linha é só para testar o hud depois retirar
+                //filefinal += "PokerStars Hand #" + fi;
+                //aqui vou pôr o numero de hand convertidas a aparecer na janela principal.
                 handconverted++;
             }
             //aqui crio o novo ficheiro
-            String icon_path = new Uri(folderconvertedhive).LocalPath;
-            String dede = icon_path + "\\" + filename;
-            StreamWriter w = new StreamWriter(dede, true);
-            w.Write(filefinal);
-            w.WriteLine();
-            w.Close();
+            if (!filefinal.Equals(""))
+            {
+                String icon_path = new Uri(folderconvertedhive).LocalPath;
+                String dede = icon_path + "\\" + filename;
+                StreamWriter w = new StreamWriter(dede, true);
+                w.Write(filefinal);
+                w.WriteLine();
+                w.Close();
+            }
         }
+
         /// <summary>
         /// 0: hands exists
         /// num hand : new number
@@ -704,10 +733,14 @@ namespace CleanHH
                     }
                 }
 
-                Dictionary<String, String> data = new Dictionary<String, String>();
-                data.Add("numberhand", oldnumhand.ToString());
-                data.Add("newnumber", newid.ToString());
-                Boolean results = dbsqlite.Insert("numberhands", data);
+                Boolean results = false;
+                while(!results)
+                {
+                    Dictionary<String, String> data = new Dictionary<String, String>();
+                    data.Add("numberhand", oldnumhand.ToString());
+                    data.Add("newnumber", newid.ToString());
+                    results = dbsqlite.Insert("numberhands", data);
+                }
                 return newid;
             }
         }

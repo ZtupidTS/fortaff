@@ -15,7 +15,7 @@ namespace CleanHH
             //string startupPath2 = Environment.CurrentDirectory;
             //var iconPath = Path.Combine(outPutDirectory, "");
             String icon_path = new Uri(startupPath).LocalPath;
-            return icon_path + "\\error\\!!ERROR!!" + DateTime.Now.ToString("yyyy_M_d") + ".txt";
+            return icon_path + "\\error\\!!ERROR!!" + DateTime.Now.ToString("yyyy_MM_dd_HH") + "H.txt";
         }
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace CleanHH
         public void LogMessage(String message)
         {
             StreamWriter w = new StreamWriter(getFileName(), true);
-            w.Write(DateTime.Now.ToString("yyyy_M_d_HH_MM") + ": " +message);
+            w.Write(DateTime.Now.ToString("yyyy_M_d_HH_mm_ss") + ": " +message);
             w.WriteLine();
             w.Close();
         }

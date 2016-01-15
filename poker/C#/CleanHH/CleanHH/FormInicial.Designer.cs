@@ -47,6 +47,7 @@
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageCleanHands = new System.Windows.Forms.TabPage();
             this.tabPageConvertHandsHive = new System.Windows.Forms.TabPage();
+            this.checkBoxLogs = new System.Windows.Forms.CheckBox();
             this.labelStatusHiveHand = new System.Windows.Forms.Label();
             this.buttonStopConvertHandHive = new System.Windows.Forms.Button();
             this.buttonStartConvertHandHive = new System.Windows.Forms.Button();
@@ -56,6 +57,7 @@
             this.textBoxHandOriginalHive = new System.Windows.Forms.TextBox();
             this.labelFolderHandHiveOriginal = new System.Windows.Forms.Label();
             this.buttonFOlderHandHiveOriginal = new System.Windows.Forms.Button();
+            this.labelHandsConverted = new System.Windows.Forms.Label();
             this.tabControlMain.SuspendLayout();
             this.tabPageCleanHands.SuspendLayout();
             this.tabPageConvertHandsHive.SuspendLayout();
@@ -142,7 +144,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "v1.1";
+            this.label3.Text = "v1.2";
             // 
             // progressBarHand
             // 
@@ -224,6 +226,8 @@
             // tabPageConvertHandsHive
             // 
             this.tabPageConvertHandsHive.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageConvertHandsHive.Controls.Add(this.labelHandsConverted);
+            this.tabPageConvertHandsHive.Controls.Add(this.checkBoxLogs);
             this.tabPageConvertHandsHive.Controls.Add(this.labelStatusHiveHand);
             this.tabPageConvertHandsHive.Controls.Add(this.buttonStopConvertHandHive);
             this.tabPageConvertHandsHive.Controls.Add(this.buttonStartConvertHandHive);
@@ -239,6 +243,17 @@
             this.tabPageConvertHandsHive.Size = new System.Drawing.Size(545, 236);
             this.tabPageConvertHandsHive.TabIndex = 1;
             this.tabPageConvertHandsHive.Text = "Convert Hands Hive";
+            // 
+            // checkBoxLogs
+            // 
+            this.checkBoxLogs.AutoSize = true;
+            this.checkBoxLogs.Location = new System.Drawing.Point(20, 205);
+            this.checkBoxLogs.Name = "checkBoxLogs";
+            this.checkBoxLogs.Size = new System.Drawing.Size(49, 17);
+            this.checkBoxLogs.TabIndex = 12;
+            this.checkBoxLogs.Text = "Logs";
+            this.checkBoxLogs.UseVisualStyleBackColor = true;
+            this.checkBoxLogs.CheckedChanged += new System.EventHandler(this.checkBoxLogs_CheckedChanged);
             // 
             // labelStatusHiveHand
             // 
@@ -327,6 +342,15 @@
             this.buttonFOlderHandHiveOriginal.UseVisualStyleBackColor = true;
             this.buttonFOlderHandHiveOriginal.Click += new System.EventHandler(this.buttonFOlderHandHiveOriginal_Click);
             // 
+            // labelHandsConverted
+            // 
+            this.labelHandsConverted.AutoSize = true;
+            this.labelHandsConverted.Location = new System.Drawing.Point(208, 115);
+            this.labelHandsConverted.Name = "labelHandsConverted";
+            this.labelHandsConverted.Size = new System.Drawing.Size(101, 13);
+            this.labelHandsConverted.TabIndex = 13;
+            this.labelHandsConverted.Text = "Hands converted: 0";
+            // 
             // FormInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -377,6 +401,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonHandsHiveConverted;
         private System.Windows.Forms.Label labelStatusHiveHand;
+        private System.Windows.Forms.CheckBox checkBoxLogs;
+        private System.Windows.Forms.Label labelHandsConverted;
     }
 }
 

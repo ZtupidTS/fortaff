@@ -13,6 +13,9 @@ using CleanHH.DB;
 
 namespace CleanHH
 {
+    //serve para executar task noutro thread
+    delegate void SetTextCallback(string text);
+    
     public partial class FormInicial : Form
     {
         //convert hands
@@ -32,6 +35,8 @@ namespace CleanHH
         private Thread hiveconvert;
         private Boolean continuconverthive = false;
         private int handconverted = 0;
+        //logs
+        private Boolean logs;
         
         public FormInicial()
         {
@@ -107,6 +112,18 @@ namespace CleanHH
                     textBoxHandHiveConverted.Text = line[1].ToString();
                     folderconvertedhive = line[1].ToString();
                     break;
+                case "checkBoxLogs":
+                    if (line[1].ToString().Equals("True"))
+                    {
+                        checkBoxLogs.Checked = true;
+                        logs = true;
+                    }
+                    else
+                    {
+                        checkBoxLogs.Checked = false;
+                        logs = false;
+                    }
+                    break;
                 default:
                     break;
             }
@@ -130,6 +147,8 @@ namespace CleanHH
             w.Write("folderoriginalhive=" + textBoxHandOriginalHive.Text.ToString());
             w.WriteLine();
             w.Write("folderconvertedhive=" + textBoxHandHiveConverted.Text.ToString());
+            w.WriteLine();
+            w.Write("checkBoxLogs=" + checkBoxLogs.Checked.ToString());
             w.WriteLine();
             w.Close();
             //test
@@ -508,9 +527,10 @@ namespace CleanHH
         {
             string[] folders;
             string[] filehands;
-            try
+            
+            while (continuconverthive)
             {
-                while (continuconverthive)
+                try
                 {
                     //ober a lista de directorios
                     folders = Directory.GetDirectories(folderoriginalhive);
@@ -534,7 +554,7 @@ namespace CleanHH
                             {
                                 //antes de ir ler o ficheiro ver se tem o mesmo tamanho
                                 FileInfo info = new FileInfo(fi);
-                                Boolean fileboo = fileChanges(fi, info.Length);
+                                Boolean fileboo = fileChanges(Path.GetFileName(fi), info.Length);
 
                                 //true = ler file
                                 //false = ir para outro
@@ -542,14 +562,45 @@ namespace CleanHH
                                 {
                                     //vou copiar o ficheiro original
                                     String tempfile = new Debug().pathApp() + "\\tempfile\\" + info.Name;
+
+                                    //File.SetAttributes(tempfile, FileAttributes.Normal);
                                     File.Copy(fi, tempfile, true);
+                                    File.SetAttributes(tempfile, FileAttributes.Normal);
 
                                     using (StreamReader streamReader = new StreamReader(tempfile, Encoding.UTF8))
                                     {
                                         textfile2 = streamReader.ReadToEnd();
+                                        streamReader.Close();
+                                        streamReader.Dispose();                                        
                                     }
-                                    handHive(textfile2, Path.GetFileName(tempfile));
-                                    File.Delete(tempfile);
+                                    handHive(textfile2, info.Name);
+                                    //aqui vou mudar o numero de hands convertidas
+                                    if (this.labelHandsConverted.InvokeRequired)
+                                    {
+                                        SetTextCallback d = new SetTextCallback(SetTextHandsConverted);
+                                        this.Invoke(d, new object[] { "Hands converted: " + handconverted });
+                                    }
+                                    else
+                                    {
+                                        // It's on the same thread, no need for Invoke
+                                        this.labelHandsConverted.Text = "Hands converted: " + handconverted;
+                                    }
+
+                                    //vou eliminar todos os ficheiros presente na pasta tempfile
+                                    var dir = new DirectoryInfo(new Debug().pathApp() + "\\tempfile\\");
+                                    foreach (var file in dir.GetFiles())
+                                    {
+                                        try
+                                        {
+                                            file.Delete();
+                                        }
+                                        catch (IOException ex)
+                                        {
+                                            //file is currently locked
+                                            if(logs) new Debug().LogMessage("Problem no catch delete: " + ex.ToString());
+                                        }
+                                    }
+                                    //File.Delete(tempfile);
                                 }
                                 textfile2 = "";
                             }
@@ -557,11 +608,13 @@ namespace CleanHH
                         }
                     }
                 }
+                catch (Exception e)
+                {
+                    if (logs) new Debug().LogMessage("Problem no handconverthive: " + e.ToString());
+                    //convertHandsHive();
+                }
             }
-            catch (Exception e)
-            {
-                new Debug().LogMessage("Problem no handconverthive: " + e.ToString());
-            }
+            
         }
 
         /// <summary>
@@ -680,6 +733,7 @@ namespace CleanHH
                     {
                         filefinal += ":" + splitone[k];
                     }
+                    handconverted++;
                 }
                 else
                 {
@@ -689,9 +743,7 @@ namespace CleanHH
                 if (repeathand > 4) l = 0;
 
                 //essa linha é só para testar o hud depois retirar
-                //filefinal += "PokerStars Hand #" + fi;
-                //aqui vou pôr o numero de hand convertidas a aparecer na janela principal.
-                handconverted++;
+                //filefinal += "PokerStars Hand #" + fi;                
             }
             //aqui crio o novo ficheiro
             if (!filefinal.Equals(""))
@@ -747,6 +799,30 @@ namespace CleanHH
 
         #endregion
 
+        /// <summary>
+        /// change in checkbox logs
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void checkBoxLogs_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxLogs.Checked)
+            {
+                logs = true;
+            }
+            else
+            {
+                logs = false;
+            }
+        }
 
+        /// <summary>
+        /// Metodo para mudar o numero de hands convertidas
+        /// </summary>
+        /// <param name="text"></param>
+        private void SetTextHandsConverted(string text)
+        {
+            this.labelHandsConverted.Text = text;
+        }
     }
 }

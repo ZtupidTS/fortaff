@@ -1,7 +1,8 @@
-Location=326,495
-textBoxFolder=C:\Users\Utilizador\Desktop\dontpanic_PS_ZNL10_SH_2014-12-29\new
-textBoxNickName=gcpasps,hulkric59
-comboBoxSite=0
-multithread=True
-folderoriginalhive=C:\Users\Utilizador\Desktop\krav77maga
-folderconvertedhive=C:\Users\Utilizador\Desktop\finalhand
+Location=150,150
+textBoxFolder=
+textBoxNickName=
+comboBoxSite=-1
+multithread=False
+folderoriginalhive=C:\Users\ricain\Desktop\krav
+folderconvertedhive=C:\Users\ricain\Desktop\nova
+checkBoxLogs=False

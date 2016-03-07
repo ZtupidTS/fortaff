@@ -46,3 +46,4 @@ M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\bin\Debug\
 M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\bin\Debug\EntityFramework.xml
 M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\bin\Debug\EntityFramework.SqlServer.xml
 M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\bin\Debug\System.Data.SQLite.xml
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\CleanHH\CleanHH\obj\x86\Debug\CleanHH.csprojResolveAssemblyReference.cache

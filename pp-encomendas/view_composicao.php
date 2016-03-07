@@ -7,9 +7,9 @@
 
 			
                     <!-- Form Name -->
-                    <legend>Coberturas</legend>
+                    <legend>Coberturas <a id="tablecoberturas" onclick="toggleTable(true);" href="#"><img /></a></legend>
                         
-                        <table id="mytable" class="table table-bordered display" cellspacing="0" width="">
+                        <table id="mytable_cob" class="table table-bordered display" cellspacing="0" width="">
 	    			<tbody> 
 	    				<?php
 	    				$table = coberturaGetAll();
@@ -37,7 +37,7 @@
                     
                     <legend>Recheio</legend>
                         
-                        <table id="mytable" class="table table-bordered display" cellspacing="0" width="">
+                        <table id="mytable_rec" class="table table-bordered display" cellspacing="0" width="">
 	    			<tbody> 
 	    				<?php
 	    				$table = recheioGetAll();
@@ -65,7 +65,7 @@
 			
 		      <legend>Massa</legend>
                         
-                        <table id="mytable" class="table table-bordered display" cellspacing="0" width="">
+                        <table id="mytable_mas" class="table table-bordered display" cellspacing="0" width="">
 	    			<tbody> 
 	    				<?php
 	    				$table = massaGetAll();
@@ -97,5 +97,14 @@
             
         </div><!-- /.col-lg-12 -->
     </div><!-- /.row -->
+    
+    <script>
+    $(document).ready(function() {
+    		$('#tablecoberturas').click(function() {
+    		$('#mytable_cob').toggle('slow');
+    	});
+    })
+    
+    </script>
     
 <?php include 'includes/footer.php';?>

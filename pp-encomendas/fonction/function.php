@@ -671,11 +671,16 @@ function insertmodifencomenda($id, $text)
 {
 	$fields = array();
 	$fields['pp_modif_enc_id'] = dbInteger($id);
-	$fields['pp_modif_us_id'] = dbInteger($_SESSION['iduser']);
+	if(strlen($_SESSION['iduser']) > 0)
+	{
+		$fields['pp_modif_us_id'] = dbInteger($_SESSION['iduser']);
+	}else{
+		$fields['pp_modif_us_id'] = 1;
+	}
 	$fields['pp_modif_date'] = dbString(date('Y-m-d H:i:s', time() - 3600));
 	$fields['pp_modif_texto'] = dbString($text);
 	modifEncomendasInsert($fields);
-	unset($fields);	
+	unset($fields);
 }
 
 //insere dados na tabela modif encomendas

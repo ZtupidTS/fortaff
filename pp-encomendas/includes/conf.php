@@ -54,9 +54,7 @@ $_SESSION['pp_massa_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas_dev/inclu
 $_SESSION['pp_recheio_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas_dev/includes/database/pp_recheio.php';
 $_SESSION['pp_users_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas_dev/includes/database/pp_users.php';
 $_SESSION['view_nossosbolos_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas_dev/includes/database/view_nossosbolos.php';
-
-
-
+$_SESSION['pp_modif_enc_mail_send_daily'] = 'C:/xampp/htdocs/pp-encomendas/includes/database/pp_modif_encomendas.php';
 
 #############      envio sms   #############
 

@@ -10,6 +10,7 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using CleanHH.DB;
+using System.Text.RegularExpressions;
 
 namespace CleanHH
 {
@@ -29,6 +30,7 @@ namespace CleanHH
         private int i = 0;
         private string[] filePaths;
         private int numfile;
+        private long newhandnumberhandDB;
         //convert hive hands
         private String folderoriginalhive = "";
         private String folderconvertedhive = "";
@@ -37,6 +39,7 @@ namespace CleanHH
         private int handconverted = 0;
         //logs
         private Boolean logs;
+        private Boolean hivehandsotherdb;
         
         public FormInicial()
         {
@@ -124,6 +127,18 @@ namespace CleanHH
                         logs = false;
                     }
                     break;
+                case "checkBoxHiveHandsOtherDb":
+                    if (line[1].ToString().Equals("True"))
+                    {
+                        checkBoxHiveHandsOtherDb.Checked = true;
+                        hivehandsotherdb = true;
+                    }
+                    else
+                    {
+                        checkBoxHiveHandsOtherDb.Checked = false;
+                        hivehandsotherdb = false;
+                    }
+                    break;
                 default:
                     break;
             }
@@ -149,6 +164,8 @@ namespace CleanHH
             w.Write("folderconvertedhive=" + textBoxHandHiveConverted.Text.ToString());
             w.WriteLine();
             w.Write("checkBoxLogs=" + checkBoxLogs.Checked.ToString());
+            w.WriteLine();
+            w.Write("checkBoxHiveHandsOtherDb=" + checkBoxHiveHandsOtherDb.Checked.ToString());
             w.WriteLine();
             w.Close();
             //test
@@ -216,7 +233,7 @@ namespace CleanHH
                 {
                     // Start the asynchronous operation.
                     backgroundWorkerProgressBar.RunWorkerAsync();
-                }
+                }                
             }
         }
 
@@ -246,7 +263,7 @@ namespace CleanHH
             //multithread
             if (checkBoxMultiThread.Checked)
             {
-                
+                String pathfinal = "";
                 Parallel.ForEach(filePaths, fi =>
                 {
                     String textfile = "";
@@ -263,7 +280,7 @@ namespace CleanHH
                         else
                         {
                             String icon_path = new Uri(folder + "/new").LocalPath;
-                            String pathfinal = icon_path + "\\" + Path.GetFileName(fi);
+                            pathfinal = icon_path + "\\" + Path.GetFileName(fi);
                             StreamWriter w = new StreamWriter(pathfinal, true);
                             w.Write(textfile);
                             w.WriteLine();
@@ -279,23 +296,26 @@ namespace CleanHH
                         else
                         {
                             String icon_path = new Uri(folder + "/new").LocalPath;
-                            String pathfinal = icon_path + "\\" + Path.GetFileName(fi);
+                            pathfinal = icon_path + "\\" + Path.GetFileName(fi);
                             StreamWriter w = new StreamWriter(pathfinal, true);
                             w.Write(textfile);
                             w.WriteLine();
                             w.Close();
+                            
                         }
                     }
-                    //elimnar o ficheiro
+                    //eliminar o ficheiro
                     File.Delete(fi);
 
                     textfile = "";
+                    pathfinal = "";
                     i++;
                 });
             }
             else
             {
                 String textfile2 = "";
+                String pathfinal = "";
                 foreach (String fi in filePaths)
                 {
                     using (StreamReader streamReader = new StreamReader(fi, Encoding.UTF8))
@@ -310,12 +330,20 @@ namespace CleanHH
                         }
                         else
                         {
-                            String icon_path = new Uri(folder + "/new").LocalPath;
-                            String pathfinal = icon_path + "\\" + Path.GetFileName(fi);
-                            StreamWriter w = new StreamWriter(pathfinal, true);
-                            w.Write(textfile2);
-                            w.WriteLine();
-                            w.Close();
+                            if (!hivehandsotherdb)
+                            {
+                                String icon_path = new Uri(folder + "/new").LocalPath;
+                                pathfinal = icon_path + "\\" + Path.GetFileName(fi);
+                                StreamWriter w = new StreamWriter(pathfinal, true);
+                                w.Write(textfile2);
+                                w.WriteLine();
+                                w.Close();
+                            }
+                            else
+                            {
+                                changeNumberHandHive(textfile2, Path.GetFileName(fi));
+                            }
+
                         }
                     }
                     else
@@ -326,12 +354,19 @@ namespace CleanHH
                         }
                         else
                         {
-                            String icon_path = new Uri(folder + "/new").LocalPath;
-                            String pathfinal = icon_path + "\\" + Path.GetFileName(fi);
-                            StreamWriter w = new StreamWriter(pathfinal, true);
-                            w.Write(textfile2);
-                            w.WriteLine();
-                            w.Close();
+                            if (!hivehandsotherdb)
+                            {
+                                String icon_path = new Uri(folder + "/new").LocalPath;
+                                pathfinal = icon_path + "\\" + Path.GetFileName(fi);
+                                StreamWriter w = new StreamWriter(pathfinal, true);
+                                w.Write(textfile2);
+                                w.WriteLine();
+                                w.Close();
+                            }
+                            else
+                            {
+                                changeNumberHandHive(textfile2, Path.GetFileName(fi));
+                            }
                         }
                     }
                     //elimnar o ficheiro
@@ -344,6 +379,55 @@ namespace CleanHH
             continu = false;
             //buttonClean.Enabled = true;
             //labelWaiting.Visible = false;
+        }
+
+        private void changeNumberHandHive(String file, String filename)
+        {
+            String[] splitfile = file.Split(new string[] { "PokerStars Hand #" }, StringSplitOptions.RemoveEmptyEntries);
+            String filefinal = "";
+
+            //aqui ler ao contrario assim se o numero das hands se repete tipo 3x paro :)
+            //foreach (String fi in splitfile)
+            for (int l = (splitfile.Length - 1); l > 0; l--)
+            {
+                String hand = splitfile[l];
+                //obter o numero antigo da hand
+                long oldnumberhand = new Utils().getOldNumberHandsHive(hand);
+                //novo numero da hand
+                long newhandnumber = newHandNumber(oldnumberhand);
+
+                Boolean verifynewnumber = true;
+                while (verifynewnumber)
+                {
+                    if (newhandnumberhandDB < newhandnumber && newhandnumberhandDB != newhandnumber)
+                    {
+                        newhandnumberhandDB = newhandnumber;
+                        verifynewnumber = false;
+                    }
+                    else
+                    {
+                        newhandnumber++;
+                    }
+                }
+
+                if (newhandnumber > 0)
+                {
+                    //vou mudar o numero na hand
+                    hand = hand.Replace(oldnumberhand.ToString(), newhandnumber.ToString());
+                    filefinal += "PokerStars Hand #" + hand;
+                    handconverted++;
+                }
+            }
+            //aqui crio o novo ficheiro
+            if (!filefinal.Equals(""))
+            {
+                String icon_path = new Uri(folder + "/new").LocalPath;
+                String pathfinal = icon_path + "\\" + filename;
+                StreamWriter w = new StreamWriter(pathfinal, true);
+                w.Write(filefinal);
+                w.WriteLine();
+                w.Close();
+            }
         }
 
         /// <summary>
@@ -387,13 +471,23 @@ namespace CleanHH
                     }
                 }
             }
-            //aqui crio o novo ficheiro
-            String icon_path = new Uri(folder + "/new").LocalPath;
-            String dede = icon_path + "\\" + filename; 
-            StreamWriter w = new StreamWriter(dede, true);
-            w.Write(filefinal);
-            w.WriteLine();
-            w.Close();
+            if (!filefinal.Equals(""))
+            {
+                if (!hivehandsotherdb)
+                {
+                    //aqui crio o novo ficheiro
+                    String icon_path = new Uri(folder + "/new").LocalPath;
+                    String dede = icon_path + "\\" + filename;
+                    StreamWriter w = new StreamWriter(dede, true);
+                    w.Write(filefinal);
+                    w.WriteLine();
+                    w.Close();
+                }
+                else
+                {
+                    changeNumberHandHive(filefinal, filename);
+                }
+            }
         }
 
         /// <summary>
@@ -719,20 +813,38 @@ namespace CleanHH
             int repeathand = 0;
             for(int l = (splitfile.Length -1);l > 0;l--)
             {
-                //vou dividir novamente no #
-                String[] splitone = splitfile[l].Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
+                //Mulla 6-max - Blinds 0.01EUR/0.02EUR - No Limit Hold'em
+                String limitplayed = new Utils().getNlHive(splitfile[l]);
+                //String[] splitchangenametable = splitfile[l].Split(new string[] { "Table " }, StringSplitOptions.RemoveEmptyEntries);
 
-                long oldnumberhand = Convert.ToInt64(splitone[0]);
+                //String abc = removeBetween(splitchangenametable[1].ToString(), 'a', 'a');
+                //String[] splitone = splitfile[l].Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
+
+                //long oldnumberhand = Convert.ToInt64(splitone[0]);
                 //tendo o numero antigo vou guardar na DB e dar o novo
+
+
+                //string da hand
+                String hand = splitfile[l];
+                //obter o numero antigo da hand
+                long oldnumberhand = new Utils().getOldNumberHandsHive(hand);
+                //novo numero da hand
                 long newhandnumber = newHandNumber(oldnumberhand);
 
                 if (newhandnumber > 0)
                 {
-                    filefinal += "PokerStars Hand #" + newhandnumber;
-                    for (int k = 1; k < splitone.Length; k++)
-                    {
-                        filefinal += ":" + splitone[k];
-                    }
+                    //vou mudar o numero na hand
+                    hand = hand.Replace(oldnumberhand.ToString(), newhandnumber.ToString());
+                    //agora mudar o nome da mesa
+                    String oldnametable = new Utils().getNameTableHive(hand);
+                    //change table name
+                    hand = hand.Replace(oldnametable, oldnametable + limitplayed);
+                    //filefinal += "PokerStars Hand #" + newhandnumber;
+                    //for (int k = 1; k < splitone.Length; k++)
+                    //{
+                    //    filefinal += ":" + splitone[k];
+                    //}
+                    filefinal += "PokerStars Hand #" + hand;
                     handconverted++;
                 }
                 else
@@ -756,6 +868,8 @@ namespace CleanHH
                 w.Close();
             }
         }
+
+        
 
         /// <summary>
         /// 0: hands exists
@@ -824,5 +938,42 @@ namespace CleanHH
         {
             this.labelHandsConverted.Text = text;
         }
+
+        /// <summary>
+        /// when checked change multithread
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void checkBoxHiveHandsOtherDb_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxHiveHandsOtherDb.Checked)
+            {
+                checkBoxMultiThread.Checked = false;
+            }
+            else
+            {
+                checkBoxMultiThread.Checked = true;
+            }
+        }
+
+        /// <summary>
+        /// when checked change checkbox hivehand
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void checkBoxMultiThread_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxMultiThread.Checked)
+            {
+                checkBoxHiveHandsOtherDb.Checked = false;
+            }
+            else
+            {
+                checkBoxHiveHandsOtherDb.Checked = true;
+            }
+        }
+
+        
+        
     }
 }

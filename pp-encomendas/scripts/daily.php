@@ -1,7 +1,7 @@
 <?php
 session_start();
-include 'C:/xampp/htdocs/pp-encomendas_dev/includes/database/mysql.php';
-include 'C:/xampp/htdocs/pp-encomendas_dev/includes/conf.php';
+include 'C:/xampp/htdocs/pp-encomendas/includes/database/mysql.php';
+include 'C:/xampp/htdocs/pp-encomendas/includes/conf.php';
 
 include $_SESSION['pp_bolo_mail_send_daily'];
 include $_SESSION['pp_cobertura_mail_send_daily'];
@@ -11,6 +11,7 @@ include $_SESSION['pp_recheio_mail_send_daily'];
 include $_SESSION['pp_users_mail_send_daily'];
 include $_SESSION['view_nossosbolos_mail_send_daily'];
 include $_SESSION['include_function'];
+include $_SESSION['pp_modif_enc_mail_send_daily'];
 
 
 //dia actual 
@@ -21,15 +22,15 @@ $date_mais8 = date("Y-m-d", strtotime($date_atual . ' + 8 days'));
 //Estado dos sms
 
 //aqui vou atualizar o estado das sms antes
-/*$where = 'status_sms  != 1 AND date_tocliente IS NULL AND date_sms IS NOT NULL';
-$table = grepGetByFiltro($where, 'date_in');
+$where = 'pp_enc_statussms  != 1 AND pp_enc_datalevantamento IS NULL AND pp_enc_datesms IS NOT NULL';
+$table = encomendasGetByFiltro($where, 'pp_enc_dateenc');
 if(mysql_num_rows($table) > 0)
 {
 	while($data = mysql_fetch_array($table))
 	{
 		//$versms = verifysms($data['sms_id']);
 		//$status = $versms->body->MessageInfo->DeliveryStatus;
-		$result = getreportegoi($data['sms_id']);
+		$result = getreportegoi($data['pp_enc_smsid']);
 	
 		$sent = intval($result['SENT']);
 		$delivered =  intval($result['DELIVERED']);
@@ -70,13 +71,13 @@ if(mysql_num_rows($table) > 0)
 		
 		//insiro na DB
 		$fields = array();
-		$fields['id'] = dbInteger($data['id']);
-		$fields['date_sms'] = dbString(date('Y-m-d H:i:s', time() - 3600));
-		$fields['status_sms'] = dbString($status);
-		grepUpdate($fields);
+		$fields['pp_enc_id'] = dbInteger($data['pp_enc_id']);
+		//$fields['pp_enc_datesms'] = dbString(date('Y-m-d H:i:s', time() - 3600));
+		$fields['pp_enc_statussms'] = dbString($status);
+		encomendasUpdate($fields);
 		unset($fields);
 		//agora a tabela modif
-		insertmodifgr($data['id'], $texto);
+		insertmodifencomenda($data['pp_enc_id'], $texto);
 		/*switch($status){
 			case 1:
 				$texto = "SMS enviado e recebido pelo cliente";
@@ -90,17 +91,13 @@ if(mysql_num_rows($table) > 0)
 			default:
 				$texto = "Verificar script da noite";
 				break;
-		}
-		
-		
-		
-		
+		}*/
 		
 	}	
 }
 unset($where);
 unset($table);
-unset($data);*/
+unset($data);
 
 $textmail = '';
 $textmail_final = '<html><body>';
@@ -130,7 +127,10 @@ while ($row = foreachRow($table))
 		//$textmail_final .= '<img height="150" width="250" src="//219.21.221.141/pp-encomendas_dev/'.$bolonosso['pp_bolo_urlimage'].'"/><br/>';
 		//pdf
 		$textmail_pdf .= $textmail;
-		$textmail_pdf .= '<img height="150" width="250" src="C:/xampp/htdocs/pp-encomendas_dev/'.$bolonosso['pp_bolo_urlimage'].'"/><br/>';
+		//pelo site
+		//$textmail_pdf .= '<img height="150" width="250" src="../'.$bolonosso['pp_bolo_urlimage'].'"/><br/>';
+		//para criar o pdf com imagem
+		$textmail_pdf .= '<img height="150" width="250" src="C:/xampp/htdocs/pp-encomendas/'.$bolonosso['pp_bolo_urlimage'].'"/><br/>';
 		$textmail = '';
 		
 	}
@@ -176,7 +176,10 @@ while ($row = foreachRow($table))
 		$textmail .= '<b>Observações:</b> '.$row['pp_enc_obs'].'<br/>';
 	}	
 }
-
+if($textmail == "")
+{
+	$textmail .= 'Não há encomendas?? Verificar se não há mesmo encomendas.';
+}
 
 $textmail .= '<br/>';
 $textmail .= '<br/>';
@@ -187,14 +190,14 @@ $textmail_final .= $textmail;
 
 $textmail_final .= '</body></html>';
 
-require_once('C:/xampp/htdocs/pp-encomendas_dev/FPDF/html2pdf/html2pdf.class.php');
+require_once('C:/xampp/htdocs/pp-encomendas/FPDF/html2pdf/html2pdf.class.php');
     
 ob_start();
 echo $textmail_pdf; 
 $content = ob_get_clean();
 $html2pdf = new HTML2PDF('P', 'A4', 'pt');
 $html2pdf->writeHTML($content, isset($_GET['vuehtml']));
-$html2pdf->Output('C:/xampp/htdocs/pp-encomendas_dev/scripts/script_diario.pdf', 'F');
+$html2pdf->Output('C:/xampp/htdocs/pp-encomendas/scripts/script_diario.pdf', 'F');
 //aqui permite me envia-lo em anexo
 $content_PDF = $html2pdf->Output('', true);
 

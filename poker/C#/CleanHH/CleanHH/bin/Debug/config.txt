@@ -1,8 +1,9 @@
-Location=150,150
-textBoxFolder=
-textBoxNickName=
-comboBoxSite=-1
+Location=585,475
+textBoxFolder=C:\Users\Utilizador\Desktop\Nova pasta
+textBoxNickName=krav77maga
+comboBoxSite=0
 multithread=False
-folderoriginalhive=C:\Users\ricain\Desktop\krav
-folderconvertedhive=C:\Users\ricain\Desktop\nova
+folderoriginalhive=C:\Users\Utilizador\Desktop\krav77maga
+folderconvertedhive=C:\Users\Utilizador\Desktop\Nova pasta
 checkBoxLogs=False
+checkBoxHiveHandsOtherDb=True

@@ -27,9 +27,7 @@
 	function modificarbolo()
 	{
 		alert('Ainda não implementado');
-				
 	}
-		
 	</script>
 	
 	<?php

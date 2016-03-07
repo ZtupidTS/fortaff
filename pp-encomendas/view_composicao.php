@@ -1,5 +1,45 @@
 <?php include 'includes/header.php'; ?>
     
+    <script>
+    	function alterarCob(id, cobertura)
+    	{
+		var my_text=prompt('Vai alterar essa cobertura: '+cobertura);
+		alterarComposicao(my_text,id,'cob');
+	}
+	function alterarRec(id, cobertura)
+    	{
+		var my_text=prompt('Vai alterar essa cobertura: '+cobertura);
+		alterarComposicao(my_text,id,'rec');
+	}
+	function alterarMas(id, cobertura)
+    	{
+		var my_text=prompt('Vai alterar essa cobertura: '+cobertura);
+		alterarComposicao(my_text,id,'mas');
+	}
+	//tipo:
+	//cob: cobertura
+	//rec: recheio
+	//mas: massa
+	function alterarComposicao(newtext,id,tipo)
+	{
+		$.get( "ajax/ajmodif_comp.php", { 
+			id: id,
+			newtext: newtext,
+			tipo: tipo}, 'text' )
+			.done(function( data ) {
+		   	    var newdata = data.trim();
+			    if(newdata == "ok")
+			    {
+			    	alert('Composição alterada');
+			    	window.location = "view_composicao.php";			    	
+			    }else{
+			    	alert(newdata);
+			    }
+		});		
+	}    	
+    </script>
+    
+    
     <div class="row">
         <div class="col-md-9 col-md-offset-2">
             <form name="changegr" class="form-horizontal" >
@@ -7,7 +47,7 @@
 
 			
                     <!-- Form Name -->
-                    <legend>Coberturas <a id="tablecoberturas" onclick="toggleTable(true);" href="#"><img /></a></legend>
+                    <legend><a id="tablecoberturas" onclick="toggleTable(true);" href="#">Coberturas</a></legend>
                         
                         <table id="mytable_cob" class="table table-bordered display" cellspacing="0" width="">
 	    			<tbody> 
@@ -21,6 +61,7 @@
 		        				{?>
 		            					<tr>
 		                					<td><?= $data['pp_cobertura_designacao'];?></td>
+		                					<td><img onclick="alterarCob('<?= $data['pp_cobertura_id'];?>','<?= $data['pp_cobertura_designacao'];?>')" height="20" width="20" src="images/alterar.jpg"/></td>
 		            					</tr>
 						        <?php
 					        	}        
@@ -35,7 +76,7 @@
 	    			</tbody>
 			</table>                        
                     
-                    <legend>Recheio</legend>
+                    <legend><a id="tablerecheio" onclick="toggleTable(true);" href="#">Recheio</a></legend>
                         
                         <table id="mytable_rec" class="table table-bordered display" cellspacing="0" width="">
 	    			<tbody> 
@@ -49,6 +90,7 @@
 		        				{?>
 		            					<tr>
 		                					<td><?= $data['pp_recheio_designacao'];?></td>
+		                					<td><img onclick="alterarRec('<?= $data['pp_recheio_id'];?>','<?= $data['pp_recheio_designacao'];?>')" height="20" width="20" src="images/alterar.jpg"/></td>
 		            					</tr>
 						        <?php
 					        	}        
@@ -63,7 +105,7 @@
 	    			</tbody>
 			</table>
 			
-		      <legend>Massa</legend>
+		      <legend><a id="tablemassa" onclick="toggleTable(true);" href="#">Massa</a></legend>
                         
                         <table id="mytable_mas" class="table table-bordered display" cellspacing="0" width="">
 	    			<tbody> 
@@ -77,6 +119,7 @@
 		        				{?>
 		            					<tr>
 		                					<td><?= $data['pp_massa_designacao'];?></td>
+		                					<td><img onclick="alterarMas('<?= $data['pp_massa_id'];?>','<?= $data['pp_massa_designacao'];?>')" height="20" width="20" src="images/alterar.jpg"/></td>
 		            					</tr>
 						        <?php
 					        	}        
@@ -100,8 +143,17 @@
     
     <script>
     $(document).ready(function() {
+    	$('#mytable_cob').toggle('slow');
+    	$('#mytable_rec').toggle('slow');
+    	$('#mytable_mas').toggle('slow');
     		$('#tablecoberturas').click(function() {
     		$('#mytable_cob').toggle('slow');
+    	});
+    		$('#tablerecheio').click(function() {
+    		$('#mytable_rec').toggle('slow');
+    	});
+    		$('#tablemassa').click(function() {
+    		$('#mytable_mas').toggle('slow');
     	});
     })
     

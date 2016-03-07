@@ -26,7 +26,7 @@ if(isset($_SESSION['username']))
     $login = "Sair(" . $_SESSION['username'] . ")";        
 }else{
     $login = "Entrar";        
-    if(recupera_url() != "gr-guias")
+    if(recupera_url() != "pp-encomendas")
     {
         if(recupera_url() != "index")
         {

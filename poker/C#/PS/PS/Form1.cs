@@ -69,7 +69,11 @@ namespace PS
                 {
                     continueDt = false;
                     //fecha a stars
-                    new Utils().detectApps("PokerStars");
+                    String[] rooms = { "pokerstars", "PartyFrance" };
+                    foreach (String room in rooms)
+                    {
+                        new Utils().detectApps(room);
+                    }
                     listbox("Mudança de IP");
                 }
                 listbox(i + "- " + temp + " (1)");
@@ -86,7 +90,11 @@ namespace PS
                 {
                     continueDt = false;
                     //fecha a stars
-                    new Utils().detectApps("PokerStars");
+                    String[] rooms = { "pokerstars", "PartyFrance" };
+                    foreach (String room in rooms)
+                    {
+                        new Utils().detectApps(room);
+                    }
                     listbox("Mudança de IP");
                 }
                 listbox(i + "- " + temp + " (2)");
@@ -103,7 +111,11 @@ namespace PS
                 {
                     continueDt = false;
                     //fecha a stars
-                    new Utils().detectApps("PokerStars");
+                    String[] rooms = { "pokerstars", "PartyFrance" };
+                    foreach (String room in rooms)
+                    {
+                        new Utils().detectApps(room);
+                    }
                     listbox("Mudança de IP");
                 }
                 listbox(i + "- " + temp + " (3)");
@@ -310,7 +322,11 @@ namespace PS
         private void buttonStop_Click(object sender, EventArgs e)
         {
             continueDt = false;
-            new Utils().detectApps("PokerStars");
+            String[] rooms = { "pokerstars", "PartyFrance" };
+            foreach (String room in rooms)
+            {
+                new Utils().detectApps(room);
+            }
             this.Close();
         }
 

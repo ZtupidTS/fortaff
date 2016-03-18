@@ -1,0 +1,4 @@
+2016_1_20_11_17_43: Problem sqlite (insert): Thread abortado.
+2016_1_20_11_25_18: Problem sqlite (insert): Thread abortado.
+2016_1_20_11_26_09: Problem sqlite (insert): Thread abortado.
+2016_1_20_11_28_21: Problem sqlite (insert): Thread abortado.

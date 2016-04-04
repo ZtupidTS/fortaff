@@ -1,9 +1,9 @@
 Location=585,475
-textBoxFolder=C:\Users\Utilizador\Desktop\Nova pasta
-textBoxNickName=krav77maga
-comboBoxSite=0
-multithread=False
+textBoxFolder=C:\Users\ricain\Desktop\1234
+textBoxNickName=dsjorge99
+comboBoxSite=1
+multithread=True
 folderoriginalhive=C:\Users\Utilizador\Desktop\krav77maga
 folderconvertedhive=C:\Users\Utilizador\Desktop\Nova pasta
 checkBoxLogs=False
-checkBoxHiveHandsOtherDb=True
+checkBoxHiveHandsOtherDb=False

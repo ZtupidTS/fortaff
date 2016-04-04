@@ -220,6 +220,7 @@ namespace CleanHH
             else
             {
                 site = comboBoxSite.SelectedItem.ToString();
+                splithandsite(site);
             }
             buttonClean.Enabled = false;
             labelWaiting.Visible = true;
@@ -257,7 +258,7 @@ namespace CleanHH
             }
 
             //obter todos a lista de ficheiro
-            filePaths = Directory.GetFiles(@"" + folder, "*.txt");
+            filePaths = Directory.GetFiles(@"" + folder, "*.txt", System.IO.SearchOption.AllDirectories);
             numfile = filePaths.Count();
             
             //multithread
@@ -461,7 +462,7 @@ namespace CleanHH
                 }
                 else
                 {
-                    if (!fi.Contains(nickname[0]))
+                    if (!fi.Contains(nickname[0]) && fi.Length > 30)
                     {
                         filefinal += site + fi;
                     }
@@ -512,6 +513,25 @@ namespace CleanHH
             if (comboBoxSite.SelectedIndex != -1)
             {
                 site = comboBoxSite.SelectedItem.ToString();
+                splithandsite(site);
+            }
+        }
+
+        /// <summary>
+        /// change string site for character split hand
+        /// </summary>
+        /// <param name="sitechoose"></param>
+        private void splithandsite(String sitechoose)
+        {
+            switch (sitechoose)
+            {
+                case "PokerStars":
+                    break;
+                case "PartyPoker":
+                    site = "#Game No :";
+                    break;
+                default:
+                    break;
             }
         }
 

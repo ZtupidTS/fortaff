@@ -123,7 +123,8 @@
             // 
             this.comboBoxSite.FormattingEnabled = true;
             this.comboBoxSite.Items.AddRange(new object[] {
-            "PokerStars"});
+            "PokerStars",
+            "PartyPoker"});
             this.comboBoxSite.Location = new System.Drawing.Point(93, 18);
             this.comboBoxSite.Name = "comboBoxSite";
             this.comboBoxSite.Size = new System.Drawing.Size(248, 21);

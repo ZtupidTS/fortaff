@@ -182,8 +182,8 @@
 					</li>
 						<li><span><?php echo form_label('One and Simple :', 'oneNsimpleUsr','class="required"');?></span>
 												     <div class="radio-input" style="margin-top:8px;">
-												         <lable style="font-size:14px;color:#010101">User</lable>
-												            <?php $isnumerausr = $userDetail['oneNsimpleUsr']; ?>
+												         <label style="font-size:14px;color:#010101">User</label>
+												            <?php $isnumerausr = @$userDetail['oneNsimpleUsr']; ?>
 												         <input type="checkbox" <?php if($isnumerausr=='y'){ echo 'checked="checked"';}?>  name="oneNsimpleUsr" value="accept" style="margin-top:2px;">
 												     </div>
 												    <?php //echo form_input('onensimpleUsr', @$userDetail['userPhone'],'id="userPhone"');?>
@@ -299,7 +299,6 @@
 										<!--Folder permission-->
 										<tr>
 										     <td colspan="3"><strong>Folder</strong></td>
-										     
 										</tr>
 										<tr>
 										     <td>

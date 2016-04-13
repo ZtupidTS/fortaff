@@ -45,7 +45,7 @@
                 ?>
                     <?php echo $footertxt->adminFooterTxt ?>
                 <?php } else {?>
-                    <?php echo date('Y');?> © one and simple 
+                    <?php echo date('Y');?> ï¿½ one and simple 
                 <?php } ?></p>
 	</div>
 </div>

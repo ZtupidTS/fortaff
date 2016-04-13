@@ -1,4 +1,12 @@
-<?php $this->load->view('admin_header')?>
+<?php $this->load->view('admin_header');
+
+if(isset($_POST)) 
+{
+	
+	print_r($_POST);
+}
+?>
+
 
 <script type="text/javascript" >
 	$(document).ready(function(){	
@@ -76,6 +84,7 @@
 				<div class="tab-content-left">
 					<!--Tab 1 For Add basic client information-->
 					<ul class="tab-field">
+												
 						<li><i><strong>Google account login details</strong></i></li>
 						<li>
 							<span><?php echo form_label('Account type:', 'accountType','class="required"');?><em>*</em></span>
@@ -195,33 +204,33 @@
 						</li>
 						<li><span><?php echo form_label('Company Name:', 'companyName','class="required"');?><em>*</em></span>
 							<div class="input-divs">
-							<?php echo form_input('companyName', @$clientDetail['companyName'],'id="companyName" maxlength="150"');?>
+							<?php echo form_input('companyName', 'fsdfsfs','id="companyName" maxlength="150"');?>
 							</div>
 							<?php echo form_error('companyName'); ?>
 						</li>
 						<li>
 							<span><?php echo form_label('Email:','userEmail','class="required"')?><em>*</em></span>
 							<div class="input-divs">
-							<?php echo form_input('userEmail',@$clientDetail['userEmail'],'id="userEmail"');?>
+							<?php echo form_input('userEmail','test@test.fr','id="userEmail"');?>
 							</div>
 							<?php echo form_error('userEmail');?>
 						</li>
 						<li><span><?php echo form_label('Address:', 'clientAddress','class="required"');?><em>*</em></span>
 							<div class="input-divs">
-							<?php echo form_textarea('clientAddress', @$clientDetail['clientAddress'],'id="clientAddress"');?>
+							<?php echo form_textarea('clientAddress', 'asasfsffgfd fgfdgd ','id="clientAddress"');?>
 							</div>
 							<?php echo form_error('clientAddress'); ?>
 						</li>
 						<li><span><?php echo form_label('Phone:', 'userPhone','class="required"');?><em>*</em></span>
 							<div class="input-divs">
-							<?php echo form_input('userPhone', @$clientDetail['userPhone'],'id="userPhone"');?>
+							<?php echo form_input('userPhone', '1234567890','id="userPhone"');?>
 							</div>
 							<?php echo form_error('userPhone'); ?>
 						</li>
 						
 						<li><span><?php echo form_label('Account manager:', 'accountManager','class="required"');?><em>*</em></span>
 							<div class="input-divs">
-							<?php echo form_input('accountManager', @$clientDetail['accountManager'],'id="accountManager" maxlength="15"');?>
+							<?php echo form_input('accountManager', 'ricardo','id="accountManager" maxlength="15"');?>
 							</div>
 							<?php echo form_error('accountManager'); ?>
 						</li>
@@ -246,27 +255,27 @@
 								<li>
 									<span><?php echo form_label('Person Name:', 'personname','class="required"');?></span>
 									<div class="input-divs">
-									<?php echo form_input("cp[$key][personname]", @$contact_person_detail['name'],'id="<?php echo cp[$key][personname]?>"');?>
+									<?php echo form_input("cp[$key][personname]", 'ric','id="<?php echo cp[$key][personname]?>"');?>
 									</div>
 									<?php echo form_error('personname'); ?>
 								</li>
 								<li>
 									<span><?php echo form_label('Profession:', 'personprofession','class="required"');?></span>
 									<div class="input-divs">
-									<?php echo form_input("cp[$key][personprofession]", @$contact_person_detail['profession'],'id="<?php echo cp[$key][personprofession]?>"');?>
+									<?php echo form_input("cp[$key][personprofession]", 'info','id="<?php echo cp[$key][personprofession]?>"');?>
 									</div>
 									<?php echo form_error('personprofession'); ?>
 								</li>
 								<li>
 									<span><?php echo form_label('Email:','personemail','class="required"')?></span>
 									<div class="input-divs">
-									<?php echo form_input("cp[$key][personemail]",@$contact_person_detail['email'],'id="<?php echo cp[$key][personemail]?>"');?>
+									<?php echo form_input("cp[$key][personemail]",'test@test.pt','id="<?php echo cp[$key][personemail]?>"');?>
 									</div>
 									<?php echo form_error('personemail');?>
 								</li>
 								<li><span><?php echo form_label('Phone:', 'personphone','class="required"');?></span>
 									<div class="input-divs">
-									<?php echo form_input("cp[$key][personphone]", @$contact_person_detail['phone'],'id="<?php echo cp[$key][personphone]?>"');?>
+									<?php echo form_input("cp[$key][personphone]", '1234567890','id="<?php echo cp[$key][personphone]?>"');?>
 									</div>
 									<?php echo form_error('personphone'); ?>							
 								</li>
@@ -279,27 +288,27 @@
 							<li>
 								<span><?php echo form_label('Person Name:', 'personname','class="required"');?><em>*</em></span>
 								<div class="input-divs">
-								<?php echo form_input('personname', @$contact_person_detail['name'],'id="personname"');?>
+								<?php echo form_input('personname', 'ricperson','id="personname"');?>
 								</div>
 								<?php echo form_error('personname'); ?>
 							</li>
 							<li>
 								<span><?php echo form_label('Profession:', 'personprofession','class="required"');?><em>*</em></span>
 								<div class="input-divs">
-								<?php echo form_input('personprofession', @$contact_person_detail['profession'],'id="personprofession"');?>
+								<?php echo form_input('personprofession', 'info','id="personprofession"');?>
 								</div>
 								<?php echo form_error('personprofession'); ?>
 							</li>
 							<li>
 								<span><?php echo form_label('Email:','personemail','class="required"')?><em>*</em></span>
 								<div class="input-divs">
-								<?php echo form_input('personemail',@$contact_person_detail['email'],'id="personemail"');?>
+								<?php echo form_input('personemail','test@test.fr','id="personemail"');?>
 								</div>
 								<?php echo form_error('personemail');?>
 							</li>
 							<li><span><?php echo form_label('Phone:', 'personphone','class="required"');?><em>*</em></span>
 								<div class="input-divs">
-								<?php echo form_input('personphone', @$contact_person_detail['phone'],'id="personphone" maxlength="200"');?>
+								<?php echo form_input('personphone', '1234567890','id="personphone" maxlength="200"');?>
 								</div>
 								<?php echo form_error('personphone'); ?>							
 							</li>
@@ -489,14 +498,14 @@
 						<li>
 							<span><?php echo form_label('Service Name:', 'serviceName','class="required"');?></span>
 							<div class="input-divs">
-							<?php echo form_input("services[$ky][serviceName]", @$client_service_detail['serviceName'],'id="services[$ky][serviceName]"');?>
+							<?php echo form_input("services[$ky][serviceName]", 'eheheh','id="services[$ky][serviceName]"');?>
 							</div>
 							<?php echo form_error('serviceName'); ?>
 						</li>
 						<li>
 							<span><?php echo form_label('Description:', 'serviceDescription','class="required"');?></span>
 							<div class="input-divs">
-							<?php echo form_textarea("services[$ky][serviceDescription]", @$client_service_detail['serviceDescription'],'id="services[$ky][serviceDescription]" ');?>
+							<?php echo form_textarea("services[$ky][serviceDescription]", 'info2222','id="services[$ky][serviceDescription]" ');?>
 							</div>
 							<?php echo form_error('serviceDescription'); ?>
 						</li>
@@ -529,14 +538,14 @@
 						<li>
 							<span><?php echo form_label('Service Name:', 'serviceName','class="required"');?><em>*</em></span>
 							<div class="input-divs">
-							<?php echo form_input('serviceName', @$client_service_detail['serviceName'],'id="serviceName"');?>
+							<?php echo form_input('serviceName', 'ric22222','id="serviceName"');?>
 							</div>
 							<?php echo form_error('serviceName'); ?>
 						</li>
 						<li>
 							<span><?php echo form_label('Description:', 'serviceDescription','class="required"');?><em>*</em></span>
 							<div class="input-divs">
-							<?php echo form_textarea('serviceDescription', @$client_service_detail['serviceDescription'],'id="serviceDescription"" ');?>
+							<?php echo form_textarea('serviceDescription', 'infosdfsfsf','id="serviceDescription"" ');?>
 							</div>
 							<?php echo form_error('serviceDescription'); ?>
 						</li>
@@ -544,7 +553,7 @@
 							<span><?php echo form_label('Starting Date:','startingDate','class="required"')?><!--<em>*</em>--></span>
 							<div class="example-container">
 							      <div class="input-divs">
-							      <?php echo form_input('startingDate',@$client_service_detail['startingDate'],'id="startingDate1"');?>
+							      <?php echo form_input('startingDate','04/09/2016 00:00','id="startingDate1"');?>
 							      </div>
 							      <pre style="display: none">$('#startingDate1').datetimepicker();</pre>
 							</div>
@@ -553,7 +562,7 @@
 						<li><span><?php echo form_label('Ending Date:', 'phone','class="required"');?><!--<em>*</em>--></span>
 							 <div class="example-container">
 							      <div class="input-divs">
-							      <?php echo form_input('endingDate', @$client_service_detail['endingDate'],'id="endingDate1"');?>
+							      <?php echo form_input('endingDate', '04/19/2016 00:00','id="endingDate1"');?>
 							      </div>
 							      <pre style="display: none">$('#endingDate1').datetimepicker();</pre>
 							      

@@ -124,6 +124,7 @@ class Adminmodel extends CI_Model {
         } else {
             if (isset($arrayval) && count($arrayval) > 0) {
                 $id = $arrayval['clientinfo']['id'];
+                //echo $id;
             } else {
                 $id = $this->input->post('id');
             }
@@ -335,6 +336,7 @@ class Adminmodel extends CI_Model {
                       'userCreateDate'=>date('Y-m-d H:i:s'),
                       ); */
                     //pr($saveclient);
+                    unset($arrayval['clientinfo']['id']);
                     $saveclient = $arrayval['clientinfo'];
                     /* 'userImage'=>$uploaded_data['upload_data']['file_name'], */
                     $this->db->insert(TBL_USERS, $saveclient);

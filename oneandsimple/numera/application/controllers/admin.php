@@ -741,8 +741,9 @@ class Admin extends MY_Controller {
             if (!empty($data['clientDetail']['id'])) {
                 $data['clientId'] = $data['clientDetail']['id'];
             } else {
-                $data['clientId'] = '';
+                $data['clientId'] = '';                
             }
+            
             if ($this->form_validation->run() == false) {
 
                 $this->load->view('admin/manageclient', $data);
@@ -799,6 +800,9 @@ class Admin extends MY_Controller {
                 $this->form_validation->set_rules('endingDate', 'Ending date', 'required');
             }
             if ($this->form_validation->run() == false) {
+            	
+            	//print_r($data);
+            	
                 $data['clientDetail'] = $this->adminmodel->getuserDetail($id, $roleid = '2');
                 if (isset($data['clientDetail']['id'])) {
                     $data['clientId'] = $data['clientDetail']['id'];
@@ -964,52 +968,53 @@ class Admin extends MY_Controller {
                 if ($this->input->post('id') == '') {
 
                     /* Check client token exist or not */
-                    $clientEamil = $saveclientSessionArray['googleloginDetail']['email'];
-                    $clientemailArray = $this->adminmodel->getAccesrefreshToken($clientEamil);
-                    //$clientemailArray['refreshToken'];
-
-                    /* Verify google client */
-                    if ($clientemailArray['refreshToken'] == '') {
-                        $this->get_google_refresh_token();
-                    } else {
-                        $client = $this->google_client;
-
-                        $client->refreshToken($clientemailArray['refreshToken']);
-                        $this->session->set_userdata('accessToken', $client->getAccessToken());
-
-
-                        $client->setAccessToken($this->session->userdata('accessToken'));
-                        $service = new Google_DriveService($client);
-
-                        $folderName = $saveclientSessionArray['clientinfo']['userName'];
-
-                        $description = 'new folder in' . $folderName;
-                        $parentId = '';
-                        $mimeType = "application/vnd.google-apps.folder";
-                        $filename = $folderName;
-                        //pr($saveclientSessionArray);
-                        $googlresponse = insertFile($service, $folderName, $description, $parentId, $mimeType, $filename);
-                        //$googlresponse=createPublicFolder($service, $folderName);
-
-                        $googlefolderArray = array('googlefolderId' => $googlresponse->id);
-                        $saveclientSessionArray = array_merge($saveclientSessionArray, $googlefolderArray);
-
-                        $noupdatearray = array('noupdate' => 'noupdate');
-                        $saveclientSessionArray = array_merge($saveclientSessionArray, $noupdatearray);
-                        //pr($saveclientSessionArray);
+//                    $clientEamil = $saveclientSessionArray['googleloginDetail']['email'];
+//                    $clientemailArray = $this->adminmodel->getAccesrefreshToken($clientEamil);
+//                    //$clientemailArray['refreshToken'];
+//
+//                    /* Verify google client */
+//                    if ($clientemailArray['refreshToken'] == '') {
+//                        $this->get_google_refresh_token();
+//                    } else {
+//                        $client = $this->google_client;
+//
+//                        $client->refreshToken($clientemailArray['refreshToken']);
+//                        $this->session->set_userdata('accessToken', $client->getAccessToken());
+//
+//
+//                        $client->setAccessToken($this->session->userdata('accessToken'));
+//                        $service = new Google_DriveService($client);
+//
+//                        $folderName = $saveclientSessionArray['clientinfo']['userName'];
+//
+//                        $description = 'new folder in' . $folderName;
+//                        $parentId = '';
+//                        $mimeType = "application/vnd.google-apps.folder";
+//                        $filename = $folderName;
+//                        //pr($saveclientSessionArray);
+//                        $googlresponse = insertFile($service, $folderName, $description, $parentId, $mimeType, $filename);
+//                        //$googlresponse=createPublicFolder($service, $folderName);
+//
+//                        $googlefolderArray = array('googlefolderId' => $googlresponse->id);
+//                        $saveclientSessionArray = array_merge($saveclientSessionArray, $googlefolderArray);
+//
+//                        $noupdatearray = array('noupdate' => 'noupdate');
+//                        $saveclientSessionArray = array_merge($saveclientSessionArray, $noupdatearray);
+//                        //pr($saveclientSessionArray);
                         if (empty($saveclientSessionArray['clientinfo']['id'])) {
                             //pr($saveclientSessionArray);
 
                             $result = $this->adminmodel->saveUser('client', $saveclientSessionArray);
-                            if ($result) {
-                                $this->session->set_flashdata('message', '<div class="alert-success">Client added successfully.</div>');
-                            } else {
-                                $this->session->set_flashdata('message', '<div class="alert-error">Folder not added, please try again.</div>');
-                            }
+                            echo $result;
+//                            if ($result) {
+//                                $this->session->set_flashdata('message', '<div class="alert-success">Client added successfully.</div>');
+//                            } else {
+//                                $this->session->set_flashdata('message', '<div class="alert-error">Folder not added, please try again.</div>');
+//                            }
                         }
-                        redirect("admin/clients");
+                        //redirect("admin/clients");
                         //pr($saveClientArray);	
-                    }
+                    //}
                 } else {
                     /* edit case */
                     $saveClientArray = $saveclientSessionArray;
@@ -1554,14 +1559,19 @@ class Admin extends MY_Controller {
 
                 //pre($folderlist);
                 echo'<table width="100%" cellspacing="0" cellpadding="0" border="0" id="clientfolders">
-					<colgroup>
+					<!-- <colgroup>
 					<col width="25">
-					<col width="250">
+					<col width="250"> -->
 					</colgroup>
 					<tbody>
-						<tr>	<td colspan="7" scope="col"> &nbsp;</td></tr>
-						<tr>	<td colspan="7" scope="col"> <strong>Folders</strong></td></tr>
-						<tr>	<th scope="col"></th><th scope="col"></th></tr>
+						<!-- <tr>	<td colspan="7" scope="col"> &nbsp;</td></tr> -->
+						<tr>	
+							<td scope="col"> <strong>Folders Name</strong></td>
+							<td scope="col"> <strong>Files</strong></td>
+							<td scope="col"> <strong>Folder</strong></td>
+							<!-- <td colspan="1" scope="col"> <strong>Folder</strong></td> -->
+						</tr>
+						<tr>	<th colspan="2" scope="col"></th><th scope="col"></th></tr>
 					<!--Folder Listing-->';
                 foreach ($folderlist as $folder) {
                     if (!empty($select_client_folder_permission[$folder['id']]->Createfile) && $select_client_folder_permission[$folder['id']]->Createfile == "accept") {
@@ -1591,45 +1601,52 @@ class Admin extends MY_Controller {
 
                     echo '</tr>
 							<tr class="alternateRow">
-							<td scope="col">' . $folder['folderName'] . '</td>
-							<td scope="col">
-								<div>
-									<div class="clear"></div>
+							<td scope="col" style="font-size: 12px;">' . $folder['folderName'] . '</td>
+							<td scope="col" style="font-size: 12px;">
+								<!-- <div>
+									<div class="clear"></div> -->
 									<div style="float:left">
-										<table>
+										 <!-- <table>
 											<tbody>
-												<tr><td colspan="3"><strong>File</strong></td></tr>
-												<tr>
-												     <td><div class="radio-input">Add <input type="checkbox" ' . $checked . '  value="accept" name="folderpermission[' . $folder['id'] . '][Createfile]"></div> </td>
-												     <td><div class="radio-input">Move <input type="checkbox"  ' . $checked . ' value="accept" name="folderpermission[' . $folder['id'] . '][moovefile]"></div> </td>
-												     <td><div class="radio-input">Delete <input type="checkbox" ' . $checked . ' value="accept" name="folderpermission[' . $folder['id'] . '][Deletefile]"></div> </td>
+												 <tr>
+													<td colspan="3"><strong>File</strong></td>
+													<td colspan="1"><strong>Folder</strong></td>
 												</tr>
+												<tr>  -->
+												     <div class="radio-input">Add <input type="checkbox" ' . $checked . '  value="accept" name="folderpermission[' . $folder['id'] . '][Createfile]"></div> 
+												     <div class="radio-input">Move <input type="checkbox"  ' . $checked . ' value="accept" name="folderpermission[' . $folder['id'] . '][moovefile]"></div> 
+												     <div class="radio-input">Delete <input type="checkbox" ' . $checked . ' value="accept" name="folderpermission[' . $folder['id'] . '][Deletefile]"></div> 		
+												<!-- </tr>
+												
 												<tr>
 												     <td colspan="3"><strong>Folder</strong></td>
 												     
-												</tr>
-												<!--<tr>
+												</tr> 
+												<tr>
 												     <td><div class="radio-input">Create<input type="checkbox" ' . $checked . '  value="accept" name="folderpermission[' . $folder['id'] . '][Createfolder]"></div></td>
 												     <td><div class="radio-input">Delete<input type="checkbox" ' . $checked . '  value="accept" name="folderpermission[' . $folder['id'] . '][Deletefolder]"></div></td>
 												     <td><div class="radio-input">Moove<input type="checkbox" ' . $checked . '  value="accept" name="folderpermission[' . $folder['id'] . '][Moovefolder]"></div></td>
-												</tr>-->
+												</tr>
 												<tr>
 												     <td><div class="radio-input">View<input type="checkbox" ' . $checked . ' value="accept" name="folderpermission[' . $folder['id'] . '][Viewfolder]"></div></td>
 												     <td><div class="checkboxhidden" >
 														 permission true<input type="checkbox"  name="folderpermission[' . $folder['id'] . '][permissiontrue]" value="accept" checked="checked">
 													</div>
 												      </td>
-												      <td><!--<div class="radio-input">Rename<input type="checkbox" ' . $checked . ' value="accept" name="folderpermission[' . $folder['id'] . '][Renamefolder]"></div>--></td>
-												</tr>
-												<tr>
+												      <td><!--<div class="radio-input">Rename<input type="checkbox" ' . $checked . ' value="accept" name="folderpermission[' . $folder['id'] . '][Renamefolder]"></div></td>
+												</tr> -->
+												<!-- <tr>
 												     <td></td>
 												     <td></td>
 												     <td></td>
-												</tr>
-										       </tbody>
+												</tr> -->
+										      <!--  </tbody>
 										</table>     
-									</div>	
-								</div>
+									</div>	-->
+								</div> 
+							</td>
+							<td>
+								<div class="radio-input">View<input type="checkbox" ' . $checked . ' value="accept" name="folderpermission[' . $folder['id'] . '][Viewfolder]"></div>
 							</td>
 						</tr>';
                 }

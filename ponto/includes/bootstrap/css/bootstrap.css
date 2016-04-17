@@ -6765,3 +6765,7 @@ button.close {
 .top15 { margin-top:15px; }
 .top17 { margin-top:17px; }
 .top30 { margin-top:30px; }
+
+@media screen {
+	#modalChangePicagem .modal-dialog  {width:300px;}
+}

@@ -95,4 +95,6 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 /* Tabela utilizadores */
 define('TBL_USERS','Userinfo');
 /* Tabela view das picagens com nome utlizadores */
-define('TBL_PICAGENS','V_Record');
+define('TBL_VPICAGENS','V_Record');
+/* Table da picagens */
+define('TBL_PICAGENS','Checkinout');

@@ -42,24 +42,27 @@ echo print_r($result);*/
 			?>
 			<!--Resultados-->
 			<div class="col-md-3 col-md-offset-4 table-responsive">
-				<table class="table table-hover">
+				<table class="table table-hover picagens">
 					<caption>
+						<!-- Form para voltar a pagina das picagens -->
 						<form hidden id="formback" class="form-inline" role="form" method="post" action="<?= base_url('home/verify_picagens');?>">
 							<input type="text" id="datefirst" value="<?= $datefirst;?>" class="form-control" required name="datefirst">	
 							<input type="text" id="datesecond" value="<?= $datesecond;?>" class="form-control" required name="datesecond">							
 						</form>
 						<button type="button" id="btn_back" class="btn btn-default" onclick="submitformback()">Voltar</button>
-						<?php 
-						$newdate = date_create($datapicagem);
-						echo $nomeuser.' Do Dia '.date_format($newdate,'d-m-Y');
-						?>	
+						<div class="top7">
+							<?php 
+							$newdate = date_create($datapicagem);
+							echo $nomeuser.' Do Dia '.date_format($newdate,'d-m-Y');
+							?>
+						</div>	
 					</caption>
 					<thead>
 				      		<tr>
 				        		<th>Logid</th>
 				        		<th>CheckTime</th>
-				        		<th></th>
-				        		<th></th>
+				        		<th>Editar</th>
+				        		<th>Eliminar</th>
 				      		</tr>
 				    	</thead>
 				    	<tbody>
@@ -67,7 +70,7 @@ echo print_r($result);*/
 					$i = 1;
 					foreach($result as $row)
 					{?>
-						<tr>
+						<tr class="<?= 'td'.$i;?>">
 							<td><?= $row['Logid'];?></td>
 							<td id="<?= 'td'.$i;?>">
 								<?php
@@ -83,12 +86,16 @@ echo print_r($result);*/
 					}?>
 					</tbody>
 				</table>
+				<div>
+					<button type="button" class="btn btn-default pull-right" onclick="addPicagem()">Adicionar Picagem</button>
+				</div>
 			</div>
 			<?php
 		}
 	}?>
 </div>
 
+<!-- Form modal -->
 <div class="modal fade" id="modalChangePicagem" tabindex="-1" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -141,45 +148,98 @@ function editpicagem(logid,td)
 	$('#novapicagem').val('');	
 	$('#modalChangePicagem').modal({
 		keyboard: true	
-	});
-	/*var new1 = pName.split(':');
-	alert(new1[0]);*/
+	});	
 }
 function delpicagem(logid,td)
 {
 	newtd = '#'+td;
+	newtr = '.' +td;
 	$('#logid').val(logid);
-	$.ajax({
-	        url: '<?= base_url("home/del_picagem");?>',
-	        type: 'post',
-	        dataType: 'text',
-	        data: $('#formmodal').serializeArray(),
-	        success: function(data) {
-	        		//console.log(data);
-	  			alert(data);
-	  			$('#modalclose').click();
-	                },
-	        error: function(xhr, textStatus, errorThrown) {
-	        		alert("Não foi possível eliminar a picagem, o erro: "+xhr.responseText); 
-	        	}
-    	});
-    	return false;
+	
+    	Lobibox.confirm({
+	    	msg: "Pretende eliminar essa picagem? (não se pode voltar atrás)",
+	    	buttonsAlign: 'right',
+	    	title: 'Pergunta',
+	    	buttons: {
+		        yes: {
+		            'class': 'lobibox-btn lobibox-btn-yes',
+		            text: 'Sim',
+		            closeOnClick: true
+		        },
+		        no: {
+		            'class': 'lobibox-btn lobibox-btn-no',
+		            text: 'Não',
+		            closeOnClick: true
+		        }
+		},
+	    	callback: function ($this, type, ev) {
+		        if(type == 'yes')
+		        {
+				$.ajax({
+				        url: '<?= base_url("home/del_picagem");?>',
+				        type: 'post',
+				        dataType: 'json',
+				        data: $('#formmodal').serializeArray(),
+				        success: function(data) {
+				        		//console.log(data);
+				  			if(data.return == 'success')
+				  			{
+								noty({ 
+							    		text: data.message,
+							    		type: "success",
+							    		layout: "center",
+							    		closeWith: ['click', 'hover']
+							    	});
+							    	//hide this tr
+							    	$(newtr).hide();	
+							}else{
+								noty({ 
+							    		text: data.message,
+							    		type: "error",
+							    		layout: "center",
+							    		closeWith: ['click', 'hover']
+							    	});
+							}
+				                },
+				        error: function(xhr, textStatus, errorThrown) {
+				        		alert("Erro no envio do pedido por ajax: "+xhr.responseText); 
+				        	}
+			    	});
+			}
+		}
+	});
+	return false;
 }
 $('#formmodal').submit(function() {
 	var novapica = $('#novapicagem').val();
 	$.ajax({
 	        url: '<?= base_url("home/editar_picagem");?>',
 	        type: 'post',
-	        dataType: 'text',
+	        dataType: 'json',
 	        data: $('#formmodal').serializeArray(),
 	        success: function(data) {
 	        		//console.log(data);
-	  			alert(data);
-	  			$(newtd).html(novapica+':00');
-	  			$('#modalclose').click();
+	        		if(data.return == 'success')
+	  			{
+					noty({ 
+				    		text: data.message,
+				    		type: "success",
+				    		layout: "center",
+				    		closeWith: ['click', 'hover']
+				    	});
+					$(newtd).html(novapica+':00');
+	  				$('#modalclose').click();	
+				}else{
+					noty({ 
+				    		text: data.message,
+				    		type: "error",
+				    		layout: "center",
+				    		closeWith: ['click', 'hover']
+				    	});
+				}
 	                },
 	        error: function(xhr, textStatus, errorThrown) {
-	        		alert("Não foi guardado a atualização, o erro: "+xhr.responseText); 
+	        		alert("Erro no envio do pedido por ajax: "+xhr.responseText); 
 	        	}
     	});
     	return false;
@@ -188,5 +248,76 @@ $('#formmodal').submit(function() {
 function submitformback()
 {
 	$('#formback').submit();
+}
+
+function addPicagem()
+{
+	Lobibox.prompt('addpicagem',{
+	    	title: 'Hora da picagem a inserir:',
+	    	buttonsAlign: 'right',
+	    	draggable: true,
+	    	buttons: {
+		        ok: {
+		            	closeOnClick: true,
+            			text: 'Inserir'
+		        },
+		        cancel: {
+		            	closeOnClick: true,
+            			text: 'Cancelar'
+		        }
+		},
+		attrs: {
+       			placeholder: "__:__:__",
+    		},	
+	    	callback: function ($this, type, ev) {
+		        if(type == 'ok')
+		        {
+		        	var regex = new RegExp("(([0-1][0-9])|([2][0-3])):([0-5][0-9]):([0-5][0-9])");
+		        	var newpicagem = $this.getValue();
+		        	if (regex.test(newpicagem) && newpicagem.length < 9) 
+		        	{
+		        		$('#novapicagem').val(newpicagem);
+		        		$.ajax({
+					        url: '<?= base_url("home/add_picagem");?>',
+					        type: 'post',
+					        dataType: 'json',
+					        data: $('#formmodal').serializeArray(),
+					        success: function(data) {
+					        		if(data.return == 'success')
+					  			{
+									noty({ 
+								    		text: data.message,
+								    		type: "success",
+								    		layout: "center",
+								    		closeWith: ['click', 'hover']
+								    	});
+								    	var rowCount = $('.picagens tr').length;
+								    	$('.picagens').last().append('<tr class="td'+rowCount+'"><td>'+data.Logid+'</td><td id="td'+rowCount+'">'+newpicagem+'</td><td onclick="editpicagem('+data.Logid+',&#39;td'+rowCount+'&#39;)"><img src="<?= base_url("images/edit.png");?>" height="20px" width="20px" ></td>' +
+								    	'<td onclick="delpicagem('+data.Logid+',&#39;td'+rowCount+'&#39;)"><img src="<?= base_url("images/remove.png");?>" height="20px" width="20px" ></td></tr>');
+								}else{
+									noty({ 
+								    		text: data.message,
+								    		type: "error",
+								    		layout: "center",
+								    		closeWith: ['click', 'hover']
+								    	});
+								}
+					                },
+					        error: function(xhr, textStatus, errorThrown) {
+					        		alert("Erro no envio do pedido por ajax: "+xhr.responseText); 
+					        	}
+				    	});	
+		        	}else{
+					noty({ 
+				    		text: 'A hora da picagem tem que ter o seguinte formato: 12:01:00',
+				    		type: "error",
+				    		layout: "center",
+				    		closeWith: ['click', 'hover']
+				    	});	
+				}
+			}
+		}
+	});
+	
 }
 </script>

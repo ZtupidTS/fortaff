@@ -58,7 +58,7 @@ class Picagem_model extends CI_Model {
 	}
 	
 	/*
-	*
+	* Atualizar hora de picagem 
 	*/
 	public function updatepicagem($logid,$data)
 	{
@@ -67,6 +67,23 @@ class Picagem_model extends CI_Model {
 	        return $update;
 	}
 	
+	/*
+	* Eliminar uma picagem
+	*/
+	public function deletepicagem($logid)
+	{
+		$this->db->where('Logid', $logid);
+		$delete = $this->db->delete(TBL_PICAGENS);
+		return $delete;
+	}
+	
+	/*
+	* Insere uma picagem
+	*/
+	public function addpicagem($data)
+	{
+		return $this->db->insert(TBL_PICAGENS,$data);
+	}
 	
 }
 ?>

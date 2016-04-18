@@ -101,10 +101,16 @@ class Home extends CI_Controller {
 		        $result = $this->picagem_model->updatepicagem($this->input->post('logid'),$sql_data);
 		        if($result)
 		        {
-				echo 'Atualização realizada com sucesso';
+				$return = array(
+					'return' => 'success',
+					'message' => 'Atualização realizada com sucesso');
+				echo json_encode($return);
 				return true;
 			}else{
-				echo 'Atualização com problemas';
+				$return = array(
+					'return' => 'error',
+					'message' => 'Atualização com problemas');
+				echo json_encode($return);
 				return true;
 			}
 		}
@@ -115,7 +121,58 @@ class Home extends CI_Controller {
 	*/
 	public function del_picagem()
 	{
+		$result = $this->picagem_model->deletepicagem($this->input->post('logid'));
+		if($result)
+	        {
+			$return = array(
+				'return' => 'success',
+				'message' => 'Registo eliminado com sucesso');
+			echo json_encode($return);
+			return true;
+		}else{
+			$return = array(
+				'return' => 'error',
+				'message' => 'Occoreu um erro e o registo não foi eliminado');
+			echo json_encode($return);
+			return true;
+		}
+	}
+	
+	/*
+	* Adicionar picagem
+	*/
+	public function add_picagem()
+	{
+		$newpicagem = $this->input->post('datapicagem').' '.$this->input->post('novapicagem').'.000';
 		
+		$sql_data = array(
+		            'CheckTime'        	=> $newpicagem,
+		            'Userid'		=> $this->input->post('iduser'),
+		            'CheckType'		=> 0,
+		            'Sensorid'		=> 0,
+		            'WorkType'		=> 0,
+		            'Checked'		=> 1,
+		            'Exported'		=> 0,
+		            'OpenDoorFlag'	=> 0		            
+		        );
+		
+		$result = $this->picagem_model->addpicagem($sql_data);
+		if($result)
+	        {
+			$Logid = $this->db->insert_id();
+			$return = array(
+				'return' => 'success',
+				'Logid'  => $Logid,
+				'message' => 'Picagem inserida com sucesso');
+			echo json_encode($return);
+			return true;
+		}else{
+			$return = array(
+				'return' => 'error',
+				'message' => 'A picagem não foi inserida, voltar a tentar');
+			echo json_encode($return);
+			return true;
+		}
 	}
 }
 ?>

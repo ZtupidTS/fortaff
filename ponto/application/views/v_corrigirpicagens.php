@@ -10,16 +10,11 @@ if($this->session->userdata('level') == 2)
 	$this->load->view('template/footer_user');
 }
 ?>
-<?php
-/*echo $iduser.' ';
-echo $datapicagem.' ';
-echo $datefirst.' ';
-echo $datesecond.' ';
-echo print_r($result);*/
-?>
+
 <div class="col-md-10 col-md-offset-1">
 	<legend>Corrigir Picagens</legend>
 </div>
+
 
 <?php if (isset($erro)){ ?>
 	<div class="alert alert-danger col-md-5 col-md-offset-3" role="alert" style="margin-top: 10px;"><?= $erro; ?></div>
@@ -42,7 +37,7 @@ echo print_r($result);*/
 			?>
 			<!--Resultados-->
 			<div class="col-md-3 col-md-offset-4 table-responsive">
-				<table class="table table-hover picagens">
+				<table class="table table-hover picagens display" id="picagens">
 					<caption>
 						<!-- Form para voltar a pagina das picagens -->
 						<form hidden id="formback" class="form-inline" role="form" method="post" action="<?= base_url('home/verify_picagens');?>">
@@ -59,7 +54,7 @@ echo print_r($result);*/
 					</caption>
 					<thead>
 				      		<tr>
-				        		<th>Logid</th>
+				        		<th data-sort="int">Logid</th>
 				        		<th>CheckTime</th>
 				        		<th>Editar</th>
 				        		<th>Eliminar</th>
@@ -291,9 +286,13 @@ function addPicagem()
 								    		layout: "center",
 								    		closeWith: ['click', 'hover']
 								    	});
+								    	//ordenar de novo a tabela
+								    	tabledatatable.destroy();
 								    	var rowCount = $('.picagens tr').length;
 								    	$('.picagens').last().append('<tr class="td'+rowCount+'"><td>'+data.Logid+'</td><td id="td'+rowCount+'">'+newpicagem+'</td><td onclick="editpicagem('+data.Logid+',&#39;td'+rowCount+'&#39;)"><img src="<?= base_url("images/edit.png");?>" height="20px" width="20px" ></td>' +
 								    	'<td onclick="delpicagem('+data.Logid+',&#39;td'+rowCount+'&#39;)"><img src="<?= base_url("images/remove.png");?>" height="20px" width="20px" ></td></tr>');
+								    	//ordenar de novo a tabela
+								    	startDatatable();
 								}else{
 									noty({ 
 								    		text: data.message,
@@ -320,4 +319,5 @@ function addPicagem()
 	});
 	
 }
+startDatatable();
 </script>

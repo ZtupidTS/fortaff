@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="<?= base_url('includes/bootstrap/css/bootstrap.css') ?>">
 	<link rel="stylesheet" href="<?= base_url('includes/bootstrap/css/bootstrap-datetimepicker.css') ?>">
 	<link rel="stylesheet" href="<?= base_url('includes/css/lobibox.css') ?>">
+	<link rel="stylesheet" href="<?= base_url('includes/css/datatables.min.css') ?>">
 	
 	<!-- script js -->
 	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
@@ -17,12 +18,10 @@
     	<script src="<?= base_url('includes/bootstrap/js/bootstrap-datetimepicker.pt.js') ?>"></script>
     	<script src="<?= base_url('includes/bootstrap/js/bootstrap-datetimepicker.js') ?>"></script>
       	
-      	<!-- <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> -->
-      	
       	<!-- O js dos popups -->
       	<script src="<?= base_url('includes/js/jquery.noty.packaged.min.js') ?>"></script>
       	<script src="<?= base_url('includes/js/lobibox.min.js') ?>"></script>
+      	<script src="<?= base_url('includes/js/datatables.min.js') ?>"></script>
       	
       	<!-- Meus scripts -->
       	<script src="<?= base_url('includes/js/submitform.js') ?>"></script>

@@ -1,4 +1,22 @@
 <script type="text/javascript">
+var tabledatatable = null;
+function startDatatable()
+{
+	tabledatatable = $('#picagens').DataTable({
+    		"paging": false,
+    		"info": false,
+    		"bFilter": false,
+    		"order": [[ 1, "asc" ]],
+    		"columnDefs": [ {
+			"targets": 2,
+			"orderable": false
+			},{
+			"targets": 3,
+			"orderable": false
+			} ]
+    	});
+	
+}
 $(document).ready(function() {
 	$(".various").fancybox({
 		maxWidth	: 800,

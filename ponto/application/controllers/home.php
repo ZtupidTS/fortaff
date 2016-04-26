@@ -17,6 +17,20 @@ class Home extends CI_Controller {
 		$this->load->view('v_home');
 	}
 	
+	public function resumo()
+	{
+		//tenho que enviar os dpt
+		$result = $this->picagem_model->getDpt();
+		if($result)
+		{
+			$data['result'] = $result;
+			$this->load->view('v_resumopicagens', $data);	
+		}else{
+			
+		}
+		
+	}
+	
 	/*
 	* Verifica se existe falta de picagens nos funcionarios
 	*/
@@ -170,6 +184,47 @@ class Home extends CI_Controller {
 			$return = array(
 				'return' => 'error',
 				'message' => 'A picagem não foi inserida, voltar a tentar');
+			echo json_encode($return);
+			return true;
+		}
+	}
+	
+	/*
+	* obtenho as picagens referente ao que foi pedido
+	*/
+	public function obterresumopicagem()
+	{
+		$datefirst = $this->input->post('datefirst');
+		$datesecond = $this->input->post('datesecond');
+		$departamento = $this->input->post('departamento');
+		
+		$result = $this->picagem_model->getresumopicagem($departamento,$datefirst,$datesecond);
+		//print_r($result);
+		if($result)
+		{
+			$message = '<table class="table table-hover picagens display" id="picagens"><thead><tr><th>Nº</th><th>Nome</th><th>Dias Trab.</th><th>Horas Trab.</th><th>Pausas Trab.</th><th>Horas Dom.</th><th>P. Horas Dom.</th><th>Horas Fer.</th><th>P. Horas Fer.</th><th>Horas Not.</th></tr></thead><tbody>';
+			foreach($result as $row)
+			{
+				if($row['Name'] == 'Total')
+				{
+					$message = $message . '<tr><td><b>'.$row['Userid'].'</b></td><td><b>'.$row['Name'].'</b></td><td><b>'.$row['Dias'].'</b></td><td><b>'.$row['HTrabalhadas'].'</b></td></td><td><b>'.$row['HPTrab'].'</b></td><td><b>'.$row['Hdomingo'].'</b></td><td><b>'.$row['HPdomingo'].'</b></td><td><b>'.$row['Hferiado'].'</b></td><td><b>'.$row['HPferiado'].'</b></td><td><b>'.$row['HNoturnas'].'</b></td></tr>';
+				}else{
+					$message = $message . '<tr><td>'.$row['Userid'].'</td><td>'.$row['Name'].'</td><td>'.$row['Dias'].'</td><td>'.$row['HTrabalhadas'].'</td><td>'.$row['HPTrab'].'</td><td>'.$row['Hdomingo'].'</td><td>'.$row['HPdomingo'].'</td><td>'.$row['Hferiado'].'</td><td>'.$row['HPferiado'].'</td><td>'.$row['HNoturnas'].'</td></tr>';	
+				}
+			}
+			$message = $message . '</tbody></table>';
+			
+			$return = array(
+				'return' => 'success',
+				'Logid'  => 'blabla',
+				'message' => $message
+				);
+			echo json_encode($return);
+			return true;
+		}else{
+			$return = array(
+				'return' => 'error',
+				'message' => 'Não foi possível obter dados, se o problema persistir contactar o administrador');
 			echo json_encode($return);
 			return true;
 		}

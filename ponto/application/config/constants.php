@@ -98,3 +98,21 @@ define('TBL_USERS','Userinfo');
 define('TBL_VPICAGENS','V_Record');
 /* Table da picagens */
 define('TBL_PICAGENS','Checkinout');
+/* Tablea dos Dpts */
+define('TBL_DPT','Dept');
+/* por aqui o valor a partir do qual é valor referente ao dpt principal */
+/* o meu fafedis é 1 mas depois loja tem tudo dentro e loja = 4 logo ponho 5 aqui */
+define('VAL_DPT',5);
+/* vou por o valor da loja = 4 */
+define('VAL_LOJA',4);
+/* valor das pausas é de 40 min excluido no maximo logo vou converter em segundo */
+/* 40 * 60 = 2400 */
+define('PAUSA',2400);
+/* a ultima hora de picagem a pegar defini 03:30:00.000 */
+define('LAST_TIME',"03:30:00.000");
+/* aqui é em segundos o last time */
+define('LAST_TIME_SEC', 12600);
+/* defini a primeira hora para as picagens nao fechei para me lembrar */
+define('FIRST_TIME',"03:30:01.000");
+/* horas noturna de manhã que é 7h00 da manhã */
+define('MANHA_NOT',25200);

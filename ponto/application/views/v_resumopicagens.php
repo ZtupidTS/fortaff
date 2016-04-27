@@ -93,7 +93,7 @@ if($this->session->userdata('level') == 2)
 <?php } ?>
 
 <div class="row">
-	<div class="col-md-9 col-md-offset-2 top10" id="returnajax">
+	<div class="col-md-9 col-md-offset-1 top10" id="returnajax">
 		
 	</div>
 </div>
@@ -134,7 +134,9 @@ function resumopicagens()
 	        		//console.log(data);
 	  			if(data.return == 'success')
 	  			{
+					//tabledatatable.destroy();
 					$('#returnajax').html(data.message);
+					startDatatableRp();
 				}else{
 					noty({ 
 				    		text: data.message,
@@ -148,8 +150,7 @@ function resumopicagens()
 	        error: function(xhr, textStatus, errorThrown) {
 	        		alert("Erro no envio do pedido por ajax: "+xhr.responseText+" "+errorThrown); 
 	        	}
-    	});
-			
+    	});		
 	return false;
 }
 </script>

@@ -202,17 +202,19 @@ class Home extends CI_Controller {
 		//print_r($result);
 		if($result)
 		{
-			$message = '<table class="table table-hover picagens display" id="picagens"><thead><tr><th>Nº</th><th>Nome</th><th>Dias Trab.</th><th>Horas Trab.</th><th>Pausas Trab.</th><th>Horas Dom.</th><th>P. Horas Dom.</th><th>Horas Fer.</th><th>P. Horas Fer.</th><th>Horas Not.</th></tr></thead><tbody>';
+			$message_tb_head = '<table class="table table-hover picagens display" id="picagens"><thead><tr><th>Nº</th><th>Nome</th><th>Dias Trab.</th><th>Horas Trab.</th><th>Pausas Trab.</th><th>Horas Dom.</th><th>P. Horas Dom.</th><th>Horas Fer.</th><th>P. Horas Fer.</th><th>Horas Not.</th></tr></thead>';
+			
+			$message = '';
 			foreach($result as $row)
 			{
 				if($row['Name'] == 'Total')
 				{
-					$message = $message . '<tr><td><b>'.$row['Userid'].'</b></td><td><b>'.$row['Name'].'</b></td><td><b>'.$row['Dias'].'</b></td><td><b>'.$row['HTrabalhadas'].'</b></td></td><td><b>'.$row['HPTrab'].'</b></td><td><b>'.$row['Hdomingo'].'</b></td><td><b>'.$row['HPdomingo'].'</b></td><td><b>'.$row['Hferiado'].'</b></td><td><b>'.$row['HPferiado'].'</b></td><td><b>'.$row['HNoturnas'].'</b></td></tr>';
+					$message_tb_foot = '<tfoot><tr><td><b>'.$row['Userid'].'</b></td><td><b>'.$row['Name'].'</b></td><td><b>'.$row['Dias'].'</b></td><td><b>'.$row['HTrabalhadas'].'</b></td></td><td><b>'.$row['HPTrab'].'</b></td><td><b>'.$row['Hdomingo'].'</b></td><td><b>'.$row['HPdomingo'].'</b></td><td><b>'.$row['Hferiado'].'</b></td><td><b>'.$row['HPferiado'].'</b></td><td><b>'.$row['HNoturnas'].'</b></td></tr></tfoot><tbody>';
 				}else{
-					$message = $message . '<tr><td>'.$row['Userid'].'</td><td>'.$row['Name'].'</td><td>'.$row['Dias'].'</td><td>'.$row['HTrabalhadas'].'</td><td>'.$row['HPTrab'].'</td><td>'.$row['Hdomingo'].'</td><td>'.$row['HPdomingo'].'</td><td>'.$row['Hferiado'].'</td><td>'.$row['HPferiado'].'</td><td>'.$row['HNoturnas'].'</td></tr>';	
+					$message .= '<tr><td>'.$row['Userid'].'</td><td>'.$row['Name'].'</td><td>'.$row['Dias'].'</td><td>'.$row['HTrabalhadas'].'</td><td>'.$row['HPTrab'].'</td><td>'.$row['Hdomingo'].'</td><td>'.$row['HPdomingo'].'</td><td>'.$row['Hferiado'].'</td><td>'.$row['HPferiado'].'</td><td>'.$row['HNoturnas'].'</td></tr>';	
 				}
 			}
-			$message = $message . '</tbody></table>';
+			$message = $message_tb_head . $message_tb_foot . $message .'</tbody></table>';
 			
 			$return = array(
 				'return' => 'success',

@@ -44,8 +44,17 @@ function calculohoras($ar_picagens)
 	$tempoinf = 0;
 	$temposup = 0;
 	$newdia = false;
+	$old_dia = '';
+	
 	foreach($ar_picagens as $row)
 	{
+		//$dia = new DateTime($row->dia);
+		//$test = $row->dia;
+		$dia = date($row->dia);
+		$cont_cal = true;
+		
+		//echo '   da       '.$dia;
+		
 		if($newdia)
 		{
 			$tempoinf = 0;
@@ -59,7 +68,18 @@ function calculohoras($ar_picagens)
 			$tempoinf = toSeconds($row->horas);
 			$picagem_number++;
 			$i = false;
-			
+			if($tempoinf > $temposup && $temposup != 0 && $dia > $old_dia)
+			{
+				$temposup = 0;
+				$picagem_number = 1;
+				$cont_cal = false;
+			}
+			if($cont_cal && $tempoinf < $temposup && $dia > $old_dia)
+			{
+				$temposup = 0;
+				$picagem_number = 1;
+				$cont_cal = false;
+			}
 		}else{
 			$temposup = toSeconds($row->horas);
 			$picagem_number++;
@@ -93,6 +113,7 @@ function calculohoras($ar_picagens)
 				}
 			}
 		}
+		$old_dia = $dia;
 	}
 	return array('horas' => $tmptrabalhado, 'pausas' => $tmppausas);
 }

@@ -219,6 +219,7 @@ class Picagem_model extends CI_Model {
 		$total_hdomingo = 0;
 		$total_hferiado = 0;
 		$total_hnoturnas = 0;
+		$total_hinv = 0;
 		foreach($array_user as $data)
 		{
 			//dias trabalhados
@@ -246,7 +247,7 @@ class Picagem_model extends CI_Model {
 			}
 			
 			//horas de domingo
-			$sql = "SELECT FORMAT(CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia FROM V_Record WHERE Userid = ".$data['Userid']." AND CheckTime between '".$datefirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datesecond." ".LAST_TIME."') AND DATEPART(dw, CheckTime) IN (1) order by CheckTime";
+			$sql = "select FORMAT(CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia from V_Record WHERE Userid = ".$data['Userid']." AND CAST(DATEPART(dw, checktime) AS VARCHAR) + FORMAT(checktime, 'HHmm') between 10330 and 20330 AND CheckTime between '".$datefirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datesecond." ".LAST_TIME."') order by CheckTime";
 			
 			$tempo_domingo = 0;
 			$tempopausas_dom = 0;
@@ -263,7 +264,7 @@ class Picagem_model extends CI_Model {
 			}
 			
 			//Horas de feriado
-			$sql = "SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia FROM V_Record as vr WHERE vr.Userid = ".$data['Userid']." AND vr.CheckTime between '".$datefirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datesecond." ".LAST_TIME."') AND EXISTS(SELECT hol.BDate FROM Holiday hol WHERE CONVERT(VARCHAR(10),vr.CheckTime,110) = CONVERT(VARCHAR(10),hol.BDate,110) AND hol.Name NOT LIKE '%INVENTARIO%') order by CheckTime";
+			$sql = "SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia FROM V_Record as vr WHERE vr.Userid = ".$data['Userid']." AND vr.CheckTime between '".$datefirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datesecond." ".LAST_TIME."') AND EXISTS (SELECT hol.BDate FROM Holiday hol WHERE CONVERT(VARCHAR(10),vr.CheckTime,110) = CONVERT(VARCHAR(10),hol.BDate,110) AND hol.Name NOT LIKE '%INV%') order by CheckTime";
 			
 			$tempo_feriado = 0;
 			$tempopausas_feriado = 0;
@@ -280,33 +281,94 @@ class Picagem_model extends CI_Model {
 			}
 			
 			//horas inventario
-			/*$sql = "SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas FROM V_Record as vr WHERE vr.Userid = ".$data['Userid']." AND vr.CheckTime between '".$datefirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datesecond." ".LAST_TIME."') AND EXISTS(SELECT hol.BDate FROM Holiday hol WHERE CONVERT(VARCHAR(10),vr.CheckTime,110) = CONVERT(VARCHAR(10),hol.BDate,110) AND hol.Name LIKE '%INVENTARIO%') order by CheckTime";
+			$sql = "select CONVERT(VARCHAR(10),format(BDate, 'yyyy-MM-dd'),110) as datestart, CONVERT(VARCHAR(10),format(DATEADD(DAY,1,BDate), 'yyyy-MM-dd'),110) as dateend from Holiday where BDate between '".$datefirst." 00:00:00.000' and '".$datesecond." ".LAST_TIME."' AND Name LIKe '%INV%' order by BDate";
 			
-			$tempo_inv = 0;
 			$result_inv = $this->db->query($sql);
-			if(($result_inv->num_rows()) % 2 == 0)
+			if($result_inv->num_rows() > 0)
 			{
-				//é par logo continuo
-				/*$i = true;
-				$tempoinf = 0;
-				$temposup = 0;
-				foreach($result_feriado->result() as $row)
+				$sql = "SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia, hol.Name as Name FROM V_Record as vr, Holiday as hol WHERE vr.Userid =".$data['Userid']." AND (";
+				
+				$i = 0;
+				foreach($result_inv->result() as $row)
 				{
-					if($i)
-					{
-						$tempoinf += toSeconds($row->horas);	
-						$i = false;
-					}else{
-						$temposup += toSeconds($row->horas);	
-						$i = true;
-					}
+					if($i > 0) $sql.= " or ";
+					$sql .= "vr.CheckTime between '".$row->datestart." ".FIRST_TIME."' and '".$row->dateend." ".LAST_TIME."'";							$i++;
 				}
-				$ret_array = calculohoras($result_feriado->result());
-				$tempo_inv = toTime($ret_array['horas']);							
+				$sql .= ") AND hol.Name LIKE '%INV%' AND (Format(vr.CheckTime, 'dd/MM/yyyy') = Format(hol.BDate, 'dd/MM/yyyy') or Format(vr.CheckTime, 'dd/MM/yyyy') = format(DATEADD(DAY,1,hol.BDate),'dd/MM/yyyy'))";
+				
+				$tempo_inv = 0;
+				$result_inv = $this->db->query($sql);
+				if(($result_inv->num_rows()) % 2 == 0)
+				{
+					//é par logo continuo
+					$i = true;
+					$hora_inv = 0;
+					$tempoinf = 0;
+					$temposup = 0;
+					$dia = 0;
+					$old_dia = 0;					
+					foreach($result_inv->result() as $row)
+					{
+						/*$dia = date($row->dia);
+						if($temposup > 0 && $dia > $old_dia && ($temposup < LAST_TIME_SEC || $temposup > $tempoinf))
+						{
+							$tempoinf = 0;
+							$temposup = 0;
+							$i = true;						
+						}*/
+						
+						$cont_inv = true;
+						$split_name = explode("_",$row->Name);
+						$hora_inv = toSeconds($split_name[1]);
+						
+						if($i)
+						{
+							$tempoinf = toSeconds($row->horas);	
+							$i = false;
+						}else{
+							$temposup = toSeconds($row->horas);
+							//$i = true;
+						}
+						
+						if($temposup != 0)
+						{
+							if($temposup > HOR_INV || $temposup < LAST_TIME_SEC)
+							{
+								$cont_inv = false;
+								if($tempoinf >= $hora_inv)
+								{
+									if($temposup < LAST_TIME_SEC)	
+									{
+										$tempo_inv += ($temposup + 86400) - $tempoinf;
+										$tempoinf = $temposup;
+									}else{
+										$tempo_inv += $temposup - $tempoinf;
+										$tempoinf = $temposup;
+									}
+								}else{
+									if($temposup < LAST_TIME_SEC)	
+									{
+										$tempo_inv += ($temposup + 86400) - $hora_inv;
+										$tempoinf = $temposup;
+									}else{
+										$tempo_inv += $temposup - $hora_inv;
+										$tempoinf = $temposup;
+									}
+								}							
+							}
+							$tempoinf = $temposup;
+						}
+						/*$old_dia = $dia;*/
+					}
+					$tempo_inv = toTime($tempo_inv);							
+				}else{
+					// é impar
+					$tempo_inv = 'Faltam picagens';				
+				}				
+				
 			}else{
-				// é impar
-				$tempo_inv = 'Faltam picagens';				
-			}*/
+				$tempo_inv = 'Não Há Inv.';
+			}
 			
 			//horas noturnas
 			$sql = "select FORMAT(CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia from V_Record where Userid = ".$data['Userid']." AND CheckTime between '".$datefirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datesecond." ".LAST_TIME."') order by CheckTime";
@@ -318,39 +380,8 @@ class Picagem_model extends CI_Model {
 				//é par logo continuo
 				if(strlen($data['Hnoturnas']) > 1)
 				{
-					$h_not_noite = intval($data['Hnoturnas']) * 3600;
-					$temp_old = 0;
-					foreach($result_noturno->result() as $row)
-					{
-						$continu = true;
-						$temp = toSeconds($row->horas);
-						if($temp < MANHA_NOT && $temp > LAST_TIME_SEC)
-						{
-							$tempo_noturno += MANHA_NOT - $temp;
-							$temp_old = 0;
-							$continu = false;
-						}
-						if($h_not_noite < $temp  && $temp < (LAST_TIME_SEC + 86400) && $continu)
-						{
-							if($temp_old != 0)
-							{
-								$tempo_noturno += $temp - $temp_old;
-								$temp_old = $temp;
-								$continu = false;	
-							}else{
-								$tempo_noturno += $temp - $h_not_noite;	
-								$temp_old = $temp;
-								$continu = false;
-							}						
-						}
-						if($temp < LAST_TIME_SEC && $temp_old != 0 && $continu)
-						{
-							$tempo_noturno += ($temp + 86400) - $temp_old;	
-							$temp_old = $temp + 86400;
-							$continu = false;
-						}					
-					}
-					$tempo_noturno = toTime($tempo_noturno);
+					$hora_not = intval($data['Hnoturnas']) * 3600;
+					$tempo_noturno = calculNoturnas($result_noturno,$hora_not);
 				}else{
 					$tempo_noturno = 'Falta H.Not.';
 				}							
@@ -370,7 +401,8 @@ class Picagem_model extends CI_Model {
 				'HPdomingo' => $tempopausas_dom,
 				'Hferiado' => $tempo_feriado,
 				'HPferiado' => $tempopausas_feriado,
-				'HNoturnas' => $tempo_noturno
+				'HNoturnas' => $tempo_noturno,
+				'HInv' => $tempo_inv
 				));
 			
 			//aqui é para a linha total
@@ -378,6 +410,7 @@ class Picagem_model extends CI_Model {
 			if($tempo_domingo != 'Faltam picagens') $total_hdomingo += toSeconds($tempo_domingo);
 			if($tempo_feriado != 'Faltam picagens') $total_hferiado += toSeconds($tempo_feriado);
 			if(strlen($tempo_noturno) < 10 ) $total_hnoturnas += toSeconds($tempo_noturno);
+			if($tempo_inv != 'Faltam picagens') $total_hinv += toSeconds($tempo_inv);
 		}
 		
 		array_push($array_final,array(
@@ -390,7 +423,8 @@ class Picagem_model extends CI_Model {
 			'HPdomingo' => '',
 			'Hferiado' => toTime($total_hferiado),
 			'HPferiado' => '',
-			'HNoturnas' => toTime($total_hnoturnas)
+			'HNoturnas' => toTime($total_hnoturnas),
+			'HInv' => toTime($total_hinv)
 			));
 		
 		return $array_final;

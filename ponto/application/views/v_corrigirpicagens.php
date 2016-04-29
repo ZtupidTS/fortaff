@@ -247,7 +247,7 @@ function submitformback()
 
 function addPicagem()
 {
-	Lobibox.prompt('addpicagem',{
+	Lobibox.prompt('time',{
 	    	title: 'Hora da picagem a inserir:',
 	    	buttonsAlign: 'right',
 	    	draggable: true,
@@ -267,8 +267,8 @@ function addPicagem()
 	    	callback: function ($this, type, ev) {
 		        if(type == 'ok')
 		        {
-		        	var regex = new RegExp("(([0-1][0-9])|([2][0-3])):([0-5][0-9]):([0-5][0-9])");
-		        	var newpicagem = $this.getValue();
+		        	var regex = new RegExp("(([0-1][0-9])|([2][0-3])):([0-5][0-9])");
+		        	var newpicagem = $this.getValue()+':00';
 		        	if (regex.test(newpicagem) && newpicagem.length < 9) 
 		        	{
 		        		$('#novapicagem').val(newpicagem);

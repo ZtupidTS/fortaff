@@ -32,7 +32,7 @@ order by CheckTime
 
 
 
-/* inventario */
+/****************************** inventario */
 /* v1 */
 SELECT *
 FROM V_Record as vr
@@ -75,16 +75,17 @@ order by CheckTime
 -- mudei o date add aqui
 select CONVERT(VARCHAR(10),format(BDate, 'yyyy-MM-dd'),110) as datestart, CONVERT(VARCHAR(10),format(DATEADD(DAY,1,BDate), 'yyyy-MM-dd'),110) as dateend
 from Holiday
-where BDate between '2016-04-21 00:00:00.000' and '2016-04-23 03:30:01.000' AND Name LIKe '%INV%'
+where BDate between '2016-04-21 00:00:00.000' and '2016-04-24 03:30:01.000' AND Name LIKe '%INV%'
+order by BDate
 
 -- depois com a ajdua do php meto os valores nessa 2ª query e obtenho o que pretendo
 SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia, hol.Name as Name 
 FROM V_Record as vr, Holiday as hol 
-WHERE vr.Userid = 12 AND (vr.CheckTime between '2016-04-24 03:30:01.000' and '2016-04-25 03:30:00.000' or vr.CheckTime between '2016-04-22 03:30:01.000' and '2016-04-23 03:30:00.000' or vr.CheckTime between '2016-04-01 03:30:01.000' and '2016-04-29 03:30:00.000') AND hol.Name LIKE '%INV%' AND (Format(vr.CheckTime, 'dd/MM/yyyy') = Format(hol.BDate, 'dd/MM/yyyy') or Format(vr.CheckTime, 'dd/MM/yyyy') = format(DATEADD(DAY,1,hol.BDate),'dd/MM/yyyy'))
+WHERE vr.Userid = 12 AND (vr.CheckTime between '2016-04-22 03:30:01.000' and '2016-04-23 03:30:00.000' or vr.CheckTime between '2016-04-24 03:30:01.000' and '2016-04-25 03:30:00.000') AND hol.Name LIKE '%INV%' AND (Format(vr.CheckTime, 'dd/MM/yyyy') = Format(hol.BDate, 'dd/MM/yyyy') or Format(vr.CheckTime, 'dd/MM/yyyy') = format(DATEADD(DAY,1,hol.BDate),'dd/MM/yyyy'))
 order by CheckTime
 
 
-/* feriado */
+/******************** feriado */
 
 /* v1 */
 SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia 
@@ -110,7 +111,7 @@ WHERE CONVERT(VARCHAR(10),vr.CheckTime,110) = CONVERT(VARCHAR(10),hol.BDate,110)
 order by CheckTime
 
 
-/* Domingos */
+/********************* Domingos */
 
 /* v1 */
 
@@ -132,3 +133,23 @@ select FORMAT(CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') a
 from V_Record 
 WHERE Userid = ".$data['Userid']." AND CAST(DATEPART(dw, checktime) AS VARCHAR) + FORMAT(checktime, 'HHmm') between 10330 and 20330 AND CheckTime between '".$datefirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datesecond." ".LAST_TIME."')
 order by CheckTime
+
+
+/************************** verificar picagens */
+
+/* v1 */
+select * 
+from(
+select (count(Logid) % 2) as odd, count(Logid) as number, Userid, datepart(DAY,CheckTime) as dia, FORMAT(datepart(Month,CheckTime),'00') as mes, datepart(Year,CheckTime) as ano, Name 
+from V_Record 
+where CheckTime between '2016-04-22 00:00:00.000' and DATEADD(DAY,1,'2016-04-22 00:00:00.000') 
+group by datepart(DAY,CheckTime), Userid, datepart(Month,CheckTime), datepart(Year,CheckTime), Name) d where odd = 1  
+
+/* v2 */
+-- por causa dos inventario e horas extras quando há picagens noutro dia
+select * 
+from(
+select (count(Logid) % 2) as odd, count(Logid) as number, Userid,  Name 
+from V_Record 
+where CheckTime between '2016-04-24 03:30:00.000' and DATEADD(DAY,1,'2016-04-25 03:30:00.000') 
+group by  Userid,   Name) d where odd = 1

@@ -84,6 +84,10 @@ if($this->session->userdata('level') == 2)
 				<div>
 					<button type="button" class="btn btn-default pull-right" onclick="addPicagem()">Adicionar Picagem</button>
 				</div>
+				<div class="top60">
+					*Editar tem que ser nesse dia<br/>
+					*Acrescentar pode ser a 1h da manhã que vai assumir 1h da manhã do dia seguinte					
+				</div>
 			</div>
 			<?php
 		}
@@ -108,6 +112,7 @@ if($this->session->userdata('level') == 2)
 					<div class="form-group">
 						<label for="novapicagem" class="control-label">Nova Picagem:</label>
 						<input type="time" step="1" size="30" class="form-control" name="novapicagem" id="novapicagem">
+						*A hora da nova picagem tem que ser no dia que estamos a editar, neste caso <?= $datapicagem;?>
 					</div>
 					<!-- aqui a parte do form escondido -->
 					<div class="form-group" hidden>

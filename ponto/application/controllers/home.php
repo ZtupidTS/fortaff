@@ -44,18 +44,43 @@ class Home extends CI_Controller {
 		$data['datefirst'] = $firstdate;
 		$data['datesecond'] = $seconddate;
 		
+		$array_picagemfaltam = array();
+		
 		if(!$iduser)
 		{
 			//nessa query só vou buscar o numero impares para saber onde falta picagens
-			$sql = "select * from(select (count(Logid) % 2) as odd, count(Logid) as number, Userid, datepart(DAY,CheckTime) as dia, FORMAT(datepart(Month,CheckTime),'00') as mes, datepart(Year,CheckTime) as ano, Name from V_Record where CheckTime between '".$firstdate."' and DATEADD(DAY,1,'".$seconddate."') group by datepart(DAY,CheckTime), Userid, datepart(Month,CheckTime), datepart(Year,CheckTime), Name) d where odd = 1";	
+			/*$sql = "select * from(select (count(Logid) % 2) as odd, count(Logid) as number, Userid, datepart(DAY,CheckTime) as dia, FORMAT(datepart(Month,CheckTime),'00') as mes, datepart(Year,CheckTime) as ano, Name from V_Record where CheckTime between '".$firstdate."' and DATEADD(DAY,1,'".$seconddate."') group by datepart(DAY,CheckTime), Userid, datepart(Month,CheckTime), datepart(Year,CheckTime), Name) d where odd = 1";*/
+			
+			//para todas datas do filtro
+			while($firstdate <= $seconddate)
+			{
+				$sql = "select * from(select (count(Logid) % 2) as odd, count(Logid) as number, Userid, Name from V_Record where CheckTime between '".$firstdate." ".FIRST_TIME."' and DATEADD(DAY,1,'".$firstdate." ".LAST_TIME."') group by  Userid,   Name) d where odd = 1";
+				$result = $this->picagem_model->getpicagens($sql);
+				
+				if($result)
+				{
+					$parts = explode('-', $firstdate);
+				
+					foreach($result as $row)
+					{
+						array_push($array_picagemfaltam,array(
+							'Userid' => $row['Userid'],
+							'Name' => $row['Name'],
+							'ano' => $parts[0],
+							'mes' => $parts[1],
+							'dia' => $parts[2],
+							'number' => $row['number']
+						));
+					}
+				}
+				$firstdate = date('Y-m-d', strtotime($firstdate . ' +1 day'));					
+			}	
 		}
-		
 		//devolve um array
-		$result = $this->picagem_model->getpicagens($sql);
 		
-		if($result)
+		if($array_picagemfaltam)
 		{
-			$data['result'] = $result;
+			$data['result'] = $array_picagemfaltam;
 			$this->load->view("v_home", $data);
 		}else{
 			$data['informacao'] = 'Sem Resultados / Verifcar Datas inseridas';
@@ -157,7 +182,27 @@ class Home extends CI_Controller {
 	*/
 	public function add_picagem()
 	{
-		$newpicagem = $this->input->post('datapicagem').' '.$this->input->post('novapicagem').'.000';
+		$this->load->helper('myfunction_helper');
+		$new_hora_picagem = toSeconds($this->input->post('novapicagem'));
+		
+		if($new_hora_picagem < LAST_TIME_SEC)
+		{
+			$newday = date('Y-m-d', strtotime($this->input->post('datapicagem') . ' +1 day'));
+			$newpicagem = $newday.' '.$this->input->post('novapicagem').'.000';
+		}else{
+			if($new_hora_picagem < 86399)
+			{
+				$newpicagem = $this->input->post('datapicagem').' '.$this->input->post('novapicagem').'.000';
+			}else{
+				$return = array(
+					'return' => 'error',
+					'message' => 'A picagem não foi inserida, por haver um problema na hora de inserção');
+				echo json_encode($return);
+				return true;
+			}
+		}
+		
+		//$newpicagem = $this->input->post('datapicagem').' '.$this->input->post('novapicagem').'.000';
 		$sql_data = array(
 		            'CheckTime'        	=> $newpicagem,
 		            'Userid'		=> $this->input->post('iduser'),

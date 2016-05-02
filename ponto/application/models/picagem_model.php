@@ -29,7 +29,7 @@ class Picagem_model extends CI_Model {
 	*/
 	public function picagensbyuser($iduser,$datafirst, $datasecond = false)
 	{
-		$date1 = explode('-',$datafirst);
+		//$date1 = explode('-',$datafirst);
 		
 		if($datasecond)
 		{
@@ -40,21 +40,23 @@ class Picagem_model extends CI_Model {
 			$this->db->where('datepart(month,CheckTime)', $date1[1]);
 			$this->db->where('datepart(year,CheckTime)', $date1[0]);*/
 			$sql = "select * from V_Record where Userid= ".$iduser." AND CheckTime between '".$datafirst."' and DATEADD(DAY,1,'".$datasecond."')";
-			return getpicagens($sql);
+			return $this->picagem_model->getpicagens($sql);
 		}else{
-			$this->db->where('Userid', $iduser);
+			/*$this->db->where('Userid', $iduser);
 			$this->db->where('datepart(day,CheckTime)', $date1[2]);
 			$this->db->where('datepart(month,CheckTime)', $date1[1]);
-			$this->db->where('datepart(year,CheckTime)', $date1[0]);
+			$this->db->where('datepart(year,CheckTime)', $date1[0]);*/
+			$sql = "select * from V_Record where Userid= ".$iduser." AND CheckTime between '".$datafirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datafirst." ".LAST_TIME."')";
+			return $this->picagem_model->getpicagens($sql);
 		}
 		
-		$get = $this->db->get(TBL_VPICAGENS);
+		/*$get = $this->db->get(TBL_VPICAGENS);
 	    	//aqui vou ver se o user ja entrou uma vez
 	    	if($get->num_rows() > 0)
 	    	{
 	    		return $get->result_array();	
 	    	} 
-	    	return array();
+	    	return array();*/
 	}
 	
 	/*
@@ -209,7 +211,7 @@ class Picagem_model extends CI_Model {
 	/*
 	* Desde que tenho o meu array id vou criar outros para mandar para a pagina
 	*/
-	public function calculoresumo($array_user,$datefirst,$datesecond)
+	public function calculoresumo($array_user,$datefirst,$datesecond, $total = true)
 	{
 		$this->load->helper('myfunction_helper');
 		
@@ -412,21 +414,22 @@ class Picagem_model extends CI_Model {
 			if(strlen($tempo_noturno) < 10 ) $total_hnoturnas += toSeconds($tempo_noturno);
 			if($tempo_inv != 'Faltam picagens') $total_hinv += toSeconds($tempo_inv);
 		}
-		
-		array_push($array_final,array(
-			'Userid' => '',
-			'Name' => 'Total',
-			'Dias' => '',
-			'HTrabalhadas' => toTime($total_temp_trab),
-			'HPTrab' => '',
-			'Hdomingo' => toTime($total_hdomingo),
-			'HPdomingo' => '',
-			'Hferiado' => toTime($total_hferiado),
-			'HPferiado' => '',
-			'HNoturnas' => toTime($total_hnoturnas),
-			'HInv' => toTime($total_hinv)
+		if($total)
+		{
+			array_push($array_final,array(
+				'Userid' => '',
+				'Name' => 'Total',
+				'Dias' => '',
+				'HTrabalhadas' => toTime($total_temp_trab),
+				'HPTrab' => '',
+				'Hdomingo' => toTime($total_hdomingo),
+				'HPdomingo' => '',
+				'Hferiado' => toTime($total_hferiado),
+				'HPferiado' => '',
+				'HNoturnas' => toTime($total_hnoturnas),
+				'HInv' => toTime($total_hinv)
 			));
-		
+		}
 		return $array_final;
 		
 	}

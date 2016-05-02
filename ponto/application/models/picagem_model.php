@@ -266,9 +266,45 @@ class Picagem_model extends CI_Model {
 			}
 			
 			//Horas de feriado
-			$sql = "SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia FROM V_Record as vr WHERE vr.Userid = ".$data['Userid']." AND vr.CheckTime between '".$datefirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datesecond." ".LAST_TIME."') AND EXISTS (SELECT hol.BDate FROM Holiday hol WHERE CONVERT(VARCHAR(10),vr.CheckTime,110) = CONVERT(VARCHAR(10),hol.BDate,110) AND hol.Name NOT LIKE '%INV%') order by CheckTime";
+			//$sql = "SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia FROM V_Record as vr WHERE vr.Userid = ".$data['Userid']." AND vr.CheckTime between '".$datefirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datesecond." ".LAST_TIME."') AND EXISTS (SELECT hol.BDate FROM Holiday hol WHERE CONVERT(VARCHAR(10),vr.CheckTime,110) = CONVERT(VARCHAR(10),hol.BDate,110) AND hol.Name NOT LIKE '%INV%') order by CheckTime";
 			
-			$tempo_feriado = 0;
+			$sql = "select CONVERT(VARCHAR(10),format(BDate, 'yyyy-MM-dd'),110) as datestart, CONVERT(VARCHAR(10),format(DATEADD(DAY,1,BDate), 'yyyy-MM-dd'),110) as dateend from Holiday where BDate between '".$datefirst." 00:00:00.000' and '".$datesecond." ".LAST_TIME."' AND Name NOT LIKE '%INV%' order by BDate";
+			
+			$result_feriado = $this->db->query($sql);
+			if($result_feriado->num_rows() > 0)
+			{
+				$sql = "SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia, hol.Name as Name FROM V_Record as vr, Holiday as hol WHERE vr.Userid =".$data['Userid']." AND (";
+				
+				$i = 0;
+				foreach($result_feriado->result() as $row)
+				{
+					if($i > 0) $sql.= " or ";
+					$sql .= "vr.CheckTime between '".$row->datestart." ".FIRST_TIME."' and '".$row->dateend." ".LAST_TIME."'";							$i++;
+				}
+				$sql .= ") AND hol.Name LIKE '%INV%' AND (Format(vr.CheckTime, 'dd/MM/yyyy') = Format(hol.BDate, 'dd/MM/yyyy') or Format(vr.CheckTime, 'dd/MM/yyyy') = format(DATEADD(DAY,1,hol.BDate),'dd/MM/yyyy'))";
+				
+				$tempo_feriado = 0;
+				$tempopausas_feriado = 0;
+				$result_feriado = $this->db->query($sql);
+				
+				if(($result_feriado->num_rows()) % 2 == 0)
+				{
+					$ret_array = calculohoras($result_feriado->result());
+					$tempo_feriado = toTime($ret_array['horas']);			
+					$tempopausas_feriado = toTime($ret_array['pausas']);
+				}else{
+					// é impar
+					$tempo_feriado = 'Faltam picagens';
+					$tempopausas_feriado = 'Faltam picagens';				
+				}
+				
+			}else{
+				$tempo_feriado = 'Não Há Fer.';
+				$tempopausas_feriado = 'Não há Fer.';
+			}
+			
+			
+			/*$tempo_feriado = 0;
 			$tempopausas_feriado = 0;
 			$result_feriado = $this->db->query($sql);
 			if(($result_feriado->num_rows()) % 2 == 0)
@@ -280,10 +316,11 @@ class Picagem_model extends CI_Model {
 				// é impar
 				$tempo_feriado = 'Faltam picagens';
 				$tempopausas_feriado = 'Faltam picagens';
-			}
+			}*/
+			
 			
 			//horas inventario
-			$sql = "select CONVERT(VARCHAR(10),format(BDate, 'yyyy-MM-dd'),110) as datestart, CONVERT(VARCHAR(10),format(DATEADD(DAY,1,BDate), 'yyyy-MM-dd'),110) as dateend from Holiday where BDate between '".$datefirst." 00:00:00.000' and '".$datesecond." ".LAST_TIME."' AND Name LIKe '%INV%' order by BDate";
+			$sql = "select CONVERT(VARCHAR(10),format(BDate, 'yyyy-MM-dd'),110) as datestart, CONVERT(VARCHAR(10),format(DATEADD(DAY,1,BDate), 'yyyy-MM-dd'),110) as dateend from Holiday where BDate between '".$datefirst." 00:00:00.000' and '".$datesecond." ".LAST_TIME."' AND Name LIKE '%INV%' order by BDate";
 			
 			$result_inv = $this->db->query($sql);
 			if($result_inv->num_rows() > 0)
@@ -410,9 +447,9 @@ class Picagem_model extends CI_Model {
 			//aqui é para a linha total
 			if($tempotrabalhado != 'Faltam picagens') $total_temp_trab += toSeconds($tempotrabalhado);
 			if($tempo_domingo != 'Faltam picagens') $total_hdomingo += toSeconds($tempo_domingo);
-			if($tempo_feriado != 'Faltam picagens') $total_hferiado += toSeconds($tempo_feriado);
+			if(strlen($tempo_feriado) < 11) $total_hferiado += toSeconds($tempo_feriado);
 			if(strlen($tempo_noturno) < 10 ) $total_hnoturnas += toSeconds($tempo_noturno);
-			if($tempo_inv != 'Faltam picagens') $total_hinv += toSeconds($tempo_inv);
+			if(strlen($tempo_inv) < 11) $total_hinv += toSeconds($tempo_inv);
 		}
 		if($total)
 		{

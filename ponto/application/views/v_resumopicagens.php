@@ -123,34 +123,44 @@ function resumopicagens()
 	date1 = $("#datefirst").val();
 	date2 = $("#datesecond").val();
 	var dpt = $("#selectdpt").val();
-	var values = {datefirst: date1, datesecond: date2, departamento: dpt};
-	var newform = createform('<?= base_url("home/obterresumopicagem");?>',values);
-	$.ajax({
-	        url: '<?= base_url("home/obterresumopicagem");?>',
-	        type: 'post',
-	        dataType: 'json',
-	        data: $(newform).serializeArray(),
-	        success: function(data) {
-	        		//console.log(data);
-	  			if(data.return == 'success')
-	  			{
-					//tabledatatable.destroy();
-					$('#returnajax').html(data.message);
-					startDatatableRp();
-				}else{
-					noty({ 
-				    		text: data.message,
-				    		type: "error",
-				    		layout: "center",
-				    		closeWith: ['click', 'hover']
-				    	});
-				    	$('#returnajax').html('');
-				}
-	                },
-	        error: function(xhr, textStatus, errorThrown) {
-	        		alert("Erro no envio do pedido por ajax: "+xhr.responseText+" "+errorThrown); 
-	        	}
-    	});		
-	return false;
+	if(dpt == '')
+	{
+		noty({ 
+	    		text: 'Tem que seleccionar uma secção ou departamento',
+	    		type: "error",
+	    		layout: "center",
+	    		closeWith: ['click', 'hover']
+	    	});
+	}else{
+		var values = {datefirst: date1, datesecond: date2, departamento: dpt};
+		var newform = createform('<?= base_url("home/obterresumopicagem");?>',values);
+		$.ajax({
+		        url: '<?= base_url("home/obterresumopicagem");?>',
+		        type: 'post',
+		        dataType: 'json',
+		        data: $(newform).serializeArray(),
+		        success: function(data) {
+		        		//console.log(data);
+		  			if(data.return == 'success')
+		  			{
+						//tabledatatable.destroy();
+						$('#returnajax').html(data.message);
+						startDatatableRp();
+					}else{
+						noty({ 
+					    		text: data.message,
+					    		type: "error",
+					    		layout: "center",
+					    		closeWith: ['click', 'hover']
+					    	});
+					    	$('#returnajax').html('');
+					}
+		                },
+		        error: function(xhr, textStatus, errorThrown) {
+		        		alert("Erro no envio do pedido por ajax: "+xhr.responseText+" "+errorThrown); 
+		        	}
+	    	});		
+		return false;
+	}
 }
 </script>

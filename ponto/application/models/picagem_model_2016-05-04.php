@@ -229,6 +229,8 @@ class Picagem_model extends CI_Model {
 			$result_diastrabalhados = $this->db->query($sql);
 			//dia trabalhados
 			$dias_trabalhados = $result_diastrabalhados->num_rows();
+			//nome funcionario
+			$nome_us = $data['Name'];
 			
 			//horas trabalhadas
 			$sql = "select FORMAT(CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd-MM-yyyy') as dia from V_Record where Userid = ".$data['Userid']." AND CheckTime between '".$datefirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datesecond." ".LAST_TIME."') order by CheckTime";
@@ -299,8 +301,14 @@ class Picagem_model extends CI_Model {
 			$result_feriado = $this->db->query($sql);
 			if($result_feriado->num_rows() > 0)
 			{
-				$sql = "SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia, hol.Name as Name FROM V_Record as vr, Holiday as hol WHERE vr.Userid =".$data['Userid']." AND (";
-								
+				/*$sql = "SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia, hol.Name as Name FROM V_Record as vr, Holiday as hol WHERE vr.Userid =".$data['Userid']." AND (";*/
+				
+				
+				/* testetetetrterre yretyrtyryrey ryreyerty */
+				
+				
+				$sql = "SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd-MM-yyyy') as dia, hol.Name as Name FROM V_Record as vr, Holiday as hol WHERE vr.Userid = 15 AND (";
+				
 				$i = 0;
 				foreach($result_feriado->result() as $row)
 				{

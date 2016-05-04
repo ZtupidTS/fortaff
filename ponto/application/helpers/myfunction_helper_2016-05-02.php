@@ -63,7 +63,6 @@ function calculohoras($ar_picagens, $ar_dia_inv = false)
 		}
 		if($i)
 		{
-			/*echo ' '.$row->horas.' ';*/
 			$tempoinf = toSeconds($row->horas);
 			$picagem_number++;
 			$i = false;
@@ -73,14 +72,8 @@ function calculohoras($ar_picagens, $ar_dia_inv = false)
 				$picagem_number = 1;
 				$cont_cal = false;
 			}
-			/*echo ' dia '.$dia.' ';
-			echo ' old '.$old_dia.' ';
-			if(strtotime($dia) > strtotime($old_dia)) echo ' supppppppppppp ';*/
-			if($cont_cal && $tempoinf < $temposup && strtotime($dia) > strtotime($old_dia) && $old_dia != '')
+			if($cont_cal && $tempoinf < $temposup && $dia > $old_dia)
 			{
-				//echo ' '.$picagem_number.' ';
-				/*echo ' '.$row->horas.' ';
-				echo $tempoinf.' ';*/
 				$temposup = 0;
 				$picagem_number = 1;
 				$cont_cal = false;
@@ -118,66 +111,15 @@ function calculohoras($ar_picagens, $ar_dia_inv = false)
 				}
 			}else{
 				//aqui é só somar
-				/*if(($temposup - $tempoinf) > PAUSA)
-				{
-					$tmptrabalhado += $temposup - $tempoinf;
-				}else{
-					
-					//$tmppausas += ($temposup - $tempoinf);
-					$tmptrabalhado += $temposup - $tempoinf;
-					$pausa++;
-				}*/
-				
 				if(($temposup - $tempoinf) > PAUSA)
 				{
-					//se dia de inventario
-					//echo $temposup.' antes ';
-					//print_r($ar_dia_inv);
-					if($temposup > HOR_INV && $ar_dia_inv)
-					{
-						//echo $temposup;
-						//echo 'entrou';
-						$cont_inv = false;
-						$hora_inv = 0;
-						foreach ($ar_dia_inv as $row_inv)
-						{
-							/*echo $row_inv->dia.' ';
-							echo ' '.$dia.' F ';*/
-							if($row_inv->dia == $dia || ($temposup > 86400 && date('d-m-Y', strtotime($row_inv->dia . ' +1 day')) == $dia))								{
-								$cont_inv = true;
-								$hora_inv = toSeconds($row_inv->hora);	
-								/*echo $hora_inv.' I ';
-								echo $temposup.' TS ';*/							
-							}
-							if($cont_inv) break;
-						}
-						/*echo ' TS '.$temposup.' ';
-						echo ' hv '.$hora_inv.' ';
-						echo ' TI '.$tempoinf.' ';*/
-						if($cont_inv)
-						{
-							if($hora_inv > $tempoinf && ($hora_inv - $tempoinf) < PAUSA)
-							{
-								$tmptrabalhado += $temposup - $hora_inv;
-							}else{
-								$tmptrabalhado += $temposup - $tempoinf;
-							}							
-						}else{
-							$tmptrabalhado += $temposup - $tempoinf;
-						}
-						/*echo ' TT '.$tmptrabalhado;*/
-					}else{
-						$tmptrabalhado += $temposup - $tempoinf;
-					}
-					
+					$tmptrabalhado += $temposup - $tempoinf;
 				}else{
 					
 					//$tmppausas += ($temposup - $tempoinf);
 					$tmptrabalhado += $temposup - $tempoinf;
 					$pausa++;
 				}
-				
-				
 			}
 		}
 		$old_dia = $dia;

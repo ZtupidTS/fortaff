@@ -275,5 +275,113 @@ class Home extends CI_Controller {
 			return true;
 		}
 	}
+	
+	/*
+	* Para ir ver os feriados
+	*/
+	public function feriados()
+	{
+		//como só vou usar o model feriado aqui só o vou por a  carregar aqui
+		$this->load->model('holiday_model');
+		
+		$result = $this->holiday_model->getHoliday();
+		if($result)
+		{
+			$data['result'] = $result;
+			$this->load->view('v_holidays', $data);	
+		}else{
+			$data['erro'] = 'Problemas na obtenção dos dados, tentar novamente.';
+			$this->load->view('v_holidays', $data);
+		}
+	}
+	
+	/*
+	* editar feriado
+	*/
+	public function editar_holiday()
+	{
+		//como só vou usar o model feriado aqui só o vou por a  carregar aqui
+		$this->load->model('holiday_model');
+		
+		$newname = $this->input->post('Name');
+		$newdate = $this->input->post('BDate').' 00:00:00.000';
+		$sql_data = array(
+	            'BDate'        => $newdate,
+	            'Name'        => $newname
+	        );
+	        $result = $this->holiday_model->updateholiday($this->input->post('Holidayid'),$sql_data);
+	        if($result)
+	        {
+			$return = array(
+				'return' => 'success',
+				'message' => 'Atualização realizada com sucesso');
+			echo json_encode($return);
+			return true;
+		}else{
+			$return = array(
+				'return' => 'error',
+				'message' => 'Atualização com problemas');
+			echo json_encode($return);
+			return true;
+		}
+	}
+	
+	/*
+	* Eliminar feriado
+	*/
+	public function del_holiday()
+	{
+		//como só vou usar o model feriado aqui só o vou por a  carregar aqui
+		$this->load->model('holiday_model');
+		
+		$result = $this->holiday_model->deleteholiday($this->input->post('Holidayid'));
+		if($result)
+	        {
+			$return = array(
+				'return' => 'success',
+				'message' => 'Registo eliminado com sucesso');
+			echo json_encode($return);
+			return true;
+		}else{
+			$return = array(
+				'return' => 'error',
+				'message' => 'Occoreu um erro e o registo não foi eliminado');
+			echo json_encode($return);
+			return true;
+		}
+	}
+	
+	/*
+	* Adicionar feriado
+	*/
+	public function add_holiday()
+	{
+		//como só vou usar o model feriado aqui só o vou por a  carregar aqui
+		$this->load->model('holiday_model');
+		
+		$sql_data = array(
+		            'BDate'        	=> $this->input->post('BDate'),
+		            'Name'		=> $this->input->post('Name'),
+		            'Days'		=> 1		            
+		        );
+		
+		$result = $this->holiday_model->addholiday($sql_data);
+		if($result)
+	        {
+			$Holidayid = $this->db->insert_id();
+			$return = array(
+				'return' => 'success',
+				'Holidayid'  => $Holidayid,
+				'message' => 'Feriado inserido com sucesso');
+			echo json_encode($return);
+			return true;
+		}else{
+			$return = array(
+				'return' => 'error',
+				'message' => 'O feriado não foi inserida, voltar a tentar');
+			echo json_encode($return);
+			return true;
+		}
+	}
 }
 ?>

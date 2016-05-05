@@ -17,22 +17,25 @@ function startDatatable()
     	});
 	
 }
+//resumo picagens
 function startDatatableRp()
 {
 	tabledatatable = $('#picagens').DataTable({
     		"paging": false,
     		"info": false,
-    		"bFilter": false
-    		//"order": [[ 1, "asc" ]],
-    		/*"columnDefs": [ {
-			"targets": 2,
-			"orderable": false
-			},{
-			"targets": 3,
-			"orderable": false
-			} ]*/
+    		"bFilter": false    		
     	});
 	
+}
+//feriados
+function startDatatableHol()
+{
+	tabledatatable = $('#holiday').DataTable({
+    		"paging": false,
+    		"info": false,
+    		"bFilter": false,
+    		"order": [[ 2, "des" ]],    		
+    	});
 }
 
 $(document).ready(function() {
@@ -48,6 +51,7 @@ $(document).ready(function() {
 		closeEffect	: 'none'
 	});
 });
+
 </script>
 </body>
 </html>

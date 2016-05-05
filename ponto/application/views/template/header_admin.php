@@ -61,8 +61,8 @@
         							<li><a href="<?= base_url('home/resumo') ?>">Resumo Picagens</a></li>
 							</ul>
 						</li>
-						<!--<li role="separator" class="divider"></li>
-						<li><a href="<?= base_url('home/resumo') ?>">Resumo Picagens</a></li>-->
+						<li role="separator" class="divider"></li>
+						<li><a href="<?= base_url('home/feriados') ?>">Feriados</a></li>
 						<!--<li><a href="#">Something else here</a></li>
 						<li role="separator" class="divider"></li>
 						<li><a href="#">Separated link</a></li>

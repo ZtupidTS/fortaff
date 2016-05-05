@@ -97,7 +97,6 @@ if($this->session->userdata('level') == 2)
 
 <div class="row">
 	<div class="col-md-9 col-md-offset-1 top10" id="returnajax">
-		
 	</div>
 </div>
 

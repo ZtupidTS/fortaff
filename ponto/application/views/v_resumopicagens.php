@@ -83,7 +83,10 @@ if($this->session->userdata('level') == 2)
 				</div>
 		  		<?php			  		
 		  	}?>
-	  		<input type="button" id="btn_search" value="Procurar" onclick="resumopicagens()" class="btn btn-default">
+	  		<input type="button" id="btn_search" value="Procurar" onclick="resumopicagens()" class="btn btn-default noPrint">
+	  		<span class="noPrint">
+	  			<img id="button_print" hidden onclick="window.print();" src="<?= base_url('images/print.png');?>" height="20px" width="20px" >
+			</span>
 		</form>
 	</div>
 </div>
@@ -97,6 +100,7 @@ if($this->session->userdata('level') == 2)
 		
 	</div>
 </div>
+
 
 <script type="text/javascript">
 $("#datefirst").datetimepicker({
@@ -139,13 +143,23 @@ function resumopicagens()
 		        type: 'post',
 		        dataType: 'json',
 		        data: $(newform).serializeArray(),
+		        beforeSend: function(){
+				noty({ 
+			    		text: "O pedido esta a ser executado, aguarda por favor.",
+			    		type: "information",
+			    		layout: "center",
+			    		closeWith: ['click', 'hover']
+			    	});
+			},
 		        success: function(data) {
+		        		$.noty.closeAll();
 		        		//console.log(data);
 		  			if(data.return == 'success')
 		  			{
 						//tabledatatable.destroy();
 						$('#returnajax').html(data.message);
 						startDatatableRp();
+						$('#button_print').show();
 					}else{
 						noty({ 
 					    		text: data.message,
@@ -154,9 +168,11 @@ function resumopicagens()
 					    		closeWith: ['click', 'hover']
 					    	});
 					    	$('#returnajax').html('');
+					    	$('#button_print').hide();
 					}
 		                },
 		        error: function(xhr, textStatus, errorThrown) {
+		        		$.noty.closeAll();
 		        		alert("Erro no envio do pedido por ajax: "+xhr.responseText+" "+errorThrown); 
 		        	}
 	    	});		

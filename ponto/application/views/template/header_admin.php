@@ -28,6 +28,11 @@
 </head>
 <body>
 
+<style media="print">
+  .noPrint{ display: none; }
+  .yesPrint{ display: block !important; }
+</style>
+
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -47,17 +52,23 @@
 				<!--<li><a href="#">Menu</a></li>
 				<li><a href="#">Link</a></li>-->
 				<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
-				<ul class="dropdown-menu">
-				<li><a href="<?= base_url('home') ?>">Problemas Picagens</a></li>
-				<li role="separator" class="divider"></li>
-				<li><a href="<?= base_url('home/resumo') ?>">Resumo Picagens</a></li>
-				<!--<li><a href="#">Something else here</a></li>
-				<li role="separator" class="divider"></li>
-				<li><a href="#">Separated link</a></li>
-				<li role="separator" class="divider"></li>
-				<li><a href="#">One more separated link</a></li>-->
-				</ul>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li class="dropdown-submenu">
+							<a href="#">Picagens</a>
+							<ul class="dropdown-menu">
+								<li><a href="<?= base_url('home') ?>">Problemas Picagens</a></li>
+        							<li><a href="<?= base_url('home/resumo') ?>">Resumo Picagens</a></li>
+							</ul>
+						</li>
+						<!--<li role="separator" class="divider"></li>
+						<li><a href="<?= base_url('home/resumo') ?>">Resumo Picagens</a></li>-->
+						<!--<li><a href="#">Something else here</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Separated link</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">One more separated link</a></li>-->
+					</ul>
 				</li>
 			</ul>
 			<!--<form class="navbar-form navbar-left" role="search">

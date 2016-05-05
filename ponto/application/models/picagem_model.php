@@ -35,21 +35,12 @@ class Picagem_model extends CI_Model {
 		{
 			//se existe uma segunda data
 			$date2 = explode('-',$datasecond);
-			/*$this->db->where('Userid', $iduser);
-			$this->db->where('datepart(day,CheckTime)', $date1[2]);
-			$this->db->where('datepart(month,CheckTime)', $date1[1]);
-			$this->db->where('datepart(year,CheckTime)', $date1[0]);*/
-			$sql = "select * from V_Record where Userid= ".$iduser." AND CheckTime between '".$datafirst."' and DATEADD(DAY,1,'".$datasecond."')";
+			$sql = "select * from V_Record where Userid= ".$iduser." AND CheckTime between '".$datafirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datasecond." ".LAST_TIME."') order by CheckTime";
 			return $this->picagem_model->getpicagens($sql);
 		}else{
-			/*$this->db->where('Userid', $iduser);
-			$this->db->where('datepart(day,CheckTime)', $date1[2]);
-			$this->db->where('datepart(month,CheckTime)', $date1[1]);
-			$this->db->where('datepart(year,CheckTime)', $date1[0]);*/
 			$sql = "select * from V_Record where Userid= ".$iduser." AND CheckTime between '".$datafirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datafirst." ".LAST_TIME."')";
 			return $this->picagem_model->getpicagens($sql);
 		}
-		
 		/*$get = $this->db->get(TBL_VPICAGENS);
 	    	//aqui vou ver se o user ja entrou uma vez
 	    	if($get->num_rows() > 0)

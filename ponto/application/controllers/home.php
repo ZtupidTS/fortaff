@@ -17,6 +17,9 @@ class Home extends CI_Controller {
 		$this->load->view('v_home');
 	}
 	
+	/*
+	* Paras consultar o resumo das horas referente as picagens
+	*/
 	public function resumo()
 	{
 		//tenho que enviar os dpt
@@ -25,10 +28,94 @@ class Home extends CI_Controller {
 		{
 			$data['result'] = $result;
 			$this->load->view('v_resumopicagens', $data);	
-		}else{
-			
-		}
+		}		
+	}
+	
+	/*
+	* Obter as picagens por utilizador e dar o resumo de picagens pelas datas escolhidas
+	*/
+	public function picagembyuser()
+	{
+		$this->load->helper('myfunction_helper');
 		
+		$firstdate = $this->input->post('datefirst');
+		$seconddate = $this->input->post('datesecond');
+		$userid  = $this->input->post('Userid');
+		
+		$result = $this->picagem_model->picagensbyuser($userid,$firstdate,$seconddate);
+		
+		if($result)
+		{
+			$message_tb_head = '<table class="table table-hover picagens display" id="picagens"><thead><tr><th>Dia</th><th>Picagens</th></tr></thead>';
+				
+			$message = '';
+			$olddate = '';
+			
+			foreach($result as $row)
+			{
+				$newdate = date_create($row['CheckTime']);
+				$hora = toSeconds(date_format($newdate,'H:i:s'));
+				
+				if($olddate == '')
+				{
+					$message .= '<tr><td>'.date_format($newdate,'d-m-y').'</td><td>';
+				}
+				
+				if($olddate != '' && date_format($newdate,'d-m-y') > date_format($olddate,'d-m-y') )
+				{
+					if($hora < LAST_TIME)
+					{
+						$message .= ' | '.date_format($newdate,'H:i:s');	
+						$message .= '</td></tr><tr><td>'.date_format($newdate,'d-m-y').'</td><td>';
+					}else{
+						$message .= '</td></tr><tr><td>'.date_format($newdate,'d-m-y').'</td><td>';
+						$message .= date_format($newdate,'H:i:s');
+					}
+					
+				}else{
+					if($olddate != '')
+					{
+						$message .= ' | '.date_format($newdate,'H:i:s');	
+					}else{
+						$message .= date_format($newdate,'H:i:s'); 
+					}
+				}
+				$olddate = $newdate;
+			}
+			$message = $message_tb_head . $message .'</tbody></table>';
+		
+			$return = array(
+				'return' => 'success',
+				'message' => $message
+			);
+			echo json_encode($return);
+			return true;
+		}else{
+			$return = array(
+				'return' => 'error',
+				'message' => 'Não tem picagens? Verificar'
+			);
+			echo json_encode($return);
+			return true;
+		}
+	}
+	
+	/*
+	* Paras consultar o resumo das horas referente as picagens
+	*/
+	public function ver()
+	{
+		//tenho que enviar os dpt
+		$result = $this->user_model->getAll();
+		if($result)
+		{
+			$data['result'] = $result;
+			$this->load->view('v_verpicagens', $data);	
+		}else{
+			$data['result'] = $result;
+			$data['erro'] = 'Problemas na obtenção dos dados, tentar novamente.';
+			$this->load->view("v_verpicagens", $data);
+		}		
 	}
 	
 	/*

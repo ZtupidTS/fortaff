@@ -12,12 +12,18 @@ if($this->session->userdata('level') == 2)
 ?>
 
 <div class="col-md-10 col-md-offset-1">
-	<legend>Resumo Horas</legend>
+	<legend>Visualização Picagens</legend>
+</div>
+
+<div class="row">
+<?php if (isset($erro)){ ?>
+	<div class="alert alert-danger col-md-6 col-md-offset-3" role="alert" style="margin-top: 10px;"><?= $erro; ?></div>
+<?php } ?>
 </div>
 
 <div class="row">
 	<div class="col-md-8 col-md-offset-3">
-		<form class="form-inline" role="form" method="post" action="<?= base_url('home/verify_picagens');?>">
+		<form class="form-inline" role="form" method="post" action="<?= base_url('home/');?>">
 			<div class="form-group">
 	    			<label for="email">Intervalo de Datas:</label>
 	    			<?php
@@ -44,46 +50,25 @@ if($this->session->userdata('level') == 2)
 	  		</div>
 	  		<?php
 	  		if(isset($result))
-	    		{?>
-		  		<div class="form-group">
-					<select class="form-control" id="selectdpt">
-						<?php
-						$separator = 0;
-			 			foreach($result as $row)
-						{
-							if($row['Deptid'] != '1')	
-							{	
-								if($row['SupDeptid'] < VAL_DPT)
-								{
-									if($row['SupDeptid'] == 1)
-									{?>
-										<option value="<?= $row['Deptid'];?>"><?= $row['DeptName']. ' (Exceto Chefias e Rep Ext)';?></option>
-										<?php
-									}else{?>
-										<option value="<?= $row['Deptid'];?>"><?= $row['DeptName'];?></option>
-										<?php
-									}										
-								}else{
-									if($separator == 0)
-									{
-										$separator++;
-										?>
-										<option value="">-----------------------------------------</option>
-										<option value="<?= $row['Deptid'];?>"><?= $row['DeptName'];?></option>	
-										<?php
-									}else{
-										?>
-										<option value="<?= $row['Deptid'];?>"><?= $row['DeptName'];?></option>
-										<?php
-									}
-								}
-							}
-						}?>
-					</select>
-				</div>
-		  		<?php			  		
+	    		{
+		  		if($this->session->userdata('level') == 2)
+		  		{
+					?>	
+			  		<div class="form-group">
+						<select class="form-control" id="selectuser">
+							<?php
+							foreach($result->result() as $row)
+							{
+								?>
+								<option value="<?= $row->Userid;?>"><?= $row->Userid.' - '.$row->Name;?></option>
+								<?php
+							}?>
+						</select>
+					</div>
+			  		<?php			  		
+		  		}
 		  	}?>
-	  		<input type="button" id="btn_search" value="Procurar" onclick="resumopicagens()" class="btn btn-default noPrint">
+	  		<input type="button" id="btn_search" value="Procurar" onclick="verpicagens()" class="btn btn-default noPrint">
 	  		<span class="noPrint">
 	  			<img id="button_print" hidden onclick="window.print();" src="<?= base_url('images/print.png');?>" height="20px" width="20px" >
 			</span>
@@ -91,12 +76,8 @@ if($this->session->userdata('level') == 2)
 	</div>
 </div>
 
-<?php if (isset($erro)){ ?>
-	<div class="alert alert-danger col-md-6 col-md-offset-3" role="alert" style="margin-top: 10px;"><?= $erro; ?></div>
-<?php } ?>
-
 <div class="row">
-	<div class="col-md-9 col-md-offset-1 top10" id="returnajax">
+	<div class="col-md-6 col-md-offset-3 top10" id="returnajax">
 	</div>
 </div>
 
@@ -121,24 +102,24 @@ $("#datesecond").datetimepicker({
         minView: 2
 });
 
-function resumopicagens()
+function verpicagens()
 {
 	date1 = $("#datefirst").val();
 	date2 = $("#datesecond").val();
-	var dpt = $("#selectdpt").val();
-	if(dpt == '')
+	var user = $("#selectuser").val();
+	if(user == '' || date1 == '' || date2 == '')
 	{
 		noty({ 
-	    		text: 'Tem que seleccionar uma secção ou departamento',
+	    		text: 'Tem que preencher os campos todos',
 	    		type: "error",
 	    		layout: "center",
 	    		closeWith: ['click', 'hover']
 	    	});
 	}else{
-		var values = {datefirst: date1, datesecond: date2, departamento: dpt};
-		var newform = createform('<?= base_url("home/obterresumopicagem");?>',values);
+		var values = {datefirst: date1, datesecond: date2, Userid: user};
+		var newform = createform('<?= base_url("home/picagembyuser");?>',values);
 		$.ajax({
-		        url: '<?= base_url("home/obterresumopicagem");?>',
+		        url: '<?= base_url("home/picagembyuser");?>',
 		        type: 'post',
 		        dataType: 'json',
 		        data: $(newform).serializeArray(),
@@ -155,9 +136,7 @@ function resumopicagens()
 		        		//console.log(data);
 		  			if(data.return == 'success')
 		  			{
-						//tabledatatable.destroy();
 						$('#returnajax').html(data.message);
-						startDatatableRp();
 						$('#button_print').show();
 					}else{
 						noty({ 

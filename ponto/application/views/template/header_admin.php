@@ -58,9 +58,11 @@
 							<a href="#">Picagens</a>
 							<ul class="dropdown-menu">
 								<li><a href="<?= base_url('home') ?>">Problemas Picagens</a></li>
-        							<li><a href="<?= base_url('home/resumo') ?>">Resumo Picagens</a></li>
+        							<li><a href="<?= base_url('home/ver') ?>">Ver Picagens Por Func.</a></li>
 							</ul>
 						</li>
+						<li role="separator" class="divider"></li>
+						<li><a href="<?= base_url('home/resumo') ?>">Resumo Horas</a></li>
 						<li role="separator" class="divider"></li>
 						<li><a href="<?= base_url('home/feriados') ?>">Feriados</a></li>
 						<!--<li><a href="#">Something else here</a></li>

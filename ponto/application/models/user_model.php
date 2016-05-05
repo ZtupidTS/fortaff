@@ -6,6 +6,7 @@ class User_model extends CI_Model {
 	private $salt = 'r4nd0m';	
 	//level 1: utilizador Normal da loja
 	//level 2: utilizador admin
+	//level 3: chefes
 	
 	//obter um user pelo id ou obter todos os users
 	public function get($number_user = false)
@@ -48,6 +49,20 @@ class User_model extends CI_Model {
 		$this->db->where('Userid', $user_id);
 	    	$update = $this->db->update(TBL_USERS, $data);
 	    	return $update;
+	}
+	
+	/*
+	* Obter todos os users
+	*/
+	public function getAll()
+	{
+		$get = $this->db->get(TBL_USERS);
+		if($get->num_rows() > 0)
+	    	{
+	    		return $get;
+	    	}else{
+			return array();	
+		}
 	}
 }
 ?>

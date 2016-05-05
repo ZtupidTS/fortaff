@@ -5,6 +5,7 @@ class Login extends CI_Controller {
 	
 	//level 1: utilizador Normal da loja
 	//level 2: utilizador admin
+	//level 3: chefes
 	
 	public function index()
 	{

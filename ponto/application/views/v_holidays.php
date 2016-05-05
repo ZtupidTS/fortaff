@@ -71,6 +71,10 @@ if($this->session->userdata('level') == 2)
 				</table>
 				<div>
 					<button type="button" class="btn btn-default pull-right" onclick="addHoliday()">Adicionar Feriado/Inventario</button>
+				</div>
+				<div class="top60">
+					*Para os inventarios inserir o nome assim: INV_00:00:00 onde 00:00:00 
+					tem que corresponder a hora de inicio do INV, ex: INV_21:00:00
 				</div>				
 			</div>
 			<?php

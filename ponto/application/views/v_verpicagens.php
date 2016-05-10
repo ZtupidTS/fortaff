@@ -5,7 +5,9 @@ if($this->session->userdata('level') == 2)
 {
 	$this->load->view('template/header_admin');
 	$this->load->view('template/footer_admin');
-}else{
+}
+if($this->session->userdata('level') == 1)
+{
 	$this->load->view('template/header_user');
 	$this->load->view('template/footer_user');
 }
@@ -68,7 +70,25 @@ if($this->session->userdata('level') == 2)
 					</div>
 			  		<?php			  		
 		  		}
-		  	}?>
+		  	}
+		  	if($this->session->userdata('level') == 1)
+	  		{
+				?>
+				<div class="form-group">
+					<select class="form-control" id="selectuser">
+						<option value="<?= $this->session->userdata('user_id');?>"><?= $this->session->userdata('user_id').' - '.$this->session->userdata('nome');?></option>
+						<?php
+						foreach($this->session->userdata('arr_user') as $row)
+						{
+							?>
+							<option value="<?= $row['Userid'];?>"><?= $row['Userid'].' - '.$row['Name'];?></option>
+							<?php
+						}?>
+					</select>
+				</div>
+		  		<?php			  		
+	  		}
+		  	?>
 	  		<input type="button" id="btn_search" value="Procurar" onclick="verpicagens()" class="btn btn-default noPrint">
 	  		<span class="noPrint">
 	  			<img data-toggle="tooltip" title="Imprimir" id="button_print" hidden onclick="window.print();" src="<?= base_url('images/print.png');?>" height="20px" width="20px" >

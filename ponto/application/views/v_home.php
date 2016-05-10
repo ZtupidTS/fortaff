@@ -5,7 +5,9 @@ if($this->session->userdata('level') == 2)
 {
 	$this->load->view('template/header_admin');
 	$this->load->view('template/footer_admin');
-}else{
+}
+if($this->session->userdata('level') == 1)
+{
 	$this->load->view('template/header_user');
 	$this->load->view('template/footer_user');
 }

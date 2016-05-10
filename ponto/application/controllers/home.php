@@ -14,7 +14,15 @@ class Home extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('v_home');
+		log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Entrou');
+		if($this->session->userdata('level') == 2)
+		{
+			$this->load->view('v_home');
+		}
+		if($this->session->userdata('level') != 2)
+		{
+			$this->load->view('v_verpicagens');
+		}
 	}
 	
 	/*

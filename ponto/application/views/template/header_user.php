@@ -6,22 +6,35 @@
 
 	<link rel="stylesheet" href="<?= base_url('includes/bootstrap/css/bootstrap.css') ?>">
 	<link rel="stylesheet" href="<?= base_url('includes/bootstrap/css/bootstrap-datetimepicker.css') ?>">
+	<link rel="stylesheet" href="<?= base_url('includes/css/lobibox.css') ?>">
+	<link rel="stylesheet" href="<?= base_url('includes/css/datatables.min.css') ?>">
 	
 	<!-- script js -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+	<script src="<?= base_url('includes/bootstrap/js/jquery.min.js') ?>"></script>
 	<script src="<?= base_url('includes/bootstrap/js/bootstrap.min.js') ?>"></script>
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    	<!--[if lt IE 9]> -->
-    	<script src="<?= base_url('includes/bootstrap/js/html5shiv.js') ?>"></script>
+	<script src="<?= base_url('includes/bootstrap/js/html5shiv.js') ?>"></script>
     	<script src="<?= base_url('includes/bootstrap/js/respond.js') ?>"></script>
     	<script src="<?= base_url('includes/bootstrap/js/bootstrap-datetimepicker.pt.js') ?>"></script>
     	<script src="<?= base_url('includes/bootstrap/js/bootstrap-datetimepicker.js') ?>"></script>
-      	<!-- <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    	<![endif]-->
+      	
+      	<!-- O js dos popups -->
+      	<script src="<?= base_url('includes/js/jquery.noty.packaged.min.js') ?>"></script>
+      	<script src="<?= base_url('includes/js/lobibox.min.js') ?>"></script>
+      	<script src="<?= base_url('includes/js/datatables.min.js') ?>"></script>
+      	
+      	<!-- Meus scripts -->
+      	<script src="<?= base_url('includes/js/submitform.js') ?>"></script>
+      	<script src="<?= base_url('includes/js/exporttoexcel.js') ?>"></script>
+      	<script src="<?= base_url('includes/js/diversos.js') ?>"></script>
 	
 </head>
 <body>
+
+<style media="print">
+  .noPrint{ display: none; }
+  .yesPrint{ display: block !important; }
+</style>
 
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
@@ -61,7 +74,7 @@
 				<button type="submit" class="btn btn-default">Submit</button>
 			</form>-->
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="<?= base_url('login/logout') ?>">Sair</a></li>
+				<li><a href="<?= base_url('login/logout') ?>"><?= $this->session->userdata('nome').'(sair)' ?></a></li>
 				<!--<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
 				<ul class="dropdown-menu">

@@ -93,13 +93,17 @@ if($this->session->userdata('level') == 1)
 	  		<span class="noPrint">
 	  			<img data-toggle="tooltip" title="Imprimir" id="button_print" hidden onclick="window.print();" src="<?= base_url('images/print.png');?>" height="20px" width="20px" >
 			</span>	
-			<span class="noPrint">
-	  			<img data-toggle="tooltip" title="Exportar Para Excel" id="button_excel" onclick="printToExcel()" hidden src="<?= base_url('images/excel.png');?>" height="20px" width="20px" >
-			</span>
-			<span class="noPrint">
-	  			<img data-toggle="tooltip" title="Refrescar Pagina" id="button_refresh" onclick="refreshPage()" hidden src="<?= base_url('images/refresh.png');?>" height="20px" width="20px" >
-			</span>
-					
+			<?php
+			if($this->session->userdata('level') != 1)
+	  		{?>
+				<span class="noPrint">
+	  				<img data-toggle="tooltip" title="Exportar Para Excel" id="button_excel" onclick="printToExcel()" hidden src="<?= base_url('images/excel.png');?>" height="20px" width="20px" >
+				</span>
+				<span class="noPrint">
+	  				<img data-toggle="tooltip" title="Refrescar Pagina" id="button_refresh" onclick="refreshPage()" hidden src="<?= base_url('images/refresh.png');?>" height="20px" width="20px" >
+				</span>
+				<?php
+			}?>	
 		</form>
 	</div>
 </div>
@@ -180,11 +184,12 @@ function verpicagens()
 	    	});
 	}else{
 		var values = {datefirst: date1, datesecond: date2, Userid: user};
+		var url = ''
 		if(user == '999999')
 		{
-			var url = '<?= base_url("home/picagemAll");?>';	
+			url = '<?= base_url("home/picagemAll");?>';	
 		}else{
-			var url = '<?= base_url("home/picagembyuser");?>';
+			url = '<?= base_url("home/picagembyuser");?>';
 		}
 		var newform = createform(url,values);
 		$.ajax({
@@ -238,7 +243,8 @@ function verpicagens()
 function corrigirPicagens(datapicagem)
 {
 	var user = $("#selectuser").val();
-	if(user != '999999')
+	var admin = "<?= $this->session->userdata('level');?>";
+	if(user != '999999' && admin != '1')
 	{
 		var newdate = datapicagem.toString().substr(0,4)+'-'+datapicagem.toString().substr(4,2)+'-'+datapicagem.toString().substr(6,2);
 		$("#datapicagem").val(newdate);
@@ -248,12 +254,15 @@ function corrigirPicagens(datapicagem)
 		$("#iduser").val($("#selectuser").val());
 		$('#formmodal').submit();	
 	}else{
-		noty({ 
-	    		text: "Seleccionando a loja não dá para editar picagens, seleciona um funcionario de cada vez",
-	    		type: "error",
-	    		layout: "center",
-	    		closeWith: ['click', 'hover']
-	    	});
+		if(admin != '1')
+		{
+			noty({ 
+		    		text: "Seleccionando a loja não dá para editar picagens, seleciona um funcionario de cada vez",
+		    		type: "error",
+		    		layout: "center",
+		    		closeWith: ['click', 'hover']
+		    	});	
+		}
 	}
 }
 </script>

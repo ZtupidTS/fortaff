@@ -108,6 +108,7 @@ define('TBL_HOLIDAY','holiday');
 define('VAL_DPT',5);
 /* vou por o valor da loja = 4 */
 define('VAL_LOJA',4);
+
 /* valor das pausas é de 40 min excluido no maximo logo vou converter em segundo */
 /* 40 * 60 = 2400 */
 define('PAUSA',2400);

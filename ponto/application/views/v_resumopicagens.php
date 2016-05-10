@@ -55,14 +55,17 @@ if($this->session->userdata('level') == 2)
 							{	
 								if($row['SupDeptid'] < VAL_DPT)
 								{
-									if($row['SupDeptid'] == 1)
-									{?>
-										<option value="<?= $row['Deptid'];?>"><?= $row['DeptName']. ' (Exceto Chefias e Rep Ext)';?></option>
-										<?php
-									}else{?>
-										<option value="<?= $row['Deptid'];?>"><?= $row['DeptName'];?></option>
-										<?php
-									}										
+									if($row['Deptid'] != 24)
+									{
+										if($row['SupDeptid'] == 1)
+										{?>
+											<option value="<?= $row['Deptid'];?>"><?= $row['DeptName']. ' (Exceto Chefias e Rep Ext)';?></option>
+											<?php
+										}else{?>
+											<option value="<?= $row['Deptid'];?>"><?= $row['DeptName'];?></option>
+											<?php
+										}	
+									}
 								}else{
 									if($separator == 0)
 									{

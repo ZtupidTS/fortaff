@@ -108,7 +108,7 @@ class Picagem_model extends CI_Model {
 			//vou devolver tudo menos chefia e repositores externos
 			//como não é igual a 4 é ok é só ir somar tudo relativo a essa secção
 			$array_Userid = array();
-			$sql = "select DISTINCT Userid, Name, Duty from ".TBL_VPICAGENS." where Deptid != 23 AND Deptid != 22 AND CheckTime between '".$datefirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datesecond." ".LAST_TIME."')";
+			$sql = "select DISTINCT Userid, Name, Duty from ".TBL_VPICAGENS." where Deptid != 23 AND Deptid != 22 AND Deptid != 24 AND CheckTime between '".$datefirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datesecond." ".LAST_TIME."')";
 			$result = $this->db->query($sql);
 			if($result->num_rows() >0)
 			{

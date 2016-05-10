@@ -40,7 +40,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	        		<input type="number" class="form-control" min="1" placeholder="Numero Utilizador" required autofocus name="number_user">
 	        		<input type="password" class="form-control" placeholder="Palavra Passe"  name="password">
 	        		<button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
-	        		*Não se esquecer de sair ao fim
+	        		<p class="text-danger">*Não se esquecer de sair ao fim</p>
+	        		<p class="text-danger">*Se é o seu primeiro acesso ao software, meta só o seu numero e clica em entrar sem preenchar o campo palavra passe</p>
 	        		<?php if (isset($erro)){ ?>
 					<div class="alert alert-danger" role="alert" style="margin-top: 10px;"><?= $erro; ?></div>
 				<?php } ?>

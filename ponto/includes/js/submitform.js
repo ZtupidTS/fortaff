@@ -25,7 +25,7 @@ function submitform(url, values)
 	$('<form hidden method="post" action="'+url+'">' + inputform + '</form>').appendTo('body').submit();
 }
 
-function createform(url,values)
+function createform(url,values,newtab = false)
 {
 	var inputform = "";
 	for (var property in values) {
@@ -49,6 +49,11 @@ function createform(url,values)
 	        }
 	}
 	//console.log('<form method="post" action="'+url+'">' + inputform + '</form>');
-	return $('<form hidden method="post" action="'+url+'">' + inputform + '</form>').appendTo('body');
+	if(newtab)
+	{
+		return $('<form hidden method="post" action="'+url+'" target="_blank">' + inputform + '</form>').appendTo('body');
+	}else{
+		return $('<form hidden method="post" action="'+url+'">' + inputform + '</form>').appendTo('body');	
+	}
 	/*$('<form hidden method="post" action="'+url+'">' + inputform + '</form>').appendTo('body').submit();*/
 }

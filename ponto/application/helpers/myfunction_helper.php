@@ -226,4 +226,58 @@ function calculNoturnas($noturno,$h_not_noite)
 	return toTime($tempo_noturno);
 }
 
+//para a tabela de vizualização de picagens
+function viewPicagens($firstdate,$seconddate,$result)
+{
+	$message = '';
+	$olddate = '';
+	$firstdate = date_create($firstdate . '00:00:00.000');
+	$seconddate = date_create($seconddate . '00:00:00.000');
+	
+	foreach($result as $row)
+	{
+		$newdate = date_create($row['CheckTime']);
+		$hora = toSeconds(date_format($newdate,'H:i:s'));
+		
+		while(date_format($firstdate,'y-m-d') < date_format($newdate,'y-m-d'))
+		{
+			$message .= '<tr onclick="corrigirPicagens('.date_format($firstdate,'Ymd').')"><td>'.date_format($firstdate,'d-m-y').'</td><td></td></tr>';
+			$firstdate->add(new DateInterval('P1D'));
+		}
+		
+		if($olddate == '' && date_format($firstdate,'y-m-d') == date_format($newdate,'y-m-d'))
+		{
+			$message .= '<tr onclick="corrigirPicagens('.date_format($newdate,'Ymd').')"><td>'.date_format($newdate,'d-m-y').'</td>';
+			$firstdate->add(new DateInterval('P1D'));
+		}
+		
+		if($olddate != '' && date_format($newdate,'y-m-d') > date_format($olddate,'y-m-d') && date_format($firstdate,'y-m-d') == date_format($newdate,'y-m-d'))
+		{
+			if($hora < LAST_TIME_SEC)
+			{
+				$message .= '<td>'.date_format($newdate,'H:i:s').'</td>';	
+				$message .= '</tr><tr onclick="corrigirPicagens('.date_format($newdate,'Ymd').')"><td>'.date_format($newdate,'d-m-y').'</td>';
+			}else{
+				$message .= '</tr><tr onclick="corrigirPicagens('.date_format($newdate,'Ymd').')"><td>'.date_format($newdate,'d-m-y').'</td>';
+				$message .= '<td>'.date_format($newdate,'H:i:s').'</td>';
+			}
+			$firstdate->add(new DateInterval('P1D'));
+		}else{
+			/*if($olddate != '')
+			{*/
+				$message .= '<td>'.date_format($newdate,'H:i:s').'</td>';	
+			/*}else{
+				$message .= date_format($newdate,'H:i:s'); 
+			}*/
+		}
+		$olddate = $newdate;
+	}
+	while(date_format($firstdate,'y-m-d') <= date_format($seconddate,'y-m-d'))
+	{
+		$message .= '<tr onclick="corrigirPicagens('.date_format($firstdate,'Ymd').')"><td>'.date_format($firstdate,'d-m-y').'</td><td></td></tr>';
+		$firstdate->add(new DateInterval('P1D'));
+	}
+	return $message;
+}
+
 ?>

@@ -39,12 +39,22 @@ if($this->session->userdata('level') == 2)
 			<div class="col-md-3 col-md-offset-4 table-responsive">
 				<table class="table table-hover picagens display" id="picagens">
 					<caption>
-						<!-- Form para voltar a pagina das picagens -->
-						<form hidden id="formback" class="form-inline" role="form" method="post" action="<?= base_url('home/verify_picagens');?>">
-							<input type="text" id="datefirst" value="<?= $datefirst;?>" class="form-control" required name="datefirst">	
-							<input type="text" id="datesecond" value="<?= $datesecond;?>" class="form-control" required name="datesecond">							
-						</form>
-						<button type="button" id="btn_back" class="btn btn-default" onclick="submitformback()">Voltar</button>
+						<?php
+						//se venho para corrigir picagens ou se venho da vizualização de picagens
+						if($datefirst != '')
+						{?>
+							<!-- Form para voltar a pagina das picagens -->
+							<form hidden id="formback" class="form-inline" role="form" method="post" action="<?= base_url('home/verify_picagens');?>">
+								<input type="text" id="datefirst" value="<?= $datefirst;?>" class="form-control" required name="datefirst">	
+								<input type="text" id="datesecond" value="<?= $datesecond;?>" class="form-control" required name="datesecond">							
+							</form>
+							<button type="button" id="btn_back" class="btn btn-default" onclick="submitformback()">Voltar</button>	
+							<?php	
+						}else{?>
+							<!-- Para fechar a tab -->
+							<button type="button" class="btn btn-default" onclick="self.close()">Fechar Esta Pagina</button>
+							<?php							
+						}?>						
 						<div class="top7">
 							<?php 
 							$newdate = date_create($datapicagem);

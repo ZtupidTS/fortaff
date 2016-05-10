@@ -32,6 +32,61 @@ class Home extends CI_Controller {
 	}
 	
 	/*
+	* Vou devolver as picagens de toda gente da loja
+	*/
+	public function picagemAll()
+	{
+		$this->load->helper('myfunction_helper');
+		
+		$firstdate = $this->input->post('datefirst');
+		$seconddate = $this->input->post('datesecond');
+		$userid  = $this->input->post('Userid');
+		
+		$resultuser = $this->user_model->getAll();
+		if($resultuser)
+		{
+			$return = '';
+			$message = '';
+			$i = 0;
+			foreach($resultuser->result() as $row_user)
+			{
+				$message_tb_head = '<table class="table table-hover picagens table-borderless" id="picagens'.$i.'"><caption>'.$row_user->Userid.' - '.$row_user->Name.'</caption><thead><tr><th>Dia</th><th colspan="12">Picagens</th></tr></thead>';
+				
+				$result = $this->picagem_model->picagensbyuser($row_user->Userid,$firstdate,$seconddate);
+				if($result)
+				{
+					$message_return = viewPicagens($firstdate,$seconddate,$result);
+					$message .= $message_tb_head . $message_return .'</tbody></table>';	
+				}else{
+					$message .= $message_tb_head . '<tr><td colspan="2">Não tem picagens</td></tr></tbody></table>';
+				}
+				$i++;				
+			}
+			
+			$array_table = array();
+			for($l=0;$l<$i;$l++)
+			{
+				array_push($array_table,'picagens'.$l);
+			}
+			
+			$return = array(
+				'return' => 'success',
+				'message' => $message,
+				'array_table' => $array_table
+			);
+			echo json_encode($return);
+			return true;
+		}else{
+			$return = array(
+				'return' => 'error',
+				'message' => 'Não tem picagens? Verificar'
+			);
+			echo json_encode($return);
+			return true;
+		}
+	}
+	
+	/*
 	* Obter as picagens por utilizador e dar o resumo de picagens pelas datas escolhidas
 	*/
 	public function picagembyuser()
@@ -46,47 +101,16 @@ class Home extends CI_Controller {
 		
 		if($result)
 		{
-			$message_tb_head = '<table class="table table-hover picagens display" id="picagens"><thead><tr><th>Dia</th><th>Picagens</th></tr></thead>';
+			$message_tb_head = '<table class="table table-hover picagens table-borderless" id="picagens1"><thead><tr><th>Dia</th><th colspan="12">Picagens</th></tr></thead>';
 				
-			$message = '';
-			$olddate = '';
-			
-			foreach($result as $row)
-			{
-				$newdate = date_create($row['CheckTime']);
-				$hora = toSeconds(date_format($newdate,'H:i:s'));
-				
-				if($olddate == '')
-				{
-					$message .= '<tr><td>'.date_format($newdate,'d-m-y').'</td><td>';
-				}
-				
-				if($olddate != '' && date_format($newdate,'d-m-y') > date_format($olddate,'d-m-y') )
-				{
-					if($hora < LAST_TIME)
-					{
-						$message .= ' | '.date_format($newdate,'H:i:s');	
-						$message .= '</td></tr><tr><td>'.date_format($newdate,'d-m-y').'</td><td>';
-					}else{
-						$message .= '</td></tr><tr><td>'.date_format($newdate,'d-m-y').'</td><td>';
-						$message .= date_format($newdate,'H:i:s');
-					}
-					
-				}else{
-					if($olddate != '')
-					{
-						$message .= ' | '.date_format($newdate,'H:i:s');	
-					}else{
-						$message .= date_format($newdate,'H:i:s'); 
-					}
-				}
-				$olddate = $newdate;
-			}
+			$message = viewPicagens($firstdate,$seconddate,$result);
 			$message = $message_tb_head . $message .'</tbody></table>';
 		
+			$array_table = array('picagens1');
 			$return = array(
 				'return' => 'success',
-				'message' => $message
+				'message' => $message,
+				'array_table' => $array_table
 			);
 			echo json_encode($return);
 			return true;
@@ -195,7 +219,12 @@ class Home extends CI_Controller {
 			$this->load->view("v_corrigirpicagens", $data);
 		}else{
 			$data['result'] = $result;
-			$data['erro'] = 'Problemas na obtenção dos dados, tentar novamente.';
+			//isso é para quando vou de ver as picagens para essa pagina de corrigir picagens
+			//assim não precido de reescrever outra pagina
+			if($data['datefirst'] != '')
+			{
+				$data['erro'] = 'Problemas na obtenção dos dados, tentar novamente.';	
+			}
 			$this->load->view("v_corrigirpicagens", $data);
 		}
 		

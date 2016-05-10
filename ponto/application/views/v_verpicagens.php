@@ -56,6 +56,7 @@ if($this->session->userdata('level') == 2)
 					?>	
 			  		<div class="form-group">
 						<select class="form-control" id="selectuser">
+							<option value="999999">Todos (não podem editar picagens)</option>
 							<?php
 							foreach($result->result() as $row)
 							{
@@ -70,10 +71,20 @@ if($this->session->userdata('level') == 2)
 		  	}?>
 	  		<input type="button" id="btn_search" value="Procurar" onclick="verpicagens()" class="btn btn-default noPrint">
 	  		<span class="noPrint">
-	  			<img id="button_print" hidden onclick="window.print();" src="<?= base_url('images/print.png');?>" height="20px" width="20px" >
+	  			<img data-toggle="tooltip" title="Imprimir" id="button_print" hidden onclick="window.print();" src="<?= base_url('images/print.png');?>" height="20px" width="20px" >
+			</span>	
+			<span class="noPrint">
+	  			<img data-toggle="tooltip" title="Exportar Para Excel" id="button_excel" onclick="printToExcel()" hidden src="<?= base_url('images/excel.png');?>" height="20px" width="20px" >
 			</span>
+			<span class="noPrint">
+	  			<img data-toggle="tooltip" title="Refrescar Pagina" id="button_refresh" onclick="refreshPage()" hidden src="<?= base_url('images/refresh.png');?>" height="20px" width="20px" >
+			</span>
+					
 		</form>
 	</div>
+</div>
+<div class="row noPrint">
+	<p class="col-md-8 col-md-offset-3 top10 text-danger">*Clica na linha que quer editar as picagens</p>
 </div>
 
 <div class="row">
@@ -81,8 +92,39 @@ if($this->session->userdata('level') == 2)
 	</div>
 </div>
 
+<!-- Form modal -->
+<div class="modal fade" id="modalChangePicagem" tabindex="-1" role="dialog" >
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form id="formmodal" name="formmodal" role="form" method="post" hidden="true" action="<?= base_url("home/obter_picagens");?>" target="_blank">
+				<div class="modal-body">
+					<div class="form-group" hidden>
+						<input type="text" class="form-control" name="nome" id="nome">
+						<input type="text" class="form-control" name="datapicagem" id="datapicagem" >
+						<input type="text" class="form-control" name="iduser" id="iduser" >
+					</div>
+				</div>				
+			</form>
+			
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 
 <script type="text/javascript">
+var arraytable = new Array();
+
+function printToExcel()
+{
+	tablesToExcel(arraytable, ['Picagens'], 'myfile.xls');
+	noty({ 
+    		text: 'Exportação concluído e ficheiro transferido. Será necessario refrescar a pagina para realizar uma nova exportação sem erros.',
+    		type: "warning",
+    		layout: "center",
+    		closeWith: ['click', 'hover']
+    	});
+}
+
 $("#datefirst").datetimepicker({
         language: "pt",
         format: "yyyy-mm-dd",
@@ -104,6 +146,7 @@ $("#datesecond").datetimepicker({
 
 function verpicagens()
 {
+	arraytable = new Array();
 	date1 = $("#datefirst").val();
 	date2 = $("#datesecond").val();
 	var user = $("#selectuser").val();
@@ -117,9 +160,15 @@ function verpicagens()
 	    	});
 	}else{
 		var values = {datefirst: date1, datesecond: date2, Userid: user};
-		var newform = createform('<?= base_url("home/picagembyuser");?>',values);
+		if(user == '999999')
+		{
+			var url = '<?= base_url("home/picagemAll");?>';	
+		}else{
+			var url = '<?= base_url("home/picagembyuser");?>';
+		}
+		var newform = createform(url,values);
 		$.ajax({
-		        url: '<?= base_url("home/picagembyuser");?>',
+		        url: url,
 		        type: 'post',
 		        dataType: 'json',
 		        data: $(newform).serializeArray(),
@@ -127,8 +176,8 @@ function verpicagens()
 				noty({ 
 			    		text: "O pedido esta a ser executado, aguarda por favor.",
 			    		type: "information",
-			    		layout: "center",
-			    		closeWith: ['click', 'hover']
+			    		layout: "center"
+			    		//closeWith: ['click', 'hover']
 			    	});
 			},
 		        success: function(data) {
@@ -138,6 +187,12 @@ function verpicagens()
 		  			{
 						$('#returnajax').html(data.message);
 						$('#button_print').show();
+						$('#button_excel').show();
+						$('#button_refresh').show();
+						
+						for (var i = 0; i < data.array_table.length; i++) {
+					        	arraytable.push(data.array_table[i]);
+					        }
 					}else{
 						noty({ 
 					    		text: data.message,
@@ -147,6 +202,8 @@ function verpicagens()
 					    	});
 					    	$('#returnajax').html('');
 					    	$('#button_print').hide();
+					    	$('#button_excel').hide();
+					    	$('#button_refresh').hide();
 					}
 		                },
 		        error: function(xhr, textStatus, errorThrown) {
@@ -155,6 +212,28 @@ function verpicagens()
 		        	}
 	    	});		
 		return false;
+	}
+}
+
+function corrigirPicagens(datapicagem)
+{
+	var user = $("#selectuser").val();
+	if(user != '999999')
+	{
+		var newdate = datapicagem.toString().substr(0,4)+'-'+datapicagem.toString().substr(4,2)+'-'+datapicagem.toString().substr(6,2);
+		$("#datapicagem").val(newdate);
+		var nameselect = $('#selectuser option:selected').text();
+		var namesplit = nameselect.split("-");
+		$("#nome").val(namesplit[1]);
+		$("#iduser").val($("#selectuser").val());
+		$('#formmodal').submit();	
+	}else{
+		noty({ 
+	    		text: "Seleccionando a loja não dá para editar picagens, seleciona um funcionario de cada vez",
+	    		type: "error",
+	    		layout: "center",
+	    		closeWith: ['click', 'hover']
+	    	});
 	}
 }
 </script>

@@ -25,6 +25,8 @@
       	
       	<!-- Meus scripts -->
       	<script src="<?= base_url('includes/js/submitform.js') ?>"></script>
+      	<script src="<?= base_url('includes/js/exporttoexcel.js') ?>"></script>
+      	<script src="<?= base_url('includes/js/diversos.js') ?>"></script>
 </head>
 <body>
 
@@ -58,7 +60,7 @@
 							<a href="#">Picagens</a>
 							<ul class="dropdown-menu">
 								<li><a href="<?= base_url('home') ?>">Problemas Picagens</a></li>
-        							<li><a href="<?= base_url('home/ver') ?>">Ver Picagens Por Func.</a></li>
+        							<li><a href="<?= base_url('home/ver') ?>">Ver Picagens</a></li>
 							</ul>
 						</li>
 						<li role="separator" class="divider"></li>

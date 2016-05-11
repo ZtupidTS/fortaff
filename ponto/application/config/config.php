@@ -203,7 +203,8 @@ $config['directory_trigger'] = 'd';
 |	1 = Error Messages (including PHP errors)
 |	2 = Debug Messages
 |	3 = Informational Messages
-|	4 = All Messages
+|	4 = Utilizadores
+|	5 = All Messages
 |
 | You can also pass an array with threshold levels to show individual error types
 |

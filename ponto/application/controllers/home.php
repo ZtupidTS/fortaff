@@ -507,5 +507,90 @@ class Home extends CI_Controller {
 			return true;
 		}
 	}
+	
+	/*
+	* pagina view log
+	*/
+	public function viewlog()
+	{
+		$this->load->view('v_logs');
+	}
+	
+	/*
+	* Para procurar o tipo de log que queremos
+	*/
+	public function searchlog()
+	{
+		$this->load->helper('directory');
+		$this->load->helper('file');
+		
+		$map = get_dir_file_info(APPPATH.'logs/');
+		
+		$datefirst = $this->input->post('datefirst');
+		$datesecond = $this->input->post('datesecond');
+		$typelog = $this->input->post('Typelog');
+		
+		//'ERROR' => 1, 'DEBUG' => 2, 'INFO' => 3, 'UTILIZADORES' => 4, 'ALL' => 5
+		
+		$files_exists = array();
+		$searchString = "UTILIZADORES";	
+		$message = '<table class="table table-hover logs table-borderless" id="logs"><thead><tr><th>Logs</th></tr></thead>';	
+		foreach($map as $file)
+		{
+			/*if(exec('grep '.escapeshellarg($searchString).' '.$file)) 
+                	{
+                		array_push($files_exists,$file);
+                	}*/
+                	if($file['name'] != 'index.html')
+                	{
+				/*if(strpos(file_get_contents($file),$searchString) !== false) 
+	                	{*/
+	                	if(strtotime($datefirst) <= $file['date'] && $file['date'] <= strtotime($datesecond . "+1 days"))
+	                	{
+					//echo file_get_contents($file['server_path']);
+					//array_push($files_exists,$file['name']);
+					$contentfile = file_get_contents($file['server_path']);
+					if($typelog != 'ALL')
+					{
+						if(strpos($contentfile, $typelog) !== false)
+						{
+							$handle = fopen($file['server_path'], "r");
+							if ($handle) {
+							    	while (($line = fgets($handle)) !== false) 
+							    	{
+							    		if(strpos($line, $typelog) !== false) 
+							    		{
+										$message .= '<tr><td>'.$line.'</td></tr>';
+									}      
+							    	}
+							    	fclose($handle);
+							}else{
+								$message .= '<tr><td>Não Conseguiu abrir o ficheiro '.$file['server_path'].'</td></tr>';
+							}
+						}	
+					}else{
+						$handle = fopen($file['server_path'], "r");
+						if ($handle) {
+						    	while (($line = fgets($handle)) !== false) 
+						    	{
+						    		$message .= '<tr><td>'.$line.'</td></tr>';
+						    	}
+						    	fclose($handle);
+						}else{
+							$message .= '<tr><td>Não Conseguiu abrir o ficheiro '.$file['server_path'].'</td></tr>';
+						}
+					}
+				}
+			}
+		}
+		//echo $message;
+		$message = $message . '</tbody></table>';
+		$return = array(
+			'return' => 'success',
+			'message' => $message);
+		echo json_encode($return);
+		return true;
+		
+	}
 }
 ?>

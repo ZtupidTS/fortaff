@@ -1,0 +1,137 @@
+INFO - 2016-04-28 10:37:13 --> Config Class Initialized
+INFO - 2016-04-28 10:37:13 --> Hooks Class Initialized
+DEBUG - 2016-04-28 10:37:13 --> UTF-8 Support Enabled
+INFO - 2016-04-28 10:37:13 --> Utf8 Class Initialized
+INFO - 2016-04-28 10:37:13 --> URI Class Initialized
+DEBUG - 2016-04-28 10:37:13 --> No URI present. Default controller set.
+INFO - 2016-04-28 10:37:13 --> Router Class Initialized
+INFO - 2016-04-28 10:37:13 --> Output Class Initialized
+INFO - 2016-04-28 10:37:13 --> Security Class Initialized
+DEBUG - 2016-04-28 10:37:13 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-28 10:37:13 --> Input Class Initialized
+INFO - 2016-04-28 10:37:13 --> Language Class Initialized
+INFO - 2016-04-28 10:37:13 --> Loader Class Initialized
+INFO - 2016-04-28 10:37:13 --> Helper loaded: url_helper
+INFO - 2016-04-28 10:37:13 --> Helper loaded: form_helper
+INFO - 2016-04-28 10:37:13 --> Database Driver Class Initialized
+INFO - 2016-04-28 10:37:13 --> Session: Class initialized using 'files' driver.
+INFO - 2016-04-28 10:37:13 --> Encrypt Class Initialized
+INFO - 2016-04-28 10:37:13 --> Model Class Initialized
+INFO - 2016-04-28 10:37:13 --> Model Class Initialized
+INFO - 2016-04-28 10:37:13 --> Controller Class Initialized
+INFO - 2016-04-28 10:37:13 --> Config Class Initialized
+INFO - 2016-04-28 10:37:13 --> Hooks Class Initialized
+DEBUG - 2016-04-28 10:37:13 --> UTF-8 Support Enabled
+INFO - 2016-04-28 10:37:13 --> Utf8 Class Initialized
+INFO - 2016-04-28 10:37:13 --> URI Class Initialized
+INFO - 2016-04-28 10:37:13 --> Router Class Initialized
+INFO - 2016-04-28 10:37:13 --> Output Class Initialized
+INFO - 2016-04-28 10:37:13 --> Security Class Initialized
+DEBUG - 2016-04-28 10:37:13 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-28 10:37:13 --> Input Class Initialized
+INFO - 2016-04-28 10:37:13 --> Language Class Initialized
+INFO - 2016-04-28 10:37:13 --> Loader Class Initialized
+INFO - 2016-04-28 10:37:13 --> Helper loaded: url_helper
+INFO - 2016-04-28 10:37:13 --> Helper loaded: form_helper
+INFO - 2016-04-28 10:37:13 --> Database Driver Class Initialized
+INFO - 2016-04-28 10:37:13 --> Session: Class initialized using 'files' driver.
+INFO - 2016-04-28 10:37:13 --> Encrypt Class Initialized
+INFO - 2016-04-28 10:37:13 --> Model Class Initialized
+INFO - 2016-04-28 10:37:13 --> Model Class Initialized
+INFO - 2016-04-28 10:37:13 --> Controller Class Initialized
+INFO - 2016-04-28 10:37:13 --> File loaded: C:\xampp\htdocs\ponto\application\views\v_login.php
+INFO - 2016-04-28 10:37:13 --> Final output sent to browser
+DEBUG - 2016-04-28 10:37:13 --> Total execution time: 0.0936
+INFO - 2016-04-28 10:37:17 --> Config Class Initialized
+INFO - 2016-04-28 10:37:17 --> Hooks Class Initialized
+DEBUG - 2016-04-28 10:37:17 --> UTF-8 Support Enabled
+INFO - 2016-04-28 10:37:17 --> Utf8 Class Initialized
+INFO - 2016-04-28 10:37:17 --> URI Class Initialized
+INFO - 2016-04-28 10:37:17 --> Router Class Initialized
+INFO - 2016-04-28 10:37:17 --> Output Class Initialized
+INFO - 2016-04-28 10:37:17 --> Security Class Initialized
+DEBUG - 2016-04-28 10:37:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-28 10:37:17 --> Input Class Initialized
+INFO - 2016-04-28 10:37:17 --> Language Class Initialized
+INFO - 2016-04-28 10:37:17 --> Loader Class Initialized
+INFO - 2016-04-28 10:37:17 --> Helper loaded: url_helper
+INFO - 2016-04-28 10:37:17 --> Helper loaded: form_helper
+INFO - 2016-04-28 10:37:17 --> Database Driver Class Initialized
+INFO - 2016-04-28 10:37:17 --> Session: Class initialized using 'files' driver.
+INFO - 2016-04-28 10:37:17 --> Encrypt Class Initialized
+INFO - 2016-04-28 10:37:17 --> Model Class Initialized
+INFO - 2016-04-28 10:37:17 --> Model Class Initialized
+INFO - 2016-04-28 10:37:17 --> Controller Class Initialized
+INFO - 2016-04-28 10:37:17 --> Config Class Initialized
+INFO - 2016-04-28 10:37:17 --> Hooks Class Initialized
+DEBUG - 2016-04-28 10:37:17 --> UTF-8 Support Enabled
+INFO - 2016-04-28 10:37:17 --> Utf8 Class Initialized
+INFO - 2016-04-28 10:37:17 --> URI Class Initialized
+INFO - 2016-04-28 10:37:17 --> Router Class Initialized
+INFO - 2016-04-28 10:37:17 --> Output Class Initialized
+INFO - 2016-04-28 10:37:17 --> Security Class Initialized
+DEBUG - 2016-04-28 10:37:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-28 10:37:17 --> Input Class Initialized
+INFO - 2016-04-28 10:37:17 --> Language Class Initialized
+INFO - 2016-04-28 10:37:17 --> Loader Class Initialized
+INFO - 2016-04-28 10:37:17 --> Helper loaded: url_helper
+INFO - 2016-04-28 10:37:17 --> Helper loaded: form_helper
+INFO - 2016-04-28 10:37:17 --> Database Driver Class Initialized
+INFO - 2016-04-28 10:37:17 --> Session: Class initialized using 'files' driver.
+INFO - 2016-04-28 10:37:17 --> Encrypt Class Initialized
+INFO - 2016-04-28 10:37:17 --> Model Class Initialized
+INFO - 2016-04-28 10:37:17 --> Model Class Initialized
+INFO - 2016-04-28 10:37:17 --> Controller Class Initialized
+INFO - 2016-04-28 10:37:17 --> File loaded: C:\xampp\htdocs\ponto\application\views\template/header_admin.php
+INFO - 2016-04-28 10:37:17 --> File loaded: C:\xampp\htdocs\ponto\application\views\template/footer_admin.php
+INFO - 2016-04-28 10:37:17 --> File loaded: C:\xampp\htdocs\ponto\application\views\v_home.php
+INFO - 2016-04-28 10:37:17 --> Final output sent to browser
+DEBUG - 2016-04-28 10:37:17 --> Total execution time: 0.0780
+INFO - 2016-04-28 10:37:20 --> Config Class Initialized
+INFO - 2016-04-28 10:37:20 --> Hooks Class Initialized
+DEBUG - 2016-04-28 10:37:20 --> UTF-8 Support Enabled
+INFO - 2016-04-28 10:37:20 --> Utf8 Class Initialized
+INFO - 2016-04-28 10:37:20 --> URI Class Initialized
+INFO - 2016-04-28 10:37:20 --> Router Class Initialized
+INFO - 2016-04-28 10:37:20 --> Output Class Initialized
+INFO - 2016-04-28 10:37:20 --> Security Class Initialized
+DEBUG - 2016-04-28 10:37:20 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-28 10:37:20 --> Input Class Initialized
+INFO - 2016-04-28 10:37:20 --> Language Class Initialized
+INFO - 2016-04-28 10:37:20 --> Loader Class Initialized
+INFO - 2016-04-28 10:37:20 --> Helper loaded: url_helper
+INFO - 2016-04-28 10:37:20 --> Helper loaded: form_helper
+INFO - 2016-04-28 10:37:20 --> Database Driver Class Initialized
+INFO - 2016-04-28 10:37:20 --> Session: Class initialized using 'files' driver.
+INFO - 2016-04-28 10:37:20 --> Encrypt Class Initialized
+INFO - 2016-04-28 10:37:20 --> Model Class Initialized
+INFO - 2016-04-28 10:37:20 --> Model Class Initialized
+INFO - 2016-04-28 10:37:20 --> Controller Class Initialized
+INFO - 2016-04-28 10:37:20 --> File loaded: C:\xampp\htdocs\ponto\application\views\template/header_admin.php
+INFO - 2016-04-28 10:37:20 --> File loaded: C:\xampp\htdocs\ponto\application\views\template/footer_admin.php
+INFO - 2016-04-28 10:37:20 --> File loaded: C:\xampp\htdocs\ponto\application\views\v_resumopicagens.php
+INFO - 2016-04-28 10:37:20 --> Final output sent to browser
+DEBUG - 2016-04-28 10:37:20 --> Total execution time: 0.0780
+INFO - 2016-04-28 10:37:30 --> Config Class Initialized
+INFO - 2016-04-28 10:37:30 --> Hooks Class Initialized
+DEBUG - 2016-04-28 10:37:30 --> UTF-8 Support Enabled
+INFO - 2016-04-28 10:37:30 --> Utf8 Class Initialized
+INFO - 2016-04-28 10:37:30 --> URI Class Initialized
+INFO - 2016-04-28 10:37:30 --> Router Class Initialized
+INFO - 2016-04-28 10:37:30 --> Output Class Initialized
+INFO - 2016-04-28 10:37:30 --> Security Class Initialized
+DEBUG - 2016-04-28 10:37:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-28 10:37:30 --> Input Class Initialized
+INFO - 2016-04-28 10:37:30 --> Language Class Initialized
+INFO - 2016-04-28 10:37:30 --> Loader Class Initialized
+INFO - 2016-04-28 10:37:30 --> Helper loaded: url_helper
+INFO - 2016-04-28 10:37:30 --> Helper loaded: form_helper
+INFO - 2016-04-28 10:37:30 --> Database Driver Class Initialized
+INFO - 2016-04-28 10:37:30 --> Session: Class initialized using 'files' driver.
+INFO - 2016-04-28 10:37:30 --> Encrypt Class Initialized
+INFO - 2016-04-28 10:37:30 --> Model Class Initialized
+INFO - 2016-04-28 10:37:30 --> Model Class Initialized
+INFO - 2016-04-28 10:37:30 --> Controller Class Initialized
+INFO - 2016-04-28 10:37:30 --> Helper loaded: myfunction_helper
+INFO - 2016-04-28 10:37:30 --> Final output sent to browser
+DEBUG - 2016-04-28 10:37:30 --> Total execution time: 0.2808

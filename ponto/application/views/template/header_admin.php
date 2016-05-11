@@ -67,12 +67,14 @@
 						<li><a href="<?= base_url('home/resumo') ?>">Resumo Horas</a></li>
 						<li role="separator" class="divider"></li>
 						<li><a href="<?= base_url('home/feriados') ?>">Feriados</a></li>
-						<!--<li><a href="#">Something else here</a></li>
+						<!-- <li role="separator" class="divider"></li>
+						<li><a href="#">Something else here</a></li>
 						<li role="separator" class="divider"></li>
 						<li><a href="#">Separated link</a></li>
 						<li role="separator" class="divider"></li>
 						<li><a href="#">One more separated link</a></li>-->
 					</ul>
+					<li><a href="<?= base_url('home/viewlog') ?>">Logs</a></li>
 				</li>
 			</ul>
 			<!--<form class="navbar-form navbar-left" role="search">

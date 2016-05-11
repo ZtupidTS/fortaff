@@ -9,6 +9,7 @@
                     <legend>Procurar Guia no Arquivo</legend>
                     
                     <?php
+					$date_atual = date("Y-m-d");
                     $date_menos = date("Y-m-d", strtotime($date_atual . ' - '.$_SESSION['archive_gr'].' days'));
 		    $where = "id > 0 AND gr_enable = 1 AND date_tocliente <= ".dbString($date_menos);
 		    
@@ -44,7 +45,15 @@
 			        {
 			            ?>
 			            <tr onclick="viewGr('<?= $data['id'];?>');">  
-			                <td><?= $data['id'];?></td>  
+			                <td>
+			                	<?php
+			                	if($data['gr_number'] == "")
+			                	{
+			                		echo $data['id'];
+			                	}else{
+			                		echo $data['gr_number'];
+			                	};?>
+			                </td>  
 			                <td><?= $data['cl_name'];?></td>
 			                <td><?= $data['cl_telefone'];?></td>
 			                <td><?= $data['date_in'];?></td>

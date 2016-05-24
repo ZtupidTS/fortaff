@@ -187,7 +187,7 @@ class Picagem_model extends CI_Model {
 								'Hnoturnas' => $row->Duty,
 							));
 						}
-						return $this->picagem_model->calculoresumo($array_Userid,$datefirst,$datesecond);						
+						return $this->picagem_model->calculoresumo($array_Userid,$datefirst,$datesecond);
 					}else{
 						return array();
 					}					
@@ -215,13 +215,29 @@ class Picagem_model extends CI_Model {
 		$total_hinv = 0;
 		foreach($array_user as $data)
 		{
-			//dias trabalhados
-			$sql = "select count(DISTINCT(day(CheckTime))) from V_Record where Userid = ".$data['Userid']." AND CheckTime between '".$datefirst."' and DATEADD(DAY,1,'".$datesecond."') group by year(CheckTime),month(CheckTime),day(CheckTime)";
-			$result_diastrabalhados = $this->db->query($sql);
-			//dia trabalhados
-			$dias_trabalhados = $result_diastrabalhados->num_rows();
+			//** ** ** dias trabalhados
 			
-			//horas trabalhadas
+			/*$sql = "select count(DISTINCT(day(CheckTime))) from V_Record where Userid = ".$data['Userid']." AND CheckTime between '".$datefirst."' and DATEADD(DAY,1,'".$datesecond."') group by year(CheckTime),month(CheckTime),day(CheckTime)";
+			$result_diastrabalhados = $this->db->query($sql);*/
+			
+			//$dias_trabalhados = $result_diastrabalhados->num_rows();
+			
+			$sql = "select day(CheckTime), month(CheckTime), count(CheckTime) as qtd from V_Record where Userid = ".$data['Userid']." AND CheckTime between '".$datefirst."' and DATEADD(DAY,1,'".$datesecond."') group by day(CheckTime), MONTH(CheckTime)";
+			
+			$result_diastrabalhados = $this->db->query($sql);
+			$dias_trabalhados = 0;
+			
+			if($result_diastrabalhados->num_rows() > 0)
+			{
+				foreach ($result_diastrabalhados->result() as $row)
+				{
+					$num = intval($row->qtd);
+					if($num > 1) $dias_trabalhados++;
+				}
+			}
+			
+			//** ** ** horas trabalhadas
+			
 			$sql = "select FORMAT(CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd-MM-yyyy') as dia from V_Record where Userid = ".$data['Userid']." AND CheckTime between '".$datefirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datesecond." ".LAST_TIME."') order by CheckTime";
 			$tempotrabalhado = 0;
 			$tempopausas = 0;
@@ -290,15 +306,18 @@ class Picagem_model extends CI_Model {
 			$result_feriado = $this->db->query($sql);
 			if($result_feriado->num_rows() > 0)
 			{
-				$sql = "SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia, hol.Name as Name FROM V_Record as vr, Holiday as hol WHERE vr.Userid =".$data['Userid']." AND (";
+				$sql = "SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'yyyy/MM/dd') as dia, hol.Name as Name FROM V_Record as vr, Holiday as hol WHERE vr.Userid =".$data['Userid']." AND (";
 								
 				$i = 0;
 				foreach($result_feriado->result() as $row)
 				{
 					if($i > 0) $sql.= " or ";
-					$sql .= "vr.CheckTime between '".$row->datestart." ".FIRST_TIME."' and '".$row->dateend." ".LAST_TIME."'";							$i++;
+					$sql .= "vr.CheckTime between '".$row->datestart." ".FIRST_TIME."' and '".$row->dateend." ".LAST_TIME."'";							
+					$i++;
 				}
 				$sql .= ") AND hol.Name NOT LIKE '%INV%' AND (Format(vr.CheckTime, 'dd/MM/yyyy') = Format(hol.BDate, 'dd/MM/yyyy') or Format(vr.CheckTime, 'dd/MM/yyyy') = format(DATEADD(DAY,1,hol.BDate),'dd/MM/yyyy'))";
+				
+				//echo $sql;
 				
 				$tempo_feriado = 0;
 				$tempopausas_feriado = 0;
@@ -428,7 +447,7 @@ class Picagem_model extends CI_Model {
 			}
 			
 			//horas noturnas
-			$sql = "select FORMAT(CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia from V_Record where Userid = ".$data['Userid']." AND CheckTime between '".$datefirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datesecond." ".LAST_TIME."') order by CheckTime";
+			$sql = "select FORMAT(CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'yyyy/MM/dd') as dia from V_Record where Userid = ".$data['Userid']." AND CheckTime between '".$datefirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datesecond." ".LAST_TIME."') order by CheckTime";
 			
 			$tempo_noturno = 0;
 			$result_noturno = $this->db->query($sql);

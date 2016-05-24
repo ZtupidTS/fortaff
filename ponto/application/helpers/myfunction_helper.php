@@ -52,6 +52,10 @@ function calculohoras($ar_picagens, $ar_dia_inv = false)
 		$dia = date($row->dia);
 		$cont_cal = true;
 		
+		if(strtotime($dia) > strtotime($old_dia) && $old_dia != '' && toSeconds($row->horas) > LAST_TIME_SEC) $newdia = true;
+		
+		//echo ' av '.var_export($newdia);
+		
 		if($newdia)
 		{
 			$tempoinf = 0;
@@ -61,6 +65,7 @@ function calculohoras($ar_picagens, $ar_dia_inv = false)
 			$pausa = 0;
 			$newdia = false;
 		}
+		//echo ' dp '.var_export($newdia);
 		if($i)
 		{
 			/*echo ' '.$row->horas.' ';*/
@@ -187,12 +192,17 @@ function calculohoras($ar_picagens, $ar_dia_inv = false)
 //calculo horas noturnas
 function calculNoturnas($noturno,$h_not_noite)
 {
-	$tempo_noturno = 0;
+	/*$tempo_noturno = 0;
 	$temp_old = 0;
 	foreach($noturno->result() as $row)
 	{
 		$continu = true;
 		$temp = toSeconds($row->horas);
+		
+		$dia = date($row->dia);
+		
+		
+		
 		if($temp < MANHA_NOT && $temp > LAST_TIME_SEC)
 		{
 			$tempo_noturno += MANHA_NOT - $temp;
@@ -203,7 +213,14 @@ function calculNoturnas($noturno,$h_not_noite)
 		{
 			if($temp_old != 0)
 			{
-				$tempo_noturno += $temp - $temp_old;
+				//se o dia é o mesmo é que faço isso
+				if(strtotime($dia) > strtotime($old_dia))
+				{
+					$tempo_noturno += $temp - $temp_old;
+				}else{
+					$tempo_noturno += $temp - $temp_old - ($temp_old - $h_not_noite);
+				}
+				
 				$temp_old = $temp;
 				$continu = false;	
 			}else{
@@ -221,8 +238,116 @@ function calculNoturnas($noturno,$h_not_noite)
 		if($continu)
 		{
 			$temp_old = 0;
-		}					
+		}
+		$old_dia = $dia;					
+	}*/
+	
+	$tempo_noturno = 0;
+	$i = true;
+	$picagem_number = 0;
+	$ar_picnum = array(3,5,7,9,11,13,15,17,19,21,23,25);
+	$tempoinf = 0;
+	$temposup = 0;
+	$newdia = false;
+	$old_dia = '';
+	
+	foreach($noturno->result() as $row)
+	{
+		//$dia = new DateTime($row->dia);
+		$dia = date($row->dia);
+		$cont_cal = true;
+		
+		if(strtotime($dia) > strtotime($old_dia) && $old_dia != '' && toSeconds($row->horas) > LAST_TIME_SEC) $newdia = true;
+		
+		//echo ' av '.var_export($newdia);
+		
+		if($newdia)
+		{
+			//echo ' ENTREI ';
+			$tempoinf = 0;
+			$temposup = 0;
+			$i = true;
+			$picagem_number = 0;
+			$newdia = false;
+		}
+		//echo ' dp '.var_export($newdia);
+		if($i)
+		{
+			/*echo ' '.$row->horas.' ';*/
+			$tempoinf = toSeconds($row->horas);
+			$picagem_number++;
+			$i = false;
+			if($tempoinf > $temposup && $temposup != 0 && $dia > $old_dia)
+			{
+				$temposup = 0;
+				$picagem_number = 1;
+				$cont_cal = false;
+			}
+			/*echo ' dia '.$dia.' ';
+			echo ' old '.$old_dia.' ';
+			if(strtotime($dia) > strtotime($old_dia)) echo ' supppppppppppp ';*/
+			if($cont_cal && $tempoinf < $temposup && strtotime($dia) > strtotime($old_dia) && $old_dia != '')
+			{
+				//echo ' '.$picagem_number.' ';
+				/*echo ' '.$row->horas.' ';
+				echo $tempoinf.' ';*/
+				$temposup = 0;
+				$picagem_number = 1;
+				$cont_cal = false;
+			}
+		}else{
+			$temposup = toSeconds($row->horas);
+			$picagem_number++;
+			$i = true;
+			//aqui vou fazer como se fosse para mudar de dia
+			if($temposup < $tempoinf && $temposup < LAST_TIME_SEC)
+			{
+				//aqui acrescento 24h
+				$temposup = $temposup + 86400;
+				$newdia = true;
+			}
+		}
+		if($temposup != 0)
+		{
+			if($temposup > $h_not_noite || $tempoinf > $h_not_noite)
+			{
+				if(in_array($picagem_number,$ar_picnum))
+				{
+					//se é uma picagem a verificar	
+					if(($tempoinf - $temposup) < PAUSA)
+					{
+						//$tempo_noturno += $tempoinf - $temposup;
+						/*if($tempoinf > $h_not_noite)
+						{*/
+							if($temposup > $h_not_noite)
+							{
+								$tempo_noturno += $tempoinf - $temposup;
+							}else{
+								$tempo_noturno += $tempoinf - $h_not_noite;
+							}
+						/*}else{
+							$tempo_noturno += $temposup - $h_not_noite;	
+						}*/					
+					}
+				}else{
+					if($tempoinf > $h_not_noite)
+					{
+						$tempo_noturno += $temposup - $tempoinf;
+					}else{
+						$tempo_noturno += $temposup - $h_not_noite;	
+					}
+				}
+			}
+		}else{
+			//aqui é para contar as horas da manha caso seja o caso
+			if($tempoinf < MANHA_NOT && $tempoinf > LAST_TIME_SEC)
+			{
+				$tempo_noturno += MANHA_NOT - $tempoinf;				
+			}	
+		}
+		$old_dia = $dia;
 	}
+	
 	return toTime($tempo_noturno);
 }
 

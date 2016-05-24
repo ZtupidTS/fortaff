@@ -58,6 +58,7 @@ FROM Holiday hol
 WHERE CONVERT(VARCHAR(10),vr.CheckTime,110) = CONVERT(VARCHAR(10),hol.BDate,110) AND hol.Name LIKE '%INV%') 
 order by CheckTime
 
+
 /* v4 */
 -- nessa versão primeiro vou ir buscar os meus dia e devolvo isso
 select CONVERT(VARCHAR(10),format(BDate, 'yyyy-MM-dd'),110) as datestart, CONVERT(VARCHAR(10),format(DATEADD(DAY,1,BDate), 'yyyy-MM-dd'),110) as dateend
@@ -69,6 +70,7 @@ SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy'
 FROM V_Record as vr, Holiday as hol 
 WHERE vr.Userid = 12 AND (vr.CheckTime between '2016-04-24 03:30:01.000' and '2016-04-25 03:30:00.000' or vr.CheckTime between '2016-04-22 03:30:01.000' and '2016-04-23 03:30:00.000' or vr.CheckTime between '2016-04-01 03:30:01.000' and '2016-04-29 03:30:00.000') AND hol.Name LIKE '%INV%' AND (Format(vr.CheckTime, 'dd/MM/yyyy') = Format(hol.BDate, 'dd/MM/yyyy') or Format(vr.CheckTime, 'dd/MM/yyyy') = format(DATEADD(DAY,1,hol.BDate),'dd/MM/yyyy'))
 order by CheckTime
+
 
 /* v5 */
 -- nessa versão primeiro vou ir buscar os meus dia e devolvo isso
@@ -110,6 +112,10 @@ FROM Holiday hol
 WHERE CONVERT(VARCHAR(10),vr.CheckTime,110) = CONVERT(VARCHAR(10),hol.BDate,110) AND hol.Name NOT LIKE '%INV%') 
 order by CheckTime
 
+/* v4 */ ??
+SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia 
+FROM V_Record as vr, Holiday as hol 
+WHERE vr.Userid = 36 AND (vr.CheckTime between '2016-04-25 03:30:00.000' and '2016-04-26 03:30:00.000' or vr.CheckTime between '2016-05-16 03:30:00.000' and '2016-05-17 03:30:00.000') AND hol.Name NOT LIKE '%INV%' AND (Format(vr.CheckTime, 'dd/MM/yyyy') = Format(hol.BDate, 'dd/MM/yyyy') or Format(vr.CheckTime, 'dd/MM/yyyy') = format(DATEADD(DAY,1,hol.BDate),'dd/MM/yyyy'))
 
 /********************* Domingos */
 
@@ -153,3 +159,18 @@ select (count(Logid) % 2) as odd, count(Logid) as number, Userid,  Name
 from V_Record 
 where CheckTime between '2016-04-24 03:30:00.000' and DATEADD(DAY,1,'2016-04-25 03:30:00.000') 
 group by  Userid,   Name) d where odd = 1
+
+
+/**************************** contar os dias */
+/* v1 */
+select count(DISTINCT(day(CheckTime))) 
+from V_Record 
+where Userid = 103 AND CheckTime between '2016-04-19' and DATEADD(DAY,1,'2016-05-18')
+group by year(CheckTime),month(CheckTime),day(CheckTime)
+
+
+/* v2 */
+select day(CheckTime), month(CheckTime), count(CheckTime) as qtd
+from V_Record 
+where Userid = 103 AND CheckTime between '2016-04-19' and DATEADD(DAY,1,'2016-05-18')
+group by day(CheckTime), MONTH(CheckTime)

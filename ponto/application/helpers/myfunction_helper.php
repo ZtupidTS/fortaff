@@ -4,8 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // Para converter o time da DB em segundos e repor em horas normais
 function toSeconds($time) 
 {
-	$parts = explode(':', $time);
-	return 3600*$parts[0] + 60*$parts[1] + $parts[2];
+	if($time == "00:00:00")
+	{
+		return 0;
+	}else{
+		$parts = explode(':', $time);
+		return 3600*$parts[0] + 60*$parts[1] + $parts[2];	
+	}
 }
 
 function toTime($seconds) {
@@ -189,6 +194,72 @@ function calculohoras($ar_picagens, $ar_dia_inv = false)
 	}
 	return array('horas' => $tmptrabalhado, 'pausas' => $tmppausas);
 }
+
+function calculoInventario($arr_inv)
+{
+	$i = true;
+	$hora_inv = 0;
+	$tempoinf = 0;
+	$temposup = 0;
+	$dia = 0;
+	$old_dia = 0;
+	$tempo_inv = 0;					
+	foreach($arr_inv as $row)
+	{
+		/*$dia = date($row->dia);
+		if($temposup > 0 && $dia > $old_dia && ($temposup < LAST_TIME_SEC || $temposup > $tempoinf))
+		{
+			$tempoinf = 0;
+			$temposup = 0;
+			$i = true;						
+		}*/
+		
+		$cont_inv = true;
+		$split_name = explode("_",$row->Name);
+		$hora_inv = toSeconds($split_name[1]);
+		
+		if($i)
+		{
+			$tempoinf = toSeconds($row->horas);	
+			$i = false;
+		}else{
+			$temposup = toSeconds($row->horas);
+			//$i = true;
+		}
+		
+		if($temposup != 0)
+		{
+			if($temposup > HOR_INV || $temposup < LAST_TIME_SEC)
+			{
+				$cont_inv = false;
+				if($tempoinf >= $hora_inv)
+				{
+					if($temposup < LAST_TIME_SEC)	
+					{
+						$tempo_inv += ($temposup + 86400) - $tempoinf;
+						$tempoinf = $temposup;
+					}else{
+						$tempo_inv += $temposup - $tempoinf;
+						$tempoinf = $temposup;
+					}
+				}else{
+					if($temposup < LAST_TIME_SEC)	
+					{
+						$tempo_inv += ($temposup + 86400) - $hora_inv;
+						$tempoinf = $temposup;
+					}else{
+						$tempo_inv += $temposup - $hora_inv;
+						$tempoinf = $temposup;
+					}
+				}							
+			}
+			$tempoinf = $temposup;
+		}
+		/*$old_dia = $dia;*/
+	}
+	return toTime($tempo_inv);
+}
+
 //calculo horas noturnas
 function calculNoturnas($noturno,$h_not_noite)
 {
@@ -403,6 +474,82 @@ function viewPicagens($firstdate,$seconddate,$result)
 		$firstdate->add(new DateInterval('P1D'));
 	}
 	return $message;
+}
+
+function useridTofourdigit($userid)
+{
+	switch (strlen($userid)) {
+	    case 1:
+	        return '000'.$userid;
+	        break;
+	    case 2:
+	        return '00'.$userid;
+	        break;
+	    case 3:
+	        return '0'.$userid;
+	        break;
+	    case 4:
+	        return $userid;
+	        break;	
+	}
+}
+
+function qtdexportsage($qtd)
+{
+	if (strpos($qtd, '.') !== false) 
+	{
+		$new_qtd = round($qtd,2);
+		$split_qtd = explode(".",$new_qtd);
+		switch (strlen($split_qtd[0])) {
+		    case 1:
+		        $qtd_int = '0000'.$split_qtd[0];
+		        break;
+		    case 2:
+		        $qtd_int = '000'.$split_qtd[0];
+		        break;
+		    case 3:
+		        $qtd_int = '00'.$split_qtd[0];
+		        break;
+		    case 4:
+		        $qtd_int = '0'.$split_qtd[0];
+		        break;
+		    case 5:
+		        $qtd_int = $split_qtd[0];
+		        break;	
+		}
+		if(count($split_qtd) > 1)
+		{
+			if(strlen($split_qtd[1]) > 1)
+			{
+				return $qtd_int.".".$split_qtd[1];	
+			}else{
+				return $qtd_int.".".$split_qtd[1]."0";
+			}
+			
+		}else{
+			return $qtd_int.".00";
+		}
+	}else{
+		$new_qtd = '';
+		switch (strlen($qtd)) {
+		    case 1:
+		        $new_qtd = '0000'.$qtd;
+		        break;
+		    case 2:
+		        $new_qtd = '000'.$qtd;
+		        break;
+		    case 3:
+		        $new_qtd = '00'.$qtd;
+		        break;
+		    case 4:
+		        $new_qtd = '0'.$qtd;
+		        break;
+		    case 5:
+		        $new_qtd = $qtd;
+		        break;	
+		}
+		return $new_qtd.".00";
+	}
 }
 
 ?>

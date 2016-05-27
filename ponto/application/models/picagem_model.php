@@ -217,11 +217,6 @@ class Picagem_model extends CI_Model {
 		{
 			//** ** ** dias trabalhados
 			
-			/*$sql = "select count(DISTINCT(day(CheckTime))) from V_Record where Userid = ".$data['Userid']." AND CheckTime between '".$datefirst."' and DATEADD(DAY,1,'".$datesecond."') group by year(CheckTime),month(CheckTime),day(CheckTime)";
-			$result_diastrabalhados = $this->db->query($sql);*/
-			
-			//$dias_trabalhados = $result_diastrabalhados->num_rows();
-			
 			$sql = "select day(CheckTime), month(CheckTime), count(CheckTime) as qtd from V_Record where Userid = ".$data['Userid']." AND CheckTime between '".$datefirst."' and DATEADD(DAY,1,'".$datesecond."') group by day(CheckTime), MONTH(CheckTime)";
 			
 			$result_diastrabalhados = $this->db->query($sql);
@@ -248,19 +243,10 @@ class Picagem_model extends CI_Model {
 				$result_diainv = $this->db->query($sql);
 				if($result_diainv->num_rows() > 0)
 				{
-					/*$ar_dia_inv = array();
-					foreach ($result_diainv->result() as $row)
-					{
-						array_push($ar_dia_inv,$row->dia);
-					}
-					o problema é que falta me a hora do inv fodas*/
-					$ret_array = calculohoras($result_tempotrabalhado->result(),$result_diainv->result());
-					//$ret_array = calculohoras($result_tempotrabalhado->result());
+					$ret_array = calculohoras($result_tempotrabalhado->result(),$result_diainv->result());					
 				}else{
 					$ret_array = calculohoras($result_tempotrabalhado->result());
 				}
-				//vai com um array dos dia de inventarios
-				//$ret_array = calculohoras($result_tempotrabalhado->result());
 				$tempotrabalhado = toTime($ret_array['horas']);			
 				$tempopausas = toTime($ret_array['pausas']);			
 			}else{
@@ -288,10 +274,6 @@ class Picagem_model extends CI_Model {
 				}
 				$tempo_domingo = toTime($ret_array['horas']);			
 				$tempopausas_dom = toTime($ret_array['pausas']);
-				
-				/*$ret_array = calculohoras($result_domingo->result());
-				$tempo_domingo = toTime($ret_array['horas']);			
-				$tempopausas_dom = toTime($ret_array['pausas']);*/			
 			}else{
 				// é impar
 				$tempo_domingo = 'Faltam picagens';
@@ -299,8 +281,6 @@ class Picagem_model extends CI_Model {
 			}
 			
 			//Horas de feriado
-			//$sql = "SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia FROM V_Record as vr WHERE vr.Userid = ".$data['Userid']." AND vr.CheckTime between '".$datefirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datesecond." ".LAST_TIME."') AND EXISTS (SELECT hol.BDate FROM Holiday hol WHERE CONVERT(VARCHAR(10),vr.CheckTime,110) = CONVERT(VARCHAR(10),hol.BDate,110) AND hol.Name NOT LIKE '%INV%') order by CheckTime";
-			
 			$sql = "select CONVERT(VARCHAR(10),format(BDate, 'yyyy-MM-dd'),110) as datestart, CONVERT(VARCHAR(10),format(DATEADD(DAY,1,BDate), 'yyyy-MM-dd'),110) as dateend from Holiday where BDate between '".$datefirst."' and '".$datesecond."' AND Name NOT LIKE '%INV%' order by BDate";
 			
 			$result_feriado = $this->db->query($sql);
@@ -340,22 +320,6 @@ class Picagem_model extends CI_Model {
 				$tempopausas_feriado = 'Não há Fer.';
 			}
 			
-			
-			/*$tempo_feriado = 0;
-			$tempopausas_feriado = 0;
-			$result_feriado = $this->db->query($sql);
-			if(($result_feriado->num_rows()) % 2 == 0)
-			{
-				$ret_array = calculohoras($result_feriado->result());
-				$tempo_feriado = toTime($ret_array['horas']);			
-				$tempopausas_feriado = toTime($ret_array['pausas']);		
-			}else{
-				// é impar
-				$tempo_feriado = 'Faltam picagens';
-				$tempopausas_feriado = 'Faltam picagens';
-			}*/
-			
-			
 			//horas inventario
 			$sql = "select CONVERT(VARCHAR(10),format(BDate, 'yyyy-MM-dd'),110) as datestart, CONVERT(VARCHAR(10),format(DATEADD(DAY,1,BDate), 'yyyy-MM-dd'),110) as dateend from Holiday where BDate between '".$datefirst."' and '".$datesecond."' AND Name LIKE '%INV%' order by BDate";
 			
@@ -376,72 +340,11 @@ class Picagem_model extends CI_Model {
 				$result_inv = $this->db->query($sql);
 				if(($result_inv->num_rows()) % 2 == 0)
 				{
-					//é par logo continuo
-					$i = true;
-					$hora_inv = 0;
-					$tempoinf = 0;
-					$temposup = 0;
-					$dia = 0;
-					$old_dia = 0;					
-					foreach($result_inv->result() as $row)
-					{
-						/*$dia = date($row->dia);
-						if($temposup > 0 && $dia > $old_dia && ($temposup < LAST_TIME_SEC || $temposup > $tempoinf))
-						{
-							$tempoinf = 0;
-							$temposup = 0;
-							$i = true;						
-						}*/
-						
-						$cont_inv = true;
-						$split_name = explode("_",$row->Name);
-						$hora_inv = toSeconds($split_name[1]);
-						
-						if($i)
-						{
-							$tempoinf = toSeconds($row->horas);	
-							$i = false;
-						}else{
-							$temposup = toSeconds($row->horas);
-							//$i = true;
-						}
-						
-						if($temposup != 0)
-						{
-							if($temposup > HOR_INV || $temposup < LAST_TIME_SEC)
-							{
-								$cont_inv = false;
-								if($tempoinf >= $hora_inv)
-								{
-									if($temposup < LAST_TIME_SEC)	
-									{
-										$tempo_inv += ($temposup + 86400) - $tempoinf;
-										$tempoinf = $temposup;
-									}else{
-										$tempo_inv += $temposup - $tempoinf;
-										$tempoinf = $temposup;
-									}
-								}else{
-									if($temposup < LAST_TIME_SEC)	
-									{
-										$tempo_inv += ($temposup + 86400) - $hora_inv;
-										$tempoinf = $temposup;
-									}else{
-										$tempo_inv += $temposup - $hora_inv;
-										$tempoinf = $temposup;
-									}
-								}							
-							}
-							$tempoinf = $temposup;
-						}
-						/*$old_dia = $dia;*/
-					}
-					$tempo_inv = toTime($tempo_inv);							
+					$tempo_inv = calculoInventario($result_inv->result());	
 				}else{
 					// é impar
 					$tempo_inv = 'Faltam picagens';				
-				}				
-				
+				}	
 			}else{
 				$tempo_inv = 'Não Há Inv.';
 			}
@@ -506,6 +409,205 @@ class Picagem_model extends CI_Model {
 		}
 		return $array_final;
 		
+	}
+	
+	public function createexportsage($userid,$datefirst,$datesecond)
+	{
+		$this->load->helper('myfunction_helper');
+		$this->load->helper('file');
+		
+		//como posso seleccionar o mes que quero tenho que ir pela data do segundo
+		$month_number =  date("m", strtotime($datesecond));
+		$year_number =  date("Y", strtotime($datesecond));
+		$day_number =  cal_days_in_month(CAL_GREGORIAN,$month_number,$year_number);
+		
+		//texto do File
+		$myfile = '';
+		
+		//valor do file é sempre o mesmo
+		$valor = "00000000000.00";
+		
+		if($userid == '999999')
+		{
+			//todos menos reposição externa e administração
+			//são os numero acima de 999
+			$cod200_chefes = cal_days_in_month(CAL_GREGORIAN,$month_number,$year_number) - 26;
+			
+			//selecionar os chefes
+			$sql = "select Userid from ".TBL_USERS." where Deptid = 23";
+			
+			$result = $this->db->query($sql);
+			if($result->num_rows() >0)
+			{
+				foreach($result->result() as $row)
+				{
+					//base_url("home/exporttosage")
+					$myfile .= "      ".useridTofourdigit($row->Userid).$day_number.".".$month_number.".".$year_number."       2000000".$cod200_chefes.".00".$valor."\r\n";
+					//write_file('path', $data)
+					
+				}
+			}else{
+				return false;
+			}
+			
+			//Agora os funcionarios
+			$sql = "select Userid, Duty from Userinfo where Deptid NOT IN (1,4,22,23,24)";
+			
+			$result = $this->db->query($sql);
+			if($result->num_rows() >0)
+			{
+				foreach($result->result() as $row)
+				{
+					//cod200
+					$sql = "select day(CheckTime), month(CheckTime), count(CheckTime) as qtd from V_Record where Userid = ".$row->Userid." AND CheckTime between '".$datefirst."' and DATEADD(DAY,1,'".$datesecond."') group by day(CheckTime), MONTH(CheckTime)";
+			
+					$result_diastrabalhados = $this->db->query($sql);
+					$dias_trabalhados = 0;
+					
+					if($result_diastrabalhados->num_rows() > 0)
+					{
+						foreach ($result_diastrabalhados->result() as $row2)
+						{
+							$num = intval($row2->qtd);
+							if($num > 1) $dias_trabalhados++;
+						}
+					}
+					$cod200_func = $dias_trabalhados;
+					
+					$myfile .= "      ".useridTofourdigit($row->Userid).$day_number.".".$month_number.".".$year_number."       2000000".$cod200_func.".00".$valor."\r\n";
+					
+					//cod A030 inventario
+					$sql = "select CONVERT(VARCHAR(10),format(BDate, 'yyyy-MM-dd'),110) as datestart, CONVERT(VARCHAR(10),format(DATEADD(DAY,1,BDate), 'yyyy-MM-dd'),110) as dateend from Holiday where BDate between '".$datefirst."' and '".$datesecond."' AND Name LIKE '%INV%' order by BDate";
+			
+					$result_inv = $this->db->query($sql);
+					if($result_inv->num_rows() > 0)
+					{
+						$sql = "SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia, hol.Name as Name FROM V_Record as vr, Holiday as hol WHERE vr.Userid =".$row->Userid." AND (";
+						
+						$i = 0;
+						foreach($result_inv->result() as $row2)
+						{
+							if($i > 0) $sql.= " or ";
+							$sql .= "vr.CheckTime between '".$row2->datestart." ".FIRST_TIME."' and '".$row2->dateend." ".LAST_TIME."'";					$i++;
+						}
+						$sql .= ") AND hol.Name LIKE '%INV%' AND (Format(vr.CheckTime, 'dd/MM/yyyy') = Format(hol.BDate, 'dd/MM/yyyy') or Format(vr.CheckTime, 'dd/MM/yyyy') = format(DATEADD(DAY,1,hol.BDate),'dd/MM/yyyy'))";
+						
+						$tempo_inv = 0;
+						$result_inv = $this->db->query($sql);
+						if(($result_inv->num_rows()) % 2 == 0)
+						{
+							$tempo_inv = calculoInventario($result_inv->result());
+							$tempo_inv = toSeconds($tempo_inv)/3600;
+							$tempo_inv = qtdexportsage($tempo_inv);
+						}else{
+							// é impar
+							$tempo_inv = "00000.00";				
+						}	
+					}else{
+						$tempo_inv = "00000.00";
+					}
+					$cod_A030 = $tempo_inv;
+					
+					$myfile .= "      ".useridTofourdigit($row->Userid).$day_number.".".$month_number.".".$year_number."      A030".$cod_A030.$valor."\r\n";
+					
+					//cod A5002 horas de domingo
+					$sql = "select FORMAT(CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd-MM-yyyy') as dia from V_Record WHERE Userid = ".$row->Userid." AND CAST(DATEPART(dw, checktime) AS VARCHAR) + FORMAT(checktime, 'HHmm') between 10330 and 20330 AND CheckTime between '".$datefirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datesecond." ".LAST_TIME."') order by CheckTime";
+			
+					$tempo_domingo = 0;
+					$result_domingo = $this->db->query($sql);
+					if(($result_domingo->num_rows()) % 2 == 0)
+					{
+						//esse sql serve para ver se ta a trabalhar num dia de inventario ou não
+						$sql = "select Format(BDate, 'dd-MM-yyyy') as dia, SUBSTRING(Name,5,8) as hora from holiday where Name LIKE '%INV%' AND BDate between '".$datefirst."' and DATEADD(DAY,1,'".$datesecond."')";
+						$result_diainv = $this->db->query($sql);
+						if($result_diainv->num_rows() > 0)
+						{
+							$ret_array = calculohoras($result_domingo->result(),$result_diainv->result());
+						}else{
+							$ret_array = calculohoras($result_domingo->result());
+						}
+						$tempo_domingo = $ret_array['horas']/3600;
+						$tempo_domingo = qtdexportsage($tempo_domingo);
+					}else{
+						$tempo_domingo = "00000.00";						
+					}
+					$cod_A5002 = $tempo_domingo;
+					
+					$myfile .= "      ".useridTofourdigit($row->Userid).$day_number.".".$month_number.".".$year_number."     A5002".$cod_A5002.$valor."\r\n";
+					
+					//cod A5003 horas de feriado
+					$sql = "select CONVERT(VARCHAR(10),format(BDate, 'yyyy-MM-dd'),110) as datestart, CONVERT(VARCHAR(10),format(DATEADD(DAY,1,BDate), 'yyyy-MM-dd'),110) as dateend from Holiday where BDate between '".$datefirst."' and '".$datesecond."' AND Name NOT LIKE '%INV%' order by BDate";
+			
+					$result_feriado = $this->db->query($sql);
+					if($result_feriado->num_rows() > 0)
+					{
+						$sql = "SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'yyyy/MM/dd') as dia, hol.Name as Name FROM V_Record as vr, Holiday as hol WHERE vr.Userid =".$row->Userid." AND (";
+										
+						$i = 0;
+						foreach($result_feriado->result() as $row2)
+						{
+							if($i > 0) $sql.= " or ";
+							$sql .= "vr.CheckTime between '".$row2->datestart." ".FIRST_TIME."' and '".$row2->dateend." ".LAST_TIME."'";							
+							$i++;
+						}
+						$sql .= ") AND hol.Name NOT LIKE '%INV%' AND (Format(vr.CheckTime, 'dd/MM/yyyy') = Format(hol.BDate, 'dd/MM/yyyy') or Format(vr.CheckTime, 'dd/MM/yyyy') = format(DATEADD(DAY,1,hol.BDate),'dd/MM/yyyy'))";
+						
+						//echo $sql;
+						
+						$tempo_feriado = 0;
+						$result_feriado = $this->db->query($sql);
+						
+						if(($result_feriado->num_rows()) % 2 == 0)
+						{
+							//print_r($result_feriado->result());
+							$ret_array = calculohoras($result_feriado->result());
+							$tempo_feriado = $ret_array['horas']/3600;
+							$tempo_feriado = qtdexportsage($tempo_feriado);
+						}else{
+							// é impar
+							$tempo_feriado = "00000.00";
+						}
+					}else{
+						$tempo_feriado = "00000.00";
+					}
+					$cod_A5003 = $tempo_feriado;
+					
+					$myfile .= "      ".useridTofourdigit($row->Userid).$day_number.".".$month_number.".".$year_number."     A5003".$cod_A5003.$valor."\r\n";
+					
+					//cod A5023 horas noturnas
+					$sql = "select FORMAT(CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'yyyy/MM/dd') as dia from V_Record where Userid = ".$row->Userid." AND CheckTime between '".$datefirst." ".FIRST_TIME."' and DATEADD(DAY,1,'".$datesecond." ".LAST_TIME."') order by CheckTime";
+					
+					$tempo_noturno = 0;
+					$result_noturno = $this->db->query($sql);
+					if(($result_noturno->num_rows()) % 2 == 0)
+					{
+						//é par logo continuo
+						if(strlen($row->Duty) > 1)
+						{
+							$hora_not = intval($row->Duty) * 3600;
+							$tempo_noturno = calculNoturnas($result_noturno,$hora_not);
+							$tempo_noturno = toSeconds($tempo_noturno)/3600;
+							$tempo_noturno = qtdexportsage($tempo_noturno);
+						}else{
+							$tempo_noturno = "00000.00";
+						}							
+					}else{
+						// é impar
+						$tempo_noturno = "00000.00";				
+					}
+					$cod_A5023 = $tempo_noturno;
+					
+					$myfile .= "      ".useridTofourdigit($row->Userid).$day_number.".".$month_number.".".$year_number."     A5023".$cod_A5023.$valor."\r\n";
+					
+				}
+				write_file('./export/sage.txt', $myfile);	
+			}else{
+				return false;
+			}
+			return true;
+		}else{
+			
+		}
 	}
 }
 ?>

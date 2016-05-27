@@ -27,6 +27,7 @@
       	<script src="<?= base_url('includes/js/submitform.js') ?>"></script>
       	<script src="<?= base_url('includes/js/exporttoexcel.js') ?>"></script>
       	<script src="<?= base_url('includes/js/diversos.js') ?>"></script>
+      	<script src="<?= base_url('includes/js/downloadfile.js') ?>"></script>
 </head>
 <body>
 
@@ -75,6 +76,7 @@
 						<li><a href="#">One more separated link</a></li>-->
 					</ul>
 					<li><a href="<?= base_url('home/viewlog') ?>">Logs</a></li>
+					<li><a href="<?= base_url('home/vexporttosage') ?>">Export To Sage</a></li>
 				</li>
 			</ul>
 			<!--<form class="navbar-form navbar-left" role="search">

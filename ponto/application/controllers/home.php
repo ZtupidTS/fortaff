@@ -592,5 +592,55 @@ class Home extends CI_Controller {
 		return true;
 		
 	}
+	
+	/*
+	* View page Export to sage
+	*/
+	public function vexporttosage()
+	{
+		//tenho que enviar os dpt
+		$result = $this->user_model->getAll();
+		if($result)
+		{
+			$data['result'] = $result;
+			$this->load->view('v_exporttosage', $data);	
+		}else{
+			$data['result'] = $result;
+			$data['erro'] = 'Problemas na obtenção dos dados, tentar novamente.';
+			$this->load->view("v_exporttosage", $data);
+		}		
+	}
+	
+	/*
+	* Export to sage
+	*/
+	public function exporttosage()
+	{
+		$this->load->helper('myfunction_helper');
+		
+		$firstdate = $this->input->post('datefirst');
+		$seconddate = $this->input->post('datesecond');
+		$userid  = $this->input->post('Userid');
+		
+		$result_export = $this->picagem_model->createexportsage($userid,$firstdate,$seconddate);
+		//$result_export = true;
+		
+		if($result_export)
+		{
+			$return = array(
+				'return' => 'success',
+				'message' => 'Exportação realizada com sucesso e ficheiro pronto para download'
+			);
+			echo json_encode($return);
+			return true;
+		}else{
+			$return = array(
+				'return' => 'error',
+				'message' => 'Exportação com problemas'
+			);
+			echo json_encode($return);
+			return true;
+		}
+	}
 }
 ?>

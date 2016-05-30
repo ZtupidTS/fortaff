@@ -65,7 +65,13 @@
 							</ul>
 						</li>
 						<li role="separator" class="divider"></li>
-						<li><a href="<?= base_url('home/resumo') ?>">Resumo Horas</a></li>
+						<li class="dropdown-submenu">
+							<a href="#">Resumo</a>
+							<ul class="dropdown-menu">
+								<li><a href="<?= base_url('home/resumototais') ?>">Horas Totais</a></li>
+        							<li><a href="<?= base_url('home/resumodiario') ?>">Diario</a></li>
+							</ul>
+						</li>
 						<li role="separator" class="divider"></li>
 						<li><a href="<?= base_url('home/feriados') ?>">Feriados</a></li>
 						<!-- <li role="separator" class="divider"></li>

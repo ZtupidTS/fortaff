@@ -28,7 +28,7 @@ class Home extends CI_Controller {
 	/*
 	* Paras consultar o resumo das horas referente as picagens
 	*/
-	public function resumo()
+	public function resumototais()
 	{
 		//tenho que enviar os dpt
 		$result = $this->picagem_model->getDpt();
@@ -36,6 +36,24 @@ class Home extends CI_Controller {
 		{
 			$data['result'] = $result;
 			$this->load->view('v_resumopicagens', $data);	
+		}		
+	}
+	
+	/*
+	* Paras consultar o resumo das horas com resumo diario
+	*/
+	public function resumodiario()
+	{
+		//tenho que enviar os dpt
+		$result = $this->user_model->getAll();
+		if($result)
+		{
+			$data['result'] = $result;
+			$this->load->view('v_resumodiario', $data);	
+		}else{
+			$data['result'] = $result;
+			$data['erro'] = 'Problemas na obtenção dos dados, tentar novamente.';
+			$this->load->view("v_resumodiario", $data);
 		}		
 	}
 	
@@ -63,7 +81,7 @@ class Home extends CI_Controller {
 				$result = $this->picagem_model->picagensbyuser($row_user->Userid,$firstdate,$seconddate);
 				if($result)
 				{
-					$message_return = viewPicagens($firstdate,$seconddate,$result);
+					$message_return = $this->picagem_model->viewPicagens($firstdate,$seconddate,$result,$row_user->Userid);
 					$message .= $message_tb_head . $message_return .'</tbody></table>';	
 				}else{
 					$message .= $message_tb_head . '<tr><td colspan="2">Não tem picagens</td></tr></tbody></table>';
@@ -111,10 +129,107 @@ class Home extends CI_Controller {
 		{
 			$message_tb_head = '<table class="table table-hover picagens table-borderless" id="picagens1"><thead><tr><th>Dia</th><th colspan="12">Picagens</th></tr></thead>';
 				
-			$message = viewPicagens($firstdate,$seconddate,$result);
+			$message = $this->picagem_model->viewPicagens($firstdate,$seconddate,$result,$userid);
 			$message = $message_tb_head . $message .'</tbody></table>';
 		
 			$array_table = array('picagens1');
+			$return = array(
+				'return' => 'success',
+				'message' => $message,
+				'array_table' => $array_table
+			);
+			echo json_encode($return);
+			return true;
+		}else{
+			$return = array(
+				'return' => 'error',
+				'message' => 'Não tem picagens? Verificar'
+			);
+			echo json_encode($return);
+			return true;
+		}
+	}
+
+	/*
+	* Vou devolver as picagens de toda gente da loja
+	*/
+	public function picagemResumodiario()
+	{
+		$this->load->helper('myfunction_helper');
+		
+		$firstdate = date_create($this->input->post('datefirst'));
+		$seconddate = date_create($this->input->post('datesecond'));
+		$userid  = $this->input->post('Userid');
+		
+		if($userid == '999999')
+		{
+			$resultuser = $this->user_model->getAll();	
+		}else{
+			$resultuser = $this->user_model->get($userid);
+		}
+		
+		if($resultuser)
+		{
+			$return = '';
+			$message = '';
+			$message_return = '';
+			$i = 0;
+			$array_table = array();
+			
+			if($userid == '999999')
+			{
+				foreach($resultuser->result() as $row_user)
+				{
+					$message_tb_head = '<table class="table table-hover picagens table-borderless" id="picagens'.$i.'"><caption>'.$row_user->Userid.' - '.$row_user->Name.'</caption><thead><tr><th>Dia</th><th>H. Trabalhadas</th><th>H. Pausas</th></tr></thead>';
+					
+					while(date_format($firstdate,'y-m-d') <= date_format($seconddate,'y-m-d'))
+					{
+						$result = $this->picagem_model->calculoHorasTrabalhadas($row_user->Userid,$firstdate->format('Y-m-d'),$firstdate->format('Y-m-d'));
+						
+						$message_return .= '<tr><td>'.date_format($firstdate,'d-m-y').'</td>';
+						
+						if($result['horas'] == '00:00:00')
+						{
+							$message_return .= '<td colspan="2" class="text-center text-danger">Não Trabalhou</td></tr>';
+						}else{
+							$message_return .= '<td>'.$result['horas'].'</td><td>'.$result['pausas'].'</td></tr>';
+						}
+						
+						$firstdate->add(new DateInterval('P1D'));
+					}
+					
+					$message .= $message_tb_head . $message_return .'</tbody></table>';	
+					$i++;				
+				}
+				
+				for($l=0;$l<$i;$l++)
+				{
+					array_push($array_table,'picagens'.$l);
+				}
+			}else{
+				$message_tb_head = '<table class="table table-hover picagens table-borderless" id="picagens'.$i.'"><caption>'.$resultuser['Userid'].' - '.$resultuser['Name'].'</caption><thead><tr><th>Dia</th><th>H. Trabalhadas</th><th>H. Pausas</th></tr></thead>';
+					
+				while(date_format($firstdate,'y-m-d') <= date_format($seconddate,'y-m-d'))
+				{
+					$result = $this->picagem_model->calculoHorasTrabalhadas($resultuser['Userid'],$firstdate->format('Y-m-d'),$firstdate->format('Y-m-d'));
+					
+					$message_return .= '<tr><td>'.date_format($firstdate,'d-m-y').'</td>';
+					
+					if($result['horas'] == '00:00:00')
+					{
+						$message_return .= '<td colspan="2" class="text-center text-danger">Não Trabalhou</td></tr>';
+					}else{
+						$message_return .= '<td>'.$result['horas'].'</td><td>'.$result['pausas'].'</td></tr>';
+					}
+					
+					$firstdate->add(new DateInterval('P1D'));
+				}
+				
+				$message .= $message_tb_head . $message_return .'</tbody></table>';
+				array_push($array_table,'picagens'.$i);
+			}
+			
+			
 			$return = array(
 				'return' => 'success',
 				'message' => $message,

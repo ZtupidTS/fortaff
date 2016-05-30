@@ -12,7 +12,7 @@ if($this->session->userdata('level') == 2)
 ?>
 
 <div class="col-md-10 col-md-offset-1">
-	<legend>Resumo Horas</legend>
+	<legend>Resumo Horas Totais</legend>
 </div>
 
 <div class="row">

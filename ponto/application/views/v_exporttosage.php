@@ -59,16 +59,6 @@ if($this->session->userdata('level') == 1)
 			  		<div class="form-group">
 						<select class="form-control" id="selectuser">
 							<option value="999999">Todos (Exceto Admin. e Rep. Externos)</option>
-							<?php
-							foreach($result->result() as $row)
-							{
-								if(intval($row->Userid) < 1000)
-								{
-									?>
-									<option value="<?= $row->Userid;?>"><?= $row->Userid.' - '.$row->Name;?></option>
-									<?php
-								}
-							}?>
 						</select>
 					</div>
 			  		<?php			  		

@@ -70,10 +70,13 @@
 							<ul class="dropdown-menu">
 								<li><a href="<?= base_url('home/resumototais') ?>">Horas Totais</a></li>
         							<li><a href="<?= base_url('home/resumodiario') ?>">Diario</a></li>
+        							<li><a href="<?= base_url('home/resumosemanal') ?>">Semanal</a></li>
 							</ul>
 						</li>
 						<li role="separator" class="divider"></li>
 						<li><a href="<?= base_url('home/feriados') ?>">Feriados</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="<?= base_url('home/contractos') ?>">Contractos</a></li>
 						<!-- <li role="separator" class="divider"></li>
 						<li><a href="#">Something else here</a></li>
 						<li role="separator" class="divider"></li>

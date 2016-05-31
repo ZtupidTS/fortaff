@@ -66,6 +66,8 @@
 				<li><a href="#">One more separated link</a></li>
 				</ul>
 				</li>-->
+				<li><a href="<?= base_url('home/ver') ?>">Ver Picagens</a></li>
+				<li><a href="<?= base_url('home/resumodiario') ?>">Resumo Diario</a></li>
 			</ul>
 			<!--<form class="navbar-form navbar-left" role="search">
 				<div class="form-group">

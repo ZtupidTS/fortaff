@@ -107,9 +107,14 @@ if($this->session->userdata('level') == 1)
 		</form>
 	</div>
 </div>
-<div class="row noPrint">
-	<p class="col-md-8 col-md-offset-3 top10 text-danger">*Clica na linha que quer editar as picagens</p>
-</div>
+<?php
+if($this->session->userdata('level') == 2)
+{?>
+	<div class="row noPrint">
+		<p class="col-md-8 col-md-offset-3 top10 text-danger">*Clica na linha que quer editar as picagens</p>
+	</div>
+	<?php
+}?>
 
 <div class="row">
 	<div class="col-md-6 col-md-offset-3 top10" id="returnajax">

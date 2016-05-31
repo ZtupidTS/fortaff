@@ -58,6 +58,24 @@ class Home extends CI_Controller {
 	}
 	
 	/*
+	* Paras consultar o resumo das horas com resumo semanal
+	*/
+	public function resumosemanal()
+	{
+		//tenho que enviar os dpt
+		$result = $this->picagem_model->getDpt();
+		if($result)
+		{
+			$data['result'] = $result;
+			$this->load->view('v_resumosemanal', $data);	
+		}else{
+			$data['result'] = $result;
+			$data['erro'] = 'Problemas na obtenção dos dados, tentar novamente.';
+			$this->load->view("v_resumosemanal", $data);
+		}		
+	}
+	
+	/*
 	* Vou devolver as picagens de toda gente da loja
 	*/
 	public function picagemAll()
@@ -516,6 +534,63 @@ class Home extends CI_Controller {
 	}
 	
 	/*
+	* Resumo semanal de trabalho
+	*/
+	public function picagemResumosemanal()
+	{
+		$this->load->helper('myfunction_helper');
+		
+		$datefirst = $this->input->post('datefirst');
+		$datesecond = $this->input->post('datesecond');
+		$departamento = $this->input->post('departamento');
+		
+		$result = $this->picagem_model->getresumopicagem($departamento,$datefirst,$datesecond);
+		//print_r($result);
+		if($result)
+		{
+			$message_tb_head = '<table class="table table-hover picagens display" id="picagens"><thead><tr><th>Nº</th><th>Nome</th><th>Dias Trab.</th><th>Contracto</th><th>Horas Trab.</th></tr></thead><tbody>';
+			
+			$message = '';
+			foreach($result as $row)
+			{
+				$result2 = $this->user_model->get($row['Userid']);
+				if($row['Name'] != 'Total')
+				{
+					if($result2['Contracto'] == '')
+					{
+						$message .= '<tr><td>'.$row['Userid'].'</td><td>'.$row['Name'].'</td><td>'.$row['Dias'].'</td><td>Não Foi Preenchido</td><td class="text-center">'.$row['HTrabalhadas'].'</td></tr>';
+					}else{
+						
+						$hcontracto = intval($result2['Contracto']) * 3600;
+						$htrab = toSeconds($row['HTrabalhadas']);
+						
+						if($htrab >= $hcontracto)
+						{
+							$message .= '<tr><td>'.$row['Userid'].'</td><td>'.$row['Name'].'</td><td>'.$row['Dias'].'</td><td>'.$result2['Contracto'].' h</td><td class="text-center text-success">'.$row['HTrabalhadas'].'</td></tr>';
+						}else{
+							$message .= '<tr><td>'.$row['Userid'].'</td><td>'.$row['Name'].'</td><td>'.$row['Dias'].'</td><td>'.$result2['Contracto'].' h</td><td class="text-center text-danger">'.$row['HTrabalhadas'].'</td></tr>';
+						}	
+					}
+				}
+			}
+			$message = $message_tb_head . $message .'</tbody></table>';
+			
+			$return = array(
+				'return' => 'success',
+				'message' => $message
+				);
+			echo json_encode($return);
+			return true;
+		}else{
+			$return = array(
+				'return' => 'error',
+				'message' => 'Não foi possível obter dados, se o problema persistir contactar o administrador');
+			echo json_encode($return);
+			return true;
+		}
+	}
+	
+	/*
 	* Para ir ver os feriados
 	*/
 	public function feriados()
@@ -535,6 +610,16 @@ class Home extends CI_Controller {
 	}
 	
 	/*
+	* Para ver e editar os contractos
+	*/
+	public function contractos()
+	{
+		$result = $this->user_model->get();
+		$data['result'] = $result;
+		$this->load->view('v_contracto', $data);		
+	}
+	
+	/*
 	* editar feriado
 	*/
 	public function editar_holiday()
@@ -549,6 +634,36 @@ class Home extends CI_Controller {
 	            'Name'        => $newname
 	        );
 	        $result = $this->holiday_model->updateholiday($this->input->post('Holidayid'),$sql_data);
+	        if($result)
+	        {
+			$return = array(
+				'return' => 'success',
+				'message' => 'Atualização realizada com sucesso');
+			echo json_encode($return);
+			return true;
+		}else{
+			$return = array(
+				'return' => 'error',
+				'message' => 'Atualização com problemas');
+			echo json_encode($return);
+			return true;
+		}
+	}
+	
+	/*
+	* editar feriado
+	*/
+	public function editar_contracto()
+	{
+		$userid = $this->input->post('Userid');
+		$contracto = $this->input->post('Contracto');
+		
+		$sql_data = array(
+	            'Userid'        => $userid,
+	            'Contracto'        => $contracto
+	        );
+	        $result = $this->user_model->update($userid,$sql_data);
+	        
 	        if($result)
 	        {
 			$return = array(

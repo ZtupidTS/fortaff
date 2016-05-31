@@ -37,6 +37,17 @@ function startDatatableHol()
     		"order": [[ 2, "des" ]],    		
     	});
 }
+//Contractos
+function startDatatableCon()
+{
+	tabledatatable = $('#contractos').DataTable({
+    		"paging": false,
+    		"info": false,
+    		"bFilter": false,
+    		"order": [[ 1, "asc" ]],    		
+    	});
+}
+
 
 $(document).ready(function() {
 	$(".various").fancybox({

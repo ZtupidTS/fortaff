@@ -326,7 +326,7 @@ class Picagem_model extends CI_Model {
 			}
 			
 			//horas inventario
-			$tempo_inv = calculoHorasInventario($data['Userid'],$datefirst,$datesecond);
+			$tempo_inv = $this->picagem_model->calculoHorasInventario($data['Userid'],$datefirst,$datesecond);
 			
 			/*$sql = "select CONVERT(VARCHAR(10),format(BDate, 'yyyy-MM-dd'),110) as datestart, CONVERT(VARCHAR(10),format(DATEADD(DAY,1,BDate), 'yyyy-MM-dd'),110) as dateend from Holiday where BDate between '".$datefirst."' and '".$datesecond."' AND Name LIKE '%INV%' order by BDate";
 			
@@ -487,6 +487,8 @@ class Picagem_model extends CI_Model {
 				$myfile .= "      ".useridTofourdigit($row->Userid).$day_number.".".$month_number.".".$year_number."       200000".$cod200_func.".00".$valor."\r\n";
 				
 				//cod A030 inventario
+				
+				
 				$sql = "select CONVERT(VARCHAR(10),format(BDate, 'yyyy-MM-dd'),110) as datestart, CONVERT(VARCHAR(10),format(DATEADD(DAY,1,BDate), 'yyyy-MM-dd'),110) as dateend from Holiday where BDate between '".$datefirst."' and '".$datesecond."' AND Name LIKE '%INV%' order by BDate";
 		
 				$result_inv = $this->db->query($sql);

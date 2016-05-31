@@ -103,11 +103,13 @@ define('TBL_DPT','Dept');
 /* Tablea dos Dpts */
 define('TBL_HOLIDAY','holiday');
 
+
 /* por aqui o valor a partir do qual é valor referente ao dpt principal */
 /* o meu fafedis é 1 mas depois loja tem tudo dentro e loja = 4 logo ponho 5 aqui */
 define('VAL_DPT',5);
 /* vou por o valor da loja = 4 */
 define('VAL_LOJA',4);
+
 
 /* valor das pausas é de 40 min excluido no maximo logo vou converter em segundo */
 /* 40 * 60 = 2400 */

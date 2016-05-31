@@ -88,7 +88,7 @@ if($this->session->userdata('level') == 2)
 		  	}?>
 	  		<input type="button" id="btn_search" value="Procurar" onclick="resumopicagens()" class="btn btn-default noPrint">
 	  		<span class="noPrint">
-	  			<img id="button_print" hidden onclick="window.print();" src="<?= base_url('images/print.png');?>" height="20px" width="20px" >
+	  			<img data-toggle="tooltip" title="Imprimir" id="button_print" hidden onclick="window.print();" src="<?= base_url('images/print.png');?>" height="20px" width="20px" >
 			</span>
 		</form>
 	</div>

@@ -58,7 +58,7 @@ if($this->session->userdata('level') == 1)
 					?>	
 			  		<div class="form-group">
 						<select class="form-control" id="selectuser">
-							<option value="999999">Todos (não podem editar picagens)</option>
+							<option value="999999">Todos</option>
 							<?php
 							foreach($result->result() as $row)
 							{
@@ -128,7 +128,7 @@ function printToExcel()
 }
 
 $("#datefirst").datetimepicker({
-        language: "pt",
+        language: 'pt',
         format: "yyyy-mm-dd",
         weekStart: 1,
         autoclose: true,
@@ -137,7 +137,7 @@ $("#datefirst").datetimepicker({
         minView: 2
 });
 $("#datesecond").datetimepicker({
-        language: "pt",
+        language: 'pt',
         format: "yyyy-mm-dd",
         weekStart: 1,
         autoclose: true,

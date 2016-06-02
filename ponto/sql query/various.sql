@@ -87,6 +87,22 @@ WHERE vr.Userid = 12 AND (vr.CheckTime between '2016-04-22 03:30:01.000' and '20
 order by CheckTime
 
 
+/* v6 */
+-- nessa versão primeiro vou ir buscar os meus dia e devolvo isso
+-- mudei o date add aqui
+select CONVERT(VARCHAR(10),format(BDate, 'yyyy-MM-dd'),110) as datestart, CONVERT(VARCHAR(10),format(DATEADD(DAY,1,BDate), 'yyyy-MM-dd'),110) as dateend
+from Holiday
+where BDate between '2016-04-21 00:00:00.000' and '2016-04-24 03:30:01.000' AND Name LIKe '%INV%'
+order by BDate
+
+-- depois com a ajdua do php meto os valores nessa 2ª query e obtenho o que pretendo
+-- NESSA V6 ACRESCENTEI O DISTINCT porque caso havia um inventario no dia a sefuir dava um problema de falta de picagens
+SELECT DISTINCT vr.CheckTime, FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia, hol.Name as Name 
+FROM V_Record as vr, Holiday as hol 
+WHERE vr.Userid = 12 AND (vr.CheckTime between '2016-04-22 03:30:01.000' and '2016-04-23 03:30:00.000' or vr.CheckTime between '2016-04-24 03:30:01.000' and '2016-04-25 03:30:00.000') AND hol.Name LIKE '%INV%' AND (Format(vr.CheckTime, 'dd/MM/yyyy') = Format(hol.BDate, 'dd/MM/yyyy') or Format(vr.CheckTime, 'dd/MM/yyyy') = format(DATEADD(DAY,1,hol.BDate),'dd/MM/yyyy'))
+order by CheckTime
+
+
 /******************** feriado */
 
 /* v1 */

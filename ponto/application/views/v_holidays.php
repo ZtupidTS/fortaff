@@ -36,7 +36,7 @@ if($this->session->userdata('level') == 2)
 		{
 			?>
 			<!--Resultados-->
-			<div class="col-md-4 col-md-offset-4 table-responsive">
+			<div class="col-md-6 col-md-offset-3 table-responsive">
 				<table class="table table-hover holiday display" id="holiday">
 					<thead>
 				      		<tr>

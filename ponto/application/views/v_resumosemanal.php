@@ -116,7 +116,7 @@ if($this->session->userdata('level') == 1)
 </div>
 
 <div class="row">
-	<div class="col-md-4 col-md-offset-4 top10" id="returnajax">
+	<div class="col-md-6 col-md-offset-3 top10" id="returnajax">
 	</div>
 </div>
 

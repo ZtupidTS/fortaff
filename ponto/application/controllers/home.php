@@ -564,11 +564,11 @@ class Home extends CI_Controller {
 						$hcontracto = intval($result2['Contracto']) * 3600;
 						$htrab = toSeconds($row['HTrabalhadas']);
 						
-						if($htrab >= $hcontracto)
+						if($htrab < ($hcontracto - 900) || $htrab > ($hcontracto + 3600))
 						{
-							$message .= '<tr><td>'.$row['Userid'].'</td><td>'.$row['Name'].'</td><td>'.$row['Dias'].'</td><td>'.$result2['Contracto'].' h</td><td class="text-center text-success">'.$row['HTrabalhadas'].'</td></tr>';
-						}else{
 							$message .= '<tr><td>'.$row['Userid'].'</td><td>'.$row['Name'].'</td><td>'.$row['Dias'].'</td><td>'.$result2['Contracto'].' h</td><td class="text-center text-danger">'.$row['HTrabalhadas'].'</td></tr>';
+						}else{
+							$message .= '<tr><td>'.$row['Userid'].'</td><td>'.$row['Name'].'</td><td>'.$row['Dias'].'</td><td>'.$result2['Contracto'].' h</td><td class="text-center">'.$row['HTrabalhadas'].'</td></tr>';
 						}	
 					}
 				}

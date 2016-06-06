@@ -12,7 +12,7 @@ if($this->session->userdata('level') == 2)
 ?>
 
 <div class="col-md-10 col-md-offset-1">
-	<legend>Horas do Contracto</legend>
+	<legend>Horas do Contrato</legend>
 </div>
 
 
@@ -42,7 +42,7 @@ if($this->session->userdata('level') == 2)
 				      		<tr>
 				        		<th data-sort="int">Nº</th>
 				        		<th>Nome</th>
-				        		<th>Contracto</th>
+				        		<th>Contrato</th>
 				        		<th>Editar</th>
 				      		</tr>
 				    	</thead>

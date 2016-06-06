@@ -76,7 +76,7 @@
 						<li role="separator" class="divider"></li>
 						<li><a href="<?= base_url('home/feriados') ?>">Feriados</a></li>
 						<li role="separator" class="divider"></li>
-						<li><a href="<?= base_url('home/contractos') ?>">Contractos</a></li>
+						<li><a href="<?= base_url('home/contractos') ?>">Contratos</a></li>
 						<!-- <li role="separator" class="divider"></li>
 						<li><a href="#">Something else here</a></li>
 						<li role="separator" class="divider"></li>

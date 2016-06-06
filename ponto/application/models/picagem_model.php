@@ -494,7 +494,7 @@ class Picagem_model extends CI_Model {
 				$result_inv = $this->db->query($sql);
 				if($result_inv->num_rows() > 0)
 				{
-					$sql = "SELECT FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia, hol.Name as Name FROM V_Record as vr, Holiday as hol WHERE vr.Userid =".$row->Userid." AND (";
+					$sql = "SELECT DISTINCT vr.CheckTime, FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia, hol.Name as Name FROM V_Record as vr, Holiday as hol WHERE vr.Userid =".$row->Userid." AND (";
 					
 					$i = 0;
 					foreach($result_inv->result() as $row2)

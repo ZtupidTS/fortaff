@@ -36,7 +36,7 @@ if($this->session->userdata('level') == 2)
 		{
 			?>
 			<!--Resultados-->
-			<div class="col-md-3 col-md-offset-4 table-responsive">
+			<div class="col-md-4 col-md-offset-4 table-responsive">
 				<table class="table table-hover picagens display" id="picagens">
 					<caption>
 						<?php

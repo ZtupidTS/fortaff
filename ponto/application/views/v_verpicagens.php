@@ -76,7 +76,7 @@ if($this->session->userdata('level') == 1)
 				?>
 				<div class="form-group">
 					<select class="form-control" id="selectuser">
-						<option value="<?= $this->session->userdata('user_id');?>"><?= $this->session->userdata('user_id').' - '.$this->session->userdata('nome');?></option>
+						<!--<option value="<?= $this->session->userdata('user_id');?>"><?= $this->session->userdata('user_id').' - '.$this->session->userdata('nome');?></option>-->
 						<?php
 						foreach($this->session->userdata('arr_user') as $row)
 						{

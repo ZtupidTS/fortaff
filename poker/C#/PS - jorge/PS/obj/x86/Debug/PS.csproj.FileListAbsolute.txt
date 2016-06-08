@@ -1,0 +1,39 @@
+M:\poker\DT_meu\prog\Debug\PS.exe
+M:\poker\DT_meu\prog\Debug\PS.pdb
+M:\Dropbox\taff et autre\pok-ps\C#\PS\PS\bin\Debug\PS.exe
+M:\Dropbox\taff et autre\pok-ps\C#\PS\PS\bin\Debug\PS.pdb
+M:\Dropbox\taff et autre\pok-ps\C#\PS\PS\obj\x86\Debug\PS.FormInicial.resources
+M:\Dropbox\taff et autre\pok-ps\C#\PS\PS\obj\x86\Debug\PS.Properties.Resources.resources
+M:\Dropbox\taff et autre\pok-ps\C#\PS\PS\obj\x86\Debug\PS.exe
+M:\Dropbox\taff et autre\pok-ps\C#\PS\PS\obj\x86\Debug\PS.pdb
+M:\Dropbox\taff et autre\pok-ps\C#\PS\PS\obj\x86\Debug\PS.csproj.GenerateResource.Cache
+M:\Dropbox\taff et autre\pok-ps\C#\PS\PS\obj\x86\Debug\PS.csprojResolveAssemblyReference.cache
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.exe
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.pdb
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.FormInicial.resources
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.Properties.Resources.resources
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.csproj.GenerateResource.Cache
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\bin\Debug\PS.exe
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\bin\Debug\PS.pdb
+\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.exe
+\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.pdb
+\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\bin\Debug\PS.exe
+\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\bin\Debug\PS.pdb
+\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.FormInicial.resources
+\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.Properties.Resources.resources
+\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.csproj.GenerateResource.Cache
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - changemente fichier des hands\PS\obj\x86\Debug\PS.exe
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - changemente fichier des hands\PS\obj\x86\Debug\PS.pdb
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - changemente fichier des hands\PS\obj\x86\Debug\PS.FormInicial.resources
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - changemente fichier des hands\PS\obj\x86\Debug\PS.Properties.Resources.resources
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - changemente fichier des hands\PS\obj\x86\Debug\PS.csproj.GenerateResource.Cache
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - changemente fichier des hands\PS\bin\Debug\PS.exe
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - changemente fichier des hands\PS\bin\Debug\PS.pdb
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - changemente fichier des hands\PS\obj\x86\Debug\PS.csprojResolveAssemblyReference.cache
+\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - jorge\PS\obj\x86\Debug\PS.exe
+\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - jorge\PS\obj\x86\Debug\PS.pdb
+\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - jorge\PS\bin\Debug\PS.exe
+\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - jorge\PS\bin\Debug\PS.pdb
+\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - jorge\PS\obj\x86\Debug\PS.FormInicial.resources
+\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - jorge\PS\obj\x86\Debug\PS.Properties.Resources.resources
+\\219.21.221.12\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - jorge\PS\obj\x86\Debug\PS.csproj.GenerateResource.Cache

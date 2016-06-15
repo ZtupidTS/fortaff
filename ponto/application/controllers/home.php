@@ -141,6 +141,8 @@ class Home extends CI_Controller {
 		$seconddate = $this->input->post('datesecond');
 		$userid  = $this->input->post('Userid');
 		
+		log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Viu picagens (Ver picagens) do funcionario '.$this->input->post('Namefunc'));
+		
 		$result = $this->picagem_model->picagensbyuser($userid,$firstdate,$seconddate);
 		
 		if($result)
@@ -178,6 +180,8 @@ class Home extends CI_Controller {
 		$firstdate = date_create($this->input->post('datefirst'));
 		$seconddate = date_create($this->input->post('datesecond'));
 		$userid  = $this->input->post('Userid');
+		
+		log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Viu picagens (R. Diario) do funcionario '.$this->input->post('Namefunc'));
 		
 		if($userid == '999999')
 		{
@@ -390,6 +394,8 @@ class Home extends CI_Controller {
 			echo 'Não inseriu a hora da nova picagem';
 			return true;
 		}else{
+			log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Edito picagens do funcionario '.$this->input->post('nome').' do dia '.$this->input->post('datapicagem'));
+			
 			$newpicagem = $this->input->post('datapicagem').' '.$this->input->post('novapicagem').'.000';
 			$sql_data = array(
 		            'CheckTime'        => $newpicagem
@@ -418,6 +424,9 @@ class Home extends CI_Controller {
 	public function del_picagem()
 	{
 		$result = $this->picagem_model->deletepicagem($this->input->post('logid'));
+		
+		log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Elimino picagens do funcionario '.$this->input->post('nome').' do dia '.$this->input->post('datapicagem'));
+		
 		if($result)
 	        {
 			$return = array(
@@ -441,6 +450,8 @@ class Home extends CI_Controller {
 	{
 		$this->load->helper('myfunction_helper');
 		$new_hora_picagem = toSeconds($this->input->post('novapicagem'));
+		
+		log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Adiciono picagens do funcionario '.$this->input->post('nome').' do dia '.$this->input->post('datapicagem'));
 		
 		if($new_hora_picagem < LAST_TIME_SEC)
 		{

@@ -179,6 +179,7 @@ function verpicagens()
 	date1 = $("#datefirst").val();
 	date2 = $("#datesecond").val();
 	var user = $("#selectuser").val();
+	var namefunc = $("#selectuser").find(":selected").text();
 	if(user == '' || date1 == '' || date2 == '')
 	{
 		noty({ 
@@ -188,7 +189,7 @@ function verpicagens()
 	    		closeWith: ['click', 'hover']
 	    	});
 	}else{
-		var values = {datefirst: date1, datesecond: date2, Userid: user};
+		var values = {datefirst: date1, datesecond: date2, Userid: user, Namefunc: namefunc};
 		var url = ''
 		if(user == '999999')
 		{

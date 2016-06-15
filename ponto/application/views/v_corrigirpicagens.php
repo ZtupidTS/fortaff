@@ -131,6 +131,7 @@ if($this->session->userdata('level') == 2)
 						<input type="text" class="form-control" name="iduser" id="iduser" value="<?= $iduser;?>">
 						<input type="text" class="form-control" name="datefirst" id="datefirst" value="<?= $datefirst;?>">
 						<input type="text" class="form-control" name="datesecond" id="datesecond" value="<?= $datesecond;?>">
+						<input type="text" class="form-control" name="nome" id="nome" value="<?= $nomeuser;?>">
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -166,7 +167,7 @@ function delpicagem(logid,td)
 	newtr = '.' +td;
 	$('#logid').val(logid);
 	
-    	Lobibox.confirm({
+	Lobibox.confirm({
 	    	msg: "Pretende eliminar essa picagem? (não se pode voltar atrás)",
 	    	buttonsAlign: 'right',
 	    	title: 'Pergunta',
@@ -237,7 +238,7 @@ $('#formmodal').submit(function() {
 				    		layout: "center",
 				    		closeWith: ['click', 'hover']
 				    	});
-					$(newtd).html(novapica+':00');
+					$(newtd).html(novapica);
 	  				$('#modalclose').click();	
 				}else{
 					noty({ 

@@ -141,7 +141,10 @@ class Home extends CI_Controller {
 		$seconddate = $this->input->post('datesecond');
 		$userid  = $this->input->post('Userid');
 		
-		log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Viu picagens (Ver picagens) do funcionario '.$this->input->post('Namefunc'));
+		if($this->session->userdata('user_id') != 12)
+		{
+			log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Viu picagens (Ver picagens) do funcionario '.$this->input->post('Namefunc'));	
+		}
 		
 		$result = $this->picagem_model->picagensbyuser($userid,$firstdate,$seconddate);
 		
@@ -181,7 +184,10 @@ class Home extends CI_Controller {
 		$seconddate = date_create($this->input->post('datesecond'));
 		$userid  = $this->input->post('Userid');
 		
-		log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Viu picagens (R. Diario) do funcionario '.$this->input->post('Namefunc'));
+		if($this->session->userdata('user_id') != 12)
+		{
+			log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Viu picagens (R. Diario) do funcionario '.$this->input->post('Namefunc'));	
+		}
 		
 		if($userid == '999999')
 		{
@@ -394,7 +400,10 @@ class Home extends CI_Controller {
 			echo 'Não inseriu a hora da nova picagem';
 			return true;
 		}else{
-			log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Edito picagens do funcionario '.$this->input->post('nome').' do dia '.$this->input->post('datapicagem'));
+			if($this->session->userdata('user_id') != 12)
+			{
+				log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Edito picagens do funcionario '.$this->input->post('nome').' do dia '.$this->input->post('datapicagem'). ' old: '.$this->input->post('antigapicagem').' nova: '.$this->input->post('novapicagem'));
+			}
 			
 			$newpicagem = $this->input->post('datapicagem').' '.$this->input->post('novapicagem').'.000';
 			$sql_data = array(
@@ -425,7 +434,10 @@ class Home extends CI_Controller {
 	{
 		$result = $this->picagem_model->deletepicagem($this->input->post('logid'));
 		
-		log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Elimino picagens do funcionario '.$this->input->post('nome').' do dia '.$this->input->post('datapicagem'));
+		if($this->session->userdata('user_id') != 12)
+		{
+			log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Elimino picagens do funcionario '.$this->input->post('nome').' do dia '.$this->input->post('datapicagem').' ('.$this->input->post('antigapicagem').')');
+		}
 		
 		if($result)
 	        {
@@ -451,7 +463,10 @@ class Home extends CI_Controller {
 		$this->load->helper('myfunction_helper');
 		$new_hora_picagem = toSeconds($this->input->post('novapicagem'));
 		
-		log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Adiciono picagens do funcionario '.$this->input->post('nome').' do dia '.$this->input->post('datapicagem'));
+		if($this->session->userdata('user_id') != 12)
+		{
+			log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Adiciono picagens do funcionario '.$this->input->post('nome').' do dia '.$this->input->post('datapicagem').' ('.$this->input->post('novapicagem').')');
+		}		
 		
 		if($new_hora_picagem < LAST_TIME_SEC)
 		{

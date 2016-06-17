@@ -4,17 +4,74 @@
     	function alterarCob(id, cobertura)
     	{
 		var my_text=prompt('Vai alterar essa cobertura: '+cobertura);
-		alterarComposicao(my_text,id,'cob');
+		var continu = true;
+		if(my_text == '')
+		{
+			//alert(my_text+'va');	
+			continu = false;
+		}
+		if(my_text == 'undefined')
+		{
+			//alert(my_text+'UN');	
+			continu = false;
+		}
+		if(my_text == null)
+		{
+			//alert(my_text+'null');	
+			continu = false;
+		}
+		if(continu)
+		{
+			alterarComposicao(my_text,id,'cob');	
+		}		
 	}
 	function alterarRec(id, cobertura)
     	{
 		var my_text=prompt('Vai alterar essa cobertura: '+cobertura);
-		alterarComposicao(my_text,id,'rec');
+		var continu = true;
+		if(my_text == '')
+		{
+			//alert(my_text+'va');	
+			continu = false;
+		}
+		if(my_text == 'undefined')
+		{
+			//alert(my_text+'UN');	
+			continu = false;
+		}
+		if(my_text == null)
+		{
+			//alert(my_text+'null');	
+			continu = false;
+		}
+		if(continu)
+		{
+			alterarComposicao(my_text,id,'rec');	
+		}		
 	}
 	function alterarMas(id, cobertura)
     	{
 		var my_text=prompt('Vai alterar essa cobertura: '+cobertura);
-		alterarComposicao(my_text,id,'mas');
+		var continu = true;
+		if(my_text == '')
+		{
+			//alert(my_text+'va');	
+			continu = false;
+		}
+		if(my_text == 'undefined')
+		{
+			//alert(my_text+'UN');	
+			continu = false;
+		}
+		if(my_text == null)
+		{
+			//alert(my_text+'null');	
+			continu = false;
+		}
+		if(continu)
+		{
+			alterarComposicao(my_text,id,'mas');	
+		}		
 	}
 	//tipo:
 	//cob: cobertura

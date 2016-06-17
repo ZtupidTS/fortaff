@@ -22,7 +22,7 @@ function massaGetByDistinct($where, $orderby)
 
 function massaGetAll()
 {
-        return getTable("pp_massa", "", "");
+        return getTable("pp_massa", "", "pp_massa_designacao");
 }
 
 //devolve me o id inserido

@@ -164,6 +164,8 @@ function editpicagem(logid,td)
 function delpicagem(logid,td)
 {
 	newtd = '#'+td;
+	var horaold = $.trim($(newtd).html());
+	$('#antigapicagem').val(horaold);
 	newtr = '.' +td;
 	$('#logid').val(logid);
 	

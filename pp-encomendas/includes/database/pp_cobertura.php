@@ -22,7 +22,7 @@ function coberturaGetByDistinct($where, $orderby)
 
 function coberturaGetAll()
 {
-        return getTable("pp_cobertura", "", "");
+        return getTable("pp_cobertura", "", "pp_cobertura_designacao");
 }
 
 //devolve me o id inserido

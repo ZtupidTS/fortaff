@@ -22,7 +22,7 @@ function recheioGetByDistinct($where, $orderby)
 
 function recheioGetAll()
 {
-        return getTable("pp_recheio", "", "");
+        return getTable("pp_recheio", "", "pp_recheio_designacao");
 }
 
 //devolve me o id inserido

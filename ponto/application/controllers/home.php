@@ -214,7 +214,12 @@ class Home extends CI_Controller {
 					{
 						$result = $this->picagem_model->calculoHorasTrabalhadas($row_user->Userid,$firstdate->format('Y-m-d'),$firstdate->format('Y-m-d'));
 						
-						$message_return .= '<tr><td>'.date_format($firstdate,'d-m-y').'</td>';
+						if(date('w', strtotime(date_format($firstdate,'Ymd'))) == 0)
+						{
+							$message_return .= '<tr class="danger"><td>'.date_format($firstdate,'d-m-y').'</td>';
+						}else{
+							$message_return .= '<tr><td>'.date_format($firstdate,'d-m-y').'</td>';
+						}
 						
 						if($result['horas'] == '00:00:00')
 						{
@@ -240,8 +245,13 @@ class Home extends CI_Controller {
 				while(date_format($firstdate,'y-m-d') <= date_format($seconddate,'y-m-d'))
 				{
 					$result = $this->picagem_model->calculoHorasTrabalhadas($resultuser['Userid'],$firstdate->format('Y-m-d'),$firstdate->format('Y-m-d'));
-					
-					$message_return .= '<tr><td>'.date_format($firstdate,'d-m-y').'</td>';
+					if(date('w', strtotime(date_format($firstdate,'Ymd'))) == 0)
+					{
+						$message_return .= '<tr class="danger"><td>'.date_format($firstdate,'d-m-y').'</td>';
+					}else{
+						$message_return .= '<tr><td>'.date_format($firstdate,'d-m-y').'</td>';
+					}
+					//$message_return .= '<tr><td>'.date_format($firstdate,'d-m-y').'</td>';
 					
 					if($result['horas'] == '00:00:00')
 					{

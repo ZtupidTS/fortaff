@@ -71,7 +71,7 @@ $_SESSION['nif_leclerc_pdf'] = '507019792';
 $_SESSION['rodape_guia'] = 'NOTA - O PRAZO MAXIMO DE REPARAÇÃO SÃO 30 DIAS ÚTEIS A CONTAR A PARTIR DA DATA DE ENTRADA NA LOJA. ESTA GUIA É INDISPENSÁVEL
 PARA O LEVANTAMENTO DO SEU ARTIGO EM LOJA, SE NÃO APRESENTA-LA NÃO PODERA LEVANTAR O ARTIGO EM CAUSA.';
 //tamanho da letra do rodape de 4 a 7
-$_SESSION['size_font_rodape'] = 7;
+$_SESSION['size_font_rodape'] = 5;
 
 
 

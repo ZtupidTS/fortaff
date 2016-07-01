@@ -113,7 +113,7 @@ define('VAL_LOJA',4);
 
 /* valor das pausas é de 40 min excluido no maximo logo vou converter em segundo */
 /* 40 * 60 = 2400, novo 35 * 60 = 2100 */
-define('PAUSA',2100);
+define('PAUSA',2220);
 /* a ultima hora de picagem a pegar defini 03:30:00.000 */
 define('LAST_TIME',"03:30:00.000");
 /* aqui é em segundos o last time */

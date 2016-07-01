@@ -700,13 +700,25 @@ class Picagem_model extends CI_Model {
 			
 			while(date_format($datefirst,'y-m-d') < date_format($newdate,'y-m-d'))
 			{
-				$message .= '<tr onclick="corrigirPicagens('.date_format($datefirst,'Ymd').')"><td>'.date_format($datefirst,'d-m-y').'</td><td></td></tr>';
+				//class="danger"
+				if(date('w', strtotime(date_format($datefirst,'Ymd'))) == 0)
+				{
+					$message .= '<tr class="danger" onclick="corrigirPicagens('.date_format($datefirst,'Ymd').')"><td>'.date_format($datefirst,'d-m-y').'</td><td></td></tr>';
+				}else{
+					$message .= '<tr onclick="corrigirPicagens('.date_format($datefirst,'Ymd').')"><td>'.date_format($datefirst,'d-m-y').'</td><td></td></tr>';	
+				}
+				
 				$datefirst->add(new DateInterval('P1D'));
 			}
 			
 			if($olddate == '' && date_format($datefirst,'y-m-d') == date_format($newdate,'y-m-d'))
 			{
-				$message .= '<tr onclick="corrigirPicagens('.date_format($newdate,'Ymd').')"><td>'.date_format($newdate,'d-m-y').'</td>';
+				if(date('w', strtotime(date_format($datefirst,'Ymd'))) == 0)
+				{
+					$message .= '<tr class="danger" onclick="corrigirPicagens('.date_format($newdate,'Ymd').')"><td>'.date_format($newdate,'d-m-y').'</td>';
+				}else{
+					$message .= '<tr onclick="corrigirPicagens('.date_format($newdate,'Ymd').')"><td>'.date_format($newdate,'d-m-y').'</td>';
+				}
 				$datefirst->add(new DateInterval('P1D'));
 			}
 			
@@ -715,10 +727,20 @@ class Picagem_model extends CI_Model {
 				if($hora < LAST_TIME_SEC)
 				{
 					$message .= '<td>'.date_format($newdate,'H:i:s').'</td>';
-						
-					$message .= '</tr><tr onclick="corrigirPicagens('.date_format($newdate,'Ymd').')"><td>'.date_format($newdate,'d-m-y').'</td>';
+					
+					if(date('w', strtotime(date_format($datefirst,'Ymd'))) == 0)
+					{
+						$message .= '</tr><tr class="danger" onclick="corrigirPicagens('.date_format($newdate,'Ymd').')"><td>'.date_format($newdate,'d-m-y').'</td>';
+					}else{
+						$message .= '</tr><tr onclick="corrigirPicagens('.date_format($newdate,'Ymd').')"><td>'.date_format($newdate,'d-m-y').'</td>';
+					}
 				}else{
-					$message .= '</tr><tr onclick="corrigirPicagens('.date_format($newdate,'Ymd').')"><td>'.date_format($newdate,'d-m-y').'</td>';
+					if(date('w', strtotime(date_format($datefirst,'Ymd'))) == 0)
+					{
+						$message .= '</tr><tr class="danger" onclick="corrigirPicagens('.date_format($newdate,'Ymd').')"><td>'.date_format($newdate,'d-m-y').'</td>';
+					}else{
+						$message .= '</tr><tr onclick="corrigirPicagens('.date_format($newdate,'Ymd').')"><td>'.date_format($newdate,'d-m-y').'</td>';
+					}
 					$message .= '<td>'.date_format($newdate,'H:i:s').'</td>';
 				}
 				$datefirst->add(new DateInterval('P1D'));
@@ -734,7 +756,12 @@ class Picagem_model extends CI_Model {
 		}
 		while(date_format($datefirst,'y-m-d') <= date_format($datesecond,'y-m-d'))
 		{
-			$message .= '<tr onclick="corrigirPicagens('.date_format($datefirst,'Ymd').')"><td>'.date_format($datefirst,'d-m-y').'</td><td></td></tr>';
+			if(date('w', strtotime(date_format($datefirst,'Ymd'))) == 0)
+			{
+				$message .= '<tr onclick="corrigirPicagens('.date_format($datefirst,'Ymd').')"><td>'.date_format($datefirst,'d-m-y').'</td><td></td></tr>';
+			}else{
+				$message .= '<tr onclick="corrigirPicagens('.date_format($datefirst,'Ymd').')"><td>'.date_format($datefirst,'d-m-y').'</td><td></td></tr>';
+			}
 			$datefirst->add(new DateInterval('P1D'));
 		}
 		return $message;

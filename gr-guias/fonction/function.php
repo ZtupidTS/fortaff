@@ -302,9 +302,9 @@ function createpdfA5($id_gr)
     
     $pdf->ln(6);
     $newcell = false;
-    if(strlen($grepdb['art_anomalia']) > 80)
+    if(strlen($grepdb['art_anomalia']) > 72)
     {
-    	$anomaliatemp = wordwrap($grepdb['art_anomalia'], 80, "%&", true);    	
+    	$anomaliatemp = wordwrap($grepdb['art_anomalia'], 72, "%&", true);    	
     	$anomaliafinal = split("%&", $anomaliatemp);
     	$newcell = true;
     }else{
@@ -312,12 +312,12 @@ function createpdfA5($id_gr)
     }
     $pdf->SetFont('arial','U',9);
     $pdf->Cell(14,10,utf8_decode('Anomalia:'));
-    $pdf->SetFont('arial','',9);
+    $pdf->SetFont('arial','',8);
     $pdf->Cell(126,10,utf8_decode(' ' . $anomaliafinal[0]));
     //a5
     $pdf->SetFont('arial','U',9);
     $pdf->Cell(14,10,utf8_decode('Anomalia:'));
-    $pdf->SetFont('arial','',9);
+    $pdf->SetFont('arial','',8);
     $pdf->Cell(10,10,utf8_decode(' ' . $anomaliafinal[0]));
     if($newcell)
     {

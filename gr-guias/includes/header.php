@@ -104,12 +104,42 @@ if(isset($_SESSION['username']))
 	    document.getElementById('loadingmsg').style.display = 'none';
 	    document.getElementById('loadingover').style.display = 'none';
 	}
+	function navbarSearchGr()
+	{
+		var navgr = document.getElementById('grnavbarsearch').value;
+		//faço o ajax da submissão do form
+		if (window.XMLHttpRequest)
+		{// code for IE7+, Firefox, Chrome, Opera, Safari
+		    var xhr=new XMLHttpRequest();
+		}else{// code for IE6, IE5
+		    var xhr=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xhr.onreadystatechange=function()
+		{
+			if (xhr.readyState==4 && xhr.status==200)
+			{
+				if(trimStr(xhr.responseText) == 'nok')
+				{
+					//alert(xhr.responseText);
+					alert('Esse numero não existe ou introduziu mal o numero da guia');
+				}else{
+					viewGr(trimStr(xhr.responseText));
+					//alert(xhr.responseText);
+				}            
+			}
+		}
+		var postajax = "gr="+navgr;
+		xhr.open("POST","ajax/ajnavbarsearch.php",true);
+	    	xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	    	xhr.send(postajax);
+	}
         </script>
         <!-- para o file upload -->
         <script src="js/other/jquery.uploadfile.js"></script>
         <!-- script para ver um pouco da guia -->
         <script src="js/viewDataGr.js"></script>
         <script src="js/viewDataRep.js"></script>
+        
         
         
     </head>
@@ -214,7 +244,14 @@ if(isset($_SESSION['username']))
 			        	}?>
 			       	<li class="dropdown">
 	                        	<a href="info.php">Info</a>				
-	                        </li>                     
+	                        </li> 
+	                        
+	                        <form class="navbar-form navbar-left" role="search">
+        				<div class="form-group">
+          					<input type="text" name="grnavbarsearch" id="grnavbarsearch" class="form-control" placeholder="Nº Guia (XX-YYYY)">
+        				</div>
+        				<input type="button" onclick="navbarSearchGr()" class="btn" value="Ver">	
+      				</form>                    
                        	<?php } ?>
                       	
                     </ul>

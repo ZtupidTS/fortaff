@@ -18,7 +18,7 @@ namespace PS
     public partial class FormInicial : Form
     {
         Boolean continueDt = true;
-        String ipinicial;
+        String ipinicial = "";
         //VpnConnect.VPN vpn;
         public WebClient webclient = new WebClient();
         public int i = 1;
@@ -36,9 +36,35 @@ namespace PS
             //aqui vai ser para a vpn
             //ipinicial = new Utils().getipinternetMeu();
             //String ipinicial2 = new Utils().getipinternet2();
-            ipinicial = new Utils().getipinternetMeu();
+            MethodInvoker startdtinit = new MethodInvoker(ipinicial1);
+            startdtinit.BeginInvoke(null, null);
+            MethodInvoker startdt3init = new MethodInvoker(ipinicial2);
+            startdt3init.BeginInvoke(null, null);
+            MethodInvoker startdt2init = new MethodInvoker(ipinicial3);
+            startdt2init.BeginInvoke(null, null);
+
+            //ipinicial = new Utils().getipinternetMeu();
+            while (ipinicial == "")
+            {
+                int i = 0;
+            }
             label1.Text = ipinicial;
             
+        }
+
+        public void ipinicial1()
+        {
+            ipinicial = new Utils().getipinternetMeu();
+        }
+
+        public void ipinicial2()
+        {
+            ipinicial = new Utils().getipinternet2();
+        }
+
+        public void ipinicial3()
+        {
+            ipinicial = new Utils().getipinternet3(webclient);
         }
 
         public void Dt()

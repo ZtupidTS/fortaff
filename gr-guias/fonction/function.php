@@ -182,7 +182,7 @@ function createpdfA5($id_gr)
     $pdf->Cell(0,10,utf8_decode('NIF: '.$_SESSION['nif_leclerc_pdf']) ,0 ,0, 'L');
 
     //cliente
-    $pdf->Ln(9);
+    $pdf->Ln(6);
     $pdf->SetFont('arial','',12);
     $pdf->Cell(140,10,utf8_decode('Cliente') ,0 ,0, 'L');
     //a5
@@ -242,15 +242,15 @@ function createpdfA5($id_gr)
     $pdf->SetFont('arial','',9);
     $pdf->Cell(0,10,utf8_decode(' ' . $grepdb['cl_telefone']));
     //artigo
-    $pdf->Ln(9);
+    $pdf->Ln(6);
     $pdf->SetFont('arial','',12);
     $pdf->Cell(140,10,utf8_decode('Artigo') ,0 ,0, 'L');
     //a5
     $pdf->Cell(0,10,utf8_decode('Artigo') ,0 ,0, 'L');
     $pdf->Ln(2);
-    $pdf->Cell(140,10,utf8_decode('______________________________________________________') ,0 ,0, 'L');
+    $pdf->Cell(140,8,utf8_decode('______________________________________________________') ,0 ,0, 'L');
     //a5
-    $pdf->Cell(0,10,utf8_decode('______________________________________________________') ,0 ,0, 'L');
+    $pdf->Cell(0,8,utf8_decode('______________________________________________________') ,0 ,0, 'L');
     $pdf->Ln(6);
     $pdf->SetFont('arial','U',9);
     $pdf->Cell(10,10,utf8_decode('Marca:'));
@@ -272,33 +272,33 @@ function createpdfA5($id_gr)
     
     $pdf->ln(6);
     $pdf->SetFont('arial','U',9);
-    $pdf->Cell(12,10,utf8_decode('Modelo:'));
+    $pdf->Cell(12,9,utf8_decode('Modelo:'));
     $pdf->SetFont('arial','',9);
-    $pdf->Cell(45,10,utf8_decode(' ' . $grepdb['art_modelo']));
+    $pdf->Cell(45,9,utf8_decode(' ' . $grepdb['art_modelo']));
     $pdf->SetFont('arial','U',9);
-    $pdf->Cell(7,10,utf8_decode('EAN:'));
+    $pdf->Cell(7,9,utf8_decode('EAN:'));
     $pdf->SetFont('arial','',9);
     $pdf->Cell(76,10,utf8_decode(' ' . $grepdb['art_ean']));
     //a5
     $pdf->SetFont('arial','U',9);
-    $pdf->Cell(12,10,utf8_decode('Modelo:'));
+    $pdf->Cell(12,9,utf8_decode('Modelo:'));
     $pdf->SetFont('arial','',9);
-    $pdf->Cell(45,10,utf8_decode(' ' . $grepdb['art_modelo']));
+    $pdf->Cell(45,9,utf8_decode(' ' . $grepdb['art_modelo']));
     $pdf->SetFont('arial','U',9);
-    $pdf->Cell(7,10,utf8_decode('EAN:'));
+    $pdf->Cell(7,9,utf8_decode('EAN:'));
     $pdf->SetFont('arial','',9);
-    $pdf->Cell(0,10,utf8_decode(' ' . $grepdb['art_ean']));
+    $pdf->Cell(0,9,utf8_decode(' ' . $grepdb['art_ean']));
     
     $pdf->ln(6);
     $pdf->SetFont('arial','U',9);
-    $pdf->Cell(13,10,utf8_decode('Nº Série:'));
+    $pdf->Cell(13,9,utf8_decode('Nº Série:'));
     $pdf->SetFont('arial','',9);
-    $pdf->Cell(127,10,utf8_decode(' ' . $grepdb['art_numserie']));
+    $pdf->Cell(127,9,utf8_decode(' ' . $grepdb['art_numserie']));
     //a5
     $pdf->SetFont('arial','U',9);
-    $pdf->Cell(13,10,utf8_decode('Nº Série:'));
+    $pdf->Cell(13,9,utf8_decode('Nº Série:'));
     $pdf->SetFont('arial','',9);
-    $pdf->Cell(0,10,utf8_decode(' ' . $grepdb['art_numserie']));
+    $pdf->Cell(0,9,utf8_decode(' ' . $grepdb['art_numserie']));
     
     $pdf->ln(6);
     $newcell = false;
@@ -311,19 +311,19 @@ function createpdfA5($id_gr)
     	$anomaliafinal = array($grepdb['art_anomalia']);
     }
     $pdf->SetFont('arial','U',9);
-    $pdf->Cell(14,10,utf8_decode('Anomalia:'));
+    $pdf->Cell(14,9,utf8_decode('Anomalia:'));
     $pdf->SetFont('arial','',8);
-    $pdf->Cell(126,10,utf8_decode(' ' . $anomaliafinal[0]));
+    $pdf->Cell(126,9,utf8_decode(' ' . $anomaliafinal[0]));
     //a5
     $pdf->SetFont('arial','U',9);
-    $pdf->Cell(14,10,utf8_decode('Anomalia:'));
+    $pdf->Cell(14,9,utf8_decode('Anomalia:'));
     $pdf->SetFont('arial','',8);
-    $pdf->Cell(10,10,utf8_decode(' ' . $anomaliafinal[0]));
+    $pdf->Cell(10,9,utf8_decode(' ' . $anomaliafinal[0]));
     if($newcell)
     {
     	$pdf->ln(6);
-    	$pdf->Cell(140,10,utf8_decode($anomaliafinal[1]));
-    	$pdf->Cell(0,10,utf8_decode($anomaliafinal[1]));
+    	$pdf->Cell(140,9,utf8_decode($anomaliafinal[1]));
+    	$pdf->Cell(0,9,utf8_decode($anomaliafinal[1]));
     }
     
     $pdf->ln(6);

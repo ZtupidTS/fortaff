@@ -246,7 +246,7 @@ if(isset($_SESSION['username']))
 	                        	<a href="info.php">Info</a>				
 	                        </li> 
 	                        
-	                        <form class="navbar-form navbar-left" role="search">
+	                        <form class="navbar-form navbar-left" role="search" onsubmit="return false;">
         				<div class="form-group">
           					<input type="text" name="grnavbarsearch" id="grnavbarsearch" class="form-control" placeholder="Nº Guia (XX-YYYY)">
         				</div>

@@ -14,7 +14,11 @@ class Home extends CI_Controller {
 	
 	public function index()
 	{
-		log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Entrou');
+		if($this->session->userdata('user_id') != 12)
+		{
+			log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Entrou');
+		}
+		
 		if($this->session->userdata('level') == 2)
 		{
 			$this->load->view('v_home');
@@ -208,6 +212,8 @@ class Home extends CI_Controller {
 			{
 				foreach($resultuser->result() as $row_user)
 				{
+					$firstdate = date_create($this->input->post('datefirst'));
+					
 					$message_tb_head = '<table class="table table-hover picagens table-borderless" id="picagens'.$i.'"><caption>'.$row_user->Userid.' - '.$row_user->Name.'</caption><thead><tr><th>Dia</th><th>H. Trabalhadas</th><th>H. Pausas</th></tr></thead>';
 					
 					while(date_format($firstdate,'y-m-d') <= date_format($seconddate,'y-m-d'))
@@ -232,6 +238,7 @@ class Home extends CI_Controller {
 					}
 					
 					$message .= $message_tb_head . $message_return .'</tbody></table>';	
+					$message_return = '';
 					$i++;				
 				}
 				
@@ -598,13 +605,23 @@ class Home extends CI_Controller {
 					}else{
 						
 						$hcontracto = intval($result2['Contracto']) * 3600;
-						$htrab = toSeconds($row['HTrabalhadas']);
+						if($row['HTrabalhadas'] == 'Faltam picagens')
+						{
+							$htrab = 'Faltam Picagens';	
+						}else{
+							$htrab = toSeconds($row['HTrabalhadas']);	
+						}						
 						
-						if($htrab < ($hcontracto - 900) || $htrab > ($hcontracto + 3600))
+						if($htrab == 'Faltam Picagens')
 						{
 							$message .= '<tr><td>'.$row['Userid'].'</td><td>'.$row['Name'].'</td><td>'.$row['Dias'].'</td><td>'.$result2['Contracto'].' h</td><td class="text-center text-danger">'.$row['HTrabalhadas'].'</td></tr>';
 						}else{
-							$message .= '<tr><td>'.$row['Userid'].'</td><td>'.$row['Name'].'</td><td>'.$row['Dias'].'</td><td>'.$result2['Contracto'].' h</td><td class="text-center">'.$row['HTrabalhadas'].'</td></tr>';
+							if($htrab < ($hcontracto - 900) || $htrab > ($hcontracto + 3600))
+							{
+								$message .= '<tr><td>'.$row['Userid'].'</td><td>'.$row['Name'].'</td><td>'.$row['Dias'].'</td><td>'.$result2['Contracto'].' h</td><td class="text-center text-danger">'.$row['HTrabalhadas'].'</td></tr>';
+							}else{
+								$message .= '<tr><td>'.$row['Userid'].'</td><td>'.$row['Name'].'</td><td>'.$row['Dias'].'</td><td>'.$result2['Contracto'].' h</td><td class="text-center">'.$row['HTrabalhadas'].'</td></tr>';
+							}
 						}	
 					}
 				}

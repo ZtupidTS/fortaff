@@ -86,7 +86,10 @@ class Login extends CI_Controller {
 	 */
 	public function logout()
 	{
-		log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Saiu');
+		if($this->session->userdata('user_id') != 12)
+		{
+			log_message('utilizadores', $this->session->userdata('user_id').' - '.$this->session->userdata('nome').': Saiu');
+		}
 		$this->session->unset_userdata("logged");
 		redirect(base_url());
 	}

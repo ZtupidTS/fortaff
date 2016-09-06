@@ -461,7 +461,7 @@ class Picagem_model extends CI_Model {
 		}
 		
 		//Agora os funcionarios
-		$sql = "select Userid, Duty from Userinfo where Deptid NOT IN (1,4,22,23,24)";
+		$sql = "select Userid, Duty from Userinfo where Deptid NOT IN (1,4,22,23,24,25)";
 		
 		$result = $this->db->query($sql);
 		if($result->num_rows() >0)

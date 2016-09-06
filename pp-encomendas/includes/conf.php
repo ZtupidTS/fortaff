@@ -64,7 +64,7 @@ $_SESSION['apikey_sms'] = "3ec8e415ff9b7939513675fd50b0c308b07d8fd9";
 $_SESSION['list_sms'] = '25';
 $_SESSION['user_sms'] = "informatica@fafedis.pt";
 $_SESSION['pass_user_sms'] = "leclercgoi29";
-$_SESSION['message_sms'] = "Estimado cliente, O seu aparelho já se encontra reparado, queira logo que possivel deslocar-se a nossa loja para proceder ao seu levantamento. Obrigado.";
+$_SESSION['message_sms'] = "Estimado cliente informamos que a sua encomenda está pronta a ser levantada, agradecemos a preferência e esperamos que esteja ao seu gosto. Obrigado";
 
 
 //$_SESSION[''] =

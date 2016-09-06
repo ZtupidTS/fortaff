@@ -142,7 +142,7 @@ while ($sec = foreachRow($tablesection))
 			}else{
 				$numguia = $data['gr_number'];
 			}
-			$textmail .= 'GR nº' . $numguia . ' - Data entrada: ' . $data['date_in'] . ' - ' . $data['cl_name'] . ' - ' . $data['art_marca'] . ': ' . $data['art_type'] . ' - ' . $reparador . '<br/>';
+			$textmail .= 'GR nº' . $numguia . ' - ' . $data['date_in'] . ' - ' . $data['cl_name'] . ' - ' . $data['art_marca'] . ': ' . $data['art_type'] . '<br/>';
 		}	
 	}else{
 		$textmail .= 'Não existe nenhuma. <br/>';
@@ -177,7 +177,7 @@ while ($sec = foreachRow($tablesection))
 			}else{
 				$numguia = $data['gr_number'];
 			}
-			$textmail .= 'GR nº' . $numguia . ' - Data entrada: ' . $data['date_in'] . ' - ' . $data['cl_name'] . ' - ' . $data['art_marca'] . ': ' . $data['art_type'] . ' - ' . $reparador . '<br/>';
+			$textmail .= 'GR nº' . $numguia . ' - ' . $data['date_in'] . ' - ' . $data['cl_name'] . ' - ' . $data['art_marca'] . ': ' . $data['art_type'] . '<br/>';
 		}	
 	}else{
 		$textmail .= 'Não existe nenhuma. <br/>';
@@ -212,7 +212,7 @@ while ($sec = foreachRow($tablesection))
 			}else{
 				$numguia = $data['gr_number'];
 			}
-			$textmail .= 'GR nº' . $numguia . ' - Data entrada: ' . $data['date_in'] . ' - ' . $data['cl_name'] . ' - ' . $data['art_marca'] . ': ' . $data['art_type'] . ' - ' . $reparador . '<br/>';;
+			$textmail .= 'GR nº' . $numguia . ' - ' . $data['date_in'] . ' - ' . $data['cl_name'] . ' - ' . $data['art_marca'] . ': ' . $data['art_type'] . '<br/>';;
 		}	
 	}else{
 		$textmail .= 'Não existe nenhuma. <br/>';
@@ -293,7 +293,7 @@ while ($sec = foreachRow($tablesection))
 			}else{
 				$numguia = $data['gr_number'];
 			}
-			$textmail .= 'GR nº' . $numguia . ' - Data entrada: ' . $data['date_in'] . ' - ' . $data['cl_name'] . ' - ' . $data['art_marca'] . ': ' . $data['art_type'] . ' - ' . $reparador . '<br/>';
+			$textmail .= 'GR nº' . $numguia . ' - ' . $data['date_in'] . ' - ' . $data['cl_name'] . ' - ' . $data['art_marca'] . ': ' . $data['art_type'] . '<br/>';
 		}	
 	}else{
 		$textmail .= 'Não existe nenhum. <br/>';

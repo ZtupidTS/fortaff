@@ -134,7 +134,8 @@
 	        	var pattern = /[0-9]{9}/;
 	        	if(!pattern.test(contacto)) {
 	            		alert( "Tem de preencher o contacto do cliente correctamente" );
-	            		$('#contacto').focus();	            		
+	            		$('#contacto').focus();	 
+	            		continu = false;           		
 	        	}
 	    	}
 	    	

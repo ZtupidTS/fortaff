@@ -1,0 +1,7 @@
+Location=150,150
+checkBox_Login=ffrefefr
+Vpn1=
+Vpn2=
+Vpn3=
+Checkbox_zoom=False
+drive=

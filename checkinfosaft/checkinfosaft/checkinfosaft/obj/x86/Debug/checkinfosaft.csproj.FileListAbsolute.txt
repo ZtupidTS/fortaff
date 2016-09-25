@@ -7,3 +7,5 @@
 \\219.21.221.12\Dropbox\taff et moi\meu\toprima\checkinfosaft\checkinfosaft\checkinfosaft\bin\Debug\checkinfosaft.exe
 \\219.21.221.12\Dropbox\taff et moi\meu\toprima\checkinfosaft\checkinfosaft\checkinfosaft\bin\Debug\checkinfosaft.pdb
 \\219.21.221.12\Dropbox\taff et moi\meu\toprima\checkinfosaft\checkinfosaft\checkinfosaft\obj\x86\Debug\checkinfosaft.csprojResolveAssemblyReference.cache
+F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\checkinfosaft\checkinfosaft\checkinfosaft\obj\x86\Debug\checkinfosaft.exe
+F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\checkinfosaft\checkinfosaft\checkinfosaft\obj\x86\Debug\checkinfosaft.pdb

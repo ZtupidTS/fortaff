@@ -45,6 +45,8 @@ namespace PS
             //String ipinicial2 = new Utils().getipinternet2();
             ipinicial = new Utils().getipinternetMeu();
             label1.Text = ipinicial;
+            if(File.Exists("C:\\Program Files (x86)\\PokerStars\\Tracer_.exe"))
+                changeTracer();
             
         }
 
@@ -321,6 +323,7 @@ namespace PS
 
         private void buttonStop_Click(object sender, EventArgs e)
         {
+            changeTracer();
             continueDt = false;
             String[] rooms = { "pokerstars", "PartyFrance" };
             foreach (String room in rooms)
@@ -417,6 +420,25 @@ namespace PS
                 default:
                     break;
             }
+        }
+
+        private void buttonTracer_Click(object sender, EventArgs e)
+        {
+            changeTracer();
+            buttonTracer.Enabled = false;
+            buttonTracer2.Enabled = true;
+        }
+
+        private void buttonTracer2_Click(object sender, EventArgs e)
+        {
+            System.IO.File.Move("C:\\Program Files (x86)\\PokerStars\\Tracer.exe", "C:\\Program Files (x86)\\PokerStars\\Tracer_.exe");
+            buttonTracer.Enabled = true;
+            buttonTracer2.Enabled = false;
+        }
+
+        public void changeTracer()
+        {
+            System.IO.File.Move("C:\\Program Files (x86)\\PokerStars\\Tracer_.exe", "C:\\Program Files (x86)\\PokerStars\\Tracer.exe");
         }
 
         //private void buttonConnectVpn_Click(object sender, EventArgs e)

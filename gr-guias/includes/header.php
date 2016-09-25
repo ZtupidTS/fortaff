@@ -1,4 +1,8 @@
 <?php
+if (substr($_SERVER['REMOTE_ADDR'],10,4) == ".201") {
+echo "You are not allowed!";
+exit();
+}
 include 'includes/allpage.php';
 
 //verif login

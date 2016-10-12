@@ -264,6 +264,8 @@ namespace PS
             w.Write("drive=" + textBoxDrive.Text.ToString());
             w.WriteLine();
             w.Close();
+
+            //this.Close();
         }
 
         private void loadconfig()
@@ -334,6 +336,11 @@ namespace PS
                 //Process.Start("shutdown", "/s /t 0");
                 vpn = new VpnConnect.VPN(textBoxVpn1.Text, ipinicial);
             }
+        }
+
+        private void buttonStop_Click(object sender, EventArgs e)
+        {
+            continueDt = false;
         }
 
     }

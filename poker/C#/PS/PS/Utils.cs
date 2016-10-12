@@ -67,5 +67,24 @@ namespace PS
                 new Debug().LogMessage(ex.ToString());
             }
         }
+
+        public Boolean detectStars()
+        {
+            // Is running
+            try
+            {
+                foreach (Process proc in Process.GetProcessesByName("pokerstars"))
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+                new Debug().LogMessage(ex.ToString());
+                return false;
+            }
+        }
     }
 }

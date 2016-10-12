@@ -3,5 +3,5 @@ checkBox_Login=ffrefefr
 Vpn1=
 Vpn2=
 Vpn3=
-Checkbox_zoom=False
+Checkbox_zoom=True
 drive=

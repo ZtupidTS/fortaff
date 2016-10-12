@@ -29,3 +29,11 @@ M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - DT\PS\bin\Debug\DT.ex
 M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - DT\PS\bin\Debug\DT.pdb
 M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - DT\PS\obj\x86\Debug\DT.exe
 M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - DT\PS\obj\x86\Debug\DT.pdb
+F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - DT\PS\obj\x86\Debug\DT.exe
+F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - DT\PS\obj\x86\Debug\DT.pdb
+F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - DT\PS\bin\Debug\DT.exe
+F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - DT\PS\bin\Debug\DT.pdb
+F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - DT\PS\obj\x86\Debug\PS.FormInicial.resources
+F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - DT\PS\obj\x86\Debug\PS.csproj.GenerateResource.Cache
+F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - DT\PS\obj\x86\Debug\DT.Properties.Resources.resources
+F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS - DT\PS\obj\x86\Debug\PS.csprojResolveAssemblyReference.cache

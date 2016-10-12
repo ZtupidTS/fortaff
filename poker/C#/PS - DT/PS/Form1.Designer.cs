@@ -65,6 +65,7 @@
             this.buttonStop.Text = "Stop (close all)";
             this.buttonStop.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonStop.UseVisualStyleBackColor = true;
+            this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
             // 
             // checkBoxLogin
             // 

@@ -14,19 +14,25 @@ namespace PS
         public void AppendToFileDT(String handcopy, String date, Boolean down, Boolean zoom, String vm, String drive)
         {
             String nl = getNL(handcopy);
+            String newhand = "";
             String path = "";
             String txtzoom = "";
             if (zoom)
             {
                 txtzoom = "zoom";
-            }
-            if (down)
-            {
-                path = "C:\\Cloud\\cloud\\HH poker\\meudt\\HH" + fdt + "_" + date + "_NL" + nl + "_up_" + txtzoom + "_"+vm+".txt";
+                newhand = handcopy.Replace("PokerStars Hand", "PokerStars Zoom Hand");
             }
             else
             {
-                path = "C:\\Cloud\\cloud\\HH poker\\meudt\\HH" + fdt + "_" + date + "_NL" + nl + "_down_" + txtzoom + "_" + vm + ".txt";
+                newhand = handcopy;
+            }
+            if (down)
+            {
+                path = "C:\\Cloud\\cloud\\HH_DT\\HH" + fdt + "_" + date + "_NL" + nl + "_up_" + txtzoom + "_"+vm+".txt";
+            }
+            else
+            {
+                path = "C:\\Cloud\\cloud\\HH_DT\\HH" + fdt + "_" + date + "_NL" + nl + "_down_" + txtzoom + "_" + vm + ".txt";
             }
             
             //File file = new File("E:/HH" + fdt + "_" + date + ".txt");
@@ -34,7 +40,7 @@ namespace PS
 
             //true = append file
             StreamWriter w = new StreamWriter(path, true);
-            w.Write(handcopy);
+            w.Write(newhand);
             w.WriteLine();
             w.WriteLine();
             w.Close();

@@ -3,15 +3,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $this->load->view('template/header_admin');
 $this->load->view('template/footer_admin');
+
 ?>
+
 <div class="col-md-10 col-md-offset-1">
-	<legend>Resumo</legend>
+	<legend>Visualização Dos Logs</legend>
 </div>
+
 <div class="row">
-	<div class="col-md-6 col-md-offset-3">
-		<form class="form-inline" role="form" method="post" action="<?= base_url('home/verify_picagens');?>">
+<?php if (isset($erro)){ ?>
+	<div class="alert alert-danger col-md-6 col-md-offset-3" role="alert" style="margin-top: 10px;"><?= $erro; ?></div>
+<?php } ?>
+</div>
+
+<div class="row">
+	<div class="col-md-8 col-md-offset-3">
+		<form class="form-inline" role="form" method="post" action="<?= base_url('home/');?>">
 			<div class="form-group">
-	    			<label for="email">Intervalo de Datas:</label>
+	    			<label>Intervalo de Datas:</label>
 	    			<?php
 	    			if(isset($datefirst) && $datefirst != "")
 	    			{?>
@@ -23,7 +32,7 @@ $this->load->view('template/footer_admin');
 				}?>
 	    		</div>	
 	    		<div class="form-group">
-	    			<label for="email">a</label>
+	    			<label>a</label>
 	    			<?php
 	    			if(isset($datesecond) && $datesecond != "")
 	    			{?>
@@ -33,61 +42,49 @@ $this->load->view('template/footer_admin');
 					<input type="text" id="datesecond" class="form-control" required name="datesecond">
 					<?php
 				}?>
-	  		</div>
-	  		<button type="submit" id="btn_search" class="btn btn-default">Procurar</button> 		
+	  		</div>	
+	  		<div class="form-group">
+				<select class="form-control" id="selecttypelogs">
+					<option value="ERROR">Error</option>
+					<option value="DEBUG">Debug</option>
+					<option value="INFO">Information</option>
+					<!--<option value="UTILIZADORES">Utilizadores</option>-->
+					<option value="ALL">All Messages</option>
+				</select>
+			</div>
+			 
+	  		<input type="button" id="btn_search" value="Procurar" onclick="verLogs()" class="btn btn-default noPrint">
+	  		<!--<span class="noPrint">
+	  			<img data-toggle="tooltip" title="Imprimir" id="button_print" hidden onclick="window.print();" src="<?= base_url('images/print.png');?>" height="20px" width="20px" >
+			</span>	
+			<span class="noPrint">
+  				<img data-toggle="tooltip" title="Exportar Para Excel" id="button_excel" onclick="printToExcel()" hidden src="<?= base_url('images/excel.png');?>" height="20px" width="20px" >
+			</span>
+			<span class="noPrint">
+  				<img data-toggle="tooltip" title="Refrescar Pagina" id="button_refresh" onclick="refreshPage()" hidden src="<?= base_url('images/refresh.png');?>" height="20px" width="20px" >
+			</span>-->
+				
 		</form>
 	</div>
 </div>
-<?php if (isset($erro)){ ?>
-	<div class="alert alert-danger col-md-6 col-md-offset-3" role="alert" style="margin-top: 10px;"><?= $erro; ?></div>
-<?php } ?>
-<div class="row top10">
-	<?php
-	if(isset($informacao) && $informacao != "")
-	{?>
-		<!-- sem resultados -->
-		<div class="col-md-10 col-md-offset-1">	
-			<div class="col-md-4 col-md-offset-4">
-				<?= $informacao;?>	
-			</div>
-		</div>
-		<?php
-	}else{
-		if(isset($result))
-		{
-			?>
-			<!--Resultados-->
-			<div class="col-md-6 col-md-offset-3 table-responsive">
-				<table class="table table-hover">
-					<thead>
-				      		<tr>
-				        		<th>Nº</th>
-				        		<th>Nome</th>
-				        		<th>Picagens</th>
-				        		<th>Data</th>
-				      		</tr>
-				    	</thead>
-				    	<tbody>
-					<?php
-					foreach($result as $row)
-					{?>
-						<tr onclick="verificarpicagens(<?= $row['Userid'];?>,<?= $row['ano'].$row['mes'].$row['dia'];?>,'<?= $row['Name'];?>')">
-							<td><?= $row['Userid'];?></td>
-							<td><?= $row['Name'];?></td>
-							<td><?= $row['number'];?></td>
-							<td><?= $row['dia'].'-'.$row['mes'].'-'.$row['ano'];?></td>
-						</tr>
-						<?php
-					}?>
-					</tbody>
-				</table>
-			</div>
-			<?php
-		}
-	}?>
+
+<div class="row">
+	<div class="col-md-6 col-md-offset-3 top10" id="returnajax">
+	</div>
 </div>
 
 <script type="text/javascript">
+/*function printToExcel()
+{
+	tablesToExcel(['logs'], ['Picagens'], 'myfile.xls');
+	noty({ 
+    		text: 'Exportação concluído e ficheiro transferido. Será necessario refrescar a pagina para realizar uma nova exportação sem erros.',
+    		type: "warning",
+    		layout: "center",
+    		closeWith: ['click', 'hover']
+    	});
+}*/
+
 $("#datefirst").datetimepicker({
         language: "pt",
         format: "yyyy-mm-dd",
@@ -107,13 +104,64 @@ $("#datesecond").datetimepicker({
         minView: 2
 });
 
-function verificarpicagens(userid,data_picagem,name)
+function verLogs()
 {
 	date1 = $("#datefirst").val();
 	date2 = $("#datesecond").val();
-	var newdate = data_picagem.toString().substr(0,4)+'-'+data_picagem.toString().substr(4,2)+'-'+data_picagem.toString().substr(6,2);
-	var url = '<?= base_url("home/obter_picagens");?>';
-	var values = {iduser: userid, datapicagem: newdate, datefirst: date1, datesecond: date2, nome: name};
-	submitform(url, values);
+	var typelog = $("#selecttypelogs").val();
+	if(date1 == '' || date2 == '')
+	{
+		noty({ 
+	    		text: 'Tem que preencher os campos todos',
+	    		type: "error",
+	    		layout: "center",
+	    		closeWith: ['click', 'hover']
+	    	});
+	}else{
+		var values = {datefirst: date1, datesecond: date2, Typelog: typelog};
+		url = '<?= base_url("Home/searchlog");?>';	
+		var newform = createform(url,values);
+		$.ajax({
+		        url: url,
+		        type: 'post',
+		        dataType: 'json',
+		        data: $(newform).serializeArray(),
+		        beforeSend: function(){
+				noty({ 
+			    		text: "O pedido esta a ser executado, aguarda por favor.",
+			    		type: "information",
+			    		layout: "center"
+			    		//closeWith: ['click', 'hover']
+			    	});
+			},
+		        success: function(data) {
+		        		$.noty.closeAll();
+		        		//console.log(data);
+		  			if(data.return == 'success')
+		  			{
+						$('#returnajax').html(data.message);
+						/*$('#button_print').show();
+						$('#button_excel').show();
+						$('#button_refresh').show();*/
+					}else{
+						noty({ 
+					    		text: data.message,
+					    		type: "error",
+					    		layout: "center",
+					    		closeWith: ['click', 'hover']
+					    	});
+					    	$('#returnajax').html('');
+					    	/*$('#button_print').hide();
+					    	$('#button_excel').hide();
+					    	$('#button_refresh').hide();*/
+					}
+		                },
+		        error: function(xhr, textStatus, errorThrown) {
+		        		$.noty.closeAll();
+		        		alert("Erro no envio do pedido por ajax: "+xhr.responseText+" "+errorThrown); 
+		        	}
+	    	});		
+		return false;
+	}
 }
 </script>

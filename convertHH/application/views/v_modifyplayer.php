@@ -42,7 +42,7 @@ $this->load->view('template/footer_admin');
 			    			<div class="col-sm-6">
 				                	<!--<input type="text" class="form-control" id="limit_play" maxlength="50">	-->
 			                	  	<select class="selectpicker" id="limit_play" name="limit_play">
-						  		<option></option>
+						  		<option value="0"></option>
 								<?php
 						    		foreach ($result as &$elem)
 						    		{
@@ -60,7 +60,25 @@ $this->load->view('template/footer_admin');
 			    			<div class="col-sm-6">
 				                	<!--<input type="text" class="form-control" id="limit_play" maxlength="50">	-->
 			                	  	<select class="selectpicker" id="limit_play2" name="limit_play2">
-						  		<option value=""></option>
+						  		<option value="0"></option>
+								<?php
+						    		foreach ($result as &$elem)
+						    		{
+									?>
+									<option value="<?= $elem['id_limit'];?>"><?= $elem['name_limit'];?></option>
+									<?php
+								}
+						    		?>
+							</select>
+							
+				                </div>
+			    		</div>
+			    		<div class="form-group">
+			    			<label class="col-sm-3 control-label" >Limit Played2</label>
+			    			<div class="col-sm-6">
+				                	<!--<input type="text" class="form-control" id="limit_play" maxlength="50">	-->
+			                	  	<select class="selectpicker" id="limit_play3" name="limit_play3">
+						  		<option value="0"></option>
 								<?php
 						    		foreach ($result as &$elem)
 						    		{
@@ -151,47 +169,53 @@ function searchplayerdata()
 {
 	var choose = $("#nickname").val();
 	var nickname2 = $("#nickname option:selected").text();
-	$.ajax({
-		url:'<?= base_url("home/getplayer");?>',
-		type: 'post',
-		dataType: 'json',
-	        data: {
-	        	id_player : choose
-	        } ,
-	        success: function(data) {
-	        		if(data.return == 'success')
-	  			{
-					$("#limit_play").val(data.limit_play);
-					$("#limit_play2").val(data.limit_play2);
-					$("#pathfolder").val(data.pathfolder);
-					$("#expire_date").val(data.expire_date);
-					$("#email").val(data.email);
-					$("#skype").val(data.skype);
-					$("#checkbox").val(data.enable);
-					$("#id").val(choose);
-					$("#nickname2").val(nickname2);
-					$(".divhidden").show();
-					
-					/*noty({ 
-				    		text: data.message,
-				    		type: "success",
-				    		layout: "center",
-				    		closeWith: ['click', 'hover']
-				    	});*/
-					
-				}else{
-					noty({ 
-				    		text: data.message,
-				    		type: "error",
-				    		layout: "center",
-				    		closeWith: ['click', 'hover']
-				    	});
-				}
-	                },
-	        error: function(xhr, textStatus, errorThrown) {
-	        		alert("Erro no envio do pedido por ajax: "+xhr.responseText); 
-	        	}
-	});
+	if(choose != "")
+	{
+		$.ajax({
+			url:'<?= base_url("home/getplayer");?>',
+			type: 'post',
+			dataType: 'json',
+		        data: {
+		        	id_player : choose
+		        } ,
+		        success: function(data) {
+		        		if(data.return == 'success')
+		  			{
+						$("#limit_play").val(data.limit_play);
+						$("#limit_play2").val(data.limit_play2);
+						$("#limit_play3").val(data.limit_play3);
+						$("#pathfolder").val(data.pathfolder);
+						$("#expire_date").val(data.expire_date);
+						$("#email").val(data.email);
+						$("#skype").val(data.skype);
+						$("#checkbox").val(data.enable);
+						$("#id").val(choose);
+						$("#nickname2").val(nickname2);
+						$(".divhidden").show();
+						
+						/*noty({ 
+					    		text: data.message,
+					    		type: "success",
+					    		layout: "center",
+					    		closeWith: ['click', 'hover']
+					    	});*/
+						
+					}else{
+						noty({ 
+					    		text: data.message,
+					    		type: "error",
+					    		layout: "center",
+					    		closeWith: ['click', 'hover']
+					    	});
+					}
+		                },
+		        error: function(xhr, textStatus, errorThrown) {
+		        		alert("Erro no envio do pedido por ajax: "+xhr.responseText); 
+		        	}
+		});
+	}else{
+		$(".divhidden").hide();
+	}
 }
 
 

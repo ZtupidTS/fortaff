@@ -48,6 +48,7 @@ class Home extends CI_Controller {
 		$checkbox = $this->input->post('checkbox');
 		$limitplay = $this->input->post('limit_play');
 		$limitplay2 = $this->input->post('limit_play2');
+		$limitplay3 = $this->input->post('limit_play3');
 		$skype = $this->input->post('skype');
 		$path = $this->input->post('path');
 		
@@ -55,12 +56,16 @@ class Home extends CI_Controller {
 			$limitplay2 = "15";
 			
 		if($limitplay == "0")
-			$limitplay = "15";		
+			$limitplay = "15";
+			
+		if($limitplay3 == "0")
+			$limitplay3 = "15";		
 		
 		$sql_data = array(
 		            'nick_player'        	=> $nickname,
 		            'limit_play'		=> $limitplay,
 		            'limit_play2'		=> $limitplay2,
+		            'limit_play3'		=> $limitplay3,
 		            'expire_date'		=> $dateexpire,
 		            'email'		=> $email,
 		            'skype'		=> $skype,
@@ -119,6 +124,7 @@ class Home extends CI_Controller {
 				'nick_player' => $result[0]['nick_player'],
 				'limit_play' => $result[0]['limit_play'],
 				'limit_play2' => $result[0]['limit_play2'],
+				'limit_play3' => $result[0]['limit_play3'],
 				'pathfolder' => $result[0]['pathfolder'],
 				'expire_date' => $result[0]['expire_date'],
 				'email' => $result[0]['email'],
@@ -145,6 +151,7 @@ class Home extends CI_Controller {
 		$checkbox = $this->input->post('checkbox');
 		$limitplay = $this->input->post('limit_play');
 		$limitplay2 = $this->input->post('limit_play2');
+		$limitplay3 = $this->input->post('limit_play3');
 		$skype = $this->input->post('skype');
 		$path = $this->input->post('pathfolder');
 		$id = $this->input->post('id');
@@ -153,12 +160,16 @@ class Home extends CI_Controller {
 			$limitplay2 = "15";
 			
 		if($limitplay == "0")
-			$limitplay = "15";		
+			$limitplay = "15";
+			
+		if($limitplay3 == "0")
+			$limitplay3 = "15";		
 		
 		$sql_data = array(
 		            'nick_player'        	=> $nickname,
 		            'limit_play'		=> $limitplay,
 		            'limit_play2'		=> $limitplay2,
+		            'limit_play3'		=> $limitplay3,
 		            'expire_date'		=> $dateexpire,
 		            'email'		=> $email,
 		            'skype'		=> $skype,
@@ -184,5 +195,73 @@ class Home extends CI_Controller {
 			echo json_encode($return);
 			return true;
 		}
+	}
+	
+	public function searchlog()
+	{
+		$this->load->helper('directory');
+		$this->load->helper('file');
+		
+		$map = get_dir_file_info(APPPATH.'logs/');
+		
+		$datefirst = $this->input->post('datefirst');
+		$datesecond = $this->input->post('datesecond');
+		$typelog = $this->input->post('Typelog');
+		
+		//'ERROR' => 1, 'DEBUG' => 2, 'INFO' => 3, 'UTILIZADORES' => 4, 'ALL' => 5
+		
+		$files_exists = array();
+		$searchString = "UTILIZADORES";	
+		$message = '<table class="table table-hover logs table-borderless" id="logs"><thead><tr><th>Logs</th></tr></thead>';	
+		
+		foreach($map as $file)
+		{
+			if($file['name'] != 'index.html')
+                	{
+				if(strtotime($datefirst) <= $file['date'] && $file['date'] <= strtotime($datesecond . "+1 days"))
+	                	{
+					//array_push($files_exists,$file['name']);
+					$contentfile = file_get_contents($file['server_path']);
+					if($typelog != 'ALL')
+					{
+						if(strpos($contentfile, $typelog) !== false)
+						{
+							$handle = fopen($file['server_path'], "r");
+							if ($handle) {
+							    	while (($line = fgets($handle)) !== false) 
+							    	{
+							    		if(strpos($line, $typelog) !== false) 
+							    		{
+										$message .= '<tr><td>'.$line.'</td></tr>';
+									}      
+							    	}
+							    	fclose($handle);
+							}else{
+								$message .= '<tr><td>Não Conseguiu abrir o ficheiro '.$file['server_path'].'</td></tr>';
+							}
+						}	
+					}else{
+						$handle = fopen($file['server_path'], "r");
+						if ($handle) {
+						    	while (($line = fgets($handle)) !== false) 
+						    	{
+						    		$message .= '<tr><td>'.$line.'</td></tr>';
+						    	}
+						    	fclose($handle);
+						}else{
+							$message .= '<tr><td>Não Conseguiu abrir o ficheiro '.$file['server_path'].'</td></tr>';
+						}
+					}
+				}
+			}
+		}
+		//echo $message;
+		$message = $message . '</tbody></table>';
+		$return = array(
+			'return' => 'success',
+			'message' => $message);
+		echo json_encode($return);
+		return true;
+		
 	}
 }

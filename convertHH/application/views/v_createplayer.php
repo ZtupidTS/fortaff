@@ -31,7 +31,7 @@ $this->load->view('template/footer_admin');
 		    			<div class="col-sm-6">
 			                	<!--<input type="text" class="form-control" id="limit_play" maxlength="50">	-->
 		                	  	<select class="selectpicker" id="limit_play" name="limit_play">
-					  		<option></option>
+					  		<option value="0"></option>
 							<?php
 					    		foreach ($result as &$elem)
 					    		{
@@ -49,7 +49,25 @@ $this->load->view('template/footer_admin');
 		    			<div class="col-sm-6">
 			                	<!--<input type="text" class="form-control" id="limit_play" maxlength="50">	-->
 		                	  	<select class="selectpicker" id="limit_play2" name="limit_play2">
-					  		<option value=""></option>
+					  		<option value="0"></option>
+							<?php
+					    		foreach ($result as &$elem)
+					    		{
+								?>
+								<option value="<?= $elem['id_limit'];?>"><?= $elem['name_limit'];?></option>
+								<?php
+							}
+					    		?>
+						</select>
+						
+			                </div>
+		    		</div>
+		    		<div class="form-group">
+		    			<label class="col-sm-3 control-label" >Limit Played3</label>
+		    			<div class="col-sm-6">
+			                	<!--<input type="text" class="form-control" id="limit_play" maxlength="50">	-->
+		                	  	<select class="selectpicker" id="limit_play3" name="limit_play3">
+					  		<option value="0"></option>
 							<?php
 					    		foreach ($result as &$elem)
 					    		{

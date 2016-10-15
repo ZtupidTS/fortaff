@@ -60,37 +60,9 @@
 							</ul>
 						</li>
 						<li role="separator" class="divider"></li>
-						<li class="dropdown-submenu">
-							<a href="#">Resumo</a>
-							<ul class="dropdown-menu">
-								<li><a href="<?= base_url('home/resumototais') ?>">Horas Totais</a></li>
-        							<li><a href="<?= base_url('home/resumodiario') ?>">Diario</a></li>
-        							<li><a href="<?= base_url('home/resumosemanal') ?>">Semanal</a></li>
-							</ul>
-						</li>
-						<li role="separator" class="divider"></li>
-						<li><a href="<?= base_url('home/feriados') ?>">Feriados</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="<?= base_url('home/contractos') ?>">Contratos</a></li>
-						<!-- <li role="separator" class="divider"></li>
-						<li><a href="#">Something else here</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#">Separated link</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#">One more separated link</a></li>-->
 					</ul>
-					<li><a href="<?= base_url('home/viewlog') ?>">Logs</a></li>
-					<li><a href="<?= base_url('home/vexporttosage') ?>">Export To Sage</a></li>
+					<li><a href="<?= base_url('home/index') ?>">Logs</a></li>
 				</li>
-			</ul>
-			<!--<form class="navbar-form navbar-left" role="search">
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Search">
-				</div>
-				<button type="submit" class="btn btn-default">Submit</button>
-			</form>-->
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="<?= base_url('login/logout') ?>"><?= $this->session->userdata('nome').'(sair)' ?></a></li>				
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->

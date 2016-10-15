@@ -99,3 +99,12 @@ define('TBL_LIMIT','limit_NL');
 define('TBL_NICKNAME','nickname');
 define('TBL_QTDHANDS','numHands_ByPlayer');
 define('TBL_PLAYER','playerHH');
+define('TBL_FILECONVERT','fileshandconvert');
+
+/* Caminho da pasta dos ficheiro convertidos */
+define('VAR_PATHCONVERTED','/mnt/hh_share/HH/HHconverted');
+
+/* FTP */
+define('FTP_URL','hhsharing.esy.es');
+define('FTP_USERNAME','u947643763.ricain');
+define('FTP_PASSWORD','ame59100');

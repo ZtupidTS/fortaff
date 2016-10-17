@@ -182,4 +182,40 @@ class All_model extends CI_Model {
 		}
 	}
 	
+	public function getresumohanddia($firstday,$secondday,$id_limit = false)
+	{
+		if($id_limit)
+		{
+			$sql = "select li.name_limit as 'limit', nh.date as 'data', sum(nh.qtd) as 'qtd' from ".TBL_QTDHANDS." nh, ".TBL_LIMIT." li where li.id_limit = nh.id_limit AND nh.date between '".$firstday."' AND DATE_ADD('".$secondday."', INTERVAL 1 DAY) AND li.id_limit = ".$id_limit." group by li.name_limit, nh.date";
+		}else{
+			$sql = "select li.name_limit as 'limit', nh.date as 'data', sum(nh.qtd) as 'qtd' from ".TBL_QTDHANDS." nh, ".TBL_LIMIT." li where li.id_limit = nh.id_limit AND nh.date between '".$firstday."' AND DATE_ADD('".$secondday."', INTERVAL 1 DAY) group by li.name_limit, nh.date";
+		}
+		return $this->get($sql);
+	}
+	
+	public function getresumoplayerdia($firstday,$secondday,$id_player = false)
+	{
+		if($id_player)
+		{
+			$sql = "select li.name_limit as 'limit', nh.date as 'data', sum(nh.qtd) as 'qtd', pl.nick_player as 'nickname', pl.id_player as 'idplayer', pl.expire_date as 'dateexpire', pl.enable as 'enable' from ".TBL_QTDHANDS." nh, ".TBL_PLAYER." pl, ".TBL_LIMIT." li where nh.id_player = pl.id_player AND li.id_limit = nh.id_limit AND nh.date between '".$firstday."' AND DATE_ADD('".$secondday."', INTERVAL 1 DAY) AND nh.id_player = ".$id_player." group by li.name_limit, nh.date,pl.nick_player,pl.id_player,pl.expire_date,pl.enable";
+		}else{
+			$sql = "select li.name_limit as 'limit', nh.date as 'data', sum(nh.qtd) as 'qtd', pl.nick_player as 'nickname', pl.id_player as 'idplayer', pl.expire_date as 'dateexpire', pl.enable as 'enable' from ".TBL_QTDHANDS." nh, ".TBL_PLAYER." pl, ".TBL_LIMIT." li where nh.id_player = pl.id_player AND li.id_limit = nh.id_limit AND nh.date between '".$firstday."' AND DATE_ADD('".$secondday."', INTERVAL 1 DAY) group by li.name_limit, nh.date,pl.nick_player,pl.id_player,pl.expire_date,pl.enable";
+		}
+		
+		/*$sql = "select li.name_limit as 'limit', nh.date as 'data', sum(nh.qtd) as 'qtd', pl.nick_player as 'nickname', pl.id_player as 'idplayer', pl.expire_date as 'dateexpire', pl.enable as 'enable' from ".TBL_QTDHANDS." nh, ".TBL_PLAYER." pl, ".TBL_LIMIT." li where nh.id_player = pl.id_player AND li.id_limit = nh.id_limit AND nh.date between '".$firstday."' AND DATE_ADD('".$secondday."', INTERVAL 1 DAY) group by li.name_limit, nh.date,pl.nick_player,pl.id_player,pl.expire_date,pl.enable";*/
+		
+		return $this->get($sql);
+	}
+	
+	public function gethandconverted($firstday,$secondday,$id_limit = false)
+	{
+		if($id_limit)
+		{
+			$sql = "SELECT sum(fi.num_hands) as 'qtd', fi.year as 'year', fi.month as 'month', fi.day as 'day', li.name_limit as 'limit' from ".TBL_FILECONVERT." fi, ".TBL_PLAYER." pl, ".TBL_LIMIT." li where fi.id_player = pl.id_player AND li.id_limit = fi.id_limit AND fi.year >= '".$firstday[0]."' AND fi.month >= '".$firstday[1]."' AND fi.day >= '".$firstday[2]."' AND fi.year <= '".$secondday[0]."' AND fi.month <= '".$secondday[1]."' AND fi.day <= '".$secondday[2]."' AND li.id_limit = ".$id_limit." group by fi.year,fi.month,fi.day,pl.id_player,li.name_limit";
+		}else{
+			$sql = "SELECT sum(fi.num_hands) as 'qtd', fi.year as 'year', fi.month as 'month', fi.day as 'day', li.name_limit as 'limit' from ".TBL_FILECONVERT." fi, ".TBL_PLAYER." pl, ".TBL_LIMIT." li where fi.id_player = pl.id_player AND li.id_limit = fi.id_limit AND fi.year >= '".$firstday[0]."' AND fi.month >= '".$firstday[1]."' AND fi.day >= '".$firstday[2]."' AND fi.year <= '".$secondday[0]."' AND fi.month <= '".$secondday[1]."' AND fi.day <= '".$secondday[2]."' group by fi.year,fi.month,fi.day,li.name_limit";
+		}
+		return $this->get($sql);
+	}
+	
 }

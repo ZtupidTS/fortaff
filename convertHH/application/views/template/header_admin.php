@@ -60,6 +60,14 @@
 							</ul>
 						</li>
 						<li role="separator" class="divider"></li>
+						<li class="dropdown-submenu">
+							<a href="#">Hands</a>
+							<ul class="dropdown-menu">
+								<li><a href="<?= base_url('Home/totaldia') ?>">Total/dia (dia real da hand)</a></li>
+        							<li><a href="<?= base_url('Home/totalplayer') ?>">Total/jogador (dia real da hand)</a></li>
+        							<li><a href="<?= base_url('Home/totalconvert') ?>">Total Convertida/Dia</a></li>
+							</ul>
+						</li>
 					</ul>
 					<li><a href="<?= base_url('home/index') ?>">Logs</a></li>
 				</li>

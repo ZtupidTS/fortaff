@@ -264,4 +264,174 @@ class Home extends CI_Controller {
 		return true;
 		
 	}
+
+	public function totaldia()
+	{
+		$result = $this->All_model->getlimit();
+		if($result)
+		{
+			$data['result'] = $result;
+			$this->load->view('v_totaldia', $data);
+		}else{
+			//isso é para quando vou de ver as picagens para essa pagina de corrigir picagens
+			//assim não precido de reescrever outra pagina
+			$data['erro'] = 'Problemas na obtenção dos dados, tentar novamente.';	
+			$this->load->view("v_totaldia", $data);
+		}
+	}
+	
+	public function totalplayer()
+	{
+		$result = $this->All_model->getplayers();
+		
+		if($result)
+		{
+			$data['result'] = $result;
+			$this->load->view('v_totalplayer', $data);
+		}else{
+			//isso é para quando vou de ver as picagens para essa pagina de corrigir picagens
+			//assim não precido de reescrever outra pagina
+			$data['erro'] = 'Problemas na obtenção dos dados, tentar novamente.';	
+			$this->load->view("v_totalplayer", $data);
+		}
+	}
+	
+	public function totalconvert()
+	{
+		$result = $this->All_model->getlimit();
+		if($result)
+		{
+			$data['result'] = $result;
+			$this->load->view('v_totalconverted', $data);
+		}else{
+			//isso é para quando vou de ver as picagens para essa pagina de corrigir picagens
+			//assim não precido de reescrever outra pagina
+			$data['erro'] = 'Problemas na obtenção dos dados, tentar novamente.';	
+			$this->load->view("v_totalconverted", $data);
+		}
+	}	
+
+	public function searchhanddia()
+	{
+		$datefirst = $this->input->post('datefirst');
+		$datesecond = $this->input->post('datesecond');
+		$id_limit = $this->input->post('id_limit');
+		
+		if($id_limit == '999999')
+		{
+			$result = $this->All_model->getresumohanddia($datefirst,$datesecond);
+		}else{
+			$result = $this->All_model->getresumohanddia($datefirst,$datesecond,$id_limit);	
+		}
+		
+		//print_r($result);
+		if($result)
+		{
+			$message_tb_head = '<table class="table table-hover handsdia display" id="handsdia"><thead><tr><th>Limit</th><th>Data</th><th>QTD</th></tr></thead>';
+			
+			$message = '';
+			foreach($result as $row)
+			{
+				$message .= '<tr><td>'.$row['limit'].'</td><td>'.$row['data'].'</td><td>'.$row['qtd'].'</td></tr>';
+			}
+			$message = $message_tb_head . $message .'</tbody></table>';
+			
+			$return = array(
+				'return' => 'success',
+				'Logid'  => 'blabla',
+				'message' => $message
+				);
+			echo json_encode($return);
+			return true;
+		}else{
+			$return = array(
+				'return' => 'error',
+				'message' => 'Não foi possível obter dados, se o problema persistir contactar o administrador');
+			echo json_encode($return);
+			return true;
+		}
+	}
+
+	public function searchplayerdia()
+	{
+		$datefirst = $this->input->post('datefirst');
+		$datesecond = $this->input->post('datesecond');
+		$id_player = $this->input->post('id_player');
+		
+		if($id_player == '999999')
+		{
+			$result = $this->All_model->getresumoplayerdia($datefirst,$datesecond);
+		}else{
+			$result = $this->All_model->getresumoplayerdia($datefirst,$datesecond,$id_player);	
+		}
+		
+		//print_r($result);
+		if($result)
+		{
+			$message_tb_head = '<table class="table table-hover handsdia display" id="handsdia"><thead><tr><th>Limit</th><th>Data</th><th>QTD</th><th>ID Player</th><th>Nickname</th></tr></thead>';
+			
+			$message = '';
+			foreach($result as $row)
+			{
+				$message .= '<tr><td>'.$row['limit'].'</td><td>'.$row['data'].'</td><td>'.$row['qtd'].'</td><td>'.$row['idplayer'].'</td><td>'.$row['nickname'].'</td></tr>';
+			}
+			$message = $message_tb_head . $message .'</tbody></table>';
+			
+			$return = array(
+				'return' => 'success',
+				'Logid'  => 'blabla',
+				'message' => $message
+				);
+			echo json_encode($return);
+			return true;
+		}else{
+			$return = array(
+				'return' => 'error',
+				'message' => 'Não foi possível obter dados, se o problema persistir contactar o administrador');
+			echo json_encode($return);
+			return true;
+		}
+	}
+
+	public function searchtotaldia()
+	{
+		$datefirst = explode("-",$this->input->post('datefirst'));
+		$datesecond = explode("-",$this->input->post('datesecond'));
+		$id_limit = $this->input->post('id_limit');
+		
+		if($id_limit == '999999')
+		{
+			$result = $this->All_model->gethandconverted($datefirst,$datesecond);
+		}else{
+			$result = $this->All_model->gethandconverted($datefirst,$datesecond,$id_limit);	
+		}
+		
+		//print_r($result);
+		if($result)
+		{
+			$message_tb_head = '<table class="table table-hover handsdia display" id="handsdia"><thead><tr><th>Limit</th><th>Data</th><th>QTD</th></tr></thead>';
+			
+			$message = '';
+			foreach($result as $row)
+			{
+				$message .= '<tr><td>'.$row['limit'].'</td><td>'.$row['year'].'-'.$row['month'].'-'.$row['day'].'</td><td>'.$row['qtd'].'</td></tr>';
+			}
+			$message = $message_tb_head . $message .'</tbody></table>';
+			
+			$return = array(
+				'return' => 'success',
+				'Logid'  => 'blabla',
+				'message' => $message
+				);
+			echo json_encode($return);
+			return true;
+		}else{
+			$return = array(
+				'return' => 'error',
+				'message' => 'Não foi possível obter dados, se o problema persistir contactar o administrador');
+			echo json_encode($return);
+			return true;
+		}
+	}
+
 }

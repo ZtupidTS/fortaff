@@ -20,7 +20,7 @@ function startDatatable()
 //resumo picagens
 function startDatatableRp()
 {
-	tabledatatable = $('#picagens').DataTable({
+	tabledatatable = $('#handsdia').DataTable({
     		"paging": false,
     		"info": false,
     		"bFilter": false    		

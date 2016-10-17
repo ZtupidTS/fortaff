@@ -214,7 +214,7 @@ class Workfiles extends CI_Controller {
 				{
 					//vou ler a primeira linha só
 					$str = strtok($arr_file_read[$m], "\r\n");
-					if(strpos($str,"Hand") !== false)
+					if(strpos($str,"Hold'em No Limit") !== false)
 					{
 						//limit hand
 						//NLxx
@@ -254,6 +254,8 @@ class Workfiles extends CI_Controller {
 							$hand_old = true;
 						}
 						$p = false;
+					}else{
+						$hand_old = true;
 					}
 				}
 				if($hand_old)

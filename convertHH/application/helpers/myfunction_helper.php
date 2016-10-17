@@ -196,4 +196,19 @@ function deletefilesftp()
 	}
 	ftp_close($connection);
 }
+
+function uploadfilesftp($file,$remotefile)
+{
+	$connection = ftp_connect(FTP_URL);
+	$login = ftp_login($connection,FTP_USERNAME,FTP_PASSWORD);
+	
+	if (ftp_put($connection, $remotefile, $file, FTP_ASCII)) {
+		shell_exec("sleep 30");
+		ftp_close($connection);
+		return true;
+	} else {
+		ftp_close($connection);
+		return false;
+	}	
+}
 ?>

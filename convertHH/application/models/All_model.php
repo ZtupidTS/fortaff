@@ -211,7 +211,7 @@ class All_model extends CI_Model {
 	{
 		if($id_limit)
 		{
-			$sql = "SELECT sum(fi.num_hands) as 'qtd', fi.year as 'year', fi.month as 'month', fi.day as 'day', li.name_limit as 'limit' from ".TBL_FILECONVERT." fi, ".TBL_PLAYER." pl, ".TBL_LIMIT." li where fi.id_player = pl.id_player AND li.id_limit = fi.id_limit AND fi.year >= '".$firstday[0]."' AND fi.month >= '".$firstday[1]."' AND fi.day >= '".$firstday[2]."' AND fi.year <= '".$secondday[0]."' AND fi.month <= '".$secondday[1]."' AND fi.day <= '".$secondday[2]."' AND li.id_limit = ".$id_limit." group by fi.year,fi.month,fi.day,pl.id_player,li.name_limit";
+			$sql = "SELECT sum(fi.num_hands) as 'qtd', fi.year as 'year', fi.month as 'month', fi.day as 'day', li.name_limit as 'limit' from ".TBL_FILECONVERT." fi, ".TBL_PLAYER." pl, ".TBL_LIMIT." li where fi.id_player = pl.id_player AND li.id_limit = fi.id_limit AND fi.year >= '".$firstday[0]."' AND fi.month >= '".$firstday[1]."' AND fi.day >= '".$firstday[2]."' AND fi.year <= '".$secondday[0]."' AND fi.month <= '".$secondday[1]."' AND fi.day <= '".$secondday[2]."' AND li.id_limit = ".$id_limit." group by fi.year,fi.month,fi.day,li.name_limit";
 		}else{
 			$sql = "SELECT sum(fi.num_hands) as 'qtd', fi.year as 'year', fi.month as 'month', fi.day as 'day', li.name_limit as 'limit' from ".TBL_FILECONVERT." fi, ".TBL_PLAYER." pl, ".TBL_LIMIT." li where fi.id_player = pl.id_player AND li.id_limit = fi.id_limit AND fi.year >= '".$firstday[0]."' AND fi.month >= '".$firstday[1]."' AND fi.day >= '".$firstday[2]."' AND fi.year <= '".$secondday[0]."' AND fi.month <= '".$secondday[1]."' AND fi.day <= '".$secondday[2]."' group by fi.year,fi.month,fi.day,li.name_limit";
 		}

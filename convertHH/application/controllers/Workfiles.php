@@ -49,9 +49,12 @@ class Workfiles extends CI_Controller {
 					
 					while($data)
 					{
+						//print_r($data);
+						
 						foreach($data as $elemfolder)
 						{
-							//echo $elemfolder['server_path'];
+							//echo $elemfolder['server_path'].' ';
+							
 							if(is_dir($elemfolder['server_path']))
 							{
 								$size = dirSize($elemfolder['server_path']);
@@ -102,10 +105,17 @@ class Workfiles extends CI_Controller {
 						if(!$continu)
 							break;
 						
+						//print_r($data);
+						
 						if($data)
 						{
 							for($i = 0;$i<count($data);$i++)	
 							{
+								//echo ' d   ';
+								//echo $data[$i].' fdfdf    ';
+								//print_r(get_dir_file_info($data[$i],0));
+								//echo '       fdffdf         ';
+								
 								$data_temp = get_dir_file_info($data[$i],0);
 								//$data_temp = get_dir_file_info("/mnt/hh_share/HH/ricain/2016/DTMEU",1);
 								if($data_temp)
@@ -122,10 +132,13 @@ class Workfiles extends CI_Controller {
 								}
 							}
 							$data = $array_temp;
+							$array_temp = array();
 						}
 						//print_r($files_array);
-						//echo 'dafsdfasdfsfsfsfsfsfsfs sdf fsdf sfsf sf            fsdfaf asffsfsffsfs';
+						//echo 'dafsdfasdfsfsfsfsfsfsfs sdf fsdf sfsf sf            fsdfaf asffsfsffsfs ';
 						//print_r($data);
+						//shell_exec("sleep 15");
+						//echo count($data). '\n';
 						//break;
 					}
 				}	
@@ -141,6 +154,7 @@ class Workfiles extends CI_Controller {
 					if($size != $filesdb->size)
 					{
 						array_push($files_final, $elem_files);
+						//echo $size.'   '.$filesdb->size.'  fim  ';
 						//como o tamanho não é igual tenho que atualizar o tamanho na DB
 						$sql_data = array(
 						            'size'        	=> $size
@@ -170,6 +184,7 @@ class Workfiles extends CI_Controller {
 				}	
 			}
 			//agora vou tratar dos ficheiros
+			//print_r($files_final);
 			foreach($files_final as $elem_finalfiles)
 			{
 				$filesdb = $this->All_model->getfolder($elem_finalfiles);
@@ -178,6 +193,7 @@ class Workfiles extends CI_Controller {
 					if(file_exists($filesdb->path))
 					{
 						$new_file = $this->workfileshand($filesdb->path,$elem['id_player'],$elem['nick_player']);
+						//echo $filesdb->path.'             ';
 					}else{
 						log_message('error', 'ficheiro não existe (workfiles line 173)');
 						$continu = false;
@@ -202,18 +218,30 @@ class Workfiles extends CI_Controller {
 		$new_file = "";
 		$date_old = "";
 		$qtd_hand = 0;
+		
 		if (strpos($file_read,"PokerStars Zoom") !== false) 
 		{
 			$p = true;
 			$hand_old = false;
 			$arr_file_read = explode("PokerStars",$file_read);
-			for($m = 0;$m<count($arr_file_read);$m++)
+			
+			//echo count($arr_file_read).' ';
+			//print_r($arr_file_read);
+			//ok ate aqui tenho hands
+			
+			for($m = 1;$m<count($arr_file_read);$m++)
 			{
 				$num_hand = 0;
+				
+				//echo $arr_file_read[$m].'             ';
+				//echo $m;
+				
 				if($arr_file_read[$m] != "")
 				{
 					//vou ler a primeira linha só
+					//echo $arr_file_read[$m]. '            ';
 					$str = strtok($arr_file_read[$m], "\r\n");
+					//echo $str.'                      ';
 					if(strpos($str,"Hold'em No Limit") !== false)
 					{
 						//limit hand
@@ -229,6 +257,9 @@ class Workfiles extends CI_Controller {
 						//data
 						$date_new = str_replace("/","-",getStringBetween($str,"- "," "));
 						//só vou guardar 1 ano de hands
+						//echo $date_new.'     ';
+						//echo strtotime($date_new).'     ';
+						//echo strtotime("now -1 year").'     ';
 						if(strtotime($date_new) > strtotime("now -1 year"))
 						{
 							//numero da hand
@@ -249,18 +280,22 @@ class Workfiles extends CI_Controller {
 							$new_hand = str_replace($nick_original,$new_nick,$arr_file_read[$m]);
 							//Criar o novo string da hand e meter na varíavel
 							$new_file .= "PokerStars".$new_hand;
+							//echo $new_file;
 							$qtd_hand++;
 						}else{
+							//echo 'aaaaaa';
 							$hand_old = true;
 						}
 						$p = false;
 					}else{
+						//echo 'bbbbbbbbb';
 						$hand_old = true;
 					}
 				}
 				if($hand_old)
 					break;
 			}
+			//echo $new_file;
 			//acabei de ler o ficheiro
 			//meter na DB (TBL_QTDHANDS e TBL_FILECONVERT) + na pasta de partilha para os gajos
 			//TBL_QTDHANDS

@@ -26,7 +26,7 @@ $this->load->view('template/footer_admin');
 			                	<select class="selectpicker" id="nickname" name="nickname" onchange="searchplayerdata()">
 					  		<option></option>
 							<?php
-					    		foreach ($result2 as &$elem2)
+					    		foreach ($result2 as $elem2)
 					    		{
 								?>
 								<option value="<?= $elem2['id_player'];?>"><?= $elem2['nick_player'];?></option>

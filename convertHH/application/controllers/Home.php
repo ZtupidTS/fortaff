@@ -110,6 +110,22 @@ class Home extends CI_Controller {
 			$this->load->view("v_modifyplayer", $data);
 		}
 	}
+	
+	public function viewallplayer()
+	{
+		$result = $this->All_model->getplayers();
+		if($result)
+		{
+			$data['result'] = $result;
+			$this->load->view("v_allplayer", $data);
+		}else{
+			$data['result'] = $result;
+			//isso é para quando vou de ver as picagens para essa pagina de corrigir picagens
+			//assim não precido de reescrever outra pagina
+			$data['erro'] = 'Problemas na obtenção dos dados, tentar novamente.';	
+			$this->load->view("v_allplayer", $data);
+		}
+	}
 
 	public function getplayer()
 	{

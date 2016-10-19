@@ -57,6 +57,7 @@
 							<ul class="dropdown-menu">
 								<li><a href="<?= base_url('Home/createplayer') ?>">Criar</a></li>
         							<li><a href="<?= base_url('Home/viewmodifyplayer') ?>">Alterar</a></li>
+        							<li><a href="<?= base_url('Home/viewallplayer') ?>">Todos</a></li>
 							</ul>
 						</li>
 						<li role="separator" class="divider"></li>

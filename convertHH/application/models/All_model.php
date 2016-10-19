@@ -51,7 +51,7 @@ class All_model extends CI_Model {
 	
 	public function getplayers()
 	{
-		$sql = "select * from ".TBL_PLAYER;
+		$sql = "select * from ".TBL_PLAYER." ORDER BY nick_player";
 		return $this->All_model->get($sql);
 	}
 	

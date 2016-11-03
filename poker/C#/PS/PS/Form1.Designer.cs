@@ -237,7 +237,7 @@
             this.Controls.Add(this.buttonStop);
             this.Controls.Add(this.buttonStart);
             this.Name = "FormInicial";
-            this.Text = "PS";
+            this.Text = "MySoft";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormInicial_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

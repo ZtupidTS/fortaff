@@ -257,7 +257,8 @@ function calculoInventario($arr_inv)
 		}
 		/*$old_dia = $dia;*/
 	}
-	return toTime($tempo_inv);
+	/*return toTime($tempo_inv);*/
+	return $tempo_inv;
 }
 
 //calculo horas noturnas

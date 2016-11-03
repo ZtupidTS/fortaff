@@ -659,25 +659,86 @@ class Picagem_model extends CI_Model {
 		$result_inv = $this->db->query($sql);
 		if($result_inv->num_rows() > 0)
 		{
-			$sql = "SELECT DISTINCT vr.CheckTime, FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia, hol.Name as Name FROM V_Record as vr, Holiday as hol WHERE vr.Userid =".$userid." AND (";
+			/*$sql = "SELECT DISTINCT vr.CheckTime, FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia, hol.Name as Name FROM V_Record as vr, Holiday as hol WHERE vr.Userid =".$userid." AND (";*/
 			
+			/*$sql = "SELECT DISTINCT vr.Logid FROM V_Record as vr, Holiday as hol WHERE vr.Userid = ".$userid." AND (";*/
+			/*$sql = "SELECT DISTINCT vr.Logid FROM V_Record as vr, Holiday as hol WHERE vr.Userid = 22 AND (";*/
+			/*$sql2 = "AND (";*/
+			$tempo_inv = 0;
+			$continue = false;
 			$i = 0;
 			foreach($result_inv->result() as $row)
 			{
-				if($i > 0) $sql.= " or ";
-				$sql .= "vr.CheckTime between '".$row->datestart." ".FIRST_TIME."' and '".$row->dateend." ".LAST_TIME."'";							$i++;
+				$sql = "SELECT DISTINCT vr.CheckTime, FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia, hol.Name as Name FROM V_Record as vr, Holiday as hol WHERE vr.Userid =".$userid." AND (vr.CheckTime between '".$row->datestart." ".FIRST_TIME."' and '".$row->dateend." ".LAST_TIME."') AND hol.Name LIKE '%INV%' AND Format(hol.BDate, 'yyyy-MM-dd') = '".$row->datestart."'";
+				
+				$result_inv2 = $this->db->query($sql);
+				
+				if(($result_inv2->num_rows()) % 2 == 0)
+				{
+					$tempo_inv += calculoInventario($result_inv2->result());	
+					//$tempo_inv = 'ds';
+				}else{
+					// é impar
+					$continue = true;
+					$tempo_inv = 'Faltam picagens';				
+				}
+				
+				if($continue)
+					break;
+				
+				
+				
+				/*if($i > 0) $sql.= " or ";*/
+				/*$sql .= "vr.CheckTime between '".$row->datestart." ".FIRST_TIME."' and '".$row->dateend." ".LAST_TIME."'";*/
+				/*if($i > 0) $sql2.= " or ";
+				$sql2 .= "Format(hol.BDate, 'yyyy-MM-dd') = '".$row->datestart."'";*/
+				/*$i++;*/
+				
 			}
-			$sql .= ") AND hol.Name LIKE '%INV%' AND (Format(vr.CheckTime, 'dd/MM/yyyy') = Format(hol.BDate, 'dd/MM/yyyy') or Format(vr.CheckTime, 'dd/MM/yyyy') = format(DATEADD(DAY,1,hol.BDate),'dd/MM/yyyy'))";
+			if(!$continue)
+				$tempo_inv = toTime($tempo_inv);
+			/*$sql .= ") AND hol.Name LIKE '%INV%' AND (Format(vr.CheckTime, 'dd/MM/yyyy') = Format(hol.BDate, 'dd/MM/yyyy') or Format(vr.CheckTime, 'dd/MM/yyyy') = format(DATEADD(DAY,1,hol.BDate),'dd/MM/yyyy'))";*/
 			
-			$tempo_inv = 0;
-			$result_inv = $this->db->query($sql);
-			if(($result_inv->num_rows()) % 2 == 0)
-			{
-				$tempo_inv = calculoInventario($result_inv->result());	
-			}else{
-				// é impar
-				$tempo_inv = 'Faltam picagens';				
-			}	
+			/*$sql .= ") AND hol.Name LIKE '%INV%' ".$sql2." )";*/
+			
+			/*echo $sql;*/
+			/*log_message('utilizadores', $sql);*/
+			/*$result_inv2 = $this->db->query($sql);*/
+			/*print_r($result_inv2);*/
+			/*echo $result_inv2->num_rows();*/
+			
+			/*if($result_inv2->num_rows() > 0)
+			{*/
+				/*$sql = "SELECT DISTINCT vr.CheckTime,vr.Logid, FORMAT(vr.CheckTime, 'HH:mm:ss') as horas, Format(CheckTime, 'dd/MM/yyyy') as dia, hol.Name as Name FROM V_Record as vr, Holiday as hol WHERE (";
+				
+				$i = 0;
+				/*print_r($result_inv2->result());*/
+				/*foreach($result_inv2->result() as $row)
+				{
+					if($i > 0) $sql.= " or ";
+					$sql .= "vr.Logid = ".$row->Logid;
+					$i++;
+				}
+				$sql .= ") AND hol.Name LIKE '%INV%' AND (Format(vr.CheckTime, 'dd/MM/yyyy') = Format(hol.BDate, 'dd/MM/yyyy') or Format(DATEADD(DAY,-1,vr.CheckTime), 'dd/MM/yyyy') = format(hol.BDate,'dd/MM/yyyy'))";
+				
+				echo $sql;
+				
+				$tempo_inv = 0;
+				$result_inv3 = $this->db->query($sql);*/
+				/*print_r($result_inv3->result());*/
+				/*echo $result_inv3->num_rows().'  d  ';*/
+				
+				/*if(($result_inv2->num_rows()) % 2 == 0)
+				{
+					$tempo_inv = calculoInventario($result_inv2->result());	
+					//$tempo_inv = 'ds';
+				}else{
+					// é impar
+					$tempo_inv = 'Faltam picagens';				
+				}*/
+			/*}else{
+				$tempo_inv = 'Não Há Inv.';
+			}*/	
 		}else{
 			$tempo_inv = 'Não Há Inv.';
 		}

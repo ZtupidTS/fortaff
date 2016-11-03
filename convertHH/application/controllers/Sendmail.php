@@ -6,7 +6,7 @@ class Sendmail extends CI_Controller {
 	
 	public function mail($email,$dia,$file)
 	{
-		shell_exec("echo -e 'to: ".$email."\nsubject: Hands ".$dia." \r\n\r\n Link Hands: ".$file."\r\n\r\n Good Luck at the tables :)' | /usr/sbin/ssmtp ".$email." -F'HH Sharing'");			
+		shell_exec("echo -e 'to: ".$email."\nsubject: Hands ".$dia." \r\n\r\n Link Hands: ".$file."\r\n\r\n The link is available for 7 days.\r\n\r\n Good Luck at the tables :)' | /usr/sbin/ssmtp ".$email." -F'HH Sharing'");			
 	}
 	
 	public function zipfilesbyplayer()

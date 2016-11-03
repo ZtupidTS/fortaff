@@ -33,9 +33,24 @@ $this->load->view('template/footer_admin');
 					<tr>
 						<td><?= $elem['id_player'];?></td>
 						<td><?= $elem['nick_player'];?></td>
-						<td><?= $elem['limit_play'];?></td>
-						<td><?= $elem['limit_play2'];?></td>
-						<td><?= $elem['limit_play3'];?></td>
+						<td>
+						<?php
+							$result_namelimit = $this->All_model->getlimitbyid($elem['limit_play']);
+							echo $result_namelimit->name_limit;
+						?>	
+						</td>
+						<td>
+						<?php
+							$result_namelimit = $this->All_model->getlimitbyid($elem['limit_play2']);
+							echo $result_namelimit->name_limit;
+						?>	
+						</td>
+						<td>
+						<?php
+							$result_namelimit = $this->All_model->getlimitbyid($elem['limit_play3']);
+							echo $result_namelimit->name_limit;
+						?>	
+						</td>
 						<td><?= $elem['pathfolder'];?></td>
 						<td><?= $elem['expire_date'];?></td>
 						<td><?= $elem['email'];?></td>

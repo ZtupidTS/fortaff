@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS", "PS\PS.csproj", "{A7E35F22-3FB9-4417-964A-C488623A2BCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySoft", "PS\MySoft.csproj", "{A7E35F22-3FB9-4417-964A-C488623A2BCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

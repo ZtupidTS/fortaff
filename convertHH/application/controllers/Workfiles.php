@@ -238,57 +238,62 @@ class Workfiles extends CI_Controller {
 				
 				if($arr_file_read[$m] != "")
 				{
-					//vou ler a primeira linha só
-					//echo $arr_file_read[$m]. '            ';
-					$str = strtok($arr_file_read[$m], "\r\n");
-					//echo $str.'                      ';
-					if(strpos($str,"Hold'em No Limit") !== false)
+					if(strpos($arr_file_read[$m],"Seat 9") === false)
 					{
-						//limit hand
-						//NLxx
-						if($p)
+						//vou ler a primeira linha só
+						//echo $arr_file_read[$m]. '            ';
+						$str = strtok($arr_file_read[$m], "\r\n");
+						//echo $str.'                      ';
+						if(strpos($str,"Hold'em No Limit") !== false)
 						{
-							$limit = getStringBetween($str,"(",")");
-							$limit = findlimithand($limit);
-							//id limit DB
-							$limit_temp = $this->All_model->getlimitbyname($limit);
-							$limit_final = $limit_temp->id_limit;
-						}
-						//data
-						$date_new = str_replace("/","-",getStringBetween($str,"- "," "));
-						//só vou guardar 1 ano de hands
-						//echo $date_new.'     ';
-						//echo strtotime($date_new).'     ';
-						//echo strtotime("now -1 year").'     ';
-						if(strtotime($date_new) > strtotime("now -1 year"))
-						{
-							//numero da hand
-							$num_hand = getStringBetween($str,"#",":");
-							//meter na DB
-							$sql_data = array(
-							            'numhands'        	=> $num_hand,
-							            'playerHH'		=> $id_player
-							        );
-							
-							$result = $this->All_model->inserthand($sql_data);
-							if(!$result)
+							//limit hand
+							//NLxx
+							if($p)
 							{
-								log_message('error', 'Não conseguiu inserir a hand na DB');
+								$limit = getStringBetween($str,"(",")");
+								$limit = findlimithand($limit);
+								//id limit DB
+								$limit_temp = $this->All_model->getlimitbyname($limit);
+								$limit_final = $limit_temp->id_limit;
 							}
-							//alterar o nick do player
-							$new_nick = $array_nickname[rand(0,299)];
-							$new_hand = str_replace($nick_original,$new_nick,$arr_file_read[$m]);
-							//Criar o novo string da hand e meter na varíavel
-							$new_file .= "PokerStars".$new_hand;
-							//echo $new_file;
-							$qtd_hand++;
+							//data
+							$date_new = str_replace("/","-",getStringBetween($str,"- "," "));
+							//só vou guardar 1 ano de hands
+							//echo $date_new.'     ';
+							//echo strtotime($date_new).'     ';
+							//echo strtotime("now -1 year").'     ';
+							if(strtotime($date_new) > strtotime("now -1 year"))
+							{
+								//numero da hand
+								$num_hand = getStringBetween($str,"#",":");
+								//meter na DB
+								$sql_data = array(
+								            'numhands'        	=> $num_hand,
+								            'playerHH'		=> $id_player
+								        );
+								
+								$result = $this->All_model->inserthand($sql_data);
+								if(!$result)
+								{
+									log_message('error', 'Não conseguiu inserir a hand na DB');
+								}
+								//alterar o nick do player
+								$new_nick = $array_nickname[rand(0,299)];
+								$new_hand = str_replace($nick_original,$new_nick,$arr_file_read[$m]);
+								//Criar o novo string da hand e meter na varíavel
+								$new_file .= "PokerStars".$new_hand;
+								//echo $new_file;
+								$qtd_hand++;
+							}else{
+								//echo 'aaaaaa';
+								$hand_old = true;
+							}
+							$p = false;
 						}else{
-							//echo 'aaaaaa';
+							//echo 'bbbbbbbbb';
 							$hand_old = true;
 						}
-						$p = false;
 					}else{
-						//echo 'bbbbbbbbb';
 						$hand_old = true;
 					}
 				}

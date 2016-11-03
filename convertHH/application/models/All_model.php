@@ -218,4 +218,6 @@ class All_model extends CI_Model {
 		return $this->get($sql);
 	}
 	
+	
+	
 }

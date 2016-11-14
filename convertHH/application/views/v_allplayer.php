@@ -5,12 +5,12 @@ $this->load->view('template/header_admin');
 $this->load->view('template/footer_admin');
 ?>
 
-<div class="col-md-10 col-md-offset-1">
+<div class="col-md-12">
 	<legend>Jogadores</legend>
 </div>
 
 <div class="row">
-	<div class="col-md-10 col-md-offset-1">
+	<div class="col-md-12">
 		<table class="table table-hover handsdia display" id="handsdia">
 			<thead>
 				<tr>
@@ -20,10 +20,12 @@ $this->load->view('template/footer_admin');
 					<th>Limit</th>
 					<th>Limit</th>
 					<th>Path</th>
+					<th>Start</th>
 					<th>Expire</th>
 					<th>Email</th>
 					<th>Skype</th>
 					<th>Enable</th>
+					<th>Keyfolder</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -52,10 +54,12 @@ $this->load->view('template/footer_admin');
 						?>	
 						</td>
 						<td><?= $elem['pathfolder'];?></td>
+						<td><?= $elem['startdate'];?></td>
 						<td><?= $elem['expire_date'];?></td>
 						<td><?= $elem['email'];?></td>
 						<td><?= $elem['skype'];?></td>
 						<td><?= $elem['enable'];?></td>
+						<td><?= $elem['keyfolder'];?></td>
 					</tr>
 					<?php
 				}?>
@@ -141,4 +145,5 @@ function handdia()
     	});		
 	return false;
 }
+startDatatableRp();
 </script>

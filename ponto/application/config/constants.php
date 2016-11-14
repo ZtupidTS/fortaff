@@ -122,5 +122,6 @@ define('LAST_TIME_SEC', 12600);
 define('FIRST_TIME',"03:30:01.000");
 /* horas noturna de manhã que é 7h00 da manhã acaba as horas a essa hora*/
 define('MANHA_NOT',25200);
-/* hora pela qual acho a ultima picagem do inv deve ultrapassar neste caso meti 22h45*/
-define('HOR_INV', 81900);
+/* hora pela qual acho a ultima picagem do inv deve ultrapassar neste caso meti 22h25*/
+/* Antes tinha 22h45 82900 */
+define('HOR_INV', 80700);

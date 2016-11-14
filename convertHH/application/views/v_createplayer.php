@@ -18,7 +18,7 @@ $this->load->view('template/footer_admin');
 
 <div class="container">
 	<div class="row top10">
-		<div class="col-md-6 col-md-offset-2">
+		<div class="col-md-8 col-md-offset-2">
 			<form id="addplayer" name="addplayer" class="form-horizontal">
 				<div class="form-group">
 		    			<label class="col-sm-3 control-label" >Nickname</label>
@@ -81,6 +81,12 @@ $this->load->view('template/footer_admin');
 			                </div>
 		    		</div>
 		    		<div class="form-group">
+		    			<label class="col-sm-3 control-label" >Start Date</label>
+		    			<div class="col-sm-6">
+			                	<input type="text" id="startdate" name="startdate" class="form-control" required>
+			                </div>
+		    		</div>
+		    		<div class="form-group">
 		    			<label class="col-sm-3 control-label" >Expire Date</label>
 		    			<div class="col-sm-6">
 			                	<input type="text" id="dateexpire" name="dateexpire" class="form-control" required>
@@ -95,13 +101,25 @@ $this->load->view('template/footer_admin');
 		    		<div class="form-group">
 		    			<label class="col-sm-3 control-label" >Skype</label>
 		    			<div class="col-sm-6">
-			                	<input type="email" id="skype" name="skype" class="form-control" maxlength="50" >
+			                	<input type="email" id="skype" name="skype" class="form-control" maxlength="200" >
+			                </div>
+		    		</div>
+		    		<div class="form-group">
+		    			<label class="col-sm-3 control-label" >Comentario</label>
+		    			<div class="col-sm-6">
+			                	<textarea  id="comment" name="comment" class="form-control" rows="5"></textarea>
 			                </div>
 		    		</div>
 		    		<div class="form-group">
 		    			<label class="col-sm-3 control-label" >Path</label>
 		    			<div class="col-sm-6">
 			                	<input type="test" id="path" name="path" class="form-control" maxlength="200" value="/mnt/hh_share/HH/">
+			                </div>
+		    		</div>
+		    		<div class="form-group">
+		    			<label class="col-sm-3 control-label" >Keypath</label>
+		    			<div class="col-sm-6">
+			                	<input type="test" id="keyfolder" name="keyfolder" class="form-control" maxlength="200" value="">
 			                </div>
 		    		</div>
 		    		<div class="form-group">
@@ -139,6 +157,15 @@ $("#dateexpire").datetimepicker({
         minView: 2
 });
 
+$("#startdate").datetimepicker({
+        language: "pt",
+        format: "yyyy-mm-dd",
+        weekStart: 1,
+        autoclose: true,
+        todayBtn: false,
+        pickerPosition: "bottom-right",
+        minView: 2
+});
 
 function addPlayer()
 {

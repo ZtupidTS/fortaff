@@ -272,18 +272,19 @@ class Workfiles extends CI_Controller {
 								            'playerHH'		=> $id_player
 								        );
 								
-								$result = $this->All_model->inserthand($sql_data);
+								$result = $this->All_model->inserthand($sql_data,$num_hand);
 								if(!$result)
 								{
-									log_message('error', 'Não conseguiu inserir a hand na DB');
+									log_message('error', 'Não conseguiu inserir a hand na DB ou duplicate');
+								}else{
+									//alterar o nick do player
+									$new_nick = $array_nickname[rand(0,299)];
+									$new_hand = str_replace($nick_original,$new_nick,$arr_file_read[$m]);
+									//Criar o novo string da hand e meter na varíavel
+									$new_file .= "PokerStars".$new_hand;
+									//echo $new_file;
+									$qtd_hand++;
 								}
-								//alterar o nick do player
-								$new_nick = $array_nickname[rand(0,299)];
-								$new_hand = str_replace($nick_original,$new_nick,$arr_file_read[$m]);
-								//Criar o novo string da hand e meter na varíavel
-								$new_file .= "PokerStars".$new_hand;
-								//echo $new_file;
-								$qtd_hand++;
 							}else{
 								//echo 'aaaaaa';
 								$hand_old = true;
@@ -305,7 +306,7 @@ class Workfiles extends CI_Controller {
 			//meter na DB (TBL_QTDHANDS e TBL_FILECONVERT) + na pasta de partilha para os gajos
 			//TBL_QTDHANDS
 			//antes de inserir ver se já existe algo do género na DB
-			if(!$hand_old)
+			if(!$hand_old && $new_file != "")
 			{
 				$array_numhand = $this->All_model->numhands($id_player,$limit_final,$date_new);
 				if($array_numhand)

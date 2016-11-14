@@ -108,3 +108,6 @@ define('VAR_PATHCONVERTED','/mnt/hh_share/HH/HHconverted');
 define('FTP_URL','hhsharing.esy.es');
 define('FTP_USERNAME','u947643763.ricain');
 define('FTP_PASSWORD','ame59100');
+
+/* Dias sem hands */
+define('DAYS_HANDS',5);

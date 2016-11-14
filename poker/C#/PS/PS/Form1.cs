@@ -40,15 +40,26 @@ namespace PS
 
         public FormInicial()
         {
-            InitializeComponent();
-            loadconfig();
-            //aqui vai ser para a vpn
-            //ipinicial = new Utils().getipinternetMeu();
-            //String ipinicial2 = new Utils().getipinternet2();
-            ipinicial = new Utils().getipinternetMeu();
-            label1.Text = ipinicial;
-            if (File.Exists("C:\\Program Files (x86)\\PokerStars\\Tracer_.exe"))
-                changeTracer();
+            try
+            {
+                InitializeComponent();
+                loadconfig();
+                //aqui vai ser para a vpn
+                //ipinicial = new Utils().getipinternetMeu();
+                //String ipinicial2 = new Utils().getipinternet2();
+                ipinicial = new Utils().getipinternetMeu();
+                label1.Text = ipinicial;
+                if (File.Exists("C:\\Program Files (x86)\\PokerStars\\Tracer_.exe"))
+                    changeTracer();
+            }
+            catch (Exception e)
+            {
+                String path = Directory.GetCurrentDirectory();
+                StreamWriter w = new StreamWriter(path + "/test.txt", false);
+                w.Write(e.ToString());
+                w.WriteLine();
+                w.Close();
+            }
             
         }
 

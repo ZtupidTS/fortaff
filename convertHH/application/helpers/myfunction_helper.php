@@ -146,6 +146,13 @@ function todaysplitlessoneday()
 	return $today;
 }
 
+function todaysplitlessxday($lessday)
+{
+	$new_lessday = 86400 * $lessday;
+	$today = explode("-",date("Y-m-d", time() - $new_lessday));
+	return $today;
+}
+
 function deletefilesftp()
 {
 	$host = FTP_URL; //Replace with your host

@@ -92,9 +92,19 @@ class All_model extends CI_Model {
 	        return $update;
 	}
 	
-	public function inserthand($data)
+	public function inserthand($data,$numhand)
 	{
-		return $this->db->insert(TBL_NUMHZOOM,$data);
+		$sql = "select * from ".TBL_NUMHZOOM." where numhands = ".$numhand;
+		$result = $this->db->query($sql);
+		if($result->num_rows() >0)
+		{
+			log_message('error', 'Linha duplicada na DB (all_model linha 101) number: '.$numhand);
+			return false;
+			/*echo "dupli";*/
+		}else{
+			return $this->db->insert(TBL_NUMHZOOM,$data);
+			/*echo "else";*/
+		}
 	}
 	
 	public function getallnickname()
@@ -218,6 +228,10 @@ class All_model extends CI_Model {
 		return $this->get($sql);
 	}
 	
-	
+	public function getexisthand($today,$todayless,$id)
+	{
+		$sql = "SELECT * FROM ".TBL_QTDHANDS." where id_player = ".$id." AND date between '".$todayless[0]."-".$todayless[1]."-".$todayless[2]."' AND '".$today[0]."-".$today[1]."-".$today[2]."'";
+		return $this->get($sql);
+	}
 	
 }

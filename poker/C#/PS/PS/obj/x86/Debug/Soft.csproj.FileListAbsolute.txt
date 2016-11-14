@@ -1,0 +1,7 @@
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\bin\Debug\Soft.exe
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\bin\Debug\Soft.pdb
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.FormInicial.resources
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.Properties.Resources.resources
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\Soft.csproj.GenerateResource.Cache
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\Soft.exe
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\Soft.pdb

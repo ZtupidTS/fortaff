@@ -55,7 +55,8 @@ class Sendmail extends CI_Controller {
 						{
 							$this->mail($elem_allplayers['email'],$arr_today[2]."-".$arr_today[1]."-".$arr_today[0],"No hands today :(");
 						}else{
-							$zipfile = VAR_PATHCONVERTED."/".$limit_convertHH->name_limit."_".$arr_today[0]."_".$arr_today[1]."_".$arr_today[2]."_".$total_hands."_".$numzip.".zip";
+							$zip_name = $limit_convertHH->name_limit."_".$arr_today[0]."_".$arr_today[1]."_".$arr_today[2]."_".$total_hands."_".$numzip."_".$elem_allplayers['id_player'].".zip";
+							$zipfile = VAR_PATHCONVERTED."/".$zip_name;
 							$this->zip->archive($zipfile);
 							
 							shell_exec("ftp-upload -h ".FTP_URL." -u ".FTP_USERNAME." --password ".FTP_PASSWORD." -d / ".$zipfile);
@@ -64,11 +65,11 @@ class Sendmail extends CI_Controller {
 							$list = $this->ftp->list_files('/');
 							$this->ftp->close();
 							
-							if(in_array($limit_convertHH->name_limit."_".$arr_today[0]."_".$arr_today[1]."_".$arr_today[2]."_".$total_hands."_".$numzip.".zip",$list))
+							if(in_array($zip_name,$list))
 							{
 								shell_exec("rm -rf ".$zipfile);
 								//se o upload foi feito vou enviar o mail
-								$this->mail($elem_allplayers['email'],$arr_today[2]."-".$arr_today[1]."-".$arr_today[0],"http://".FTP_URL."/".$limit_convertHH->name_limit."_".$arr_today[0]."_".$arr_today[1]."_".$arr_today[2]."_".$total_hands."_".$numzip.".zip");
+								$this->mail($elem_allplayers['email'],$arr_today[2]."-".$arr_today[1]."-".$arr_today[0],"http://".FTP_URL."/".$zip_name);
 							}else{
 								log_message('error', 'Não conseguiu realizar o upload do ficheiro: '.$zipfile);
 							}

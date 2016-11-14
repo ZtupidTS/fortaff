@@ -23,6 +23,11 @@ class Home extends CI_Controller {
 		$this->load->view('v_home');
 	}
 	
+	public function test()
+	{
+		echo $this->All_model->inserthand("ss",142270463896);
+	}
+	
 	public function createplayer()
 	{
 		$result = $this->All_model->getlimit();
@@ -44,6 +49,7 @@ class Home extends CI_Controller {
 		//print_r($this->input->post(NULL,TRUE));		
 		$nickname = $this->input->post('nickname');
 		$dateexpire = $this->input->post('dateexpire');
+		$startdate = $this->input->post('startdate');
 		$email = $this->input->post('email');
 		$checkbox = $this->input->post('checkbox');
 		$limitplay = $this->input->post('limit_play');
@@ -51,6 +57,8 @@ class Home extends CI_Controller {
 		$limitplay3 = $this->input->post('limit_play3');
 		$skype = $this->input->post('skype');
 		$path = $this->input->post('path');
+		$keyfolder = $this->input->post('keyfolder');
+		$comment = $this->input->post('comment');
 		
 		if($limitplay2 == "0")
 			$limitplay2 = "15";
@@ -67,9 +75,12 @@ class Home extends CI_Controller {
 		            'limit_play2'		=> $limitplay2,
 		            'limit_play3'		=> $limitplay3,
 		            'expire_date'		=> $dateexpire,
+		            'startdate'		=> $startdate,
+		            'comment'		=> $comment,
 		            'email'		=> $email,
 		            'skype'		=> $skype,
 		            'pathfolder'	=> $path,
+		            'keyfolder'		=> $keyfolder,
 		            'enable'		=> $checkbox	            
 		        );
 		
@@ -142,9 +153,12 @@ class Home extends CI_Controller {
 				'limit_play2' => $result[0]['limit_play2'],
 				'limit_play3' => $result[0]['limit_play3'],
 				'pathfolder' => $result[0]['pathfolder'],
+				'startdate' => $result[0]['startdate'],
 				'expire_date' => $result[0]['expire_date'],
+				'comment' => $result[0]['comment'],
 				'email' => $result[0]['email'],
 				'skype' => $result[0]['skype'],
+				'keyfolder' => $result[0]['keyfolder'],
 				'enable' => $result[0]['enable']
 				);
 			echo json_encode($return);
@@ -162,6 +176,7 @@ class Home extends CI_Controller {
 	{
 		//print_r($this->input->post(NULL,TRUE));		
 		$nickname = $this->input->post('nickname2');
+		$startdate = $this->input->post('startdate');
 		$dateexpire = $this->input->post('expire_date');
 		$email = $this->input->post('email');
 		$checkbox = $this->input->post('checkbox');
@@ -170,6 +185,8 @@ class Home extends CI_Controller {
 		$limitplay3 = $this->input->post('limit_play3');
 		$skype = $this->input->post('skype');
 		$path = $this->input->post('pathfolder');
+		$keyfolder = $this->input->post('keyfolder');
+		$comment = $this->input->post('comment');
 		$id = $this->input->post('id');
 		
 		if($limitplay2 == "0")
@@ -187,9 +204,12 @@ class Home extends CI_Controller {
 		            'limit_play2'		=> $limitplay2,
 		            'limit_play3'		=> $limitplay3,
 		            'expire_date'		=> $dateexpire,
+		            'startdate'		=> $startdate,
+		            'comment'		=> $comment,
 		            'email'		=> $email,
 		            'skype'		=> $skype,
 		            'pathfolder'	=> $path,
+		            'keyfolder'	=> $keyfolder,
 		            'enable'		=> $checkbox	            
 		        );
 		

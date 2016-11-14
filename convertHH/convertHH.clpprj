@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\convertHH.clpprj">
 	<settings><PM_URL><![CDATA[\\10.10.3.11\convertHH]]></PM_URL><PM_HOME_URL><![CDATA[\\10.10.3.11\convertHH]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";"/><added value=""/><lastopfiles>
+		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php"/>
+		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php"/>
+		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php"/>
+		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php"/>
+		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\constants.php"/>
 	</lastopfiles>
 	<codestructure version="5.8">
 		<phptree>
@@ -9,6 +14,8 @@
 			<treenode node="BASEPATH;PHP:PHP Word;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\index.php;f9;229;17;229;;;;vpos;;v;;r$system_path;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="CI_VERSION;PHP:PHP Word;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\system\core\CodeIgniter.php;f9;57;19;57;;;;vposstring;;v;;r&#xA;Description&#xA;     System Initialization File;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="DAYS_HANDS;PHP:PHP Word;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\constants.php;f8;112;18;112;;;;vpos;;v;;r5;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="DIR_READ_MODE;PHP:PHP Word;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\constants.php;f38;30;51;30;;;;vpos;;v;;r0755;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -124,7 +131,7 @@
 			</treenode>
 			<treenode node="VIEWPATH;PHP:PHP Word;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\index.php;f9;305;17;305;;;;vpos;;v;;r$view_folder.DIRECTORY_SEPARATOR;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="All_model;PHP:Class Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f0;3;1;222;;;;vpos;;vCI_Model;;c;;r;;d33,3;;b0,0;;m">
+			<treenode node="All_model;PHP:Class Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f0;3;1;236;;;;vpos;;vCI_Model;;c;;r;;d33,3;;b0,0;;m">
 				<treenode node="addPlayer;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;46;2;49;;;;vpos;;v;;r;;d1,47;;b1,0;;mdata;;p">
 					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f27;46;32;46;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
@@ -139,30 +146,42 @@
 					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f12;8;17;8;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="getallnickname;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;99;2;116;;;;vpos;;v;;r;;d1,100;;b1,0;;m">
-					<treenode node="array_nick;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f3;106;14;106;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="getallnickname;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;109;2;126;;;;vpos;;v;;r;;d1,110;;b1,0;;m">
+					<treenode node="array_nick;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f3;116;14;116;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="elem_nick;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f3;105;13;105;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="elem_nick;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f3;115;13;115;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="elem_nick2;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f25;107;36;107;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="elem_nick2;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f25;117;36;117;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;102;9;102;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;112;9;112;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="sql;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;101;6;101;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="sql;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;111;6;111;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f12;102;17;102;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f12;112;17;112;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="getfilesconvertbynorid;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;165;2;169;;;;vpos;;v;;r;;d1,166;;b1,0;;mid_player;;pid_limit;;pdate;;p">
-					<treenode node="date;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f61;165;66;165;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="getexisthand;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;230;2;234;;;;vpos;;v;;r;;d1,231;;b1,0;;mtoday;;ptodayless;;pid;;p">
+					<treenode node="id;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f48;230;51;230;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="id_limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f51;165;60;165;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="sql;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;232;6;232;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="id_player;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f40;165;50;165;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;233;14;233;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="sql;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;167;6;167;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="today;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f30;230;36;230;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;168;14;168;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="todayless;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f37;230;47;230;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+				<treenode node="getfilesconvertbynorid;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;175;2;179;;;;vpos;;v;;r;;d1,176;;b1,0;;mid_player;;pid_limit;;pdate;;p">
+					<treenode node="date;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f61;175;66;175;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="id_limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f51;175;60;175;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="id_player;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f40;175;50;175;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="sql;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;177;6;177;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;178;14;178;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 				<treenode node="getfolder;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;76;2;80;;;;vpos;;v;;r;;d1,77;;b1,0;;mpath;;p">
@@ -173,34 +192,34 @@
 					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f55;78;60;78;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="gethandconverted;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;209;2;218;;;;vpos;;v;;r;;d1,210;;b1,0;;mfirstday;;psecondday;;pid_limit;;p">
-					<treenode node="firstday;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f34;209;43;209;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="gethandconverted;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;219;2;228;;;;vpos;;v;;r;;d1,220;;b1,0;;mfirstday;;psecondday;;pid_limit;;p">
+					<treenode node="firstday;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f34;219;43;219;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="id_limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f55;209;64;209;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="id_limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f55;219;64;219;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="secondday;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f44;209;54;209;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="secondday;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f44;219;54;219;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="sql;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f3;213;7;213;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="sql;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f3;223;7;223;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;217;14;217;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;227;14;227;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="getlastnamefile;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;147;2;158;;;;vpos;;v;;r;;d1,148;;b1,0;;mid_limit;;pyear;;pmonth;;pday;;p">
-					<treenode node="day;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f56;147;60;147;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="getlastnamefile;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;157;2;168;;;;vpos;;v;;r;;d1,158;;b1,0;;mid_limit;;pyear;;pmonth;;pday;;p">
+					<treenode node="day;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f56;157;60;157;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="elem_namefile;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f3;153;17;153;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="elem_namefile;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f3;163;17;163;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="id_limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f33;147;42;147;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="id_limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f33;157;42;157;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="month;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f49;147;55;147;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="month;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f49;157;55;157;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;150;9;150;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;160;9;160;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="sql;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;149;6;149;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="sql;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;159;6;159;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f12;150;17;150;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f12;160;17;160;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="year;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f43;147;48;147;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="year;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f43;157;48;157;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 				<treenode node="getlimit;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;28;2;32;;;;vpos;;v;;r;;d1,29;;b1,0;;m">
@@ -245,28 +264,28 @@
 					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;60;14;60;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="getresumohanddia;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;184;2;193;;;;vpos;;v;;r;;d1,185;;b1,0;;mfirstday;;psecondday;;pid_limit;;p">
-					<treenode node="firstday;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f34;184;43;184;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="getresumohanddia;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;194;2;203;;;;vpos;;v;;r;;d1,195;;b1,0;;mfirstday;;psecondday;;pid_limit;;p">
+					<treenode node="firstday;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f34;194;43;194;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="id_limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f55;184;64;184;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="id_limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f55;194;64;194;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="secondday;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f44;184;54;184;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="secondday;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f44;194;54;194;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="sql;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f3;188;7;188;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="sql;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f3;198;7;198;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;192;14;192;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;202;14;202;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="getresumoplayerdia;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;195;2;207;;;;vpos;;v;;r;;d1,196;;b1,0;;mfirstday;;psecondday;;pid_player;;p">
-					<treenode node="firstday;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f36;195;45;195;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="getresumoplayerdia;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;205;2;217;;;;vpos;;v;;r;;d1,206;;b1,0;;mfirstday;;psecondday;;pid_player;;p">
+					<treenode node="firstday;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f36;205;45;205;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="id_player;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f57;195;67;195;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="id_player;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f57;205;67;205;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="secondday;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f46;195;56;195;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="secondday;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f46;205;56;205;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="sql;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f3;199;7;199;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="sql;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f3;209;7;209;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;206;14;206;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;216;14;216;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 				<treenode node="getrow;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;17;2;26;;;;vpos;;v;;r;;d1,18;;b1,0;;msql;;p">
@@ -277,10 +296,10 @@
 					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f12;19;17;19;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="insertfileshands;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;160;2;163;;;;vpos;;v;;r;;d1,161;;b1,0;;mdata;;p">
-					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f34;160;39;160;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="insertfileshands;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;170;2;173;;;;vpos;;v;;r;;d1,171;;b1,0;;mdata;;p">
+					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f34;170;39;170;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;162;14;162;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;172;14;172;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 				<treenode node="insertfolder;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;82;2;85;;;;vpos;;v;;r;;d1,83;;b1,0;;mdata;;p">
@@ -289,16 +308,22 @@
 					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;84;14;84;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="inserthand;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;94;2;97;;;;vpos;;v;;r;;d1,95;;b1,0;;mdata;;p">
+				<treenode node="inserthand;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;94;2;107;;;;vpos;;v;;r;;d1,95;;b1,0;;mdata;;pnumhand;;p">
 					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f28;94;33;94;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;96;14;96;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="numhand;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f34;94;42;94;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;97;9;97;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="sql;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;96;6;96;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f12;97;17;97;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="insertnumhands;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;142;2;145;;;;vpos;;v;;r;;d1,143;;b1,0;;mdata;;p">
-					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f32;142;37;142;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="insertnumhands;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;152;2;155;;;;vpos;;v;;r;;d1,153;;b1,0;;mdata;;p">
+					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f32;152;37;152;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;144;14;144;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;154;14;154;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 				<treenode node="modifyplayer;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;69;2;74;;;;vpos;;v;;r;;d1,70;;b1,0;;mdata;;pid;;p">
@@ -311,38 +336,38 @@
 					<treenode node="update;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;72;16;72;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="numhands;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;118;2;133;;;;vpos;;v;;r;;d1,119;;b1,0;;mid_player;;pid_limit;;pdate;;p">
-					<treenode node="array_row;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f3;125;13;125;;;;vposint;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="numhands;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;128;2;143;;;;vpos;;v;;r;;d1,129;;b1,0;;mid_player;;pid_limit;;pdate;;p">
+					<treenode node="array_row;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f3;135;13;135;;;;vposint;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="date;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f47;118;52;118;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="date;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f47;128;52;128;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="elem_qtd;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f3;124;12;124;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="elem_qtd;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f3;134;12;134;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="id_limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f37;118;46;118;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="id_limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f37;128;46;128;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="id_player;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f26;118;36;118;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="id_player;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f26;128;36;128;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;121;9;121;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;131;9;131;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="sql;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;120;6;120;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="sql;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;130;6;130;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f12;121;17;121;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f12;131;17;131;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="sumconvertbynorid;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;171;2;182;;;;vpos;;v;;r;;d1,172;;b1,0;;mid_player;;pid_limit;;pdate;;p">
-					<treenode node="date;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f56;171;61;171;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="sumconvertbynorid;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;181;2;192;;;;vpos;;v;;r;;d1,182;;b1,0;;mid_player;;pid_limit;;pdate;;p">
+					<treenode node="date;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f56;181;61;181;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="elem_numhands;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f3;177;17;177;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="elem_numhands;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f3;187;17;187;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="id_limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f46;171;55;171;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="id_limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f46;181;55;181;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="id_player;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f35;171;45;171;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="id_player;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f35;181;45;181;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;174;9;174;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;184;9;184;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="sql;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;173;6;173;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="sql;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;183;6;183;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f12;174;17;174;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f12;184;17;184;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 				<treenode node="updatefolder;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;87;2;92;;;;vpos;;v;;r;;d1,88;;b1,0;;mdata;;ppath;;p">
@@ -355,14 +380,14 @@
 					<treenode node="update;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;90;16;90;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="updatenumhands;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;135;2;140;;;;vpos;;v;;r;;d1,136;;b1,0;;mdata;;pid_hand;;p">
-					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f32;135;37;135;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="updatenumhands;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f8;145;2;150;;;;vpos;;v;;r;;d1,146;;b1,0;;mdata;;pid_hand;;p">
+					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f32;145;37;145;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="id_hand;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f38;135;46;135;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="id_hand;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f38;145;46;145;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;137;7;137;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f2;147;7;147;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="update;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;138;16;138;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="update;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php;f9;148;16;148;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 			</treenode>
@@ -8420,357 +8445,307 @@
 				<treenode node="zipdata;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\system\libraries\Zip.php;f8;61;16;61;;;;vposstring;;v;;r;;d-1,-1;;b1,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="Home;PHP:Class Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f0;3;1;452;;;;vpos;;vCI_Controller;;c;;r;;d33,3;;b0,0;;m">
-				<treenode node="createplayer;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;25;2;39;;;;vpos;;v;;r;;d1,26;;b1,0;;m">
-					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;30;8;30;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="Controlhandplayer;PHP:Class Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f0;3;1;43;;;;vpos;;vCI_Controller;;c;;r;;d46,3;;b0,0;;m">
+				<treenode node="dayswithouthand;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f8;11;2;42;;;;vpos;;v;;r;;d1,12;;b1,0;;m">
+					<treenode node="all_players;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f2;16;14;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;27;9;27;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="arr_today;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f2;20;12;20;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f12;27;17;27;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="arr_todaylessday;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f2;19;19;19;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="elem_allplayers;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f26;24;42;24;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="have_hands;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f4;29;15;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="player;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f2;22;9;22;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f2;14;7;14;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="getplayer;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;129;2;158;;;;vpos;;v;;r;;d1,130;;b1,0;;m">
-					<treenode node="id_player;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;131;12;131;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="mail;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f8;6;2;9;;;;vpos;;v;;r;;d1,7;;b1,0;;mplayers;;p">
+					<treenode node="players;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f22;6;30;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;132;9;132;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Home;PHP:Class Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f0;3;1;472;;;;vpos;;vCI_Controller;;c;;r;;d33,3;;b0,0;;m">
+				<treenode node="createplayer;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;30;2;44;;;;vpos;;v;;r;;d1,31;;b1,0;;m">
+					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;35;8;35;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="return;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;137;10;137;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;32;9;32;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f15;131;20;131;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f12;32;17;32;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+				<treenode node="getplayer;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;140;2;172;;;;vpos;;v;;r;;d1,141;;b1,0;;m">
+					<treenode node="id_player;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;142;12;142;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;143;9;143;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="return;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;148;10;148;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f15;142;20;142;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 				<treenode node="index;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;20;2;23;;;;vpos;;v;;r&#xA;Definition&#xA;    index()&#xA;&#xA;Description&#xA;     Index Page for this controller.;;d1,21;;b1,0;;m">
 					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;22;7;22;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="insertplayer;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;41;2;93;;;;vpos;;v;;r;;d1,42;;b1,0;;m">
-					<treenode node="checkbox;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;47;11;47;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="insertplayer;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;46;2;104;;;;vpos;;v;;r;;d1,47;;b1,0;;m">
+					<treenode node="checkbox;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;53;11;53;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="dateexpire;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;45;13;45;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="comment;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;60;10;60;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="email;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;46;8;46;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="dateexpire;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;50;13;50;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="limitplay;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;48;12;48;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="email;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;52;8;52;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="limitplay2;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;49;13;49;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="keyfolder;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;59;12;59;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="limitplay3;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;50;13;50;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="limitplay;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;54;12;54;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="nickname;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;44;11;44;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="limitplay2;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;55;13;55;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="path;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;52;7;52;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="limitplay3;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;56;13;56;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;75;9;75;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="nickname;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;49;11;49;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="return;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;80;10;80;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="path;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;58;7;58;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="skype;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;51;8;51;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;86;9;86;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="sql_data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;63;11;63;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="return;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;91;10;91;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f14;44;19;44;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="skype;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;57;8;57;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-				</treenode>
-				<treenode node="modifyplayer;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;160;2;213;;;;vpos;;v;;r;;d1,161;;b1,0;;m">
-					<treenode node="checkbox;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;166;11;166;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="sql_data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;71;11;71;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="dateexpire;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;164;13;164;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="startdate;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;51;12;51;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="email;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;165;8;165;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="id;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;172;5;172;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="limitplay;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;167;12;167;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="limitplay2;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;168;13;168;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="limitplay3;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;169;13;169;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="nickname;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;163;11;163;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="path;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;171;7;171;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;195;9;195;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="return;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;200;10;200;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="skype;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;170;8;170;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="sql_data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;183;11;183;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f14;163;19;163;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f14;49;19;49;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="searchhanddia;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;329;2;368;;;;vpos;;v;;r;;d1,330;;b1,0;;m">
-					<treenode node="datefirst;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;331;12;331;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="modifyplayer;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;174;2;233;;;;vpos;;v;;r;;d1,175;;b1,0;;m">
+					<treenode node="checkbox;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;181;11;181;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="datesecond;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;332;13;332;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="comment;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;188;10;188;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="id_limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;333;11;333;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="dateexpire;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;179;13;179;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="message;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;347;11;347;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="email;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;180;8;180;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="message_tb_head;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;345;19;345;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="id;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;189;5;189;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;337;10;337;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="keyfolder;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;187;12;187;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="return;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;354;10;354;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="limitplay;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;182;12;182;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="row;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f22;348;26;348;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="limitplay2;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;183;13;183;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f15;331;20;331;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="limitplay3;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;184;13;184;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-				</treenode>
-				<treenode node="searchlog;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;215;2;281;;;;vpos;;v;;r;;d1,216;;b1,0;;m">
-					<treenode node="contentfile;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f5;239;17;239;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="nickname;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;177;11;177;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="datefirst;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;222;12;222;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="path;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;186;7;186;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="datesecond;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;223;13;223;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;215;9;215;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="file;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f18;232;23;232;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="return;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;220;10;220;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="files_exists;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;228;15;228;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="skype;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;185;8;185;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="handle;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f7;244;14;244;;;;vposresource;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="sql_data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;200;11;200;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="line;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f20;246;25;246;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="startdate;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;178;12;178;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="map;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;220;6;220;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="message;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;230;10;230;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="return;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;275;9;275;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="searchString;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;229;15;229;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;217;7;217;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="typelog;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;224;10;224;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f14;177;19;177;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="searchplayerdia;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;370;2;409;;;;vpos;;v;;r;;d1,371;;b1,0;;m">
-					<treenode node="datefirst;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;372;12;372;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="searchhanddia;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;349;2;388;;;;vpos;;v;;r;;d1,350;;b1,0;;m">
+					<treenode node="datefirst;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;351;12;351;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="datesecond;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;373;13;373;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="datesecond;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;352;13;352;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="id_player;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;374;12;374;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="id_limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;353;11;353;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="message;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;388;11;388;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="message;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;367;11;367;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="message_tb_head;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;386;19;386;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="message_tb_head;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;365;19;365;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;378;10;378;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;357;10;357;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="return;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;395;10;395;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="return;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;374;10;374;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="row;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f22;389;26;389;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="row;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f22;368;26;368;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f15;372;20;372;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-				</treenode>
-				<treenode node="searchtotaldia;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;411;2;450;;;;vpos;;v;;r;;d1,412;;b1,0;;m">
-					<treenode node="datefirst;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;413;12;413;;;;vposarray;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="datesecond;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;414;13;414;;;;vposarray;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="id_limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;415;11;415;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="message;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;429;11;429;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="message_tb_head;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;427;19;427;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;419;10;419;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="return;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;436;10;436;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="row;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f22;430;26;430;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f27;413;32;413;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f15;351;20;351;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="totalconvert;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;314;2;327;;;;vpos;;v;;r;;d1,315;;b1,0;;m">
-					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;319;8;319;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="searchlog;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;235;2;301;;;;vpos;;v;;r;;d1,236;;b1,0;;m">
+					<treenode node="contentfile;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f5;259;17;259;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;316;9;316;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="datefirst;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;242;12;242;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f12;316;17;316;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="datesecond;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;243;13;243;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-				</treenode>
-				<treenode node="totaldia;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;283;2;296;;;;vpos;;v;;r;;d1,284;;b1,0;;m">
-					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;288;8;288;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="file;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f18;252;23;252;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;285;9;285;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="files_exists;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;248;15;248;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f12;285;17;285;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="handle;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f7;264;14;264;;;;vposresource;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-				</treenode>
-				<treenode node="totalplayer;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;298;2;312;;;;vpos;;v;;r;;d1,299;;b1,0;;m">
-					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;304;8;304;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="line;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f20;266;25;266;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;300;9;300;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="map;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;240;6;240;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f12;300;17;300;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="message;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;250;10;250;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-				</treenode>
-				<treenode node="viewallplayer;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;113;2;127;;;;vpos;;v;;r;;d1,114;;b1,0;;m">
-					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;118;8;118;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="return;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;295;9;295;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;115;9;115;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="searchString;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;249;15;249;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f12;115;17;115;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;237;7;237;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="typelog;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;244;10;244;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="viewmodifyplayer;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;95;2;111;;;;vpos;;v;;r;;d1,96;;b1,0;;m">
-					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;101;8;101;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="searchplayerdia;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;390;2;429;;;;vpos;;v;;r;;d1,391;;b1,0;;m">
+					<treenode node="datefirst;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;392;12;392;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;97;9;97;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="datesecond;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;393;13;393;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="result2;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;98;10;98;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="id_player;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;394;12;394;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f12;97;17;97;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="message;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;408;11;408;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="message_tb_head;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;406;19;406;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;398;10;398;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="return;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;415;10;415;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="row;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f22;409;26;409;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f15;392;20;392;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-			</treenode>
-			<treenode node="Sendmail;PHP:Class Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f0;3;1;86;;;;vpos;;vCI_Controller;;c;;r;;d37,3;;b0,0;;m">
-				<treenode node="mail;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f8;6;2;9;;;;vpos;;v;;r;;d1,7;;b1,0;;memail;;pdia;;pfile;;p">
-					<treenode node="dia;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f29;6;33;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="searchtotaldia;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;431;2;470;;;;vpos;;v;;r;;d1,432;;b1,0;;m">
+					<treenode node="datefirst;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;433;12;433;;;;vposarray;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="email;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f22;6;28;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="datesecond;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;434;13;434;;;;vposarray;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="file;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f34;6;39;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="id_limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;435;11;435;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="message;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;449;11;449;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="message_tb_head;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;447;19;447;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;439;10;439;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="return;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;456;10;456;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="row;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f22;450;26;450;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f27;433;32;433;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="zipfilesbyplayer;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f8;11;2;83;;;;vpos;;v;;r;;d1,12;;b1,0;;m">
-					<treenode node="all_players;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f2;19;14;19;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="test;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;25;2;28;;;;vpos;;v;;r;;d1,26;;b1,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f7;27;12;27;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="arr_filestozip;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f6;45;21;45;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="totalconvert;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;334;2;347;;;;vpos;;v;;r;;d1,335;;b1,0;;m">
+					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;339;8;339;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="arr_limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f4;38;14;38;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;336;9;336;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="arr_today;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f2;22;12;22;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f12;336;17;336;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="config;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f2;28;9;28;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="totaldia;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;303;2;316;;;;vpos;;v;;r;;d1,304;;b1,0;;m">
+					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;308;8;308;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="elem_allplayers;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f26;33;42;33;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;305;9;305;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="elem_zip;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f33;47;42;47;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f12;305;17;305;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="limit_convertHH;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f6;46;22;46;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="totalplayer;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;318;2;332;;;;vpos;;v;;r;;d1,319;;b1,0;;m">
+					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;324;8;324;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="list;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f7;63;12;63;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;320;9;320;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="numzip;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f2;25;9;25;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f12;320;17;320;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="r;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f9;40;11;40;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="viewallplayer;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;124;2;138;;;;vpos;;v;;r;;d1,125;;b1,0;;m">
+					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;129;8;129;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f2;13;7;13;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;126;9;126;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="total_hands;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f6;52;18;52;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f12;126;17;126;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="zipfile;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f7;57;15;57;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="viewmodifyplayer;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f8;106;2;122;;;;vpos;;v;;r;;d1,107;;b1,0;;m">
+					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f3;112;8;112;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;108;9;108;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="result2;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f2;109;10;109;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php;f12;108;17;108;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 			</treenode>
-			<treenode node="Workfiles;PHP:Class Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f0;3;1;384;;;;vpos;;vCI_Controller;;c;;r;;d38,3;;b0,0;;m">
+			<treenode node="Sendmail;PHP:Class Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f0;3;1;87;;;;vpos;;vCI_Controller;;c;;r;;d37,3;;b0,0;;m">
+				<treenode node="mail;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f8;6;2;9;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f8;6;2;9;;;;vpos;;v;;r;;d1,7;;b1,0;;memail;;pdia;;pfile;;p">
+					<treenode node="dia;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f29;6;33;6;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f29;6;33;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="email;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f22;6;28;6;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f22;6;28;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="file;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f34;6;39;6;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f34;6;39;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+				<treenode node="zipfilesbyplayer;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f8;11;2;84;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f8;11;2;84;;;;vpos;;v;;r;;d1,12;;b1,0;;m">
+					<treenode node="all_players;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f2;19;14;19;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f2;19;14;19;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="arr_filestozip;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f6;45;21;45;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f6;45;21;45;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="arr_limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f4;38;14;38;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f4;38;14;38;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="arr_today;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f2;22;12;22;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f2;22;12;22;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="config;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f2;28;9;28;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f2;28;9;28;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="elem_allplayers;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f26;33;42;33;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f26;33;42;33;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="elem_zip;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f33;47;42;47;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f33;47;42;47;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="limit_convertHH;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f6;46;22;46;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f6;46;22;46;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="list;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f7;64;12;64;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f7;64;12;64;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="numzip;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f2;25;9;25;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f2;25;9;25;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="r;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f9;40;11;40;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f9;40;11;40;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f2;13;7;13;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f2;13;7;13;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="total_hands;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f6;52;18;52;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f6;52;18;52;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="zip_name;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f7;57;16;57;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f7;57;16;57;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="zipfile;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php;f7;58;15;58;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php;f7;58;15;58;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+			</treenode>
+			<treenode node="Workfiles;PHP:Class Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f0;3;1;385;;;;vpos;;vCI_Controller;;c;;r;;d38,3;;b0,0;;m">
 				<treenode node="readhand;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f8;20;2;209;;;;vpos;;v;;r&#xA;Definition&#xA;    readhand()&#xA;&#xA;Description&#xA;     Index Page for this controller.;;d1,21;;b1,0;;m">
-					<treenode node="array_temp;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f5;47;16;47;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="continu;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f3;37;11;37;;;;vposint;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f4;41;9;41;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="data_temp;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f8;118;18;118;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="elem;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f22;34;27;34;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="elem_datatemp;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f31;122;45;122;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="elem_files;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f27;147;38;147;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="elem_finalfiles;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f27;187;43;187;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="elemfolder;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f23;53;34;53;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="files_array;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f3;36;15;36;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="files_final;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f3;146;15;146;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="filesdb;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f4;150;12;150;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="folderdb;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f8;62;17;62;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="i;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f11;111;13;111;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="new_file;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f6;194;15;194;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="players;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f2;31;10;31;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f10;73;17;73;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="size;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f8;59;13;59;;;;vposint;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="sql_data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f10;69;19;69;;;;vposint;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f2;22;7;22;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
 				</treenode>
-				<treenode node="workfileshand;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f1;211;2;383;;;;vpos;;v;;r;;d1,212;;b0,0;;mfile_path;;pid_player;;pnick_original;;p">
-					<treenode node="arr_file_read;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f3;225;17;225;;;;vposarray;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="array_nickname;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f2;213;17;213;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="array_numhand;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f4;309;18;309;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="date_new;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f7;259;16;259;;;;vposmixed;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="date_old;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f2;218;11;218;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
+				<treenode node="workfileshand;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f1;211;2;384;;;;vpos;;v;;r;;d1,212;;b0,0;;mfile_path;;pid_player;;pnick_original;;p">
 					<treenode node="file_path;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f24;211;34;211;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="file_read;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f2;215;12;215;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="hand_old;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f3;224;12;224;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 					<treenode node="id_player;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f35;211;45;211;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="limit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f8;252;14;252;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="limit_final;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f8;256;20;256;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="limit_temp;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f8;255;19;255;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="m;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f7;231;9;231;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="myfile;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f4;360;11;360;;;;vposresource;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="namefile;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f4;359;13;359;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="new_file;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f2;217;11;217;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="new_hand;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f8;281;17;281;;;;vposmixed;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="new_nick;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f8;280;17;280;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="new_numhand;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f5;313;17;313;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
 					<treenode node="nick_original;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f46;211;60;211;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="num_hand;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f4;233;13;233;;;;vposarray;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="p;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f3;223;5;223;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="qtd_hand;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f2;219;11;219;;;;vposmixed;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f8;274;15;274;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="sql_data;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f8;269;17;269;;;;vposarray;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="str;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f6;244;10;244;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f20;213;25;213;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="today;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php;f4;340;10;340;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 			</treenode>
@@ -9144,7 +9119,35 @@
 				<treenode node="path;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\system\helpers\file_helper.php;f23;126;28;126;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="deletefilesftp;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f0;148;1;197;;;;vpos;;v;;r;;d0,149;;b0,0;;m">
+			<treenode node="deletefilesftp;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f0;155;1;204;;;;vpos;;v;;r;;d0,156;;b0,0;;m">
+				<treenode node="connection;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;167;12;167;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="dateToCompare;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;182;15;182;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="daysOld;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;162;9;162;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="dir;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;161;5;161;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="file;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f19;187;24;187;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="files;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;185;7;185;;;;vposarray;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="filesToSkip;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;163;13;163;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="host;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;157;6;157;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="login;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;168;7;168;;;;vposbool;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="mode;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;160;6;160;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="modTime;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f6;195;14;195;;;;vposint;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="notificationEmail;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;164;19;164;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="password;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;159;10;159;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="username;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;158;10;158;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
 			</treenode>
 			<treenode node="directory_map;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\system\helpers\directory_helper.php;f1;66;2;99;;;;vpos;;varray;;r&#xA;Definition&#xA;    directory_map($source_dir, $directory_depth = 0, $hidden = FALSE)&#xA;&#xA;Description&#xA;     Create a Directory Map&#xA;&#xA;Parameters:&#xA;    string $source_dir - Path to source&#xA;    int $directory_depth - Depth of directories to traverse&#xA;    bool $hidden - Whether to show hidden files;;d1,67;;b0,0;;mstring $source_dir;;pint $directory_depth;;pbool $hidden;;p">
 				<treenode node="directory_depth;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\system\helpers\directory_helper.php;f37;66;53;66;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -9156,6 +9159,10 @@
 			</treenode>
 			<treenode node="dirSize;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f0;3;1;10;;;;vpos;;v;;r;;d0,4;;b0,0;;mdirectory;;p">
 				<treenode node="directory;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f17;3;27;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="file;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f86;6;91;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="size;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;5;6;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="do_hash;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\system\helpers\security_helper.php;f1;95;2;103;;;;vpos;;vstring;;r&#xA;Definition&#xA;    do_hash($str, $type = 'sha1')&#xA;&#xA;Description&#xA;     Hash encode a string&#xA;&#xA;Parameters:&#xA;    string $str&#xA;    string $type - = 'sha1';;d1,96;;b0,0;;mstring $str;;pstring $type;;p">
@@ -9430,6 +9437,8 @@
 				<treenode node="from;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f31;129;36;129;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="str;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f26;129;30;129;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="sub;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f4;131;8;131;;;;vposstring;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="to;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f37;129;40;129;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
@@ -9939,8 +9948,20 @@
 				</treenode>
 			</treenode>
 			<treenode node="todaysplit;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f0;135;1;139;;;;vpos;;v;;r;;d0,136;;b0,0;;m">
+				<treenode node="today;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;137;7;137;;;;vposarray;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
 			</treenode>
 			<treenode node="todaysplitlessoneday;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f0;141;1;146;;;;vpos;;v;;r;;d0,142;;b0,0;;m">
+				<treenode node="today;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;143;7;143;;;;vposarray;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="todaysplitlessxday;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f0;148;1;153;;;;vpos;;v;;r;;d0,149;;b0,0;;mlessday;;p">
+				<treenode node="lessday;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f28;148;36;148;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="new_lessday;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;150;13;150;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="today;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;151;7;151;;;;vposarray;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
 			</treenode>
 			<treenode node="trim_slashes;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\system\helpers\string_helper.php;f1;70;2;73;;;;vpos;;vstring;;r&#xA;Definition&#xA;    trim_slashes($str)&#xA;&#xA;Description&#xA;     Trim Slashes&#xA;&#xA;Parameters:&#xA;    string;;d1,71;;b0,0;;mstring;;p">
 				<treenode node="str;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\system\helpers\string_helper.php;f23;70;27;70;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -9964,10 +9985,14 @@
 				<treenode node="time;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\system\helpers\date_helper.php;f24;415;29;415;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="uploadfilesftp;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f0;199;1;212;;;;vpos;;v;;r;;d0,200;;b0,0;;mfile;;premotefile;;p">
-				<treenode node="file;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f24;199;29;199;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="uploadfilesftp;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f0;206;1;219;;;;vpos;;v;;r;;d0,207;;b0,0;;mfile;;premotefile;;p">
+				<treenode node="connection;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;208;12;208;;;;vposresource;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="remotefile;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f30;199;41;199;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="file;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f24;206;29;206;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="login;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f1;209;7;209;;;;vposbool;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="remotefile;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php;f30;206;41;206;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="uri_string;PHP:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\system\helpers\url_helper.php;f1;120;2;123;;;;vpos;;vstring;;r&#xA;Definition&#xA;    uri_string()&#xA;&#xA;Description&#xA;     URL String;;d1,121;;b0,0;;m">
@@ -10066,19 +10091,19 @@
 			</treenode>
 			<treenode node="config;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\migration.php;f0;13;7;13;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\memcached.php;f0;12;7;12;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\config.php;f0;25;7;25;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="datefirst;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalplayer.php;f17;17;27;17;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totaldia.php;f17;17;27;17;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_home.php;f17;24;27;24;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalconverted.php;f17;17;27;17;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="datefirst;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalplayer.php;f17;17;27;17;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totaldia.php;f17;17;27;17;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalconverted.php;f17;17;27;17;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_home.php;f17;24;27;24;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="datesecond;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalplayer.php;f17;29;28;29;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totaldia.php;f17;29;28;29;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_home.php;f17;36;28;36;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalconverted.php;f17;29;28;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="datesecond;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalplayer.php;f17;29;28;29;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totaldia.php;f17;29;28;29;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalconverted.php;f17;29;28;29;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_home.php;f17;36;28;36;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="db;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\database.php;f0;75;3;75;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="e404;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\system\core\CodeIgniter.php;f1;397;6;397;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="elem;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f32;35;37;35;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f23;30;28;30;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f33;46;38;46;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="elem;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f32;35;37;35;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f33;43;38;43;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f23;32;28;32;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="elem2;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f32;28;38;28;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="elem2;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f32;25;38;25;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="erro;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalplayer.php;f16;61;21;61;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totaldia.php;f16;61;21;61;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_home.php;f16;13;21;13;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f16;14;21;14;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalconverted.php;f16;61;21;61;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f16;66;21;66;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f16;14;21;14;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="erro;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalplayer.php;f16;61;21;61;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totaldia.php;f16;61;21;61;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalconverted.php;f16;61;21;61;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_home.php;f16;13;21;13;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f16;14;21;14;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f16;11;21;11;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f16;70;21;70;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="error;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\errors\html\error_php.php;f37;16;43;16;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\errors\html\error_exception.php;f42;16;48;16;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\errors\cli\error_php.php;f36;12;42;12;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\errors\cli\error_exception.php;f41;12;47;12;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -10122,11 +10147,11 @@
 			</treenode>
 			<treenode node="query_builder;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\database.php;f0;73;14;73;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalplayer.php;f14;39;21;39;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totaldia.php;f14;39;21;39;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f20;35;27;35;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalconverted.php;f14;39;21;39;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f12;30;19;30;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f21;46;28;46;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="result;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalplayer.php;f14;39;21;39;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totaldia.php;f14;39;21;39;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalconverted.php;f14;39;21;39;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f20;35;27;35;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f21;43;28;43;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f12;32;19;32;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="result_namelimit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f7;37;24;37;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="result_namelimit;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f7;39;24;39;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="result2;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f20;28;28;28;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="result2;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f20;25;28;25;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="robots;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\user_agents.php;f0;193;7;193;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -10148,7 +10173,7 @@
 			</treenode>
 			<treenode node="system_path;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\index.php;f1;99;13;99;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalplayer.php;f0;3;5;3;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totaldia.php;f0;3;5;3;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_home.php;f0;3;5;3;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f0;3;5;3;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalconverted.php;f0;3;5;3;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f0;3;5;3;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f0;3;5;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="this;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalplayer.php;f0;3;5;3;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totaldia.php;f0;3;5;3;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalconverted.php;f0;3;5;3;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_home.php;f0;3;5;3;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f0;3;5;3;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f0;3;5;3;;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f0;3;5;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="UNI;PHP:Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\system\core\CodeIgniter.php;f1;293;5;293;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -10384,6 +10409,46 @@
 				<treenode node="newElements;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\includes\bootstrap\js\html5shiv.js;f23;90;34;90;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="ownerDocument;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\includes\bootstrap\js\html5shiv.js;f36;90;49;90;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="addPlayer;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f0;169;1;201;;;;vpos;;v;;r;;d0,170;;b0,0;;m">
+				<treenode node="error;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f9;197;11;199;;;;vpos;;v;;r;;d55,197;;b0,0;;mxhr;;ptextStatus;;perrorThrown;;p">
+					<treenode node="errorThrown;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f42;197;53;197;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="textStatus;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f30;197;40;197;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="xhr;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f25;197;28;197;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+				<treenode node="success;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f9;176;18;196;;;;vpos;;v;;r;;d33,176;;b0,0;;mdata;;p">
+					<treenode node="callback;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f10;183;7;185;;;;vpos;;v;;r;;d20,183;;b0,0;;m">
+						<treenode node="afterClose;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f14;184;89;184;;;;vpos;;v;;r;;d37,184;;b0,0;;m">
+							<treenode node="window;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f38;184;44;184;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+								<treenode node="location;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f45;184;53;184;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+								</treenode>
+							</treenode>
+						</treenode>
+					</treenode>
+					<treenode node="closeWith;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f10;186;19;186;;;;vposArray;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="data;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f27;176;31;176;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+						<treenode node="return;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f19;177;25;177;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+						</treenode>
+					</treenode>
+					<treenode node="layout;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f10;182;16;182;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="text;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f10;180;14;180;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="type;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f10;181;14;181;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+				<treenode node="data;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f9;175;13;175;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="dataType;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f9;174;17;174;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="type;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f9;173;13;173;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="url;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php;f9;172;12;172;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="addStyleSheet;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\includes\bootstrap\js\html5shiv.js;f0;66;3;72;;;;vpos;;v;;r;;d49,66;;b0,0;;mownerDocument;;pcssText;;p">
@@ -16072,6 +16137,70 @@
 				<treenode node="za;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\includes\bootstrap\js\jquery.min.js;f21227;2;21229;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
+			<treenode node="handdia;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f0;100;1;146;;;;vpos;;v;;r;;d0,101;;b0,0;;m">
+				<treenode node="beforeSend;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f9;114;3;121;;;;vpos;;v;;r;;d31,114;;b0,0;;m">
+					<treenode node="closeWith;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f8;119;17;119;;;;vposArray;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="layout;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f8;118;14;118;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="text;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f8;116;12;116;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="type;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f8;117;12;117;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+				<treenode node="error;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f9;140;11;143;;;;vpos;;v;;r;;d55,140;;b0,0;;mxhr;;ptextStatus;;perrorThrown;;p">
+					<treenode node="errorThrown;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f42;140;53;140;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="textStatus;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f30;140;40;140;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="xhr;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f25;140;28;140;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+				<treenode node="success;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f9;122;18;139;;;;vpos;;v;;r;;d33,122;;b0,0;;mdata;;p">
+					<treenode node="closeWith;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f10;135;19;135;;;;vposArray;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="data;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f27;122;31;122;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+						<treenode node="return;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f14;125;20;125;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+						</treenode>
+					</treenode>
+					<treenode node="layout;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f10;134;16;134;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="text;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f10;132;14;132;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="type;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f10;133;14;133;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+				<treenode node="data;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f9;113;13;113;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="dataType;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f9;112;17;112;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="date1;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f1;102;6;102;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="date2;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f1;103;6;103;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="limit;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f5;104;10;104;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="newform;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f5;107;12;107;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="type;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f9;111;13;111;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="url;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f9;110;12;110;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="values;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f5;106;68;106;;;;vpos;;v;;r;;d14,106;;b0,0;;m">
+					<treenode node="date1;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f26;106;31;106;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="date2;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f45;106;50;106;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="datefirst;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f15;106;24;106;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="datesecond;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f33;106;43;106;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="id_limit;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f52;106;60;106;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="limit;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php;f62;106;67;106;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+			</treenode>
 			<treenode node="handleReSort;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\user_guide\_static\websupport.js;f0;402;3;420;;;;vpos;;v;;r;;d30,402;;b0,0;;mlink;;p">
 				<treenode node="by;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\user_guide\_static\websupport.js;f1;406;3;406;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
@@ -18774,6 +18903,46 @@
 				<treenode node="TRANSITION_DURATION;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\includes\bootstrap\js\bootstrap.js;f8;947;27;947;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="VERSION;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\includes\bootstrap\js\bootstrap.js;f8;945;15;945;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="modifyPlayer;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f0;249;1;281;;;;vpos;;v;;r;;d0,250;;b0,0;;m">
+				<treenode node="error;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f9;277;11;279;;;;vpos;;v;;r;;d55,277;;b0,0;;mxhr;;ptextStatus;;perrorThrown;;p">
+					<treenode node="errorThrown;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f42;277;53;277;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="textStatus;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f30;277;40;277;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="xhr;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f25;277;28;277;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+				<treenode node="success;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f9;256;18;276;;;;vpos;;v;;r;;d33,256;;b0,0;;mdata;;p">
+					<treenode node="callback;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f10;263;7;265;;;;vpos;;v;;r;;d20,263;;b0,0;;m">
+						<treenode node="afterClose;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f14;264;100;264;;;;vpos;;v;;r;;d37,264;;b0,0;;m">
+							<treenode node="window;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f38;264;44;264;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+								<treenode node="location;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f45;264;53;264;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+								</treenode>
+							</treenode>
+						</treenode>
+					</treenode>
+					<treenode node="closeWith;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f10;266;19;266;;;;vposArray;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="data;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f27;256;31;256;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+						<treenode node="return;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f19;257;25;257;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+						</treenode>
+					</treenode>
+					<treenode node="layout;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f10;262;16;262;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="text;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f10;260;14;260;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="type;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f10;261;14;261;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+				<treenode node="data;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f9;255;13;255;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="dataType;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f9;254;17;254;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="type;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f9;253;13;253;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="url;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f9;252;12;252;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="mt;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\user_guide\_static\jquery.js;f49783;1;49798;1;;;;vpos;;v;;r;;d49796,1;;b0,0;;m">
@@ -21964,6 +22133,50 @@
 				<treenode node="VERSION;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\includes\bootstrap\js\bootstrap.js;f12;1902;19;1902;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="window;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\includes\bootstrap\js\bootstrap.js;f59;1889;65;1889;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="searchplayerdata;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f0;192;1;246;;;;vpos;;v;;r;;d0,193;;b0,0;;m">
+				<treenode node="error;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f10;239;12;241;;;;vpos;;v;;r;;d56,239;;b0,0;;mxhr;;ptextStatus;;perrorThrown;;p">
+					<treenode node="errorThrown;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f43;239;54;239;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="textStatus;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f31;239;41;239;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="xhr;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f26;239;29;239;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+				<treenode node="success;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f10;205;19;238;;;;vpos;;v;;r;;d34,205;;b0,0;;mdata;;p">
+					<treenode node="choose;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f19;219;25;219;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="closeWith;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f11;235;20;235;;;;vposArray;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="data;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f28;205;32;205;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+						<treenode node="return;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f20;206;26;206;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+						</treenode>
+					</treenode>
+					<treenode node="layout;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f11;234;17;234;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="nickname2;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f26;220;35;220;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="text;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f11;232;15;232;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="type;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f11;233;15;233;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+				<treenode node="choose;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f5;194;11;194;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="data;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f10;202;11;204;;;;vpos;;v;;r;;d16,202;;b0,0;;m">
+					<treenode node="choose;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f23;203;29;203;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="id_player;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f11;203;20;203;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+				<treenode node="dataType;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f3;201;11;201;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="nickname2;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f5;195;14;195;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="type;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f3;200;7;200;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="url;JS:JS Var Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php;f3;199;6;199;;;;vposString;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="setComparator;JS:Function Name;F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\user_guide\_static\websupport.js;f0;106;3;120;;;;vpos;;v;;r;;d27,106;;b0,0;;m">
@@ -30639,8 +30852,6 @@
 			<todo name="@todo - this needs to be made more general purpose" pos="6;1574"/>
 		</todofile>
 	</todoblock>
-	<dbgurls>
-	</dbgurls>
 	<filescache>
 		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\user_guide\_static\js\theme.js" crc="1476101568"/>
 		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\user_guide\_static\js\oldtheme.js" crc="1476101568"/>
@@ -30868,16 +31079,17 @@
 		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalplayer.php" crc="1476703694"/>
 		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totaldia.php" crc="1476703189"/>
 		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_totalconverted.php" crc="1476704809"/>
-		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php" crc="1476890512"/>
+		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_modifyplayer.php" crc="1479119725"/>
 		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_home.php" crc="1476447515"/>
-		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php" crc="1476444619"/>
-		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php" crc="1477576579"/>
-		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php" crc="1477576281"/>
+		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_createplayer.php" crc="1479119593"/>
+		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\views\v_allplayer.php" crc="1479119977"/>
+		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\models\All_model.php" crc="1479121267"/>
 		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\logs\log-2016-05-11.txt" crc="1476447769"/>
-		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php" crc="1476645609"/>
-		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php" crc="1477637142"/>
-		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php" crc="1477301395"/>
-		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php" crc="1477576284"/>
+		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\helpers\myfunction_helper.php" crc="1479121156"/>
+		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Workfiles.php" crc="1478943636"/>
+		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Sendmail.php" crc="1479119129"/>
+		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Home.php" crc="1479119836"/>
+		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\controllers\Controlhandplayer.php" crc="1479121765"/>
 		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\user_agents.php" crc="1469551008"/>
 		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\smileys.php" crc="1469551008"/>
 		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\routes.php" crc="1476184928"/>
@@ -30889,7 +31101,7 @@
 		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\foreign_chars.php" crc="1469551008"/>
 		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\doctypes.php" crc="1469551008"/>
 		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\database.php" crc="1476174636"/>
-		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\constants.php" crc="1476436522"/>
+		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\constants.php" crc="1479121793"/>
 		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\config.php" crc="1476447261"/>
 		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\config\autoload.php" crc="1476196915"/>
 		<file name="F:\dropbox\Dropbox\taff et moi\meu\fortaff.git\trunk\convertHH\application\cache\.htaccess" crc="1469551008"/>

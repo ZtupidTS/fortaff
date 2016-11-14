@@ -5,3 +5,13 @@ M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\PS.Pro
 M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\MySoft.csproj.GenerateResource.Cache
 M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\MySoft.exe
 M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\MySoft.pdb
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\bin\Debug\Microsoft.CSharp.dll
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\bin\Debug\System.Data.DataSetExtensions.dll
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\bin\Debug\System.Data.dll
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\bin\Debug\System.Deployment.dll
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\bin\Debug\System.dll
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\bin\Debug\System.Drawing.dll
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\bin\Debug\System.Windows.Forms.dll
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\bin\Debug\System.Xml.dll
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\bin\Debug\System.Xml.Linq.dll
+M:\Dropbox\taff et moi\meu\fortaff.git\trunk\poker\C#\PS\PS\obj\x86\Debug\MySoft.csprojResolveAssemblyReference.cache

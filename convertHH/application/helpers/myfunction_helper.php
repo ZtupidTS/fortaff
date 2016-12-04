@@ -121,8 +121,80 @@ function findlimithand($limit)
 	    case "€2.5/€5.00":
 	        return "NL500";
 	        break;
+	    case "€0.01/€0.02 EUR":
+	        return "NL2";
+	        break;
+	    case "€0.02/€0.05 EUR":
+	        return "NL5";
+	        break;
+	    case "€0.05/€0.10 EUR":
+	        return "NL10";
+	        break;
+	    case "€0.08/€0.16 EUR":
+	        return "NL16";
+	        break;
+	    case "€0.10/€0.20 EUR":
+	        return "NL20";
+	        break;
+	    case "€0.10/€0.25 EUR":
+	        return "NL25";
+	        break;
+	    case "€0.15/€0.30 EUR":
+	        return "NL30";
+	        break;
+	    case "€0.25/€0.50 EUR":
+	        return "NL50";
+	        break;
+	    case "€0.50/€1.00 EUR":
+	        return "NL100";
+	        break;
+	    case "€1/€2":
+	        return "NL200 EUR";
+	        break;
+	    case "€2/€4":
+	        return "NL400 EUR";
+	        break;
+	    case "€2.5/€5.00 EUR":
+	        return "NL500";
+	        break;
+	    case "0.01/0.02":
+	        return "NL2";
+	        break;
+	    case "0.02/0.05":
+	        return "NL5";
+	        break;
+	    case "0.05/0.10":
+	        return "NL10";
+	        break;
+	    case "0.08/0.16":
+	        return "NL16";
+	        break;
+	    case "0.10/0.20":
+	        return "NL20";
+	        break;
+	    case "0.10/0.25":
+	        return "NL25";
+	        break;
+	    case "0.15/0.30":
+	        return "NL30";
+	        break;
+	    case "0.25/0.50":
+	        return "NL50";
+	        break;
+	    case "0.50/1.00":
+	        return "NL100";
+	        break;
+	    case "1/2":
+	        return "NL200";
+	        break;
+	    case "2/4":
+	        return "NL400";
+	        break;
+	    case "2.5/5.00":
+	        return "NL500";
+	        break;
 	    default:
-	        return "N/A";
+	        return "NA";
 	        break;
 	}
 }

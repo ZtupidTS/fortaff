@@ -95,6 +95,7 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 /* Tabela foldersize */
 define('TBL_FOLDER','foldersize');
 define('TBL_NUMHZOOM','hands_StarsZoom');
+define('TBL_NUMHPTREG','hands_StarsPtReg');
 define('TBL_LIMIT','limit_NL');
 define('TBL_NICKNAME','nickname');
 define('TBL_QTDHANDS','numHands_ByPlayer');
@@ -102,7 +103,9 @@ define('TBL_PLAYER','playerHH');
 define('TBL_FILECONVERT','fileshandconvert');
 
 /* Caminho da pasta dos ficheiro convertidos */
-define('VAR_PATHCONVERTED','/mnt/hh_share/HH/HHconverted');
+define('VAR_PATHCONVERTED','/mnt/hh_share/HH/HHconverted_zoom');
+define('VAR_PATHCONVERTED_PT_SH','/mnt/hh_share/HH/HHconverted_pt/REG');
+define('VAR_PATHCONVERTED_PT_ZO','/mnt/hh_share/HH/HHconverted_pt/ZOOM');
 
 /* FTP */
 define('FTP_URL','hhsharing.esy.es');

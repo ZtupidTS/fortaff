@@ -192,7 +192,7 @@ class Workfiles extends CI_Controller {
 				{
 					if(file_exists($filesdb->path))
 					{
-						$new_file = $this->workfileshand($filesdb->path,$elem['id_player'],$elem['nick_player']);
+						$new_file = $this->workfileshand($filesdb->path,$elem['id_player'],$elem['nick_player'],$elem['room'],$elem['type']);
 						//echo $filesdb->path.'             ';
 					}else{
 						log_message('error', 'ficheiro não existe (workfiles line 173)');
@@ -209,7 +209,31 @@ class Workfiles extends CI_Controller {
 		}
 	}
 	
-	function workfileshand($file_path,$id_player,$nick_original)
+	function workfileshand($file_path,$id_player,$nick_original,$room,$type)
+	{
+		$continu_room = true;
+		
+		if($room == "EU")
+		{
+			$this->converthandEuZoom($file_path,$id_player,$nick_original);
+			$continu_room = false;	
+		}
+		
+		if($room == "PT" && $continu_room)
+		{
+			if($type == "SH")
+			{
+				$this->convetHandPtReg($file_path,$id_player,$nick_original);
+				$continu_room = false;
+			}
+			if($type == "ZO" && $continu_room)
+			{
+				$continu_room = false;
+			}
+		}
+	}
+	
+	function converthandEuZoom($file_path,$id_player,$nick_original)
 	{
 		$array_nickname = $this->All_model->getallnickname();
 		
@@ -370,6 +394,8 @@ class Workfiles extends CI_Controller {
 				            'month'		=> $today[1], 
 				            'day'		=> $today[2],
 				            'namefile'		=> $namefile,
+				            'room'		=> 'EU',
+				            'type'		=> 'ZO',
 				            'id_player'		=> $id_player
 				        );
 				$result = $this->All_model->insertfileshands($sql_data);
@@ -379,8 +405,188 @@ class Workfiles extends CI_Controller {
 				}
 			}
 			//exec ("chmod 777 -R ".VAR_PATHCONVERTED);
-		}else{
-			//não é de zoom deita fora		
 		}
 	}
+
+	function convetHandPtReg($file_path,$id_player,$nick_original)
+	{
+		$array_nickname = $this->All_model->getallnickname();
+		
+		$file_read = file_get_contents($file_path);
+		//echo $file_read;
+		$new_file = "";
+		$date_old = "";
+		$qtd_hand = 0;
+		
+		if (strpos($file_read,"PokerStars") !== false) 
+		{
+			$p = true;
+			$hand_old = false;
+			$arr_file_read = explode("PokerStars",$file_read);
+			
+			//echo count($arr_file_read).' ';
+			//print_r($arr_file_read);
+			//ok ate aqui tenho hands
+			
+			for($m = 1;$m<count($arr_file_read);$m++)
+			{
+				$num_hand = 0;
+				
+				//echo $arr_file_read[$m].'             ';
+				//echo $m;
+				
+				if($arr_file_read[$m] != "")
+				{
+					if(strpos($arr_file_read[$m],"Seat 9") === false)
+					{
+						//vou ler a primeira linha só
+						//echo $arr_file_read[$m]. '            ';
+						$str = strtok($arr_file_read[$m], "\r\n");
+						//echo $str.'                      ';
+						if(strpos($str,"Hold'em No Limit") !== false)
+						{
+							//limit hand
+							//NLxx
+							if($p)
+							{
+								$limit = getStringBetween($str,"(",")");
+								$limit = str_replace(chr(0xE2).chr(0x82).chr(0xAC),"",$limit);
+								$limit = str_replace(chr(128), '',$limit);
+								$limit = str_replace("EUR","",$limit);
+								$limit = str_replace(" ","",$limit);
+								//echo $limit.'   ';
+								$limit = findlimithand($limit);
+								//echo $limit;
+								//id limit DB
+								$limit_temp = $this->All_model->getlimitbyname($limit);
+								$limit_final = $limit_temp->id_limit;
+							}
+							//data
+							$date_new = str_replace("/","-",getStringBetween($str,"- "," "));
+							//só vou guardar 1 ano de hands
+							//echo $date_new.'     ';
+							//echo strtotime($date_new).'     ';
+							//echo strtotime("now -1 year").'     ';
+							if(strtotime($date_new) > strtotime("now -1 year"))
+							{
+								//numero da hand
+								$num_hand = getStringBetween($str,"#",":");
+								//meter na DB
+								$sql_data = array(
+								            'numhands'        	=> $num_hand,
+								            'playerHH'		=> $id_player
+								        );
+								
+								$result = $this->All_model->inserthandPtReg($sql_data,$num_hand);
+								if(!$result)
+								{
+									log_message('error', 'Não conseguiu inserir a hand na DB ou duplicate');
+								}else{
+									//alterar o nick do player
+									$new_nick = $array_nickname[rand(0,299)];
+									$new_hand = str_replace($nick_original,$new_nick,$arr_file_read[$m]);
+									//Criar o novo string da hand e meter na varíavel
+									$new_file .= "PokerStars".$new_hand;
+									//echo $new_file;
+									$qtd_hand++;
+								}
+							}else{
+								//echo 'aaaaaa';
+								$hand_old = true;
+							}
+							$p = false;
+						}else{
+							//echo 'bbbbbbbbb';
+							$hand_old = true;
+						}
+					}else{
+						$hand_old = true;
+					}
+				}
+				if($hand_old)
+					break;
+			}
+			//echo $new_file;
+			//acabei de ler o ficheiro
+			//meter na DB (TBL_QTDHANDS e TBL_FILECONVERT) + na pasta de partilha para os gajos
+			//TBL_QTDHANDS
+			//antes de inserir ver se já existe algo do género na DB
+			if(!$hand_old && $new_file != "")
+			{
+				$array_numhand = $this->All_model->numhands($id_player,$limit_final,$date_new);
+				if($array_numhand)
+				{
+					//update
+					$new_numhand = $array_numhand[0] + $qtd_hand;
+					$sql_data = array(
+					            'id_player'        	=> $id_player,
+					            'id_limit'		=> $limit_final,
+					            'date'		=> $date_new,
+					            'qtd'		=> $new_numhand 
+					        );
+					$result = $this->All_model->updatenumhands($sql_data,$array_numhand[1]);
+					if(!$result)
+					{
+						log_message('error', 'Não conseguiu fazer o update de num hands (workfiles linha 274');
+					}
+				}else{
+					//insert
+					$sql_data = array(
+					            'id_player'        	=> $id_player,
+					            'id_limit'		=> $limit_final,
+					            'date'		=> $date_new,
+					            'qtd'		=> $qtd_hand 
+					        );
+					$result = $this->All_model->insertnumhands($sql_data);
+					if(!$result)
+					{
+						log_message('error', 'Não conseguiu inserir o numero de hands (workfiles linha 287');
+					}
+				}
+				//TBL_FILECONVERT
+				$today = todaysplit();
+				//criar a pasta caso não existe
+				if(!file_exists(VAR_PATHCONVERTED_PT_SH."/".$limit))
+				{
+					mkdir(VAR_PATHCONVERTED_PT_SH."/".$limit, 0777, true);						
+				}
+				if(!file_exists(VAR_PATHCONVERTED_PT_SH."/".$limit."/".$today[0]))
+				{
+					mkdir(VAR_PATHCONVERTED_PT_SH."/".$limit."/".$today[0], 0777, true);	
+				}
+				if(!file_exists(VAR_PATHCONVERTED_PT_SH."/".$limit."/".$today[0]."/".$today[1]))
+				{
+					mkdir(VAR_PATHCONVERTED_PT_SH."/".$limit."/".$today[0]."/".$today[1], 0777, true);
+				}
+				if(!file_exists(VAR_PATHCONVERTED_PT_SH."/".$limit."/".$today[0]."/".$today[1]."/".$today[2]))
+				{
+					mkdir(VAR_PATHCONVERTED_PT_SH."/".$limit."/".$today[0]."/".$today[1]."/".$today[2], 0777, true);
+				}
+				//criar o ficheiro de hands
+				$namefile = $this->All_model->getlastnamefile($limit_final,$today[0],$today[1],$today[2]);
+				$myfile = fopen(VAR_PATHCONVERTED_PT_SH."/".$limit."/".$today[0]."/".$today[1]."/".$today[2]."/".$namefile.".txt", "w");
+				fwrite($myfile, $new_file);
+				fclose($myfile);
+				//meter na DB
+				$sql_data = array(
+				            'num_hands'        	=> $qtd_hand,
+				            'id_limit'		=> $limit_final,
+				            'year'		=> $today[0],
+				            'month'		=> $today[1], 
+				            'day'		=> $today[2],
+				            'namefile'		=> $namefile,
+				            'room'		=> 'PT',
+				            'type'		=> 'SH',
+				            'id_player'		=> $id_player
+				        );
+				$result = $this->All_model->insertfileshands($sql_data);
+				if(!$result)
+				{
+					log_message('error', 'Não conseguiu inserir o numnero do ficheiro (workfiles linha 287');
+				}
+			}
+			//exec ("chmod 777 -R ".VAR_PATHCONVERTED);
+		}
+	}
+	
 }

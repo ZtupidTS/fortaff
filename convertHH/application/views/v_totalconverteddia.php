@@ -5,70 +5,57 @@ $this->load->view('template/header_admin');
 $this->load->view('template/footer_admin');
 ?>
 
-<div class="col-md-12">
-	<legend>Jogadores</legend>
+<div class="col-md-10 col-md-offset-1">
+	<legend>Convertidas / Dia</legend>
 </div>
 
 <div class="row">
-	<div class="col-md-12">
-		<table class="table table-hover handsdia display" id="handsdia">
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>Nick</th>
-					<th>Limit</th>
-					<th>Limit</th>
-					<th>Limit</th>
-					<th>Path</th>
-					<th>Start</th>
-					<th>Expire</th>
-					<th>Email</th>
-					<th>Skype</th>
-					<th>Enable</th>
-					<th>Room</th>
-					<th>Type</th>
-					<th>Keyfolder</th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php
-				foreach($result as $elem)
-				{?>
-					<tr>
-						<td><?= $elem['id_player'];?></td>
-						<td><?= $elem['nick_player'];?></td>
-						<td>
-						<?php
-							$result_namelimit = $this->All_model->getlimitbyid($elem['limit_play']);
-							echo $result_namelimit->name_limit;
-						?>	
-						</td>
-						<td>
-						<?php
-							$result_namelimit = $this->All_model->getlimitbyid($elem['limit_play2']);
-							echo $result_namelimit->name_limit;
-						?>	
-						</td>
-						<td>
-						<?php
-							$result_namelimit = $this->All_model->getlimitbyid($elem['limit_play3']);
-							echo $result_namelimit->name_limit;
-						?>	
-						</td>
-						<td><?= $elem['pathfolder'];?></td>
-						<td><?= $elem['startdate'];?></td>
-						<td><?= $elem['expire_date'];?></td>
-						<td><?= $elem['email'];?></td>
-						<td><?= $elem['skype'];?></td>
-						<td><?= $elem['enable'];?></td>
-						<td><?= $elem['room'];?></td>
-						<td><?= $elem['type'];?></td>
-						<td><?= $elem['keyfolder'];?></td>
-					</tr>
+	<div class="col-md-12 col-md-offset-3">
+		<form class="form-inline" role="form" method="post" >
+			<div class="form-group">
+	    			<label for="email">Intervalo de Datas:</label>
+	    			<?php
+	    			if(isset($datefirst) && $datefirst != "")
+	    			{?>
+					<input type="text" id="datefirst" value="<?= $datefirst;?>" class="form-control" required name="datefirst">	
+					<?php	
+				}else{?>
+					<input type="text" id="datefirst" class="form-control" required name="datefirst">
 					<?php
 				}?>
-			</tbody>
-		</table>
+	    		</div>	
+	    		<div class="form-group">
+	    			<label for="email">a</label>
+	    			<?php
+	    			if(isset($datesecond) && $datesecond != "")
+	    			{?>
+					<input type="text" id="datesecond" value="<?= $datesecond;?>" class="form-control" required name="datesecond">	
+					<?php	
+				}else{?>
+					<input type="text" id="datesecond" class="form-control" required name="datesecond">
+					<?php
+				}?>
+	  		</div>
+	  		<?php
+	  		if(isset($result))
+	    		{
+		  		?>	
+		  			<select class="form-control" id="selectlimit">
+						<option value="999999">Todos</option>
+						<?php
+						foreach($result as $row)
+						{
+							?>
+							<option value="<?= $row['id_limit'];?>"><?= $row['name_limit'];?></option>
+							<?php
+						}?>
+					</select>
+				
+		  		<?php
+		  	}?>
+		  	<input type="button" id="btn_search" value="Procurar" onclick="totaldia()" class="btn btn-default noPrint">
+	  		
+		</form>
 	</div>
 </div>
 
@@ -102,17 +89,17 @@ $("#datesecond").datetimepicker({
         minView: 2
 });
 
-function handdia()
+function totaldia()
 {
 	date1 = $("#datefirst").val();
 	date2 = $("#datesecond").val();
 	var limit = $("#selectlimit").val();
 	
 	var values = {datefirst: date1, datesecond: date2, id_limit: limit};
-	var newform = createform('<?= base_url("home/searchhanddia");?>',values);
+	var newform = createform('<?= base_url("home/searchtotaldia");?>',values);
 	
 	$.ajax({
-	        url: '<?= base_url("home/searchhanddia");?>',
+	        url: '<?= base_url("home/searchtotaldia");?>',
 	        type: 'post',
 	        dataType: 'json',
 	        data: $(newform).serializeArray(),
@@ -149,5 +136,4 @@ function handdia()
     	});		
 	return false;
 }
-startDatatableRp();
 </script>

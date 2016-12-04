@@ -43,20 +43,44 @@ class Sendmail extends CI_Controller {
 					$this->zip->clear_data();
 					if($arr_limit[$r] != 15 && $arr_limit[$r] != 0)
 					{
-						$arr_filestozip = $this->All_model->getfilesconvertbynorid($elem_allplayers['id_player'],$arr_limit[$r],$arr_today);
+						$arr_filestozip = $this->All_model->getfilesconvertbynorid($elem_allplayers['id_player'],$arr_limit[$r],$arr_today,$elem_allplayers['room'],$elem_allplayers['type']);
 						$limit_convertHH = $this->All_model->getlimitbyid($arr_limit[$r]);
 						foreach($arr_filestozip as $elem_zip)
 						{
 							/*$this->zip->add_data(VAR_PATHCONVERTED."/".$limit_convertHH->name_limit."/".$arr_today[0]."/".$arr_today[1]."/".$arr_today[2]."/".$elem_zip['namefile'].".txt", $elem_zip['namefile']);*/
-							$this->zip->read_file(VAR_PATHCONVERTED."/".$limit_convertHH->name_limit."/".$arr_today[0]."/".$arr_today[1]."/".$arr_today[2]."/".$elem_zip['namefile'].".txt");
+							if($elem_allplayers['room'] == "EU")
+							{
+								$this->zip->read_file(VAR_PATHCONVERTED."/".$limit_convertHH->name_limit."/".$arr_today[0]."/".$arr_today[1]."/".$arr_today[2]."/".$elem_zip['namefile'].".txt");	
+							}
+							if($elem_allplayers['room'] == "PT" && $elem_allplayers['type'] == "SH")
+							{
+								$this->zip->read_file(VAR_PATHCONVERTED_PT_SH."/".$limit_convertHH->name_limit."/".$arr_today[0]."/".$arr_today[1]."/".$arr_today[2]."/".$elem_zip['namefile'].".txt");	
+							}
+							if($elem_allplayers['room'] == "PT" && $elem_allplayers['type'] == "ZO")
+							{
+								$this->zip->read_file(VAR_PATHCONVERTED_PT_ZO."/".$limit_convertHH->name_limit."/".$arr_today[0]."/".$arr_today[1]."/".$arr_today[2]."/".$elem_zip['namefile'].".txt");	
+							}
+							
 						}
-						$total_hands = $this->All_model->sumconvertbynorid($elem_allplayers['id_player'],$arr_limit[$r],$arr_today);
+						$total_hands = $this->All_model->sumconvertbynorid($elem_allplayers['id_player'],$arr_limit[$r],$arr_today,$elem_allplayers['room'],$elem_allplayers['type']);
 						if($total_hands == 0)
 						{
 							$this->mail($elem_allplayers['email'],$arr_today[2]."-".$arr_today[1]."-".$arr_today[0],"No hands today :(");
 						}else{
 							$zip_name = $limit_convertHH->name_limit."_".$arr_today[0]."_".$arr_today[1]."_".$arr_today[2]."_".$total_hands."_".$numzip."_".$elem_allplayers['id_player'].".zip";
-							$zipfile = VAR_PATHCONVERTED."/".$zip_name;
+							if($elem_allplayers['room'] == "EU")
+							{
+								$zipfile = VAR_PATHCONVERTED."/".$zip_name;	
+							}
+							if($elem_allplayers['room'] == "PT" && $elem_allplayers['type'] == "SH")
+							{
+								$zipfile = VAR_PATHCONVERTED_PT_SH."/".$zip_name;	
+							}
+							if($elem_allplayers['room'] == "PT" && $elem_allplayers['type'] == "ZO")
+							{
+								$zipfile = VAR_PATHCONVERTED_PT_ZO."/".$zip_name;	
+							}
+							
 							$this->zip->archive($zipfile);
 							
 							shell_exec("ftp-upload -h ".FTP_URL." -u ".FTP_USERNAME." --password ".FTP_PASSWORD." -d / ".$zipfile);

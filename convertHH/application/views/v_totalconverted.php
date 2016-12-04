@@ -6,7 +6,7 @@ $this->load->view('template/footer_admin');
 ?>
 
 <div class="col-md-10 col-md-offset-1">
-	<legend>Convertidas / Dia</legend>
+	<legend>Convertidas / Jogadores</legend>
 </div>
 
 <div class="row">
@@ -36,24 +36,7 @@ $this->load->view('template/footer_admin');
 					<?php
 				}?>
 	  		</div>
-	  		<?php
-	  		if(isset($result))
-	    		{
-		  		?>	
-		  			<select class="form-control" id="selectlimit">
-						<option value="999999">Todos</option>
-						<?php
-						foreach($result as $row)
-						{
-							?>
-							<option value="<?= $row['id_limit'];?>"><?= $row['name_limit'];?></option>
-							<?php
-						}?>
-					</select>
-				
-		  		<?php
-		  	}?>
-		  	<input type="button" id="btn_search" value="Procurar" onclick="totaldia()" class="btn btn-default noPrint">
+	  		<input type="button" id="btn_search" value="Procurar" onclick="total()" class="btn btn-default noPrint">
 	  		
 		</form>
 	</div>
@@ -89,17 +72,16 @@ $("#datesecond").datetimepicker({
         minView: 2
 });
 
-function totaldia()
+function total()
 {
 	date1 = $("#datefirst").val();
 	date2 = $("#datesecond").val();
-	var limit = $("#selectlimit").val();
 	
-	var values = {datefirst: date1, datesecond: date2, id_limit: limit};
-	var newform = createform('<?= base_url("home/searchtotaldia");?>',values);
+	var values = {datefirst: date1, datesecond: date2};
+	var newform = createform('<?= base_url("home/searchtotal");?>',values);
 	
 	$.ajax({
-	        url: '<?= base_url("home/searchtotaldia");?>',
+	        url: '<?= base_url("home/searchtotal");?>',
 	        type: 'post',
 	        dataType: 'json',
 	        data: $(newform).serializeArray(),

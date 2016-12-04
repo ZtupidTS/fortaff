@@ -6,7 +6,7 @@ class Controlhandplayer extends CI_Controller {
 	
 	public function mail($players)
 	{
-		shell_exec("echo -e 'to: gravenegro@gmail.com \nsubject: Players Without Hands \r\n\r\n Players: ".$players."' | /usr/sbin/ssmtp gravenegro@gmail.com -F'HH Sharing'");			
+		shell_exec("echo -e 'to: stoploss59@gmail.com \nsubject: Players Without Hands \r\n\r\n Players: ".$players."' | /usr/sbin/ssmtp stoploss59@gmail.com -F'HH Sharing'");			
 	}
 	
 	public function dayswithouthand()

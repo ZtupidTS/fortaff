@@ -123,6 +123,25 @@ $this->load->view('template/footer_admin');
 			                </div>
 		    		</div>
 		    		<div class="form-group">
+		    			<label class="col-sm-3 control-label" >Room</label>
+		    			<div class="col-sm-6">
+			                	<select class="selectpicker" id="room" name="room">
+					  		<option value="EU">.EU (.com,.be,.uk)</option>
+					  		<option value="FR">.FR</option>							
+					  		<option value="PT">.PT</option>							
+						</select>
+			                </div>
+		    		</div>
+		    		<div class="form-group">
+		    			<label class="col-sm-3 control-label" >Tipo</label>
+		    			<div class="col-sm-6">
+			                	<select class="selectpicker" id="type" name="type">
+					  		<option value="SH">6max</option>
+					  		<option value="ZO">Zoom</option>							
+						</select>
+			                </div>
+		    		</div>
+		    		<div class="form-group">
 		    			<label class="col-sm-3 control-label" >Enable</label>
 		    			<div class="col-sm-6">
 			                	<select class="selectpicker" id="checkbox" name="checkbox">

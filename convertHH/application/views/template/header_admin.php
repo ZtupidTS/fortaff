@@ -66,7 +66,8 @@
 							<ul class="dropdown-menu">
 								<li><a href="<?= base_url('Home/totaldia') ?>">Total/dia (dia real da hand)</a></li>
         							<li><a href="<?= base_url('Home/totalplayer') ?>">Total/jogador (dia real da hand)</a></li>
-        							<li><a href="<?= base_url('Home/totalconvert') ?>">Total Convertida/Dia</a></li>
+        							<li><a href="<?= base_url('Home/totalconvertdia') ?>">Total Convertida/Dia</a></li>
+        							<li><a href="<?= base_url('Home/totalconvert') ?>">Total Convertida/jogador</a></li>
 							</ul>
 						</li>
 					</ul>

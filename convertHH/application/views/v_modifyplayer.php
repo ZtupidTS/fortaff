@@ -131,10 +131,29 @@ $this->load->view('template/footer_admin');
 				                </div>
 			    		</div>
 			    		<div class="form-group">
+			    			<label class="col-sm-3 control-label" >Room</label>
+			    			<div class="col-sm-6">
+				                	<select class="selectpicker" id="room" name="room">
+						  		<option value="EU">.EU (.com,.be,.uk)</option>
+						  		<option value="FR">.FR</option>							
+						  		<option value="PT">.PT</option>							
+							</select>
+				                </div>
+			    		</div>
+			    		<div class="form-group">
+			    			<label class="col-sm-3 control-label" >Tipo</label>
+			    			<div class="col-sm-6">
+				                	<select class="selectpicker" id="type" name="type">
+						  		<option value="SH">6max</option>
+						  		<option value="ZO">Zoom</option>
+							</select>
+				                </div>
+			    		</div>
+			    		<div class="form-group">
 			    			<label class="col-sm-3 control-label" >Enable</label>
 			    			<div class="col-sm-6">
 				                	<select class="selectpicker" id="checkbox" name="checkbox">
-						  		<option value="1" selected>Yes</option>							
+						  		<option value="1" >Yes</option>						
 						  		<option value="0">No</option>							
 							</select>
 				                </div>
@@ -219,6 +238,8 @@ function searchplayerdata()
 						$("#keyfolder").val(data.keyfolder);
 						$("#id").val(choose);
 						$("#nickname2").val(nickname2);
+						$("#room").val(data.room);
+						$("#type").val(data.type);
 						$(".divhidden").show();
 						
 						/*noty({ 

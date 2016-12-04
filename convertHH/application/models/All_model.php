@@ -107,6 +107,21 @@ class All_model extends CI_Model {
 		}
 	}
 	
+	public function inserthandPtReg($data,$numhand)
+	{
+		$sql = "select * from ".TBL_NUMHPTREG." where numhands = ".$numhand;
+		$result = $this->db->query($sql);
+		if($result->num_rows() >0)
+		{
+			log_message('error', 'Linha duplicada na DB (all_model linha 116) number: '.$numhand);
+			return false;
+			/*echo "dupli";*/
+		}else{
+			return $this->db->insert(TBL_NUMHPTREG,$data);
+			/*echo "else";*/
+		}
+	}
+	
 	public function getallnickname()
 	{
 		$sql = "select name_nickname from ".TBL_NICKNAME;
@@ -173,15 +188,15 @@ class All_model extends CI_Model {
 		return $this->db->insert(TBL_FILECONVERT,$data);
 	}
 	
-	public function getfilesconvertbynorid($id_player,$id_limit,$date)
+	public function getfilesconvertbynorid($id_player,$id_limit,$date,$room,$type)
 	{
-		$sql = "select * from ".TBL_FILECONVERT." where id_player != ".$id_player." AND id_limit = ".$id_limit." AND year = ".$date[0]." AND month = ".$date[1]." AND day = ".$date[2];
+		$sql = "select * from ".TBL_FILECONVERT." where id_player != ".$id_player." AND id_limit = ".$id_limit." AND year = ".$date[0]." AND month = ".$date[1]." AND day = ".$date[2]." AND room = '".$room."' AND type = '".$type."'";
 		return $this->All_model->get($sql);
 	}
 	
-	public function sumconvertbynorid($id_player,$id_limit,$date)
+	public function sumconvertbynorid($id_player,$id_limit,$date,$room,$type)
 	{
-		$sql = "select sum(num_hands) as totalhands from ".TBL_FILECONVERT." where id_player != ".$id_player." AND id_limit = ".$id_limit." AND year = ".$date[0]." AND month = ".$date[1]." AND day = ".$date[2];
+		$sql = "select sum(num_hands) as totalhands from ".TBL_FILECONVERT." where id_player != ".$id_player." AND id_limit = ".$id_limit." AND year = ".$date[0]." AND month = ".$date[1]." AND day = ".$date[2]." AND room = '".$room."' AND type = '".$type."'";
 		$result = $this->db->query($sql);
 		if($result->num_rows() >0)
 		{
@@ -221,10 +236,17 @@ class All_model extends CI_Model {
 	{
 		if($id_limit)
 		{
-			$sql = "SELECT sum(fi.num_hands) as 'qtd', fi.year as 'year', fi.month as 'month', fi.day as 'day', li.name_limit as 'limit' from ".TBL_FILECONVERT." fi, ".TBL_PLAYER." pl, ".TBL_LIMIT." li where fi.id_player = pl.id_player AND li.id_limit = fi.id_limit AND fi.year >= '".$firstday[0]."' AND fi.month >= '".$firstday[1]."' AND fi.day >= '".$firstday[2]."' AND fi.year <= '".$secondday[0]."' AND fi.month <= '".$secondday[1]."' AND fi.day <= '".$secondday[2]."' AND li.id_limit = ".$id_limit." group by fi.year,fi.month,fi.day,li.name_limit";
+			$sql = "SELECT sum(fi.num_hands) as 'qtd', fi.year as 'year', fi.month as 'month', fi.day as 'day', li.name_limit as 'limit', fi.room as 'room', fi.type as 'tipo' from ".TBL_FILECONVERT." fi, ".TBL_PLAYER." pl, ".TBL_LIMIT." li where fi.id_player = pl.id_player AND li.id_limit = fi.id_limit AND fi.year >= '".$firstday[0]."' AND fi.month >= '".$firstday[1]."' AND fi.day >= '".$firstday[2]."' AND fi.year <= '".$secondday[0]."' AND fi.month <= '".$secondday[1]."' AND fi.day <= '".$secondday[2]."' AND li.id_limit = ".$id_limit." group by fi.year,fi.month,fi.day,li.name_limit,fi.room,fi.type";
 		}else{
-			$sql = "SELECT sum(fi.num_hands) as 'qtd', fi.year as 'year', fi.month as 'month', fi.day as 'day', li.name_limit as 'limit' from ".TBL_FILECONVERT." fi, ".TBL_PLAYER." pl, ".TBL_LIMIT." li where fi.id_player = pl.id_player AND li.id_limit = fi.id_limit AND fi.year >= '".$firstday[0]."' AND fi.month >= '".$firstday[1]."' AND fi.day >= '".$firstday[2]."' AND fi.year <= '".$secondday[0]."' AND fi.month <= '".$secondday[1]."' AND fi.day <= '".$secondday[2]."' group by fi.year,fi.month,fi.day,li.name_limit";
+			$sql = "SELECT sum(fi.num_hands) as 'qtd', fi.year as 'year', fi.month as 'month', fi.day as 'day', li.name_limit as 'limit', fi.room as 'room', fi.type as 'tipo' from ".TBL_FILECONVERT." fi, ".TBL_PLAYER." pl, ".TBL_LIMIT." li where fi.id_player = pl.id_player AND li.id_limit = fi.id_limit AND fi.year >= '".$firstday[0]."' AND fi.month >= '".$firstday[1]."' AND fi.day >= '".$firstday[2]."' AND fi.year <= '".$secondday[0]."' AND fi.month <= '".$secondday[1]."' AND fi.day <= '".$secondday[2]."' group by fi.year,fi.month,fi.day,li.name_limit,fi.room,fi.type";
 		}
+		return $this->get($sql);
+	}
+	
+	public function gethandconvertedbysumplayer($firstday,$secondday)
+	{
+		$sql = "SELECT sum(fi.qtd) as 'qtd', pl.nick_player as 'nickname', li.name_limit as 'limit' from ".TBL_QTDHANDS." fi, ".TBL_PLAYER." pl, ".TBL_LIMIT." li 
+where fi.id_player = pl.id_player AND li.id_limit = fi.id_limit AND fi.date between '".$firstday."' AND '".$secondday."' group by pl.nick_player,li.name_limit";
 		return $this->get($sql);
 	}
 	

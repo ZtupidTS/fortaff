@@ -59,6 +59,8 @@ class Home extends CI_Controller {
 		$path = $this->input->post('path');
 		$keyfolder = $this->input->post('keyfolder');
 		$comment = $this->input->post('comment');
+		$type = $this->input->post('type');
+		$room = $this->input->post('room');
 		
 		if($limitplay2 == "0")
 			$limitplay2 = "15";
@@ -81,6 +83,8 @@ class Home extends CI_Controller {
 		            'skype'		=> $skype,
 		            'pathfolder'	=> $path,
 		            'keyfolder'		=> $keyfolder,
+		            'type'		=> $type,
+		            'room'		=> $room,
 		            'enable'		=> $checkbox	            
 		        );
 		
@@ -159,6 +163,8 @@ class Home extends CI_Controller {
 				'email' => $result[0]['email'],
 				'skype' => $result[0]['skype'],
 				'keyfolder' => $result[0]['keyfolder'],
+				'room' => $result[0]['room'],
+				'type' => $result[0]['type'],
 				'enable' => $result[0]['enable']
 				);
 			echo json_encode($return);
@@ -187,6 +193,8 @@ class Home extends CI_Controller {
 		$path = $this->input->post('pathfolder');
 		$keyfolder = $this->input->post('keyfolder');
 		$comment = $this->input->post('comment');
+		$room = $this->input->post('room');
+		$type = $this->input->post('type');
 		$id = $this->input->post('id');
 		
 		if($limitplay2 == "0")
@@ -209,6 +217,8 @@ class Home extends CI_Controller {
 		            'email'		=> $email,
 		            'skype'		=> $skype,
 		            'pathfolder'	=> $path,
+		            'room'	=> $room,
+		            'type'	=> $type,
 		            'keyfolder'	=> $keyfolder,
 		            'enable'		=> $checkbox	            
 		        );
@@ -332,19 +342,24 @@ class Home extends CI_Controller {
 		}
 	}
 	
-	public function totalconvert()
+	public function totalconvertdia()
 	{
 		$result = $this->All_model->getlimit();
 		if($result)
 		{
 			$data['result'] = $result;
-			$this->load->view('v_totalconverted', $data);
+			$this->load->view('v_totalconverteddia', $data);
 		}else{
 			//isso é para quando vou de ver as picagens para essa pagina de corrigir picagens
 			//assim não precido de reescrever outra pagina
 			$data['erro'] = 'Problemas na obtenção dos dados, tentar novamente.';	
-			$this->load->view("v_totalconverted", $data);
+			$this->load->view("v_totalconverteddia", $data);
 		}
+	}
+	
+	public function totalconvert()
+	{
+		$this->load->view("v_totalconverted");		
 	}	
 
 	public function searchhanddia()
@@ -445,12 +460,48 @@ class Home extends CI_Controller {
 		//print_r($result);
 		if($result)
 		{
-			$message_tb_head = '<table class="table table-hover handsdia display" id="handsdia"><thead><tr><th>Limit</th><th>Data</th><th>QTD</th></tr></thead>';
+			$message_tb_head = '<table class="table table-hover handsdia display" id="handsdia"><thead><tr><th>Limit</th><th>Data</th><th>QTD</th><th>Room</th><th>Tipo</th></tr></thead>';
 			
 			$message = '';
 			foreach($result as $row)
 			{
-				$message .= '<tr><td>'.$row['limit'].'</td><td>'.$row['year'].'-'.$row['month'].'-'.$row['day'].'</td><td>'.$row['qtd'].'</td></tr>';
+				$message .= '<tr><td>'.$row['limit'].'</td><td>'.$row['year'].'-'.$row['month'].'-'.$row['day'].'</td><td>'.$row['qtd'].'</td><td>'.$row['room'].'</td><td>'.$row['tipo'].'</td></tr>';
+			}
+			$message = $message_tb_head . $message .'</tbody></table>';
+			
+			$return = array(
+				'return' => 'success',
+				'Logid'  => 'blabla',
+				'message' => $message
+				);
+			echo json_encode($return);
+			return true;
+		}else{
+			$return = array(
+				'return' => 'error',
+				'message' => 'Não foi possível obter dados, se o problema persistir contactar o administrador');
+			echo json_encode($return);
+			return true;
+		}
+	}
+	
+	public function searchtotal()
+	{
+		$datefirst = $this->input->post('datefirst');
+		$datesecond = $this->input->post('datesecond');
+		$id_limit = $this->input->post('id_limit');
+		
+		$result = $this->All_model->gethandconvertedbysumplayer($datefirst,$datesecond);
+		
+		//print_r($result);
+		if($result)
+		{
+			$message_tb_head = '<table class="table table-hover handsdia display" id="handsdia"><thead><tr><th>Limit</th><th>Nickname</th><th>QTD</th></tr></thead>';
+			
+			$message = '';
+			foreach($result as $row)
+			{
+				$message .= '<tr><td>'.$row['limit'].'</td><td>'.$row['nickname'].'</td><td>'.$row['qtd'].'</td></tr>';
 			}
 			$message = $message_tb_head . $message .'</tbody></table>';
 			

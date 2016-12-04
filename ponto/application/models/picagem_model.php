@@ -509,7 +509,8 @@ class Picagem_model extends CI_Model {
 					if(($result_inv->num_rows()) % 2 == 0)
 					{
 						$tempo_inv = calculoInventario($result_inv->result());
-						$tempo_inv = toSeconds($tempo_inv)/3600;
+						//$tempo_inv = toSeconds($tempo_inv)/3600;
+						$tempo_inv = $tempo_inv/3600;
 						$tempo_inv = qtdexportsage($tempo_inv);
 					}else{
 						// é impar
